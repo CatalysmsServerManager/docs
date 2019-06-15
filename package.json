@@ -1,0 +1,21 @@
+{
+  "name": "csmm-docs",
+  "version": "1.0.0",
+  "description": "Documentation for CSMM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "keywords": [
+    "csmm",
+    "docs",
+    "7daystodie"
+  ],
+  "author": "Catalysm",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.0.1"
+  }
+}
