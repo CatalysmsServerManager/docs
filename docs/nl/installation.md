@@ -17,6 +17,7 @@ De makkelijkste manier om dit te doen is via de console. U kan verbinden met de 
 Let op de 0 op het einde! Het is belangrijk dat CSMM voldoende toegang heeft tot uw server om alle functies te laten werken.
 
 ::: warning Deze web tokens zijn gevoelige data! Behandel deze als een wachtwoord. (Hou het geheim, maak ze moeilijk te raden. Het is aangeraden om een combinatie van letters, cijfers, kleine en grote letters)
+:::
 
 ## Registreer uw server in CSMM via de website.
 

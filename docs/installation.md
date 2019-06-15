@@ -17,6 +17,7 @@ The easiest way to do this is with commands through the console. You can connect
 Don’t forget the 0 at the end! It’s important CSMM has privilege 0 to ensure all functions can properly work.
 
 ::: warning These credentials are sensitive! You should treat these as a password. (Keep it secret, no obvious names/tokens). It's advised to use a combination of numbers, letters, lowercase and uppercase aswell as symbols
+:::
 
 ## Add your server to CSMM via the website.
 
