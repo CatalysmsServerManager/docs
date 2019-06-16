@@ -12,7 +12,11 @@ module.exports = {
           title: 'Configuration',
           children: [
             '/en/CSMM/roles',
-            '/en/CSMM/discord-integration'
+            '/en/CSMM/discord-integration',
+            '/en/CSMM/GBL',
+            '/en/CSMM/max-ping-kicker',
+            '/en/CSMM/country-ban',
+            '/en/CSMM/automation'
           ]
         },
         {

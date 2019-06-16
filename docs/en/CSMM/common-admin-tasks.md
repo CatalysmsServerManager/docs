@@ -38,19 +38,7 @@ Scheduled commands include things like automated world saving, scheduled reboots
     The above commands will trigger a reboot at exactly 10AM EST. Because CSMM is located in London, cron jobs must be set to run in the GMT-0 time zone. You can [look up your offset calculation](https://en.wikipedia.org/wiki/List_of_UTC_time_offsets) in order to determine how to schedule your settings properly. In this case, '50 14' means 9:50AM EST (14:50 GMT), and the command 'cpm-shutdownba 10' will trigger a 10-minute delayed reboot, which will execute exactly at 10AM.  
       
     
-3.  **Automated server announcements** - Most servers have regularly-occurring announcements that go out to the in-game players. These announcements can be everything from a reminder of the rules, a suggestion to go vote for the server, a list of Admins who are available, etc. These announcements are typically triggered by using the 'say' or 'say2' command. Some examples of these announcement types are shown in the screenshot below, and you can see that color formatting has been applied to make the announcement more visible within the in-game chat.  
-      
-    Announcements are very easy to create, but the scheduling part of the job is tricky. A lot of server admins schedule their announcements to go off every half hour, every hour, every three hours, etc. Consider the below:  
-      
-    #1 - Every 30 minutes, a reminder to vote goes off.  
-    #2 - Every 40 minutes, a reminder of the Admin team appears.  
-    #3 - Every hour, a reminder of the rules goes off.  
-      
-    Eventually, these timers will overlap. At the top of the hour, #1 and #3 go off at the same time. At the top of every even-numbered hour, all three will go off at the same time. This creates a huge chat spam, and in some cases, the first or even second message may instantly scroll off-screen.   
-      
-    ![](/assets/images/CSMM/commonAdminTasks/5210470.png)  
-      
-    This problem can be solved by configuring your announcements for exact times using the [cron time selection tool](https://crontab.guru/) linked in the CSMM scheduled task creation page, and spacing them out evenly. In the screenshot above, the 'rules' announcement fires every half hour, but does so specifically at minute 10 and minute 40 of every hour. Two minutes later, the minibike rule will go off as well. A few minutes later, the Discord alert goes off. Between these two groups of events, the vote reminder goes off. Specifying the exact time is only really useful if you have a lot of chat events that trigger regularly.
+
 
 ## CPM Settings
 
