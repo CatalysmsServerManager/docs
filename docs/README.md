@@ -2,7 +2,7 @@
 home: true
 heroImage: /CSMM.png
 actionText: Get Started →
-actionLink: /installation/
+actionLink: /en/CSMM/installation/
 features:
 - title: Cloud hosted
   details: You don't need to get a new VPS or figure out how to install a new mod on your server. Fill in your connection details and you're ready!

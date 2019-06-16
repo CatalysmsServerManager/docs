@@ -20,6 +20,7 @@
     "vuepress": "^1.0.1"
   },
   "dependencies": {
+    "vuepress-plugin-migrate": "^1.0.3",
     "vuepress-plugin-smooth-scroll": "0.0.3"
   }
 }

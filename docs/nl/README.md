@@ -2,7 +2,7 @@
 home: true
 heroImage: /CSMM.png
 actionText: Installatie →
-actionLink: /nl/installation/
+actionLink: /nl/CSMM/installation/
 features:
 - title: Cloud hosted
   details: Je moet geen nieuwe server kopen, voer de connectie informatie in en klaar!
