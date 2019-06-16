@@ -10,6 +10,8 @@ module.exports = {
       description: 'Documentatie voor de web based 7 days to die server manager',
     }
   },
+  ga: 'UA-104087733-8',
+  plugins: ['@vuepress/back-to-top'],
   themeConfig: {
     repo: 'CatalysmsServerManager/docs',
     repoLabel: 'Contribute!',
