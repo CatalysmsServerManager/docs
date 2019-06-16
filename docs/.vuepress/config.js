@@ -14,25 +14,9 @@ module.exports = {
     }
   },
   ga: 'UA-104087733-8',
-  plugins: ['@vuepress/back-to-top', 'vuepress-plugin-smooth-scroll', ['migrate', {
-    targetDir: '_posts',
-    downloadDir: '.vuepress/downloads',
-    maxConcurrentTasks: 10,
-    parseHTML($, render) {
-      const article = $('#main')
-      let title = article.find('#title-text').text().trim()
-      let content = article.find('#main-content')[0];
-      content = render(content).trim();
-
-      return {
-        frontmatter: {
-          title,
-        },
-        filename: title.replace(/\\|\//g, ' ').replace(/!/g, '！'),
-        content: `${content}`,
-      }
-    },
-  }], ],
+  plugins: ['@vuepress/back-to-top', 'vuepress-plugin-smooth-scroll', ['vuepress-plugin-medium-zoom', {
+    selector: '.content__default img'
+  }]],
   themeConfig: {
     repo: 'CatalysmsServerManager/docs',
     repoLabel: 'Contribute',
