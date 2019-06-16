@@ -16,6 +16,10 @@
   "author": "Catalysm",
   "license": "ISC",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
     "vuepress": "^1.0.1"
+  },
+  "dependencies": {
+    "vuepress-plugin-smooth-scroll": "0.0.3"
   }
 }
