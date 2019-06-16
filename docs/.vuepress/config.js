@@ -11,7 +11,7 @@ module.exports = {
     }
   },
   ga: 'UA-104087733-8',
-  plugins: ['@vuepress/back-to-top'],
+  plugins: ['@vuepress/back-to-top', 'vuepress-plugin-smooth-scroll'],
   themeConfig: {
     repo: 'CatalysmsServerManager/docs',
     repoLabel: 'Contribute!',
