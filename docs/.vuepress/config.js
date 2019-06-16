@@ -31,7 +31,7 @@ module.exports = {
         // label for this locale in the language dropdown
         label: 'English',
         // text for the edit-on-github link
-        editLinkText: 'Edit this page on GitHub',
+        editLinkText: 'Help us improve this page!',
         sidebar: sidebars['en'],
         nav: navs['en']
       },
@@ -39,7 +39,7 @@ module.exports = {
         lang: 'nl',
         selectText: 'Taal',
         label: 'Nederlands',
-        editLinkText: 'Bewerk deze pagina op Github',
+        editLinkText: 'Help ons deze pagina te verbeteren!',
         sidebar: sidebars['nl'],
         nav: navs['nl']
       }

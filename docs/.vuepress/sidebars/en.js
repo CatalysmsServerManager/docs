@@ -28,7 +28,8 @@ module.exports = {
         },
         '/en/CSMM/catching-dupers',
         '/en/CSMM/common-admin-tasks',
-        '/en/CSMM/support'
+        '/en/CSMM/support',
+        '/en/contributing'
     ],
     '/en/CPM/' : [
       '/en/CPM/',
@@ -38,15 +39,17 @@ module.exports = {
           '/en/CPM/advanced-claims',
         ]
       },
-      '/en/CPM/pvpve-server-configuration'
-      
+      '/en/CPM/pvpve-server-configuration',
+      '/en/contributing'
     ],
     '/en/3SM/' : [
       '/en/3SM/',
       '/en/3SM/chat-commands',
-      '/en/3SM/console-commands'
+      '/en/3SM/console-commands',
+      '/en/contributing'
     ],
     '/en/7D2D/' : [
-      '/en/7D2D/switching-to-beta-versions'
+      '/en/7D2D/switching-to-beta-versions',
+      '/en/contributing'
     ],
 }
