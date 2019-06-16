@@ -10,12 +10,19 @@ module.exports = {
         },
     ],
     '/en/CPM/' : [
-
+      '/en/CPM/',
+      {
+        title: 'Functional overview',
+        children: [
+          '/en/CPM/advanced-claims',
+        ]
+      },
+      
     ],
     '/en/3SM/' : [
 
     ],
     '/en/7D2D/' : [
-
+      '/en/7D2D/switching-to-beta-versions'
     ],
 }
