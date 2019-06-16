@@ -4,8 +4,6 @@ If you were trying to answer a question and these docs don’t provide you with 
 
 The best way to contact someone is via our [Discord server](https://catalysm.net/discord). In there, you can either ask your question in the appropriate support channel or you can create a personal ticket with Tickety discord bot.
 
-  
-
 ::: warning
  Please do **NOT** PM staff directly. You will have to wait until this specific person sees your message. It is **MUCH** better to ask your question directly in the discord where multiple people can see it and answer. Also consider the fact that many people do not appreciate being PMed for general questions.
 :::
@@ -21,8 +19,6 @@ If you have a general question, it’s better to ask in the public channel as yo
   
 ## Additional info
 
-  
-
 To provide support, we might need more info. This will help us debug the problem and help you faster. If a support staff member asked you to provide more info, it's best to create a new ticket and paste all the info there. Helps to keep issues separate.
 
 ### Problems with the website
@@ -35,11 +31,9 @@ Check your browser console for errors. CSMM can capture errors and display debug
 
 To open the console you can either click your browsers' 'more options' button or you can use one of these keybinds
 
-      - Chrome: Press Ctrl+Shift+J (Windows / Linux) or Cmd+Opt+J (Mac).
-
-      - Firefox: Press Ctrl+Shift+K (Windows / Linux) or Cmd+Opt+K (Mac).
-
-      - Edge: Press Ctrl+Shift+J
+  - Chrome: Press Ctrl+Shift+J (Windows / Linux) or Cmd+Opt+J (Mac)
+  - Firefox: Press Ctrl+Shift+K (Windows / Linux) or Cmd+Opt+K (Mac)
+  - Edge: Press Ctrl+Shift+J
 
 After that, select the 'console' tab to view info and error messages from the website. Try refreshing the page, doing the action that triggers the error and look at console then. You might see a red error message, yellow warnings (less important, usually wont break something) or a custom error message like this:
 

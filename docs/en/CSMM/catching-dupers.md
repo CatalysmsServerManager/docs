@@ -10,7 +10,7 @@ Every server has dupers, and they're a pain in the ass to catch. Unless you lite
 
 A player reported to an Admin that they'd found a box in the region of 2000W/2500S that had two full stacks of vitamins one real-world day after a server wipe, and that they had just seen a specific player leaving the area. It seemed like a slam dunk, but it turned out to be much more complicated, as it always does.
 
-##Proving Innocence
+## Proving Innocence
 
 The first part was fairly simple. A player had been accused of duping vitamins. We went into Player Tracking, selected the player, picked the last few days, and hit Get Data. Looking through the inventory log, in the one day since the wipe, CSMM had never seen this player have a vitamin in their inventory. Obviously this was not the guy.
 
