@@ -27,7 +27,8 @@ module.exports = {
           ]
         },
         '/en/CSMM/catching-dupers',
-        '/en/CSMM/common-admin-tasks'
+        '/en/CSMM/common-admin-tasks',
+        '/en/CSMM/support'
     ],
     '/en/CPM/' : [
       '/en/CPM/',
