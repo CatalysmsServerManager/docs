@@ -12,6 +12,7 @@ module.exports = {
           title: 'Configuration',
           children: [
             '/en/CSMM/roles',
+            '/en/CSMM/discord-integration'
           ]
         },
         {
