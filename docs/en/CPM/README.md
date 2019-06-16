@@ -14,4 +14,49 @@ Version: [5.39 (A16)](/releases/CPM/CSMM_Patrons_5.39.zip)
 
 Optional: Download the Reset Regions / Adv. Claims map update.
 
- Admins: Updating from versions below 5.26 will need to delete the following file before restarting your server: /saves/Random Gen/\<mapname\>/CSMM_Patrons.bin CPM is an extension of Coppi's Mod, which means that you must remove Coppi's mod from your server, or it will conflict with CPM.Are you a 7 Days Server Owner who wants to use CPM on your server?Use our installation guide to guide yourself through installing the CPM plugin on your server.Check out the Functional Overview page to see some of the Features available to CPM Admins, and configure them as you desire.Are you a 7 Days Player who wants to know more about what CPM can do for you?Check out the Player Chat Commands page for information on what you can type in-game to trigger features or get help.Need some direct help?Come visit us on Discord over at the Catalysm Dev Server
+
+::: warning
+ Admins: **Updating from versions below 5.26** will need to delete the following file before restarting your server: /saves/Random Gen/\<mapname\>/CSMM_Patrons.bin CPM is an extension of Coppi's Mod, which means that you must remove Coppi's mod from your server, or it will conflict with CPM.
+ :::
+
+
+# Installation
+
+[Go to start of metadata](#page-metadata-start)
+
+## Step-by-step guide
+
+1.  Download the latest version of the mod.
+2.  Extract the zip to a new folder. You will see a License.txt and a folder with the actual mod files.
+3.  Copy the folder with the mod files to your servers Mods/ directory. If the Mods/ folder does not exist yet, you have to create it.
+
+Your Mods/ folder structure should look similar to this: 
+
+```
+sdtdserver@7dtddev:~/serverfiles/Mods$ tree .
+
+├── Allocs_CommandExtensions
+│   ├── AllocsCommands.dll
+│   └── ModInfo.xml
+├── Allocs_CommonFunc
+│   ├── 7dtd-server-fixes.dll
+│   ├── 7dtd-server-fixes_version.txt
+│   └── ModInfo.xml
+├── Allocs_WebAndMapRendering
+│   ├── MapRendering.dll
+│   ├── ModInfo.xml
+└── CSMM_Patrons
+├── CSMM_Patrons.dll
+└── ModInfo.xml
+```
+([Allocs server fixes](https://7dtd.illy.bz/wiki/Server%20fixes#Download) is included here as it is a VERY common mod for servers)
+
+::: warning
+Make sure the CSMM\_Patrons folder has the ModInfo.xml and CSMM\_Patrons.dll file!  
+:::
+
+4\. Restart your server.
+
+5\. Check if the mod is loaded by executing the "version" command on your server. If CPM shows up in this list, you're good to go!
+
+Note that some hosting providers do not allow you to upload .dll files! In this case you will need to ask help from their customer support in order to install CPM.
