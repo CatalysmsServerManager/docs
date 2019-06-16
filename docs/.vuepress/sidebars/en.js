@@ -8,8 +8,19 @@ module.exports = {
             '/en/CSMM/allocs',
           ]
         },
-        '/en/CSMM/custom-commands',
-        '/en/CSMM/hooks',
+        {
+          title: 'Configuration',
+          children: [
+            '/en/CSMM/roles',
+          ]
+        },
+        {
+          title: 'Advanced',
+          children: [
+            '/en/CSMM/custom-commands',
+            '/en/CSMM/hooks',
+          ]
+        },
         '/en/CSMM/catching-dupers',
         '/en/CSMM/common-admin-tasks'
     ],

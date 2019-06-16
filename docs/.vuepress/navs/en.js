@@ -1,6 +1,6 @@
 module.exports = [{
     text: 'CSMM',
-    link: '/en/CSMM'
+    link: '/'
   },
   {
     text: 'CPM',
