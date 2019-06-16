@@ -8,6 +8,10 @@ module.exports = {
             '/en/CSMM/allocs',
           ]
         },
+        '/en/CSMM/custom-commands',
+        '/en/CSMM/hooks',
+        '/en/CSMM/catching-dupers',
+        '/en/CSMM/common-admin-tasks'
     ],
     '/en/CPM/' : [
       '/en/CPM/',
@@ -17,10 +21,13 @@ module.exports = {
           '/en/CPM/advanced-claims',
         ]
       },
+      '/en/CPM/pvpve-server-configuration'
       
     ],
     '/en/3SM/' : [
-
+      '/en/3SM/',
+      '/en/3SM/chat-commands',
+      '/en/3SM/console-commands'
     ],
     '/en/7D2D/' : [
       '/en/7D2D/switching-to-beta-versions'
