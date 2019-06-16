@@ -11,7 +11,11 @@ module.exports = {
     }
   },
   themeConfig: {
-    lastUpdated: 'true',
+    repo: 'CatalysmsServerManager/docs',
+    repoLabel: 'Contribute!',
+    docsDir: 'docs',
+    editLinks: true,
+    lastUpdated: 'Last updated',
     nav: [{
         text: 'Home',
         link: '/'
@@ -28,7 +32,6 @@ module.exports = {
         selectText: 'Languages',
         // label for this locale in the language dropdown
         label: 'English',
-        editLinks: true,
         // text for the edit-on-github link
         editLinkText: 'Edit this page on GitHub',
         sidebar: [
