@@ -40,8 +40,13 @@ module.exports = {
           '/en/CPM/reset-regions',
         ]
       },
-      '/en/CPM/chat-commands',
-      '/en/CPM/console-commands',
+      {
+        title: 'Commands',
+        children: [
+          '/en/CPM/chat-commands',
+          '/en/CPM/console-commands',
+        ]
+      },
       '/en/CPM/pvpve-server-configuration',
       '/en/contributing'
     ],
