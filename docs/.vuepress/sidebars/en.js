@@ -37,6 +37,7 @@ module.exports = {
         title: 'Functional overview',
         children: [
           '/en/CPM/advanced-claims',
+          '/en/CPM/reset-regions',
         ]
       },
       '/en/CPM/pvpve-server-configuration',
