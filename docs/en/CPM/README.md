@@ -7,10 +7,8 @@ title: CSMM Patrons Mod (CPM)
 CSMM Patron's Mod (CPM) is an API mod that is free for anyone, who wants to use. It's in no way affiliated with Catalysm's Server Manager and Monitor. It's name was explicitly chosen to make sure other servermanagers are not hijacking its fuctionality and present it as their own, but it can be used by any servermanager. The author (Prisma501) is a CSMM user that has grown to like CSMM very much and wants to contribute to it by offering support and feature requests for his API mod to supporters of CSMM. Support and feature requests are therefore reserved for those supporters (Specific exception for users that are using Botman with BCM). CPM is a forked extension of Coppi's Mod, extending the functionality of existing commands, and adding new commands and features.CPM - Features like the Advanced Claims, Reset Regions, Location Tracking, Protective Bubble, Nighttime Announcer, Old LCB system, Trading system, and more. These features include both console commands, as well as chat commands.
 
 # Downloads
-Current Version
-Version: [10.5 (A17.4 b4 Stable)](/releases/CPM/CSMM_Patrons_10.5.zip)
 
-Version: [5.39 (A16)](/releases/CPM/CSMM_Patrons_5.39.zip)
+[Current Version](https://github.com/Prisma501/CSMM-Patrons-Mod/releases)
 
 Optional: Download the Reset Regions / Adv. Claims map update.
 
@@ -21,8 +19,6 @@ Optional: Download the Reset Regions / Adv. Claims map update.
 
 
 # Installation
-
-[Go to start of metadata](#page-metadata-start)
 
 ## Step-by-step guide
 
