@@ -1,3 +1,6 @@
+const sidebars = require('./sidebars');
+const navs = require('./navs');
+
 module.exports = {
   title: 'CSMM',
   description: 'Documentation for the web based 7 days to die server manager',
@@ -11,50 +14,34 @@ module.exports = {
     }
   },
   ga: 'UA-104087733-8',
-  plugins: ['@vuepress/back-to-top', 'vuepress-plugin-smooth-scroll'],
+  plugins: ['@vuepress/back-to-top', 'vuepress-plugin-smooth-scroll', ['vuepress-plugin-medium-zoom', {
+    selector: '.content__default img'
+  }]],
   themeConfig: {
     repo: 'CatalysmsServerManager/docs',
-    repoLabel: 'Contribute!',
+    repoLabel: 'Contribute',
     docsDir: 'docs',
     editLinks: true,
     lastUpdated: 'Last updated',
-    nav: [{
-        text: 'Home',
-        link: '/'
-      },
-      {
-        text: 'Discord',
-        link: 'https://catalysm.net/discord/'
-      },
-    ],
-
     locales: {
       '/': {
+        lang: 'en',
         // text for the language dropdown
         selectText: 'Languages',
         // label for this locale in the language dropdown
         label: 'English',
         // text for the edit-on-github link
-        editLinkText: 'Edit this page on GitHub',
-        sidebar: [
-          '/',
-          {
-            title: 'Installation',
-            children: [
-              '/installation',
-              '/allocs',
-            ]
-          },
-        ],
+        editLinkText: 'Help us improve this page!',
+        sidebar: sidebars['en'],
+        nav: navs['en']
       },
       '/nl/': {
+        lang: 'nl',
         selectText: 'Taal',
         label: 'Nederlands',
-        editLinkText: 'Bewerk deze pagina op Github',
-        sidebar: [
-          '/nl/',
-          '/nl/installation',
-        ],
+        editLinkText: 'Help ons deze pagina te verbeteren!',
+        sidebar: sidebars['nl'],
+        nav: navs['nl']
       }
     }
   }
