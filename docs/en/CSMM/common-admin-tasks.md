@@ -1,7 +1,7 @@
 
 # CSMM/CPM Common Admin Tasks
 
-So, you've got a 7 Days To Die server set up, got CSMM connected to it for management, and have [CPM](https://confluence.catalysm.net/pages/viewpage.action?pageId=1114182) installed and running. So...now what? Are there some standard things every server admin must do? Settings you could set that will make things better/simpler/safer for the server? This page will get you started with some of the more common follow-on tasks that veteran CSMM server managers typically do once everything is up and running.
+So, you've got a 7 Days To Die server set up, got CSMM connected to it for management, and have [CPM](/en/cpm) installed and running. So...now what? Are there some standard things every server admin must do? Settings you could set that will make things better/simpler/safer for the server? This page will get you started with some of the more common follow-on tasks that veteran CSMM server managers typically do once everything is up and running.
 
 This page assumes that you have completed the basic setup process covered in the [CSMM Installation Guide](https://confluence.catalysm.net/display/CSM/CSMM+Installation+Guide), and that you are at least familiar with the medium/advanced topic areas such as [Roles](https://confluence.catalysm.net/display/CSM/Roles), [Scheduled Commands](https://confluence.catalysm.net/pages/viewpage.action?pageId=1114342), etc. Detailed explanations for how to use each part of the tool are _not_ covered here.
 
