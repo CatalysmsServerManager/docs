@@ -1,8 +1,8 @@
 ---
-title: (Optional) Switching to experimental/BETA versions
+title: (Optional) Switching to experimental/beta versions
 ---
 
-# Switching to experimental/BETA versions
+# Switching to experimental/beta versions
 
 Remember to login with user sdtdserver to perform any action with server (start/stop/update etc.)
 
