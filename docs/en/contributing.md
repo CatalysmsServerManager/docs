@@ -17,6 +17,34 @@ This will install the necessary dev dependencies, so that you can view the site 
 
 To submit changes, please create a [pull request](https://help.github.com/en/articles/about-pull-requests). 
 
+### Step by step guide
+
+First we start off by finding the page you want to make a change to. At the bottom of the page, you will find a edit link.
+
+![](/assets/images/contributing/pull-request-1.png)
+
+This will open up a link to Github where you can create a fork of the repository. This is essentially a copy of the repository on your own Github profile.
+
+![](/assets/images/contributing/pull-request-2.png)
+
+After creating the fork, you will see a web editor where you can make the change(s) you want. After making the change(s), scroll down and save your work.
+
+![](/assets/images/contributing/pull-request-3.png)
+
+Upon saving your changes, you will see an overview. Your work is now saved in your personal fork. To send your changes to the actual repository, you must now create a pull request (PR).
+
+![](/assets/images/contributing/pull-request-4.png)
+
+Give your PR a useful title and optionally a description.
+
+![](/assets/images/contributing/pull-request-5.png)
+
+Finally, you will see the PR. Some automated checks will happen, checking if the config still works and checking if the build process succeeds. You will also get a deploy preview so you can see what your change(s) will look like on the real website.
+
+![](/assets/images/contributing/pull-request-6.png)
+
+At this point, a maintainer can accept your change(s). This will merge your forked repo with the main one and your changes will go live!
+
 ## Adding a new page
 
 - Create a new file in the appropriate location
