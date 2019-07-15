@@ -28,6 +28,7 @@ module.exports = {
     },
     '/en/CSMM/catching-dupers',
     '/en/CSMM/common-admin-tasks',
+    '/en/CSMM/configuration-examples',
     '/en/CSMM/support',
     '/en/contributing'
   ],
