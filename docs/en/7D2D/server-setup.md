@@ -687,23 +687,14 @@ sdtdserver@server7dt:~$
 
 Configs file are created, system is ready to run.
 
-
-7DTD server setup and maintance : Configuring network router. Portforarding and firewalls  
-
-1.  [7DTD server setup and maintance](index.html)
-2.  ["Creating and managing 7DTD server" grandpa's cookbook](5210171.html)
-3.  [Server setup (Linux)](5210477.html)
-
-## Configuring network router. Portforarding and firewalls
-
-Created by DobriyDed, last modified on Dec 09, 2018
+## Network configuration
 
 
 :::warning
 Network configuration  is most troubled part for new gameserver owners. You can pass this section with ease or can stuck forever. Most people abandon the idea of creating their own server because of the inability to properly configure the network and begins to consider the word "port forwarding" offensive ![(big grin)](images/icons/emoticons/biggrin.svg "(big grin)")
 :::
 
-### Network configuration - port forward 
+### Port forwarding 
 
 [Port forwarding](https://en.wikipedia.org/wiki/Port_forwarding) in a router of your server network, needs to be configured to allow peoples from outside of your LAN to access some gameserver ports, required to connect. It involves [NAT](https://en.wikipedia.org/wiki/Network_address_translation) and [FIREWALL](https://en.wikipedia.org/wiki/Firewall_(computing)) configuration of your router.  This procedure is different for each router model and cannot be briefly described in this article. 
 
@@ -729,11 +720,11 @@ But be warned! Its for A16, not A17 version
 
   
 
-### Network configuration - router firewall
+### Router firewall
 
 After ports are opened in previous chapter, you need to configure router firewall to allow connection from outside. 
 
-### Network configuration - server firewall
+### Server firewall
 
 By default server firewall is disabled. You can enable it and configure it for additional security, but this section is not covered here and should be studied on your own.
 
