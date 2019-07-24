@@ -39,7 +39,7 @@ These examples show you some of the things possible with CSMMs custom modules. N
     
     For healiing players, Prisma added a new modlet at [Healme modlet](http://www.necropolis.at/healmebuff.zip)
     You could add new custom commands, one for players like $healme
-    one for admins like $heal <playername>
+    one for admins like $heal PLAYERNAME
     
     Here is an example how to create the both custom commands
     <example1>
