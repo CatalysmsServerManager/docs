@@ -44,12 +44,12 @@ These examples show you some of the things possible with CSMMs custom modules. N
     "healme" is the String you need to call in your custom command. It will give a player godmode for a given time (in seconds) use the wait() command.
     
     Example:
+    
 `buffplayer ${player.entityId} healme; wait(6);debuffplayer ${player.entityId} healme;debuffplayer  ${player.entityId} buffLegSprained;debuffplayer ${player.entityId} buffLegBroken; say "Regeneration completed!"`
     
-    Here is an example how to create the both custom commands
-    <example1>
-    <example2>
-
+ Here a Player will be healed over 6 seconds, broken legs will be repaired ;)
+ You can use "healme" also for just an admin command like %heal PLAYERNAME, where PLAYERNAME is stored in an argument.
+ 
 - Let a player take his LCB
 
     cpm-grablcb ${entityId} 10;sayplayer ${steamId} "Your LCB is in your bag."
