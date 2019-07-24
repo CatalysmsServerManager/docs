@@ -37,9 +37,14 @@ These examples show you some of the things possible with CSMMs custom modules. N
 
     buffplayer ${entityId} firstAid; debuffplayer ${entityId} bleeding; sayplayer ${entityId} "Healed!!"
     
-    For healiing players, Prisma added a new modlet at [Healme modlet](http://www.necropolis.at/HealmeBuff.zip)
+    For healiing players, Prisma was coding a new [Healme modlet](http://www.necropolis.at/HealmeBuff.zip)
     You could add new custom commands, one for players like $healme
     one for admins like $heal PLAYERNAME
+    
+    "healme" is the String you need to call in your custom command. It will give a player godmode for a given time (in seconds) use the wait() command.
+    
+    Example:
+`buffplayer ${player.entityId} healme; wait(6);debuffplayer ${player.entityId} healme;debuffplayer  ${player.entityId} buffLegSprained;debuffplayer ${player.entityId} buffLegBroken; say "Regeneration completed!"`
     
     Here is an example how to create the both custom commands
     <example1>
