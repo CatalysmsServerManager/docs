@@ -47,8 +47,8 @@ These examples show you some of the things possible with CSMMs custom modules. N
     
 `buffplayer ${player.entityId} healme; wait(6);debuffplayer ${player.entityId} healme;debuffplayer  ${player.entityId} buffLegSprained;debuffplayer ${player.entityId} buffLegBroken; say "Regeneration completed!"`
     
- Here a Player will be healed over 6 seconds, broken legs will be repaired ;)
- You can use "healme" also for just an admin command like %heal PLAYERNAME, where PLAYERNAME is stored in an argument.
+ Here a Player will be healed over 6 seconds, broken legs will be repaired.
+ You can use "healme" also for just an admin command like $heal PLAYERNAME, where PLAYERNAME is stored in an argument.
  
 - Let a player take his LCB
 
