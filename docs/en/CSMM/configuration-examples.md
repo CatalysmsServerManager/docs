@@ -41,7 +41,7 @@ These examples show you some of the things possible with CSMMs custom modules. N
     You could add new custom commands, one for players like $healme
     one for admins like $heal PLAYERNAME
     
-    "healme" is the String you need to call in your custom command. It will give a player godmode for a given time (in seconds) use the wait() command.
+    "healme" is the String you need to call in your custom command. It will give a player godmode for a given time (in seconds) using the wait() command.
     
     Example:
     
