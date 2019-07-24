@@ -36,7 +36,7 @@ These examples show you some of the things possible with CSMMs custom modules. N
 - Heal command
 
     buffplayer ${entityId} firstAid; debuffplayer ${entityId} bleeding; sayplayer ${entityId} "Healed!!"
-    For healiing players, Prisma added a new modlet at <link>
+    For healiing players, Prisma added a new modlet at http://www.necropolis.at/healmebuff.zip "Healme modlet"
     You could add new custom commands, one for players like $healme and one for admins like $heal <playername>
     
     Here is an example how to create the both custom commands
