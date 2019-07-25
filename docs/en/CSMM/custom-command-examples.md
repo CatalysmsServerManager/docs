@@ -53,7 +53,7 @@
     
    Using the example above but with 2 arguments, one for the playername and one for the time in seconds where a player is getting the      godmode. Players cant fly or do other admin stuff, but they get no damage.
    
-   `sayplayer ${playername} "An admin gives you the godmode for ${time} seconds";buffplayer ${player.entityId} healme; wait(${time});debuffplayer ${playername} healme; sayplayer ${playername} "The godmode is now disabled"
+   `sayplayer ${playername} "An admin gives you the godmode for ${time} seconds";buffplayer ${playername} healme; wait(${time});debuffplayer ${playername} healme; sayplayer ${playername} "The godmode is now disabled"
  
 - Let a player take his LCB
 
