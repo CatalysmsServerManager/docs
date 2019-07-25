@@ -28,7 +28,14 @@ module.exports = {
     },
     '/en/CSMM/catching-dupers',
     '/en/CSMM/common-admin-tasks',
-    '/en/CSMM/configuration-examples',
+    {
+      title: 'Configuration examples',
+      children: [
+        '/en/CSMM/configuration-examples',
+        '/en/CSMM/custom-command-examples',
+        '/en/CSMM/hooks-examples',
+      ]
+    },
     '/en/CSMM/support',
     '/en/contributing'
   ],
