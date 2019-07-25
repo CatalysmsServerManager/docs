@@ -114,6 +114,10 @@ Allows you to define an area as small as 1 block, along with a maximum trigger h
 
 This is used for creating hostile free areas. All hostiles will despawn in this type of advanced claim.
 
+:::warning
+Traders are marked as hostile by default! If you do not want your traders to dissapear, consider using the [no hostile traders modlet](/assets/public/modlets/No_Hostile_Traders.zip)
+:::
+
 ### Openhours
 
 Similar to a Normal claim, but with assigned opening hours, like a trader. Particularly useful to protect lobby or trading areas from being overwhelmed of players attempt to hide there during horde night; set the opening hours to 0400 to 2200 and players will get teleported out if they attempt to enter outside the specified hours.
