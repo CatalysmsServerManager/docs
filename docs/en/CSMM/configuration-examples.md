@@ -11,6 +11,9 @@ These examples show you some of the things possible with CSMMs custom modules. N
 - High level players need an extra challenge? Give them some zombies to fight!
 
     say "Good luck!" ;multipleentityspawn ${entityId} 15 @ 4 5 6 4 5 6 7 8 9 7 8 9 10 11 12 11 10 12 17 18 19  61 61 61 70 70 70 58 59 58 59 58 59 54 55 54 55;wait(240) ;say "Hope you're ready for round 2, here it comes!" ;multipleentityspawn ${entityId} 15 @ 4 5 6 4 5 6 7 8 9 7 8 9 10 11 12 11 10 12 17 18 19 61 61 61 70 70
+    
+    If you want to give the player a reward, then add:
+    `say "The reward is coming!" ;wait(5);Se ${entityId} 103;say "A supply box was landing next to you."`
 
 - Let players control the weather. Stop rain/snow/... . This uses a custom argument to specify the type of weather to stop.
 
@@ -36,7 +39,20 @@ These examples show you some of the things possible with CSMMs custom modules. N
 - Heal command
 
     buffplayer ${entityId} firstAid; debuffplayer ${entityId} bleeding; sayplayer ${entityId} "Healed!!"
-
+    
+    For healiing players, Prisma was coding a new [Healme modlet](http://www.necropolis.at/HealmeBuff.zip)
+    You could add new custom commands, one for players like $healme
+    one for admins like $heal PLAYERNAME
+    
+    "healme" is the String you need to call in your custom command. It will give a player godmode for a given time (in seconds) using the wait() command.
+    
+    Example:
+    
+`buffplayer ${player.entityId} healme; wait(6);debuffplayer ${player.entityId} healme;debuffplayer  ${player.entityId} buffLegSprained;debuffplayer ${player.entityId} buffLegBroken; say "Regeneration completed!"`
+    
+ Here a Player will be healed over 6 seconds, broken legs will be repaired.
+ You can use "healme" also for just an admin command like $heal PLAYERNAME, where PLAYERNAME is stored in an argument.
+ 
 - Let a player take his LCB
 
     cpm-grablcb ${entityId} 10;sayplayer ${steamId} "Your LCB is in your bag."
