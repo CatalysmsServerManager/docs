@@ -101,7 +101,7 @@
     As you can see in the chatwindow, the server is starting with the information to all players...the event is starting.
     The landclaimblock from the bad player will be removed, the BP will be arrested for the time you give in PORTALTIME.
     The command is now creating a waypoint so all players can $join the event.
-    After the given time (PORTALTIME), the BP will be released out of the jail and ported to his bedroll.
+    After the given time (PORTALTIME), the created waypoint will be deleted, the BP will be released out of the jail and ported to his bedroll.
     
     Step 2 - Players joining the event
     
