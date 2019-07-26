@@ -70,6 +70,8 @@
     Let me show you 2 examples how this command can work in your custom commands. In this examples my custom command is called jail.
     The 'jail' claim must exist for this command to function.
     
+    (Adding a simple Jail (11x11 size) type in console: ccc radius 5 YOURNAME jail 0 reversed)
+    
     I am using three arguments: playername, timer, reason
     
     Example 1:
