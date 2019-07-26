@@ -83,3 +83,34 @@
     `arrest ${playername}; say "${playername} is now arrested for ${timer} seconds"; say "Reason: ${reason}"; wait(${timer}); release   ${playername}; say "${playername} you are now free again, please dont brake our rules"`
 
     Chatcommand: $jail Corran 3600 "You have broken the Rules"
+  
+  - Starting a raidevent against a bad player (just use it as admin)
+  
+    How it works:
+    If one of your players was working hard against your rules, you can start a raiding-event where all players can join.
+    We just need 3 custom commands: 1 for the raid itself, 1 so players can join the event, and optional 1 where players can tp home to  the bedroll.
+    
+    The main custom command looks a little bit big, but we just need two arguments and it just works if you have cpm installed.
+    The custom commands i am using are $raid $join $leave and the arguments are "badplayer" and "portaltime"
+    
+    Let´s start with the main:
+    
+    `say "A raiding event will be opened"; wait(10); say "Removing the claimblock from ${badplayer} ...check"; wait(5);  grablcb ${badplayer} 100; say "Landclaimblock removed from Player ${badplayer}";wait(5); arrest ${badplayer}; say "${badplayer} arrested for ${portaltime} seconds "; wait(5); say "opening the eventportal...";wait(5); wpc add raid ${player.positionX} ${player.positionY} ${player.positionZ}; say "Raidportal opened for ${portaltime} seconds"; say "Use $join to join the raid, use $leave to jump back to your bedroll"; wait(${portaltime}); say "The raidportal will be closed in 2 minutes";wait(120); wpc remove raid;say "Raidportal closed!";wait(5); release ${badplayer}; say "${badplayer} released from the arrest";wait(5);teleportplayerhome ${badplayer}`
+    
+    The admin should port to the base of the bad player and start the event (in my case) with $raid BADPLAYER PORTALTIME
+    As you can see in the chatwindow, the server is starting with the information to all players...the event is starting.
+    The landclaimblock from the bad player will be removed, the BP will be arrested for the time you give in PORTALTIME.
+    The command is now creating a waypoint so all players can $join the event.
+    After the given time (PORTALTIME), the BP will be released out of the jail and ported to his bedroll.
+    
+    Step 2 - Players joining the event
+    
+    `mvw ${player.steamId} raid ; say "${player.name} joined the raid"`
+    
+    Step 3- After the event, players port home
+    
+    ` teleportplayerhome  ${player.steamId}; say "${player.steamId} leaved the event"`
+    
+    Enjoy ;)
+    
+    
