@@ -73,9 +73,11 @@
     I am using three arguments: playername, timer, reason
     
     Example 1:
+    
     `arrest ${playername} ${timer}; say "${playername} is now arrested for ${timer} seconds"; say "Reason: ${reason}"`
     
     Example 2:
+    
     `arrest ${playername}; say "${playername} is now arrested for ${timer} seconds"; say "Reason: ${reason}"; wait(${timer}); release   ${playername}; say "${playername} you are now free again, please dont brake our rules"`
 
     Chatcommand: $jail Corran 3600 "You have broken the Rules"
