@@ -44,7 +44,7 @@
     
     Example:
     
-`buffplayer ${player.entityId} healme; wait(6);debuffplayer ${player.entityId} healme;debuffplayer  ${player.entityId} buffLegSprained;debuffplayer ${player.entityId} buffLegBroken; say "Regeneration completed!"`
+    `buffplayer ${player.entityId} healme; wait(6);debuffplayer ${player.entityId} healme;debuffplayer  ${player.entityId} buffLegSprained;debuffplayer ${player.entityId} buffLegBroken; say "Regeneration completed!"`
     
  Here a Player will be healed over 6 seconds, broken legs will be repaired.
  You can use "healme" also for just an admin command like $heal PLAYERNAME, where PLAYERNAME is stored in an argument.
@@ -53,7 +53,7 @@
     
    Using the example above but with 2 arguments, one for the playername and one for the time in seconds where a player is getting the      godmode. Players cant fly or do other admin stuff, but they get no damage.
    
-   `sayplayer ${playername} "An admin gives you the godmode for ${time} seconds";buffplayer ${playername} healme; wait(${time});debuffplayer ${playername} healme; sayplayer ${playername} "The godmode is now disabled"
+   `sayplayer ${playername} "An admin gives you the godmode for ${time} seconds";buffplayer ${playername} healme; wait(${time});debuffplayer ${playername} healme; sayplayer ${playername} "The godmode is now disabled"`
  
 - Let a player take his LCB
 
