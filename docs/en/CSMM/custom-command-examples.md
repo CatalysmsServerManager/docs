@@ -44,7 +44,7 @@
     
     Example:
     
-`buffplayer ${player.entityId} healme; wait(6);debuffplayer ${player.entityId} healme;debuffplayer  ${player.entityId} buffLegSprained;debuffplayer ${player.entityId} buffLegBroken; say "Regeneration completed!"`
+    `buffplayer ${player.entityId} healme; wait(6);debuffplayer ${player.entityId} healme;debuffplayer  ${player.entityId} buffLegSprained;debuffplayer ${player.entityId} buffLegBroken; say "Regeneration completed!"`
     
  Here a Player will be healed over 6 seconds, broken legs will be repaired.
  You can use "healme" also for just an admin command like $heal PLAYERNAME, where PLAYERNAME is stored in an argument.
@@ -53,7 +53,7 @@
     
    Using the example above but with 2 arguments, one for the playername and one for the time in seconds where a player is getting the      godmode. Players cant fly or do other admin stuff, but they get no damage.
    
-   `sayplayer ${playername} "An admin gives you the godmode for ${time} seconds";buffplayer ${playername} healme; wait(${time});debuffplayer ${playername} healme; sayplayer ${playername} "The godmode is now disabled"
+   `sayplayer ${playername} "An admin gives you the godmode for ${time} seconds";buffplayer ${playername} healme; wait(${time});debuffplayer ${playername} healme; sayplayer ${playername} "The godmode is now disabled"`
  
 - Let a player take his LCB
 
@@ -64,3 +64,45 @@
     (A16) `cpm-giveplus ${entityId} gunSniperRifle 1 600 0;cpm-giveplus ${entityId} gunAK47 1 600 0;cpm-giveplus ${entityId} 762mmBullet 350;cpm-giveplus ${entityId} meatStew 5;cpm-giveplus ${entityId} megaCrush 10;cpm-giveplus ${entityId} firstAidKit 10;sayplayer ${entityId} "Go get 'em Tiger!!"`
 
     (A17) `cpm-giveplus ${entityId} gunMR10 1 6 0;cpm-giveplus ${entityId} gunAK47 1 6 0;cpm-giveplus ${entityId} ammo762mmBulletFMJSteel 350;cpm-giveplus ${entityId} foodMeatStew 5;cpm-giveplus ${entityId} drinkCanMegaCrush 10;cpm-giveplus ${entityId} medicalFirstAidKit 10;sayplayer ${entityId} "Go get 'em Tiger!!"`
+    
+ - Arrest a player
+ 
+    Let me show you 2 examples how this command can work in your custom commands. In this examples my custom command is called jail.
+    The 'jail' claim must exist for this command to function.
+    
+    (Adding a simple Jail (11x11 size) type in console: ccc radius 5 YOURNAME jail 0 reversed)
+    
+    I am using three arguments: playername, timer, reason
+    
+    Example 1:
+    
+    `arrest ${playername} ${timer}; say "${playername} is now arrested for ${timer} seconds"; say "Reason: ${reason}"`
+    
+    Example 2:
+    
+    `arrest ${playername}; say "${playername} is now arrested for ${timer} seconds"; say "Reason: ${reason}"; wait(${timer}); release   ${playername}; say "${playername} you are now free again, please dont brake our rules"`
+
+    Chatcommand: $jail Corran 3600 "You have broken the Rules"
+  
+  - Starting a raidevent against a bad player
+  
+    How it works:
+    If one of your players was breaking the rules, you can start a raiding-event where all players can join.
+    We just need 3 custom commands: 1 for the raid itself, 1 so players can join the event, and an optional one where players can tp home to the bedroll.
+    
+The main custom command looks a little bit big, but we just need two arguments and it requires CPM to be installed. The custom commands I am using are $raid $join $leave and the arguments are "badplayer" and "portaltime"
+    
+Step 1 - the main command
+    
+    `say "A raiding event will be opened"; wait(10); say "Removing the claimblock of${badplayer}"; wait(5);  grablcb ${badplayer} 100; say "Landclaimblock removed from player ${badplayer}";wait(5); arrest ${badplayer}; say "${badplayer} arrested for ${portaltime} seconds "; wait(5); say "Opening the eventportal...";wait(5); wpc add raid ${player.positionX} ${player.positionY} ${player.positionZ}; say "Raidportal opened for ${portaltime} seconds"; say "Use $join to join the raid, use $leave to jump back to your bedroll"; wait(${portaltime}); say "The raidportal will be closed in 2 minutes";wait(120); wpc remove raid;say "Raidportal closed!";wait(5); release ${badplayer}; say "${badplayer} released from the arrest";wait(5);teleportplayerhome ${badplayer}`
+    
+The admin should port to the base of the bad player and start the event (in my case) with $raid BADPLAYER PORTALTIME
+As you can see in the chatwindow, the server is starting with the information to all players. The landclaimblock from the bad player will be removed, the bad player will be arrested for the time you give in PORTALTIME. The command is now creates a waypoint so all players can $join the event. After the given time (PORTALTIME), the created waypoint will be deleted, the bad player will be released out of the jail and ported to his bedroll.
+    
+Step 2 - Players joining the event ($join)
+    
+    `mvw ${player.steamId} raid ; say "${player.name} joined the raid"`
+    
+Step 3- After the event, players port home ($leave)
+    
+    ` teleportplayerhome  ${player.steamId}; say "${player.name} left the raid"`
