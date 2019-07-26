@@ -109,7 +109,7 @@
     
     Step 3- After the event, players port home
     
-    ` teleportplayerhome  ${player.steamId}; say "${player.steamId} leaved the event"`
+    ` teleportplayerhome  ${player.steamId}; say "${player.name} leaved the event"`
     
     Enjoy ;)
     
