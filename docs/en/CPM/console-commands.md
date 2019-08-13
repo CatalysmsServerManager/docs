@@ -694,6 +694,17 @@ You can type 'help' to see all possible commands, and any command provided by CP
             </td>
             <td>Teleport an entity to the specified player using their entity ID.</td>
         </tr>
+         <tr role="row">
+            <td>eoc (executeonclient)</td>
+            <td>Execute local only commands remotely on client</td>
+        </tr>
+        <tr role="row">
+            <td>
+                <p><strong>eoc &lt;entityId/steamId/name&gt; &quot;commamd param1 param2&quot; </strong></p>
+                <p>eoc 171 &quot;dm&quot;</p>
+            </td>
+            <td>Executes dm on local client of player with entityId 171.<BR>Example of local only  commands:<BR> sg (sg OptionsFieldOfViewNew x!), automove, cm, dm, givequest, removequest, giveself, giveselfxp, buff, debuff, exhausted, gfx, dms, bents, memcl, pois, settempunit, screeneffect, showhits, starve, thirsty, xui, spawnsupplycrate etc etc</td>
+        </tr>
         <tr role="row">
             <td>fblock</td>
             <td>Fills a specified region with the specified type of block. Commonly
@@ -1580,7 +1591,7 @@ You can type 'help' to see all possible commands, and any command provided by CP
                 <p>Kicks all players, saves the world, and reboots immediately. During the reboot, all areas of the map
                     which are NOT marked for reset will be erased.</p>
                 <p>This is the <em>inverse </em>of the <a
-                        href="https://confluence.catalysm.net/display/CPM/Functional+Overview" rel="nofollow">Reset
+                        href="https://docs.csmm.app/en/cpm/reset-regions.html" rel="nofollow">Reset
                         Regions</a> functionality, because all areas that are <u>not</u> a reset region will be wiped.
                 </p>
                 <p>This command can also be triggered as a parameter of the <em>shutdownba</em> command.</p>

@@ -196,20 +196,18 @@ Lists all items currently marked for trade.
 
 While Players can't place Advanced Claims, they _can_ interact with Advanced Claims that were created and assigned to them in order to manage the whitelist for the claim. With most advanced claim types, any player not on the whitelist is typically not able to enter, unless they are added to the whitelist. Similarly, anyone inside a Reversed claim region can't leave unless they are whitelisted, and players on the whitelist for an OpenHours claim can enter the region off-hours.
 
-Advanced Claim Commands only work on the **first** advanced claim assigned to a player. All other claim region adjustments will have to be performed by an Admin.
-
 
 /acf \<playername\>
 
-Adds the specified player to the whitelist for your first advanced claim.
+Adds the specified player to the whitelist for your advanced claim(s).
 
 /lcf \<playername\>
 
-Lists all players whitelisted for your first advanced claim.
+Lists all players whitelisted for your advanced claim(s).
 
 /rcf \<playername\>
 
-Removes the specified player from the whitelist for your first advanced claim.
+Removes the specified player from the whitelist for your advanced claim(s).
 
 ## Working With Player Names
 
