@@ -700,10 +700,10 @@ You can type 'help' to see all possible commands, and any command provided by CP
         </tr>
         <tr role="row">
             <td>
-                <p><strong>eoc &lt;entityId/steamId/name&gt; &quot;commamd param1 param2&quot; </strong></p>
+                <p><strong>eoc &lt;entityId/steamId/name&gt; &quot;command param1 param2&quot; </strong></p>
                 <p>eoc 171 &quot;dm&quot;</p>
             </td>
-            <td>Executes dm on local client of player with entityId 171.<BR>Example of local only  commands:<BR> sg (sg OptionsFieldOfViewNew x!), automove, cm, dm, givequest, removequest, giveself, giveselfxp, buff, debuff, exhausted, gfx, dms, bents, memcl, pois, settempunit, screeneffect, showhits, starve, thirsty, xui, spawnsupplycrate etc etc</td>
+            <td>Executes dm on local client of player with entityId 171.<p>Example of local only  commands:</p> <p>sg (sg OptionsFieldOfViewNew x!), automove, cm, dm, givequest, removequest, giveself, giveselfxp, buff, debuff, exhausted, gfx, dms, bents, memcl, pois, settempunit, screeneffect, showhits, starve, thirsty, xui, spawnsupplycrate etc etc</p></td>
         </tr>
         <tr role="row">
             <td>fblock</td>
