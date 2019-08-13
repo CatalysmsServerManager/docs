@@ -392,7 +392,7 @@ You can type 'help' to see all possible commands, and any command provided by CP
                     command (or commands) must be added after the notification messages.</p>
                 <p><em>Multiple punishment commands can be added to the punishment trigger by separating them with a
                         semicolon ( ; ), like this:</em></p>
-                <pre>"notify:EntryMessage:ExitMessage:command1;command2;command3"</pre>
+                "notify:EntryMessage:ExitMessage:command1;command2;command3"
                 <p>When PVE punishment claims are created with 'npf' in the claim name, the game will not punish PVE
                     kills if the killer and victim are friends; this is intended to avoid punishing allies who
                     accidentally kill eachother during events like hordenight, or a sudden zombie mob.</p>
@@ -441,7 +441,7 @@ You can type 'help' to see all possible commands, and any command provided by CP
                     command (or commands) must be added after the notification messages.</p>
                 <p><em>Multiple punishment commands can be added to the punishment trigger by separating them with a
                         semicolon ( ; ), like this:</em></p>
-                <pre>"notify:EntryMessage:ExitMessage:command1;command2;command3"</pre>
+                "notify:EntryMessage:ExitMessage:command1;command2;command3"
                 <p><em><br></em></p>
                 <p><em>This command is only available in CPM 5.30 and above.</em></p>
             </td>
