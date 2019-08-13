@@ -93,22 +93,37 @@ There are several different Advanced Claim types available, and the configuratio
 ### Normal
 
 This is used for protecting player made structures/bases. The player that owns it can whitelist other players to have access to enter the advanced claim. Players that are not whitelisted will get teleported out of the advanced claimed area if they try to enter, similar to a trader that is closed.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel>
+```
 
 ### Reversed
 
 This is used for containing players in a specified area. Whitelisting players for a Reversed Advanced Claim will keep them within the boundaries of the claim like a forcefield. If they leave the area, they will be teleported back in.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> reversed
+```
 
 ### Timed
 
 Similar to a Normal claim, but for a specified amount of time. This was requested for a specific PVP situation in mind. If a player was raided, the server owner can grant him some time to recover without the chance of being raided again. After the specified amount of time has passed, this claim will vanish.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> timed:<numbeOfHoursToLive>
+```
 
 ### Leveled
 
 Similar to a Normal claim, but with the option to define a 'top' and 'bottom' to the claim. A normal claim reaches from bedrock to heaven, but a Leveled claim has a specified height. Designed specifically to protect underground bases (with a normal claim, players walking on ground above the base would get teleported out without knowing what they intruded) or for bases that have public tunnels under them (with a normal claim, players wouldn't be able to use the tunnel under the protected base).
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> leveled:<YcoordHigh>,<YcoordLow>
+```
 
 ### Portal
 
 Allows you to define an area as small as 1 block, along with a maximum trigger height, and any allowed player who passes through the portal area will be teleported to a preset location. 
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> portal:<stepHeight>:<x>,<y>,<z>
+```
 
 ### Hostilefree
 
@@ -117,25 +132,44 @@ This is used for creating hostile free areas. All hostiles will despawn in this 
 :::warning
 Traders are marked as hostile by default! If you do not want your traders to dissapear, consider using the [no hostile traders modlet](/assets/public/modlets/No_Hostile_Traders.zip)
 :::
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> hostilefree
+```
 
 ### Openhours
 
 Similar to a Normal claim, but with assigned opening hours, like a trader. Particularly useful to protect lobby or trading areas from being overwhelmed of players attempt to hide there during horde night; set the opening hours to 0400 to 2200 and players will get teleported out if they attempt to enter outside the specified hours.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> openhours:<openFrom>-<openTo>
+```
+
 
 ### Notify
 
 This defines a claim area in which players get a configurable private message in chat when they enter or leave the claim area.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> "notify:<enterMsgWithColorSupport>:<exitMsgWithColorSupport>"
+```
+Exit message is optional. If omitted, a chat message will only show on entering the claim.
 
-
-### Command(detailed page coming soon!)
+### Command
 
 Trigger one or multiple console commands when a player enter this claim area. The claim type must be enclosed in double quotes and parameters with spaces within each command must be enclosed in single quotes. Use semicolon ( ; ) to seperate commands. Below is an example shows all 3 supported placeholders (casesensitive): ${playerName}, ${entityId} and ${steamId}:
 
 `ccc add deathzone -10 10 10 -10 0 "command:say '${playerName} has entered the DeathZone!!! mwuhahahaha!';pm ${entityId} 'I wish you luck my friend. Lots of it...';spawnhorde ${steamId} 30"`
 
-### Playerlevel(detailed page coming soon!)
+### Playerlevel
 
 This claim can be used to restrict/grant access to a claim by player level. Built in basic logical expression, plus support for level ranges, allows you to create some very unique settings.Supported operators: <= (and =<), >= (and =>), == (and =), != (and =!) Define ranges by using 2 operators in 1 claim (use & between expressions)Examples:allow levels between 5 and 10: playerlevel:>=5&<=10allow only level 5: playerlevel:=5allow all levels but 5: playerlevel:!=5allow levels lesser than or equal 5: playerlevel:<=5
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> "playerlevel:logicalExpression>"
+```
+### LcbFree
+Control abillity to place LCB's within the boundaries of the lcbfree adv. claim. Allow to place LCB's by accesslevel and/or whitelist. If not allowed to place LCB, it will be removed and put back in player inventory. Use lcbfree as type when creating this advanced claim. Violation message is configurable in CpmStrings.xml (AdvClaims_LcbFree).
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> lcbfree
+```
+
 
 ## Alloc's Webmap Update
 
