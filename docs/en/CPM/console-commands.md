@@ -14,6 +14,99 @@ Starting with CPM 5.35, all CPM-specific commands have been given the prefix 'cp
 You can type 'help' to see all possible commands, and any command provided by CPM will have the prefix listed. Alternately, to only see CPM-related commands, you can type 'cpm-help' instead.
 :::
 
+CPM has a built in function to list all avalaible console commands (cpm-help), which give you a global description of the available commands. For detailed info on a command do:
+````
+help <command>
+````
+
+Available commands as of version 10.9:
+````
+cpm-additemloot additemloot => add item to SecureLoot below the given entity
+cpm-announcenighttime announcenighttime an => Turn NightTime announcement on/off
+cpm-arrest arrest => Put a player in jail (reversed claim jail required!)
+cpm-bcheck bcheck => Checks the kind of a block
+cpm-bdup bdup => Copy an Area to another location
+cpm-bexport bexport => Exports as Prefab some space
+cpm-brender brender => Renders a Prefab on given location
+cpm-brepblock brepblock => Replace blocks from a defined location
+cpm-bun bun blockutf8names => Kick any players with UTF-8 chars in name at login
+cpm-bundo bundo => Undo last prefab command
+cpm-ccc ccc => Manage advanced claims
+cpm-ccp ccp chatcommandpermissions => Set permission levels on admin chatcommands
+cpm-chatgroupcolor chatgroupcolor cgc => Manage chat color by groupmembership.
+cpm-checkloot checkloot => check items from SecureLoot below the given entity
+cpm-cpmprefix cpmprefix => Set prefix for CPM chatcommands.
+cpm-cs cs => Spawn scouts near a player or coordinate
+cpm-cvc cvc checkvehiclecontent => check the content of a vehicle.
+cpm-ds donorslot ds => Add, Remove and View steamids on the ReservedSlots list.
+cpm-entityremove entityremove => remove entity from game
+cpm-eoc eoc executeonclient => Let a local player fire a local only console coommand (or any)
+cpm-etele etele => Teleport an entity
+cpm-fblock fblock => Fill a defined area with a specific block
+cpm-fblock1 fblock1 => place one block at a time without the need of chunkreloading (RPC)
+cpm-getbicycle getbicycle => Get lost or stuck bicycle to player
+cpm-getbike getbike => Get lost or stuck minibike to player
+cpm-getgyrocopter getgyrocopter => Get lost or stuck gyrocopter to player
+cpm-getjeep getjeep => Get lost or stuck jeep to player
+cpm-getmotorcycle getmotorcycle => Get lost or stuck motorcycle to player
+cpm-getprefab getprefab => Get info/manage the RWG prefab you are standing in.
+cpm-giveplus giveplus => give an item to a player(s) (entity id or name)
+cpm-givexp givexp => give XP to a player
+cpm-got got => give items to or trade items with other player
+cpm-grablcb grablcb => Put all landclaims within <radius> of and owned by player in his/her backpack.
+cpm-help => Help on console and specific CSMM Patrons Mod commands
+cpm-hidechatcommand hidechatcommand hccp => specify a chat message prefix that defines chat commands that are hidden from chat
+cpm-lce lce listcustomentity => List entity with custom parameter for better filtering.
+cpm-listbedplayer listbedplayer lbp => list bed locations of all players or a specific player
+cpm-listbuffs listbuffs lbuffs => List or search all available buffs
+cpm-listfriendsplayer listfriendsplayer lfp => list friends of a single player or all players
+cpm-listlandclaims listlandclaims llc => lists all land protection blocks and owners
+cpm-listplayerbuffs listplayerbuffs lpbuffs => List players active buffs
+cpm-listplayerskill listplayerskill lps => list players Skills
+cpm-loctrack loctrack => Manage locationtracker settings and data
+cpm-mrr mrr markresetregion => Manage the reset regions list.
+cpm-multipleentityspawn multipleentityspawn mes => spawn multiple entities around some coordinate or player
+cpm-mutechatplayer mutechatplayer mcp => mute a player on public chat
+cpm-mv mv => Move player command (to coordinates and to other player). Optionally restrict of friends only.
+cpm-mvw mvw => Move player to waypoint.
+cpm-ob ob ownbike => take ownership of a minibike for the current player.
+cpm-overridechatname overridechatname ocn => Change a player's chat name.
+cpm-own own => define an owner to SecureLoot/SecureDoor for a player.
+cpm-pd pd permadeath => Manage permadeath players
+cpm-pfb pfb preventfallingblocks => Prevent falling blocks on server.
+cpm-playerchatcolor playerchatcolor pcc => Change default player chat color.
+cpm-playsound playsound => Play an ingame sound on any server/player position.
+cpm-protectplayer protectplayer protect => Set protective bubble on player.
+cpm-release release => Release a player from jail.
+cpm-remitem remitem => remove items from SecureLoot below the given entity
+cpm-removelandprotection2 removelandprotection2 rlp2 => removes the association of a land protection block without players needing to be near
+cpm-resetregionsnow resetregionsnow => Execute shutdown immediately and reset marked regions.
+cpm-resetunclaimedregionsnow resetunclaimedregionsnow => Execute shutdown immediately and reset ALL regions except the ones that have LCB/Adv. Claim on.
+cpm-rpd rpd resetplayerdata => Reset a player
+cpm-rst rst resetskilltree => Reset a player's skilltree progress.
+cpm-rt rt repairtrees => Repair indestructable trees (only with damageindicator)
+cpm-say2 say2 => Sends a message to all connected clients with specific sender
+cpm-sayadmin sayadmin => Send a PM to all players meeting the minimum receipients permisson level
+cpm-sayplayer2 sayplayer2 pm2 => send a message to a single player with a specific sender name
+cpm-scn scn serverchatname => Set server chatname globally
+cpm-sdc sdc setdeathcount => Set a player's deathcount.
+cpm-setbundosize setbundosize => Set the size of history on bundo
+cpm-setplayerstatus setplayerstatus sps => Set a value on players attributes (zombiekill, playerkill)
+cpm-showinventory2 showinventory2 si2 => list inventory of a given player
+cpm-shutdownba shutdownba => Timed shutdown with bloodmoon awareness.
+cpm-sleepers sleepers => Remove sleepervolumes from world
+cpm-targetedhorde targetedhorde th => Spawn targeted horde near a player or coordinate
+cpm-teleportplayerhome teleportplayerhome teleh => teleport a player to his home (on bedroll)
+cpm-tp2bag tp2bag teleport2bag => Teleport player to his/her backpack after death.
+cpm-tprotect tprotect => Set protection to a location in same way as trader.
+cpm-traderlist traderlist => List Trader Areas
+cpm-unlockall unlockall => unlock all secure loots, chests and doors for the current player.
+cpm-w2l w2l => Write to console.
+cpm-wi wi wipeinventory => Reset a player's inventory completely (bag, belt and equipment).
+cpm-wlf wlf => Adds all friends of a player to whitelist(s) of their claim(s)
+cpm-wpc wpc => Manage CPM waypoints
+````
+
 <table role="grid" resolved="">
     <thead>
         <tr role="row">
