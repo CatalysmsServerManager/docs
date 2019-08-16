@@ -3,13 +3,13 @@
 **Version 11.0 A17.4 b4 Stable (2019.08.16)**
 
 * Added settings for individually enabling/disabling gamemessages (GMSG) for PlayerJoined,, PlayerLeft, PlayerDied and PlayerKilled.
-`<GMSG_PlayerJoined_Enabled>true</GMSG_PlayerJoined_Enabled>
- <GMSG_PlayerLeft_Enabled>true</GMSG_PlayerLeft_Enabled>
- <GMSG_PlayerDied_Enabled>true</GMSG_PlayerDied_Enabled>
- <GMSG_PlayerKilled_Enabled>true</GMSG_PlayerKilled_Enabled>`
+    `<GMSG_PlayerJoined_Enabled>true</GMSG_PlayerJoined_Enabled>`
+    `<GMSG_PlayerLeft_Enabled>true</GMSG_PlayerLeft_Enabled>`
+    `<GMSG_PlayerDied_Enabled>true</GMSG_PlayerDied_Enabled>`
+    `<GMSG_PlayerKilled_Enabled>true</GMSG_PlayerKilled_Enabled>`
 * Added configurable response strings for use on arresting player.
-`<Arrest_Notification>[00FF00]You have been jailed by an Admin![-]</Arrest_Notification>
-  <Arrest_Notification_Timed>[00FF00]You have been jailed by an Admin! You will be released automatically in {minutes} minutes[-]</Arrest_Notification_Timed>`
+    `<Arrest_Notification>[00FF00]You have been jailed by an Admin![-]</Arrest_Notification>`
+    `<Arrest_Notification_Timed>[00FF00]You have been jailed by an Admin! You will be released automatically in {minutes} minutes[-]</Arrest_Notification_Timed>`
 
 
 **Version 10.9 A17.4 b4 Stable (2019.08.09)**
