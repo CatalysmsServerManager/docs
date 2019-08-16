@@ -56,6 +56,7 @@ module.exports = {
       ]
     },
     '/en/CPM/pvpve-server-configuration',
+    '/en/CPM/version-history',
     '/en/contributing'
   ],
   '/en/3SM/': [
