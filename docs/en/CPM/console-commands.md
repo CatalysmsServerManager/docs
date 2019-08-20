@@ -19,7 +19,7 @@ CPM has a built in function to list all avalaible console commands (cpm-help), w
 help <command>
 ````
 
-Available commands as of version 10.9:
+Available commands:
 ````
 cpm-additemloot additemloot => add item to SecureLoot below the given entity
 cpm-announcenighttime announcenighttime an => Turn NightTime announcement on/off
