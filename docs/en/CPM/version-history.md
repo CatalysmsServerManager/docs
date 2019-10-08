@@ -1,5 +1,11 @@
 # Version History
 
+**Version 12.0 A18 b139 Experimental (2019.10.07)**
+
+* A18b139 Experimental compatibility (codebreaking changes so not compatible with A17 and lower)
+* Added consolecommand ownvehicle: take ownership of any ingame vehicle (bicycle, minibike, motorcycle, jeep, gyrocopter, blimp and helicopter)
+
+
 **Version 11.0 A17.4 b4 Stable (2019.08.16)**
 
 * Added settings for individually enabling/disabling gamemessages (GMSG) for PlayerJoined,, PlayerLeft, PlayerDied and PlayerKilled.
