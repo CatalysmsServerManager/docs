@@ -119,6 +119,10 @@ Will wait x seconds before continuing with command execution. Warning: you shoul
 
 With this function, you can add or substract currency from a players balance. For example: addCurrency(${player.id}, 50)
 
+### setRole(steamId, role)
+
+Sets a players role. The role parameter is the name of the role, this has to be **exactly** the same. This can be used if you have a $adddonor command, in the vote reward command to give voters access to special commands, ...
+
 
 ## Legacy variables
 
