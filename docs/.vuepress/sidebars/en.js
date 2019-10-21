@@ -6,6 +6,7 @@ module.exports = {
       children: [
         '/en/CSMM/installation',
         '/en/CSMM/allocs',
+        '/en/CSMM/self-hosting'
       ]
     },
     {
