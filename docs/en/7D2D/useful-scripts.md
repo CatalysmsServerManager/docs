@@ -2,6 +2,11 @@
 
 ## Install/Update Allocs fixes
 
+:::warning
+Turn off your server BEFORE updating to prevent data loss.
+:::
+
+
 ```bash
 #!/bin/sh
 
@@ -55,6 +60,10 @@ printHeader "Finished! ヽ(´▽\`)/"
 ## Install/Update CPM
 
 Please note that for this script `jq` is required to parse output of the Github API.
+
+:::warning
+Turn off your server BEFORE updating to prevent data loss.
+:::
 
 ```bash
 #!/bin/bash
