@@ -1,4 +1,4 @@
-# Self hosting
+# Installation
 
 In this guide, I will assume you are installing on Ubuntu 18. Installation steps for other distros or Windows will be similar but keep that in mind. If you do not have a server yet, you can use one of these referral links to get some free credit and support the project :).
 
@@ -15,7 +15,7 @@ Go to the [Valve API key page](https://steamcommunity.com/dev/apikey) and regist
 
 ### Discord bot account
 
- Go to the [Discord developer page](https://discordapp.com/developers/applications) and create a new application. You must also make this application a bot account. For more info, see [this guide by Reactiflux(https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token)] or Google.
+ Go to the [Discord developer page](https://discordapp.com/developers/applications) and create a new application. You must also make this application a bot account. For more info, see [this guide by Reactiflux](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) or Google.
 
 Collect the following values from the page:
 
@@ -119,3 +119,7 @@ node app.js
 ```bash
 NODE_ENV=production node app.js
 ```
+
+::: warning
+It is very important to run CSMM in **production** mode for security reasons, application stability and data persistence.
+:::
