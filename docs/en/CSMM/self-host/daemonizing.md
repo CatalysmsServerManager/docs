@@ -1,6 +1,6 @@
 # Daemonizing
 
-You'll most likely want to set CSMM to be managed as a service. There are many ways to do this but here I will explain how to do it with [pm2](https://pm2.keymetrics.io/).
+You'll most likely want to set CSMM to be managed as a service. There are many ways to do this but here we will explain how to do it with [pm2](https://pm2.keymetrics.io/).
 
 pm2 can monitor a service for failures and automatically restart it, watch for memory usage, logging, ...
 
@@ -14,7 +14,7 @@ To start CSMM with pm2:
 
 `pm2 start app.js --name csmm`
 
-There are many more options available in pm2, I suggest you head over to the [pm2 documentation](https://pm2.keymetrics.io/docs/usage/quick-start/) for more info.
+There are many more options available in pm2, we suggest you head over to the [pm2 documentation](https://pm2.keymetrics.io/docs/usage/quick-start/) for more info.
 
 Afterwards, you'll want to make sure this process gets started on systemboot.
 
