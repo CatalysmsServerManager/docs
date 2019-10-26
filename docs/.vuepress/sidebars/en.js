@@ -13,6 +13,7 @@ module.exports = {
       children: [
         '/en/CSMM/self-host/installation',
         '/en/CSMM/self-host/reverse-proxy',
+        '/en/CSMM/self-host/daemonizing',
       ]
     },
     {
