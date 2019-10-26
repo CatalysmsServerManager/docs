@@ -1,8 +1,8 @@
 <div align=center>
 
 ![Netlify](https://img.shields.io/netlify/634d4258-e312-4f70-8e1a-02c14897ef30?label=Netlify&logo=netlify)
-![Travis (.org)](https://img.shields.io/travis/CatalysmsServerManager/docs?label=Travis&logo=travis)
-![Discord](https://img.shields.io/discord/336821518250147850?label=Discord&logo=discord)
+[![Travis (.org)](https://img.shields.io/travis/CatalysmsServerManager/docs?label=Travis&logo=travis)](https://travis-ci.org/CatalysmsServerManager/docs)
+[![Discord](https://img.shields.io/discord/336821518250147850?label=Discord&logo=discord)](http://catalysm.net/discord)
 
 # Documentation
 </div>
