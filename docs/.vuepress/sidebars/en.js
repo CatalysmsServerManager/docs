@@ -6,7 +6,13 @@ module.exports = {
       children: [
         '/en/CSMM/installation',
         '/en/CSMM/allocs',
-        '/en/CSMM/self-hosting'
+      ]
+    },
+    {
+      title: 'Self hosting',
+      children: [
+        '/en/CSMM/self-host/installation',
+        '/en/CSMM/self-host/reverse-proxy',
       ]
     },
     {
