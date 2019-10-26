@@ -15,7 +15,7 @@ Go to the [Valve API key page](https://steamcommunity.com/dev/apikey) and regist
 
 ### Discord bot account
 
- Go to the [Discord developer page](https://discordapp.com/developers/applications) and create a new application. You must also make this application a bot account. For more info, see [this guide by Reactiflux(https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token)] or Google.
+ Go to the [Discord developer page](https://discordapp.com/developers/applications) and create a new application. You must also make this application a bot account. For more info, see [this guide by Reactiflux](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) or Google.
 
 Collect the following values from the page:
 
