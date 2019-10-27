@@ -140,6 +140,10 @@ Reports all living players within the radius defined by the _loctrack_ _neardist
 
 Teleports you to your most recent death bag.
 
+/bed
+
+Teleports you to your active bed(roll).
+
 /hostiles
 
 Gives you a report on how many hostile creatures there are within a small radius of your current position. This script explicitly mentions feral zombies, dogs, and vultures among others.
