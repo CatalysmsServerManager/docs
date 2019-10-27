@@ -21,7 +21,7 @@ help <command>
 
 Available commands:
 ````
-cpm-additemloot additemloot => add item to SecureLoot below the given entity
+ cpm-additemloot additemloot => add item to SecureLoot below the given entity
  cpm-announcenighttime announcenighttime an => Turn NightTime announcement on/off
  cpm-arrest arrest => Put a player in jail (reversed claim jail required!)
  cpm-bcheck bcheck => Checks the kind of a block
