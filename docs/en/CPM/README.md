@@ -42,7 +42,7 @@ sdtdserver@7dtddev:~/serverfiles/Mods$ tree .
 │   ├── MapRendering.dll
 │   ├── ModInfo.xml
 └── CSMM_Patrons
-├── CSMM_Patrons.dll
+    ├── 1CSMM_Patrons.dll
 └── ModInfo.xml
 ```
 ([Allocs server fixes](https://7dtd.illy.bz/wiki/Server%20fixes#Download) is included here as it is a VERY common mod for servers)
