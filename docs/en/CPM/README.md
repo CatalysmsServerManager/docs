@@ -29,8 +29,12 @@ Optional: Download the Reset Regions / Adv. Claims map update.
 Your Mods/ folder structure should look similar to this: 
 
 ```
-sdtdserver@7dtddev:~/serverfiles/Mods$ tree .
-
+└── 1CSMM_Patrons
+    ├── cpmcc
+    ├── CSMM_Patrons.dll
+    └── ModInfo.xml
+    └── steam-intermediate.cer
+    └── steam-rootca.cer
 ├── Allocs_CommandExtensions
 │   ├── AllocsCommands.dll
 │   └── ModInfo.xml
@@ -41,9 +45,6 @@ sdtdserver@7dtddev:~/serverfiles/Mods$ tree .
 ├── Allocs_WebAndMapRendering
 │   ├── MapRendering.dll
 │   ├── ModInfo.xml
-└── CSMM_Patrons
-├── CSMM_Patrons.dll
-└── ModInfo.xml
 ```
 ([Allocs server fixes](https://7dtd.illy.bz/wiki/Server%20fixes#Download) is included here as it is a VERY common mod for servers)
 
