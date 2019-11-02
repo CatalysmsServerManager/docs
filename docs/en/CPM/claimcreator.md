@@ -102,46 +102,46 @@ All your reset regions have been created and are active immediately including en
 
 ## Overview of all advanced claims and parameters
 
-hostilefree:
+### hostilefree:
 
 ![](/assets/images/CPM/claimCreator/hf.png)
 
-notify:
+### notify:
 
 ![](/assets/images/CPM/claimCreator/notify.png)
 
-command:
+### command:
 
 ![](/assets/images/CPM/claimCreator/command.png)
 
-leveled:
+### leveled:
 
 ![](/assets/images/CPM/claimCreator/leveled.png)
 
-reversed:
+### reversed:
 
 ![](/assets/images/CPM/claimCreator/reversed.png)
 
-normal:
+### normal:
 
 ![](/assets/images/CPM/claimCreator/normal.png)
 
-timed:
+### timed:
 
 ![](/assets/images/CPM/claimCreator/timed.png)
 
-portal:
+### portal:
 
 ![](/assets/images/CPM/claimCreator/portal.png)
 
-openhours:
+### openhours:
 
 ![](/assets/images/CPM/claimCreator/openhours.png)
 
-playerlevel:
+### playerlevel:
 
 ![](/assets/images/CPM/claimCreator/playerlevel.png)
 
-lcbfree:
+### lcbfree:
 
 ![](/assets/images/CPM/claimCreator/lcbfree.png)
