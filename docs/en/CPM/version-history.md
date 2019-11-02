@@ -1,5 +1,83 @@
 # Version History
 
+**Version 12.7 A18 b155 Stable (2019.11.02) (A18.1 b5 Experimental compatible)**
+
+* Added Quest POI Protection: prevent players from placing LCB's and/or bed(roll)s in a POI (prefab) that can be selected for a quest by the game. No more blocked quests because of LCB's and/or bed(roll)s present in that POI. Enabled by default. Use QuestPoiProtection_Enabled in CpmSettings.xml to en,- or disable. Customizable strings for detecting placed bed(roll)s and LCB's in CpmStrings.xml (QuestPoiProtection_LcbMessage and QuestPoiProtection_BedMessage).
+* Added consolecommand deactivatebed (db): deactivate a players bed(roll) by this consolecommand.
+* Added webapi for reporting bed(roll)s: for querying the game for active bedrolls via webapi.
+* Changed map.js: added code to use the new bedroll webapi for displaying player beds on allocs webmap.
+
+
+**Version 12.6 A18 b155 Stable (2019.10.28) (A18.1 b5 Experimental compatible)**
+
+* changed consolecommand resetrwgprefabs (rrp):
+     * added count of prefabs that are marked for reset in response when running the command.
+     * added parameter "stop": when running "rrp stop" the active reset prefabs run will be terminated.
+     * added parameter "status": when running "rrp status" it will show if there is an active reset prefabs run and if so, how many prefabs are awaiting reset on a full chunkload.
+* changed "getprefab reset" and resetprefabs functionality: fixed landclaimblock/bed(roll) icon still showing for owning player after resetting a prefab with a landclaimblock/bed(roll) present.
+* changed consolecommand shutdownba: fixed the possibillity of an infinite loop while CPM was waiting for all players to have gracefully disconnected. It now has a failsafe loop breaker which will do a shutdown after 5 seconds of waiting regardless if there are still stuck connections.
+
+
+**Version 12.5.1 A18 b155 Stable (2019.10.27) (A18.1 b2 Experimental compatible)**
+
+* Fixed chatcommand /bag and consolecommand tp2bag: fixed the player getting stuck in ground after a tp to dropped backpack position in some circumstances.
+
+
+**Version 12.5 A18 b155 Stable (2019.10.26) (A18.1 b2 Experimental compatible)**
+
+* Added chatcommand /bed: will take you to your active bed(roll). Default permission = 0. Use CpmSettings.xml or ccp (chatcommandpermissions) to assign permissions.
+* Improved reset prefabs functionality: Little quality of life improvement. Reset prefabs exclusions can now be added after the resetcommand has been given and the active reset run will considder the new exclusion(s). Could be used if, for some reason, a prefab has troubles resetting (added logline if that happens).
+
+All reset prefabs features once again for reference:
+
+Use consolecommand rrp (resetrwgprefabs) or "shutdownba [minutes] resetprefabs" for resetting prefabs. No need for server to be empty. Use at your will.
+
+There are 3 ways of using exclusions on which prefabs should be reset or not:
+* By adding the unique prefab name to the exceptions file (/Saves/ResetRegions/ResetPrefabs_Exceptions.txt. You can get the unique name of any prefab on your map by standing in/near it and do consolecommand getprefab. Use "name" (ex. Prefab bombshelter_lg_01.877) of the prefab to exclude only that specific prefab from resetting when running the new command.
+
+* By adding a type of prefab to the exceptions file (/Saves/ResetRegions/ResetPrefabs_Exceptions.txt. You can get the type of prefab on your map by standing in/near it and do consolecommand getprefab. Use "filename" (ex. funeral_home_01) of the prefab to exclude all prefabs on your map that are of that type. You can also check your /Data/Prefabs folder for available types. Just use the .tts fiilename without the extention.
+
+* By setting if claimed prefabs should be excluded from resetting. In CpmSettings.xml you can set ResetPrefabs_ExcludeClaimedPrefabs to true/false. By default (for safety) all claimed prefabs are excluded from resetting when running the new command. When you want to allow players to setup base in prefabs and still be able to reset all other prefabs, you should leave it true. When you dont allow setup bases in prefabs,, you can set it to false and all claimed prefabs will also be reset when running the new command (claimblocks will be removed too).
+
+Adding prefabs to the exclusion list can also be done ingame with the getprefab consolecommand:
+* "getprefab exclude": for excluding the specific prefab you are in/near 
+* "getprefab exclude type": for excluding all prefabs of the same type as the prefab you are in/near 
+
+
+**Version 12.3 A18 b152 Experimental (2019.10.21)**
+
+* Changed shutdownba x resetprefabs: added more errorhandling and extended logging. Moved the code so its absolutely guaranteed there can be no players connected or connecting while in progress.
+
+* Changed consolecommand getprefab: added parameter "exclude" and "exclude type". Use the command for excluding the specific prefab you are in/near (exclude) or excluding all prefabs of the same type as the prefab you are in/near (exclude type) from being reset.
+
+* Added consolecommand gc: invoke the .NET garbagecollector on demand and free up some memory.
+
+
+**Version 12.2 A18 b152 Experimental (2019.10.19)**
+
+* Fixed consolecommand resetrwgprefabs (rrp): fixed the undoing of prefab resets for prefabs that have not been visited yet after a prefab reset when the server reboots.
+
+* Changed consolecommand shutdownba: added parameter "resetprefabs".  Now its possible to combine a server reboot with a RWG prefab reset. Combine the maintenance tasks for convenience.
+
+
+**Version 12.1 A18 b149 Experimental (2019.10.16)**
+
+* Added consolecommand resetrwgprefabs (rrp): Welcome to the next level of map maintenance! Reset all RWG generated prefabs on your map to RWG virgin state. No more wiping complete region files for getting your cities (and all other RWG prefabs) clean and in a virgin RWG state. Just one command for resetting the prefabs and prefabs only. There are 3 ways of using exclusions on which prefabs should be reset or not:
+
+    + By adding the unique prefab name to the exceptions file (/Saves/ResetRegions/ResetPrefabs_Exceptions.txt. You can get the unique name of any prefab on your map by standing in/near it and do consolecommand getprefab. Use "name" (ex. Prefab bombshelter_lg_01.877) of the prefab to exclude only that specific prefab from resetting when running the new command.
+
+    + By adding a type of prefab to the exceptions file (/Saves/ResetRegions/ResetPrefabs_Exceptions.txt.  You can get the type of prefab on your map by standing in/near it and do consolecommand getprefab. Use "filename" (ex. funeral_home_01) of the prefab to exclude all prefabs on your map that are of that type. You can also check your /Data/Prefabs folder for available types. Just use the .tts fiilename without the extention.
+
+    + By setting if claimed prefabs should be excluded from resetting. In CpmSettings.xml you can set ResetPrefabs_ExcludeClaimedPrefabs to true/false. By default (for safety) all claimed prefabs are excluded from resetting when running the new command. When you want to allow players to setup base in prefabs and still be able to reset all other prefabs, you should leave it true. When you dont allow setup bases in prefabs,, you can set it to false and all claimed prefabs will also be reset when running the new command (claimblocks will be removed too).
+
+For the reset to work correctly the server needs to be empty. My advise is to set up a CSMM cronjob on a time 
+you know the server will be unoccupied or has low playercount. The command will automatically kick all online 
+players with a configurable kick string if run when there are players online. In CpmStrings.xml you can set the 
+kick string (<ResetPrefabs_KickMessage>RWG prefabs are being reset...</ResetPrefabs_KickMessage>).
+
+* Changed consolecommand targetedhorde (th): added "all" parameter to send a targeted horde to all online players at once.
+
+
 **Version 12.0 A18 b139 Experimental (2019.10.07)**
 
 * A18b139 Experimental compatibility (codebreaking changes so not compatible with A17 and lower)
