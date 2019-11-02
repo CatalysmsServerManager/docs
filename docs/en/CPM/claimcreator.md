@@ -100,4 +100,48 @@ Click "Claims" in navigation menu -> Click "Create" -> Click "Commands" in navig
 
 All your reset regions have been created and are active immediately including enter/exit notification and automatic landclaim removal.
 
+## Overview of all advanced claims and parameters
 
+hostilefree:
+
+![](/assets/images/CPM/claimCreator/hf.png)
+
+notify:
+
+![](/assets/images/CPM/claimCreator/notify.png)
+
+command:
+
+![](/assets/images/CPM/claimCreator/command.png)
+
+leveled:
+
+![](/assets/images/CPM/claimCreator/leveled.png)
+
+reversed:
+
+![](/assets/images/CPM/claimCreator/reversed.png)
+
+normal:
+
+![](/assets/images/CPM/claimCreator/normal.png)
+
+timed:
+
+![](/assets/images/CPM/claimCreator/timed.png)
+
+portal:
+
+![](/assets/images/CPM/claimCreator/portal.png)
+
+openhours:
+
+![](/assets/images/CPM/claimCreator/openhours.png)
+
+playerlevel:
+
+![](/assets/images/CPM/claimCreator/playerlevel.png)
+
+lcbfree:
+
+![](/assets/images/CPM/claimCreator/lcbfree.png)
