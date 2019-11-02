@@ -63,6 +63,7 @@ module.exports = {
         '/en/CPM/console-commands',
       ]
     },
+    '/en/CPM/claimcreator',
     '/en/CPM/pvpve-server-configuration',
     '/en/CPM/version-history',
     '/en/contributing'

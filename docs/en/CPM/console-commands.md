@@ -38,6 +38,7 @@ Available commands:
  cpm-cpmprefix cpmprefix => Set prefix for CPM chatcommands.
  cpm-cs cs => Spawn scouts near a player or coordinate
  cpm-cvc cvc checkvehiclecontent => check the content of a vehicle.
+ cpm-db db deactivatebed => Deactivate a players bed(roll).
  cpm-ds donorslot ds => Add, Remove and View steamids on the ReservedSlots list.
  cpm-entityremove entityremove => remove entity from game
  cpm-eoc eoc executeonclient => Let a local player fire a local only console coommand (or any)
