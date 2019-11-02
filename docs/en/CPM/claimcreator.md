@@ -31,9 +31,9 @@ For actually creating claims you must login via Steam so CPM can determine if yo
 If you want to change the default permissions for CPMcc create claims, view online players and view landclaims you can do so in cpmcc_permissions.xml.
 
 ````
-<permission module="cpmcc.createadvclaim\" permission_level="0" />
-<permission module="cpmcc.getplayersonline\" permission_level="0" />
-<permission module="cpmcc.getlandclaims\" permission_level="0" />
+<permission module="cpmcc.createadvclaim" permission_level="0" />
+<permission module="cpmcc.getplayersonline" permission_level="0" />
+<permission module="cpmcc.getlandclaims" permission_level="0" />
 ````
 
 ### Creating advanced claims
