@@ -9,6 +9,14 @@ module.exports = {
       ]
     },
     {
+      title: 'Self hosting',
+      children: [
+        '/en/CSMM/self-host/installation',
+        '/en/CSMM/self-host/reverse-proxy',
+        '/en/CSMM/self-host/daemonizing',
+      ]
+    },
+    {
       title: 'Configuration',
       children: [
         '/en/CSMM/roles',
@@ -71,6 +79,7 @@ module.exports = {
     '/en/7D2D/Hardware&OS',
     '/en/7D2D/server-setup',
     '/en/7D2D/switching-to-beta-versions',
+    '/en/7D2D/useful-scripts',
     '/en/contributing'
   ],
 }
