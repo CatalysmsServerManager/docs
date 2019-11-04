@@ -1,5 +1,22 @@
 # Version History
 
+**Version 12.9 A18 b155 Stable (2019.11.04) (A18.1 b5 Experimental compatible)**
+
+* integrated new CPM Claim Creator Web UI v1.2.1: Catalysm has built in webapi usage of the new CPM webapi's of player beds and quest poi's. Now you can show playerbeds, questpoi's and questpoi's with bed/lcb only on the CPMcc map. To replace, just remove the cpmcc folder from /Mods/1CSMM_Patrons folder and paste the one from this release. Server can keep running. CPM version 12.8 or higher required.
+
+**Version 12.8 A18 b155 Stable (2019.11.03) (A18.1 b5 Experimental compatible)**
+
+* changed consolecommand getprefab: added Quest POI status to the info getprefab gives about the prefab you're investigating.
+* changed webapi for playerbeds: added status Active (bedroll deactivates after expirytime ends) to response
+* added webapi for quest POI's: webapi for getting all prefabs that can be chosen for a quest including bedlcbonly filter
+* changed quest POI protection:  now taking bedroll deadzone size and expiration status of a bedroll into account. Adapted completely to how TFP code checks if a poi can be selected for questing. This means a bedroll's deadzone cannot touch a quest prefab. Even if it's not in it. Exactly like the claimed area of a landclaim.
+Changed the strings for responding to poi protection interventions because the bedroll/landclaim doesnt nescesarely need to be IN a prefab to get denied now. Only active for new installs. Please change your strings manually in CpmStrings.xml:
+````
+<QuestPoiProtection_LcbMessage>[F7FE2E]Claim area overlaps a quest POI! You are not allowed to place a LCB here![-]</QuestPoiProtection_LcbMessage>
+<QuestPoiProtection_BedMessage>[F7FE2E]Bed(roll) deadzone overlaps a quest POI! You are not allowed to place a bed(roll) here! Bed(roll) deactivated.[-]</QuestPoiProtection_BedMessage>
+````
+* changed map.js: fixed correct representation of bedroll deadzone size for showing playerbeds. The deadzone gamesetting determines the size of the rectangle drawn. Active bedrolls are green and inactive are red now. Added code to show quest POI's and quest POI's with bed/lcb only to use the new quest POI webapi
+
 **Version 12.7 A18 b155 Stable (2019.11.02) (A18.1 b5 Experimental compatible)**
 
 * Added Quest POI Protection: prevent players from placing LCB's and/or bed(roll)s in a POI (prefab) that can be selected for a quest by the game. No more blocked quests because of LCB's and/or bed(roll)s present in that POI. Enabled by default. Use QuestPoiProtection_Enabled in CpmSettings.xml to en,- or disable. Customizable strings for detecting placed bed(roll)s and LCB's in CpmStrings.xml (QuestPoiProtection_LcbMessage and QuestPoiProtection_BedMessage).
