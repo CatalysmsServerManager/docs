@@ -110,7 +110,7 @@ Regardless of which command is used, however, all 9 region files will be complet
 
 ## Reset Reboot Commands
 
-Region resets don't occur automatically, but must instead be triggered by a special command. There are several different commands that cause a reset sequence, and each one has a slightly different purpose. All of the below commands are documented on the [CPM Console Commands](CPM-Console-Commands_1114588.html) page.
+Region resets don't occur automatically, but must instead be triggered by a special command. There are several different commands that cause a reset sequence, and each one has a slightly different purpose. All of the below commands are documented on the [CPM Console Commands](/en/CPM/console-commands.html) page.
 
 ### Wipe Marked Reset Regions
 
