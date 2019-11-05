@@ -1,7 +1,8 @@
 # Reverse proxy
 
-Since CSMM requires HTTPS to set session cookies, it is recommended to reverse proxy the application with your favourite webserver. Included here is an example nginx config.
+Since CSMM requires HTTPS to set session cookies, it is recommended to reverse proxy the application with your favourite webserver. Included here are example configs for webservers.
 
+## Nginx
 
 ```nginx
 server {
@@ -24,4 +25,27 @@ server {
 
   listen 80;
 }
+```
+
+## Apache
+
+```apache
+SSLProxyEngine On
+
+ProxyRequests Off
+ProxyPreserveHost on
+
+ProxyPass / http://127.0.0.1:1337/
+ProxyPassReverse / http://127.0.0.1:1337/
+
+RequestHeader set "X-Forwarded-Proto" expr=%{REQUEST_SCHEME}
+RequestHeader set "X-Forwarded-SSL" expr=%{HTTPS}
+
+RemoteIPHeader X-Forwarded-For
+RemoteIPInternalProxy 127.0.0.0/8
+
+<Proxy *>
+Order deny,allow
+Allow from all
+</Proxy>
 ```
