@@ -3,12 +3,12 @@
 **Version 13.1 A18 b155 Stable (2019.11.09) (A18.1 b6 Experimental compatible)**
 
 * changed quest poi protection: added exclusion capability by adding specific quest poi's or types of quest poi's to an exception list (/Saves/ResetRegions/QuestPoi_Exceptions.txt). You can get a poi name with the getprefab consolecommand while standing in/near the poi or with CPMcc 1.3.0 or higher you can use the map to look up specific poi names.
-* completely overhauled cpm's webapi's: added native gettrader api and getallpois api. All api endpoints have explicit security now. Default permission to use any of them is admin level 0. For getting the latest cpmcc_permissions.xml please delete it from /Saves before starting server again after updating CPM. Or put the permissions in manually and save:
+* completely overhauled cpm's webapi's: added native gettrader api and getallpois api and serving maptiles api. All api endpoints have explicit security now. Default permission to use any of them is admin level 0. For getting the latest cpmcc_permissions.xml please delete it from /Saves before starting server again after updating CPM. Or put the permissions in manually and save:
 ````
 <?xml version="1.0" encoding="UTF-8"?>
 <cpmcc_permissions>
 	<permissions>
-		<permission module="cpmcc.map" permission_level="1" />
+		<permission module="cpmcc.map" permission_level="0" />
 		<permission module="cpmcc.createadvclaims" permission_level="0" />
 		<permission module="cpmcc.getlandclaims" permission_level="0" />
 		<permission module="cpmcc.getadvclaims" permission_level="0" />
@@ -21,7 +21,7 @@
 	</permissions>
 </cpmcc_permissions>
 ````
-* New CPMcc: Catalysm has adopted to the secured webapi usage and added the use of the new CPM wepapi's gettraders and getallpois. Since CPM's webapi are secured now there is no crossvisiting from allocs map anymore. I will stop supporting showing adv. claims/resetregions/questpois/allpois/traders from allocs map. Feel free to play around with the map.js code from alloc to use the new CPM webapi's. I just wont invest in it anymore. CPMcc can be used to make use of all of them.
+* New CPMcc: Catalysm has adopted to the secured webapi usage and added the use of the new CPM wepapi's gettraders and getallpois. Since CPM's webapi are secured now there is no crossvisiting from allocs map anymore.  Plusside is that the maptiles are served from within CPM now and there is no need to use webtokens anymore in CPMcc. I will stop supporting showing adv. claims/resetregions/questpois/allpois/traders from allocs map. Feel free to play around with the map.js code from alloc to use the new CPM webapi's. I just wont invest in it anymore. CPMcc can be used to make use of all of them.
 
 
 **Version 13.0 A18 b155 Stable (2019.11.04) (A18.1 b5 Experimental compatible)**
