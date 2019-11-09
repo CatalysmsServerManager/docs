@@ -10,8 +10,6 @@ CSMM Patron's Mod (CPM) is an API mod that is free for anyone, who wants to use.
 
 [Current Version](https://github.com/Prisma501/CSMM-Patrons-Mod/releases)
 
-Optional: Download the Reset Regions / Adv. Claims map update.
-
 
 ::: warning
  Admins: **Updating from versions below 5.26** will need to delete the following file before restarting your server: /saves/Random Gen/\<mapname\>/CSMM_Patrons.bin CPM is an extension of Coppi's Mod, which means that you must remove Coppi's mod from your server, or it will conflict with CPM.

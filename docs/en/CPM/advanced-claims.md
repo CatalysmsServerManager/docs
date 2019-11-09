@@ -170,7 +170,3 @@ Control abillity to place LCB's within the boundaries of the lcbfree adv. claim.
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> lcbfree
 ```
 
-
-## Alloc's Webmap Update
-
-All of the Advanced Claim types can be shown on your existing Alloc's webmap if you install this patch to enable the functionality. You may need to re-install the patch after updating your Alloc's Mod in the future.
