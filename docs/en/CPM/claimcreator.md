@@ -10,30 +10,30 @@ So if you are using http://serverip:8082 to access allocs webmap, you add 1 to t
 
 ![](/assets/images/CPM/claimCreator/complete.png)
 
-## Configuring CPMcc
-
-CPMcc uses allocs map for showing it in the claim creator. For this its nescesary to configure a connection to allocs map by use of webtokens.
-
-To do this click "Connection settings" in the navigation menu:
-
-![](/assets/images/CPM/claimCreator/conectionSettings.png)
-
-In the windows that comes up fill in an admin user and admin token as present in allocs webpermissions.xml. You can safely use the one you allready use for CSMM, but not restricted to use that. You can add a new admin user and admin token if you want to (<token name="adminuser1" token="supersecrettoken" permission_level="0" />).
-
-![](/assets/images/CPM/claimCreator/connectionInfo.png)
-
 ## Using CPMcc
 
-For actually creating claims you must login via Steam so CPM can determine if you have the permission to do so. Admins level 0 are allowed by default to create claims, view online players and view landclaims on CPMcc.
+For using the webui you must login via Steam so CPM can determine what permissions you have on the map. Default permission level for all is admin level 0.
 
 ![](/assets/images/CPM/claimCreator/login.png)
 
-If you want to change the default permissions for CPMcc create claims, view online players and view landclaims you can do so in cpmcc_permissions.xml.
+If you want to change the default permissions for CPMcc create claims, view online players, view landclaims, view advClaims and (quest) POI's, you can do so in cpmcc_permissions.xml. That file is in your Saves folder.
 
 ````
-<permission module="cpmcc.createadvclaim" permission_level="0" />
-<permission module="cpmcc.getplayersonline" permission_level="0" />
-<permission module="cpmcc.getlandclaims" permission_level="0" />
+<?xml version="1.0" encoding="UTF-8"?>
+<cpmcc_permissions>
+	<permissions>
+		<permission module="cpmcc.map" permission_level="0" />
+		<permission module="cpmcc.createadvclaims" permission_level="0" />
+		<permission module="cpmcc.getlandclaims" permission_level="0" />
+		<permission module="cpmcc.getadvclaims" permission_level="0" />
+		<permission module="cpmcc.getresetregions" permission_level="0" />
+		<permission module="cpmcc.getplayerhomes" permission_level="0" />
+		<permission module="cpmcc.getplayersonline" permission_level="0" />
+		<permission module="cpmcc.getquestpois" permission_level="0" />
+		<permission module="cpmcc.getallpois" permission_level="0" />
+		<permission module="cpmcc.gettraders" permission_level="0" />	
+	</permissions>
+</cpmcc_permissions>
 ````
 
 ### Creating advanced claims
