@@ -23,7 +23,7 @@ Don’t forget the 0 at the end! It’s important CSMM has privilege 0 to ensure
 
 Once CSMM is connected to your server, it's time to perform the detailed configuration process. 
 
-- Set up Roles in order to add additional Administrators, Moderators, and more.
+- Set up [Roles](https://docs.csmm.app/en/CSMM/roles.html) in order to add additional Administrators, Moderators, and more.
 - Configure the server Economy for your players
 - Get a Shop up and running that uses the economy.
 - Configure your Support Ticketing system.
