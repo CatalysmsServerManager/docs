@@ -162,15 +162,6 @@ Available commands:
         </tr>
         <tr role="row">
             <td>
-                <p>an hordecycle &lt;days&gt;</p>
-                <p>an hordecycle 7</p>
-            </td>
-            <td>Configure the Nighttime Announcer to announce the correct number of
-                days between blood moons. This does <em>not</em> set the cycle; it just configures the announcer to
-                match the cycle you set in the config.</td>
-        </tr>
-        <tr role="row">
-            <td>
                 <p>an warnhours &lt;hours&gt;</p>
                 <p>an warnhours 2</p>
             </td>
