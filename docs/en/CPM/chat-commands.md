@@ -136,6 +136,10 @@ Reports all living players within the radius defined by the _loctrack_ _neardist
 
 ### General Commands
 
+/day7
+
+Reports the next bloodmoon, number of players, number of zombies and server fps in chat
+
 /bag
 
 Teleports you to your most recent death bag.
