@@ -1,5 +1,20 @@
 # Version History
 
+**Version 13.2 A18.1 b8 Stable (A18.2 b2 Experimental compatible) (2019.11.17)**
+
+* changed remote trading system: fixed trading system not working when using another prefix than "/" for the trading system chatcommands.
+* changed shutdownba consolecommand: fixed bloodmoon calculation not to see day 1 as a bloodmoon. Now you can boot your server bloodmoon aware on day 1 again.
+* changed "bmonly(fromHour-toHour)_" adv. claim name tag: this was still using the fixed 7 day hordecycle. Changed it to use bloodmoon cycle in settings. Now you can use adv. claims that are only active on bloodmoon again with variable bloodmoon cycle.
+
+**Version 13.1.2 A18.1 b7 Stable (2019.11.13)**
+
+* small change in quest poi protection: made a design booboo by logging if a quest poi doesnt get protected because its excluded from protection. That becomes spammy real quick. No need to update if you dont have exceptions on quest poi protection.
+
+**Version 13.1.1 A18.1 b7 Stable (2019.11.12)**
+
+* changed consolecommand bcheck: fixed out of index range exception when investigating a block by coordinates
+* the gamecode doesnt always deregister a LCB or bedroll when it gets removed. CPM willl help the game now with that. Affects consolecommand rlp2, questpoi protection, reset prefabs (rrp), region reset and lcbfree adv. claim.
+
 **Version 13.1 A18 b155 Stable (2019.11.09) (A18.1 b6 Experimental compatible)**
 
 * changed quest poi protection: added exclusion capability by adding specific quest poi's or types of quest poi's to an exception list (/Saves/ResetRegions/QuestPoi_Exceptions.txt). You can get a poi name with the getprefab consolecommand while standing in/near the poi or with CPMcc 1.3.0 or higher you can use the map to look up specific poi names.
