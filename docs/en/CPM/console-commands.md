@@ -1734,7 +1734,8 @@ Available commands:
             </td>
             <td>
                 <p>Sets the death count <span>for the specified Steam ID's account to the value specified.</span></p>
-                <p><em>This command is only available in CPM 5.35 and above.</em></p>
+                <p>Use operators + and - to add or subtract to/from deathcount (ex. +5 or -1)
+                Without operator the new deathcount will be  &lt;count&gt;</p>
             </td>
         </tr>
         <tr role="row">
