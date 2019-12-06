@@ -1729,7 +1729,7 @@ Available commands:
         </tr>
         <tr role="row">
             <td>
-                <p><strong>setdeathcount &lt;steam id&gt; &lt;count&gt; [alias:sdc]</strong></p>
+                <p><strong>setdeathcount &lt;name/entity id/steam id&gt; &lt;count&gt; [alias:sdc]</strong></p>
                 <p>sdc 76561197961408188 99</p>
             </td>
             <td>
