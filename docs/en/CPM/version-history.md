@@ -1,5 +1,23 @@
 # Version History
 
+**Version 13.4 A18.2 b5 Stable (2019.12.04)**
+
+* A18.2 b5 Stable compatibility
+* Changed consolecommand setdeathcount (sdc): added support for offline players.
+* Changed consolecommand setplayerstatus (sps): updated command help and description
+
+
+**Version 13.3 A18.1 b8 Stable + Version 13.3 A18.2 b5 Experimental (2019.11.29)**
+
+* Vehicle adv. claim intrusion handling: warning and handling for all vehicle types instead of only minibike.
+* Explicit save of persistent data when whitelisting players on an adv. claim: prevent dataloss when server does crash or not gracefully shuts down.
+* Rewrite of falling block prevention system: adapted to new structural integrity in a18.
+* moved waypoints to nosql db (existing waypoints not migrated)
+* moved player storage to nosql db (existing players not migrated)
+* moved tradingchests to nosql db (existing tradingchests not migrated)
+* moved adv. claims to nosql db (existing adv. claims not migrated)
+* moved chatgroup colors to nosql db (existing chatgroup colors not migrated)
+
 **Version 13.2 A18.1 b8 Stable (A18.2 b2 Experimental compatible) (2019.11.17)**
 
 * changed remote trading system: fixed trading system not working when using another prefix than "/" for the trading system chatcommands.
