@@ -1742,8 +1742,8 @@ Available commands:
             <td>
                 <p><strong>setplayerstatus &lt;playername/entity id&gt; &lt;status&gt; &lt;value&gt; [alias:
                         sps]</strong></p>
-                <p>sps Corran zkill 100</p>
-                <p>sps 171 pkill 50</p>
+                <p>sps Corran zkills 100</p>
+                <p>sps 171 pkills 50</p>
             </td>
             <td>
                 <p>Configure the values for Player Kills or Zombie Kills for a specified player.</p>
