@@ -6,13 +6,14 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - name: npm install
-        run: npm install
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+      - name: npm ci
+        run: npm ci
       - name: npm build
         run: npm run build
-  Check-html:
-    runs-on: ubuntu-latest
-    steps:
       - name: Check HTML
         uses: chabad360/htmlproofer@master
         with:
