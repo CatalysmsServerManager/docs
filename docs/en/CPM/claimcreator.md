@@ -8,13 +8,13 @@ With this Web UI its very easy to create advanced claims or mark regions for res
 To access the Claim Creator Web UI just add one to the port you are using to access allocs webmap.
 So if you are using http://serverip:8082 to access allocs webmap, you add 1 to that port and thus access CPMcc with http://serverip:8083
 
-![](/assets/images/CPM/claimCreator/complete1.png)
+![Missing image](/assets/images/CPM/claimCreator/complete1.png)
 
 ## Using CPMcc
 
 For using the webui you must login via Steam so CPM can determine what permissions you have on the map. Default permission level for all is admin level 0.
 
-![](/assets/images/CPM/claimCreator/login1.png)
+![Missing image](/assets/images/CPM/claimCreator/login1.png)
 
 If you want to change the default permissions for CPMcc create claims, view online players, view landclaims, view advClaims and (quest) POI's, you can do so in cpmcc_permissions.xml. That file is in your Saves folder.
 
@@ -40,7 +40,7 @@ If you want to change the default permissions for CPMcc create claims, view onli
 
 Make sure you have selected "Select area" in the bottom right selection area.
 
-![](/assets/images/CPM/claimCreator/navarea.png)
+![Missing image](/assets/images/CPM/claimCreator/navarea.png)
 
 Now it's as easy as selecting 2 opposing corners of an area you want to mark. The area will automatically be drawn on the map for you to review.
 
@@ -48,37 +48,37 @@ In the following example i will make a hostile free advanced claim on an entire 
 
 Draw the desired area:
 
-![](/assets/images/CPM/claimCreator/selection.png)
+![Missing image](/assets/images/CPM/claimCreator/selection.png)
 
 Now select "Claims" in navigation menu.
 
-![](/assets/images/CPM/claimCreator/claims.png)
+![Missing image](/assets/images/CPM/claimCreator/claims.png)
 
 This window will show all your defined advanced claims and reset regions and can be managed from here.
 
-![](/assets/images/CPM/claimCreator/claims_overview.png)
+![Missing image](/assets/images/CPM/claimCreator/claims_overview.png)
 
 We are going to add the selected area on map as a new claim. Click "Create".
 
-![](/assets/images/CPM/claimCreator/createclaim.png)
+![Missing image](/assets/images/CPM/claimCreator/createclaim.png)
 
 Now all you have to do is give your claim a unique name and assign an accesslevel. Then select the type of advanced claim in the dropdown menu. Each type of claim will show you a brief explenation and offers you the possibility to configure all claim parameters (if present).
 
 For my hostilefree advanced claim it looks like this:
 
-![](/assets/images/CPM/claimCreator/hostilefree.png)
+![Missing image](/assets/images/CPM/claimCreator/hostilefree.png)
 
 You can repeat above steps to create more and different types of advanced claims.
 
 The "Commands" button in navigation menu will show you the number of commands that are awaiting execution (claim creation). In my example that number is 1 as i created only 1 advanced claim.
 
-![](/assets/images/CPM/claimCreator/commands.png)
+![Missing image](/assets/images/CPM/claimCreator/commands.png)
 
 Click "Commands"
 
 An overwiew of commands to be executed is presented:
 
-![](/assets/images/CPM/claimCreator/commandsoverview.png)
+![Missing image](/assets/images/CPM/claimCreator/commandsoverview.png)
 
 You can review your commands and if all is well, click the green "Execute x commands" button. All claims in the list will be created and are immediately visible on CPMcc Web UI and Allocs Webmap.
 
@@ -86,11 +86,11 @@ You can review your commands and if all is well, click the green "Execute x comm
 
 Make sure you have selected "Select region" in the bottom right selection area.
 
-![](/assets/images/CPM/claimCreator/navregion.png)
+![Missing image](/assets/images/CPM/claimCreator/navregion.png)
 
 Now you can select regions (make the grid visible via floating menu -> Regions) by just clicking on them.
 
-![](/assets/images/CPM/claimCreator/regions.png)
+![Missing image](/assets/images/CPM/claimCreator/regions.png)
 
 You can select as many as you like and when you are done just do the same steps as above when creating an advanced claim.
 
@@ -104,44 +104,44 @@ All your reset regions have been created and are active immediately including en
 
 ### hostilefree:
 
-![](/assets/images/CPM/claimCreator/hf.png)
+![Missing image](/assets/images/CPM/claimCreator/hf.png)
 
 ### notify:
 
-![](/assets/images/CPM/claimCreator/notify.png)
+![Missing image](/assets/images/CPM/claimCreator/notify.png)
 
 ### command:
 
-![](/assets/images/CPM/claimCreator/command.png)
+![Missing image](/assets/images/CPM/claimCreator/command.png)
 
 ### leveled:
 
-![](/assets/images/CPM/claimCreator/leveled.png)
+![Missing image](/assets/images/CPM/claimCreator/leveled.png)
 
 ### reversed:
 
-![](/assets/images/CPM/claimCreator/reversed.png)
+![Missing image](/assets/images/CPM/claimCreator/reversed.png)
 
 ### normal:
 
-![](/assets/images/CPM/claimCreator/normal.png)
+![Missing image](/assets/images/CPM/claimCreator/normal.png)
 
 ### timed:
 
-![](/assets/images/CPM/claimCreator/timed.png)
+![Missing image](/assets/images/CPM/claimCreator/timed.png)
 
 ### portal:
 
-![](/assets/images/CPM/claimCreator/portal.png)
+![Missing image](/assets/images/CPM/claimCreator/portal.png)
 
 ### openhours:
 
-![](/assets/images/CPM/claimCreator/openhours.png)
+![Missing image](/assets/images/CPM/claimCreator/openhours.png)
 
 ### playerlevel:
 
-![](/assets/images/CPM/claimCreator/playerlevel.png)
+![Missing image](/assets/images/CPM/claimCreator/playerlevel.png)
 
 ### lcbfree:
 
-![](/assets/images/CPM/claimCreator/lcbfree.png)
+![Missing image](/assets/images/CPM/claimCreator/lcbfree.png)

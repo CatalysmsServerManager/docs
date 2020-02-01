@@ -1,26 +1,28 @@
 # Console Commands
 
-Below is a list of Console Commands added to the server by CPM. 
- 
+Below is a list of Console Commands added to the server by CPM.
+
 ::: tip
 New command prefix
 
 Starting with CPM 5.35, all CPM-specific commands have been given the prefix 'cpm-' to identify which mod they are part of. As a result, commands like 'brender' are now named 'cpm-brender'; however, an alias has been added to the older name, so that Admins with experience in the older names can still use them. As an example, all three of the following commands would be valid and produce the same result:
 
-*   cpm-chatgroupcolor
-*   chatgroupcolor
-*   cgc
-    
+- cpm-chatgroupcolor
+- chatgroupcolor
+- cgc
+
 You can type 'help' to see all possible commands, and any command provided by CPM will have the prefix listed. Alternately, to only see CPM-related commands, you can type 'cpm-help' instead.
 :::
 
 CPM has a built in function to list all avalaible console commands (cpm-help), which give you a global description of the available commands. For detailed info on a command do:
-````
+
+```
 help <command>
-````
+```
 
 Available commands:
-````
+
+```
  cpm-additemloot additemloot => add item to SecureLoot below the given entity
  cpm-announcenighttime announcenighttime an => Turn NightTime announcement on/off
  cpm-arrest arrest => Put a player in jail (reversed claim jail required!)
@@ -108,7 +110,7 @@ Available commands:
  cpm-wlf wlf => Adds all friends of a player to whitelist(s) of their claim(s)
  cpm-wpc wpc => Manage CPM waypoints
 
-````
+```
 
 <table role="grid" resolved="">
     <thead>
@@ -425,7 +427,7 @@ Available commands:
                 <p>ccc</p>
             </td>
             <td>Claim Control Commands
-                used to work with <a href="https://confluence.catalysm.net/display/CPM/Advanced+Claims"
+                used to work with <a href="/en/CPM/advanced-claims.html"
                     rel="nofollow">Advanced Claims</a>.</td>
         </tr>
         <tr role="row">
@@ -1277,7 +1279,7 @@ Available commands:
             <td>markresetregion [alias:
                 mrr]</td>
             <td>Marked <a
-                    href="https://confluence.catalysm.net/display/CPM/Functional+Overview" rel="nofollow">Reset
+                    href="/en/CPM/reset-regions.html" rel="nofollow">Reset
                     Regions</a> are specific region files that have been marked for deletion so that they regenerate,
                 the next time a specific resetcommand is given. This command is used to mark/unmark regions, see the
                 list of regions, and set the message displayed to players when they enter a reset region.</td>
@@ -1678,7 +1680,7 @@ Available commands:
                 <p>Kicks all players, saves the world, and reboots immediately. During the reboot, all areas of the map
                     which are NOT marked for reset will be erased.</p>
                 <p>This is the <em>inverse </em>of the <a
-                        href="https://docs.csmm.app/en/cpm/reset-regions.html" rel="nofollow">Reset
+                        href="https://docs.csmm.app/en/CPM/reset-regions.html" rel="nofollow">Reset
                         Regions</a> functionality, because all areas that are <u>not</u> a reset region will be wiped.
                 </p>
                 <p>This command can also be triggered as a parameter of the <em>shutdownba</em> command.</p>
@@ -1781,8 +1783,7 @@ Available commands:
                     Bloodmoon has started, the shutdown process will wait until 10AM the morning after the event, and
                     then start the timer, allowing players time to loot following the horde. <span>Prior to the
                         shutdown, players will be kicked and world will be saved.</span></p>
-                <p>Optional flags for the shutdown include <a class="createlink"
-                        href="/pages/createpage.action?spaceKey=CPM&amp;title=abc1&amp;linkCreation=true&amp;fromPageId=1114588">resetting
+                <p>Optional flags for the shutdown include resetting
                         marked regions</a>, as well as the opposite command, resetting all regions that are <em>not</em>
                     marked for reset.</p>
                 <p>Entering 0 for the minute parameter will check for a blood moon, and if none is found, immediately
@@ -1806,9 +1807,7 @@ Available commands:
                 <p>shutdownba 10 reset</p>
             </td>
             <td>This command starts a Bloodmoon-aware shutdown with 10 minute timer and
-                automatically <a class="createlink"
-                    href="/pages/createpage.action?spaceKey=CPM&amp;title=abc1&amp;linkCreation=true&amp;fromPageId=1114588">resets
-                    marked regions</a>. Prior to the shutdown, players will be kicked and world will be saved.</td>
+                automatically. Prior to the shutdown, players will be kicked and world will be saved.</td>
         </tr>
         <tr role="row">
             <td>
