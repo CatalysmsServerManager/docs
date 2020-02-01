@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   Build:
-    runs on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: yarn install
         run: |
@@ -15,7 +15,7 @@ jobs:
           cd backend
           yarn build
   Check html:
-    runs on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Check HTML
         uses: chabad360/htmlproofer@master
