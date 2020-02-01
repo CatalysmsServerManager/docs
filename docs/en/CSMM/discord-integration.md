@@ -18,55 +18,37 @@ You must have administrative rights or control over user permissions for your Di
 3.  Click _Add bot to your server_ to trigger the invitation to Discord for Takaro.
 4.  In the window that pops up, select your Discord server.
 5.  On your server, Takaro will appear.
-6.  Once Takaro is present on the server, go back to CSMM and select your Discord server from the dropdown next to the _Select Guild_ button. If you don't see your server listed here, refresh the page.  
+6.  Once Takaro is present on the server, go back to CSMM and select your Discord server from the dropdown next to the _Select Guild_ button. If you don't see your server listed here, refresh the page.
 
-
-![](/assets/images/CSMM/discordIntegration/1114552.png)  
-  
-
+![](/assets/images/CSMM/discordIntegration/1114552.png)
 
 7.  You will need to create one or more text channels for Takaro to send messages to. Consult [Creating A Channel](https://support.discordapp.com/hc/en-us/articles/206143877-How-do-I-set-up-a-Role-Exclusive-channel-) over at Discord for more information. The linked tutorial includes explanations for public and private channels.
-    In this example, a 'chat' channel and an 'admin' channel were created. Normal users can see the 'chat' channel but not transmit to it, and only users with the Discord Role _7 Days Admins_ and above can see the 'admin' channel.  
+    In this example, a 'chat' channel and an 'admin' channel were created. Normal users can see the 'chat' channel but not transmit to it, and only users with the Discord Role _7 Days Admins_ and above can see the 'admin' channel.
 
-
-![](/assets/images/CSMM/discordIntegration/1114555.png)  
-  
-
+![](/assets/images/CSMM/discordIntegration/1114555.png)
 
 8.  Once the channels exist, you will need to either create a Discord Role for Takaro, or grant the Bot itself permissions to read and write to the channel. Take a look at [Discord Permissions](https://support.discordapp.com/hc/en-us/articles/206029707-How-do-I-set-up-Permissions-) for assistance on this step. Takaro needs these specific permissions Text Permissions:
     - Read Messages
     - Send Messages
     - Embed Links
 9.  In CSMM, set the command Prefix for your chat channel. This is the character you add before any instructions to the bot; any lines that begin with this character will not be relayed to the game.  
-    For example: typing !serverinfo will tell the bot to output all of your basic 7 Days server settings into the Discord channel.  
+    For example: typing !serverinfo will tell the bot to output all of your basic 7 Days server settings into the Discord channel.
 
+![](/assets/images/CSMM/discordIntegration/1114554.png)
 
-![](/assets/images/CSMM/discordIntegration/1114554.png)  
-  
+10. Set the _Chat Bridge Channel_ dropdown to the channel on your server that you wish the in-game chat to be copied to. In the example above, this was _csmm-chat_.
 
+![](/assets/images/CSMM/discordIntegration/1114556.png)
 
-10. Set the _Chat Bridge Channel_ dropdown to the channel on your server that you wish the in-game chat to be copied to. In the example above, this was _csmm-chat_.  
+11. Set the Rich Messages checkbox to the value that you want. If enabled, when players join or leave the server, it will show a preview window of their name, have a link to their Steam Profile, and a copy of their Steam ID. If disabled, it will simply show their name. This setting _only_ affects the chat channel, not the admin-specific notices which appear because of a different setting.
 
+![](/assets/images/CSMM/discordIntegration/1114557.png)
 
-![](/assets/images/CSMM/discordIntegration/1114556.png)  
-  
+12. Specify the 'blocked prefixes' for the chat channel in the text field. Typically, these prefixes are related to CSMM chat commands; CPM/Coppi/Alloc/Botman mods use in-game chat commands to trigger macros and features, and this feature prevents this commands from being relayed to the chat bridge. Typically these would be values such as / or ! or \$.
 
+If you have multiple prefixes (for example, if you have Botman and CPM at the same time), you can enter multiple prefixes to block here, each separated by a comma. In the example below, the / and ! and \$ symbols are all blocked prefixes.
 
-11. Set the Rich Messages checkbox to the value that you want. If enabled, when players join or leave the server, it will show a preview window of their name, have a link to their Steam Profile, and a copy of their Steam ID. If disabled, it will simply show their name. This setting _only_ affects the chat channel, not the admin-specific notices which appear because of a different setting.  
-
-
-![](/assets/images/CSMM/discordIntegration/1114557.png)  
-  
-
-
-12. Specify the 'blocked prefixes' for the chat channel in the text field. Typically, these prefixes are related to CSMM chat commands; CPM/Coppi/Alloc/Botman mods use in-game chat commands to trigger macros and features, and this feature prevents this commands from being relayed to the chat bridge. Typically these would be values such as / or ! or \$.  
-
-
-If you have multiple prefixes (for example, if you have Botman and CPM at the same time), you can enter multiple prefixes to block here, each separated by a comma. In the example below, the / and ! and \$ symbols are all blocked prefixes.  
-  
-![](/assets/images/CSMM/discordIntegration/1114558.png)  
-  
-
+![](/assets/images/CSMM/discordIntegration/1114558.png)
 
 13. Click _Set Chat Channel_ to save the Chat Bridge settings.
 
@@ -152,7 +134,7 @@ A notification that shows when a player joins that is on CSMM GBL list.
 
 ## Discord Bot Commands
 
-Takaro does more than just relay chat back and forth and provide notifications: you can give Takaro instructions for to execute on the server, and also send commands to have the bot bring back data for you to use. These commands have the same privilege level as if they were run via RCON, so care must be taken granting people access to this ability. Use of these two commands requires the below role permissions in your [Roles](/en/CSMM/roles) setup, and also requires you to link your Discord ID to your CSMM profile in the CSMM web interface.
+Takaro does more than just relay chat back and forth and provide notifications: you can give Takaro instructions for to execute on the server, and also send commands to have the bot bring back data for you to use. These commands have the same privilege level as if they were run via RCON, so care must be taken granting people access to this ability. Use of these two commands requires the below role permissions in your [Roles](/en/CSMM/roles.html) setup, and also requires you to link your Discord ID to your CSMM profile in the CSMM web interface.
 
 ![](/assets/images/CSMM/discordIntegration/3866659.png)
 

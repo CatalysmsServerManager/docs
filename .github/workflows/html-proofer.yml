@@ -3,7 +3,7 @@ name: HTML Proofer
 on: [push]
 
 jobs:
-  Build:
+  Validate_HTML:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1

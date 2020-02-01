@@ -1,8 +1,8 @@
 # CSMM/CPM Common Admin Tasks
 
-So, you've got a 7 Days To Die server set up, got CSMM connected to it for management, and have [CPM](/en/cpm) installed and running. So...now what? Are there some standard things every server admin must do? Settings you could set that will make things better/simpler/safer for the server? This page will get you started with some of the more common follow-on tasks that veteran CSMM server managers typically do once everything is up and running.
+So, you've got a 7 Days To Die server set up, got CSMM connected to it for management, and have [CPM](/en/CPM/index.html) installed and running. So...now what? Are there some standard things every server admin must do? Settings you could set that will make things better/simpler/safer for the server? This page will get you started with some of the more common follow-on tasks that veteran CSMM server managers typically do once everything is up and running.
 
-This page assumes that you have completed the basic setup process covered in the [CSMM Installation Guide](/en/csmm/installation), and that you are at least familiar with the medium/advanced topic areas such as [Roles](/en/csmm/roles), [Scheduled Commands](/en/csmm/automation), etc. Detailed explanations for how to use each part of the tool are _not_ covered here.
+This page assumes that you have completed the basic setup process covered in the [CSMM Installation Guide](/en/CSMM/installation.html), and that you are at least familiar with the medium/advanced topic areas such as [Roles](/en/CSMM/roles.html), [Scheduled Commands](/en/CSMM/automation.html), etc. Detailed explanations for how to use each part of the tool are _not_ covered here.
 
 # Expanded Server Basics
 
@@ -34,7 +34,7 @@ Scheduled commands include things like automated world saving, scheduled reboots
 
 ## CPM Settings
 
-[CPM](/en/cpm) has a _lot_ of functionality, more so than most people realize, and it's very easy to miss some very helpful configuration settings that allow you to use the more useful features. The [full list](/en/cpm/console-commands) of commands is available for reference, and this section will go over the quick-set commands you can use to configure the high-level functionality.
+[CPM](/en/CPM/index.html) has a _lot_ of functionality, more so than most people realize, and it's very easy to miss some very helpful configuration settings that allow you to use the more useful features. The [full list](/en/CPM/console-commands.html) of commands is available for reference, and this section will go over the quick-set commands you can use to configure the high-level functionality.
 
 **Command: an**
 
@@ -131,7 +131,7 @@ If the user were to type '/gv smith', the server would attempt to execute 'cpm-g
 
 _Requires CPM 8.1.1 or higher._
 
-In A17, the land claim protection block is less useful than it was in A16 since you can only have one now. Without it, however, zombies will be able to spawn in your base at random and during horde night. An alternative to the LCB is to use [Advanced Claims](/en/CPM/advanced-claims) to mark a region on the map where only the owner, and anyone they choose, are permitted to enter. Typically, however, Advanced Claims must be created by an admin; this command works around that. When a player runs it, it automatically creates an Advanced Claim with a radius of 20 around where the player is standing, and then whitelists the player's friends to be able to enter the area.
+In A17, the land claim protection block is less useful than it was in A16 since you can only have one now. Without it, however, zombies will be able to spawn in your base at random and during horde night. An alternative to the LCB is to use [Advanced Claims](/en/CPM/advanced-claims.html) to mark a region on the map where only the owner, and anyone they choose, are permitted to enter. Typically, however, Advanced Claims must be created by an admin; this command works around that. When a player runs it, it automatically creates an Advanced Claim with a radius of 20 around where the player is standing, and then whitelists the player's friends to be able to enter the area.
 
 There are several protections in place with this command to prevent abuse by the player by spamming it to block large regions of the map off.
 

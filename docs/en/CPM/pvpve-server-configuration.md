@@ -6,7 +6,7 @@ Traditionally, 7 Days To Die servers are configured as PVP servers, or PVE serve
 - The server is not both a PVP and PVE server. It is solely a PVP server that has a special area where kills are punished because they are supposed to be forbidden. PVE kills are not prevented, they are punished. As an Admin, you will need to watch for repeat PVE kills and punish those who are griefing in your PVE space.
 - It is possible to limit punishment for kills to players who are not friends, or punish anyone who kills in PVE. The former option prevents punishment for friendly fire incidents.
 - The PVE protection zone helps limit PVE player kills, but it does not do anything against base raiding or griefing. The only way to do prevent this is to configure Land Claims blocks to provide 100% protection, or allow the use of Advanced Claims to prevent access to player bases.
-- The PVE/PVP border is a solid line on the map, but the ability to kill people across this line depends entirely on the player's visibility of eachother across this line. It is possible for players with better computers to see other players across the line and still be able to kill them from a distance. See [ThePVP/PVEKillRules](#PvPvEServerConfiguration-ThePVP/PVEKillRules) section for more information on this.
+- The PVE/PVP border is a solid line on the map, but the ability to kill people across this line depends entirely on the player's visibility of eachother across this line. It is possible for players with better computers to see other players across the line and still be able to kill them from a distance.
 
 With these restrictions understood, you can begin to configure your server.
 
@@ -39,7 +39,7 @@ If you wish to _completely_ prevent griefing behavior in your PVE zones, you sho
 
 ## PVE Claim Regions
 
-The PVE region claim is the most complicated part of the server setup. A PVE claim is simply a Notify [Advanced Claims](/en/cpm/advanced-claims) with an extra parameter, known as the punishment parameter. A PVE claim looks something like this:
+The PVE region claim is the most complicated part of the server setup. A PVE claim is simply a Notify [Advanced Claims](/en/CPM/advanced-claims.html) with an extra parameter, known as the punishment parameter. A PVE claim looks something like this:
 
 ccc add pveNPFZone \-4096 2500 4096 -4096 1 "notify:You are inside the PVE Zone. Killing of other players in this zone will result in instant death.:You are in the PVP Zone. Killing of other players is permitted.:kill \${entityId}"
 

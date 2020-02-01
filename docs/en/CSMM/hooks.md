@@ -13,7 +13,7 @@ The Custom Hooks feature allows CSMM to read your server's console logs and watc
 CSMM has a number of built-in detections for common events, such as a new player connecting, existing players connecting, players being killed, players dying from the environment (zombies, animals, etc.), chat messages, _players leveling up, when a zombie is killed, when an animal is killed._ Beyond those built-in hooks, you can create completely custom hooks of your own, using any rules on any kind of event that you want.
 
 ::: warning
-the _italics_ hooks require at least Version 9.5 or higher of the [CSMM Patrons Mod (CPM)](/en/cpm) plugin to be installed in order for these event triggers to work.
+the _italics_ hooks require at least Version 9.5 or higher of the [CSMM Patrons Mod (CPM)](/en/CPM/index.html) plugin to be installed in order for these event triggers to work.
 :::
 
 Custom Hooks are a _complicated_ topic, but they allow you to do some crazy cool stuff, so be patient as you explore this feature!
@@ -25,7 +25,7 @@ The key to understanding when custom event hooks can fire requires you to unders
 2019-03-16T23:33:34 1175.575 INF Chat (from '76561197961408188', entity id '171', to 'Global'): '**Corran**': test message  
 2019-03-16T23:37:18 1399.896 INF Entity **2821** killed by **171**.
 
-In this log, player 'Corran' sent a message to general chat that said 'test message'. After that, entity '171' killed another entity, '2821'. The first event is easy to understand, but the second event is not so simple. CSMM can compare entityIds to active players, but animals and zombies often appear and die in a few short seconds, so it's hard to tell what class of creature a specific entity is at any given moment. Even worse, once the entity dies, it's deleted from memory immediately, so no record remains. Because of this, CSMM is limited in what it can do in response. Installing the [CSMM Patrons Mod (CPM)](/en/cpm) version 9.5 or higher adds extra output to those logs. The lines with the \[CSMM_Patrons\] prefix are the extra bits of info.
+In this log, player 'Corran' sent a message to general chat that said 'test message'. After that, entity '171' killed another entity, '2821'. The first event is easy to understand, but the second event is not so simple. CSMM can compare entityIds to active players, but animals and zombies often appear and die in a few short seconds, so it's hard to tell what class of creature a specific entity is at any given moment. Even worse, once the entity dies, it's deleted from memory immediately, so no record remains. Because of this, CSMM is limited in what it can do in response. Installing the [CSMM Patrons Mod (CPM)](/en/CPM/index.html) version 9.5 or higher adds extra output to those logs. The lines with the \[CSMM_Patrons\] prefix are the extra bits of info.
 
 2019-03-16T23:37:20 1401.709 INF Entity **2849** killed by **171**.  
 2019-03-16T23:37:20 1401.710 INF \[CSMM_Patrons\]entityKilled: **Corran (76561197961408188)** killed zombie **zombieFemaleFat**
@@ -97,7 +97,7 @@ This event fires whenever a player kills an 'animal' type entity, such as a pig 
 
 ### User-Created Event Hooks
 
-This is where the true creativity of custom hooks can be found. Referred to as _logLine_ Events, these hooks will fire whenever totally unique custom criteria are matched, and this capability is extremely powerful when paired up with [CSMM Patrons Mod (CPM)](/en/cpm)'s Write2Log (W2L) as well. Using W2L, you can create a server event log at any time you wish, allowing you to create a record in the event log that some specific action or event has taken place.
+This is where the true creativity of custom hooks can be found. Referred to as _logLine_ Events, these hooks will fire whenever totally unique custom criteria are matched, and this capability is extremely powerful when paired up with [CSMM Patrons Mod (CPM)](/en/CPM/index.html)'s Write2Log (W2L) as well. Using W2L, you can create a server event log at any time you wish, allowing you to create a record in the event log that some specific action or event has taken place.
 
 For example, CPM has a feature called a Command Claim, which can trigger a W2L event whenever someone enters the area. Normal command claims can take console commands and execute them, but by triggering W2L and then calling a custom hook, the commands run by the custom hook now have access to much more information and can apply custom criteria, such as only firing during certain times of day, or if the player has a specific name. It can also show information about the player, such as their currency balance, last online time, country, etc.
 
@@ -146,8 +146,7 @@ Using the above order, there's a few specific things you can see:
 
 This will reward a player for leveling up with currency equal to their newly gained level. Note that this will reward a player for **every** level they get. If you only want to reward players for getting a level that is a multiple of 10 you can use this regex: `(level )(\[0-9\])\*0`
 
-- Bounty for killing players in PvP  
-
+- Bounty for killing players in PvP
 
 `say "${killer.name} has eliminated ${victim.name} and was awarded ${victim.playerKills}0 zcoins as bounty reward!"; addCurrency(${killer.id}, ${victim.playerKills}0)`
 

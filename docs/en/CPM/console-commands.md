@@ -427,7 +427,7 @@ Available commands:
                 <p>ccc</p>
             </td>
             <td>Claim Control Commands
-                used to work with <a href="/en/cpm/advanced-claims"
+                used to work with <a href="/en/CPM/advanced-claims.html"
                     rel="nofollow">Advanced Claims</a>.</td>
         </tr>
         <tr role="row">
@@ -1279,7 +1279,7 @@ Available commands:
             <td>markresetregion [alias:
                 mrr]</td>
             <td>Marked <a
-                    href="/en/cpm/reset-regions" rel="nofollow">Reset
+                    href="/en/CPM/reset-regions.html" rel="nofollow">Reset
                     Regions</a> are specific region files that have been marked for deletion so that they regenerate,
                 the next time a specific resetcommand is given. This command is used to mark/unmark regions, see the
                 list of regions, and set the message displayed to players when they enter a reset region.</td>
@@ -1680,7 +1680,7 @@ Available commands:
                 <p>Kicks all players, saves the world, and reboots immediately. During the reboot, all areas of the map
                     which are NOT marked for reset will be erased.</p>
                 <p>This is the <em>inverse </em>of the <a
-                        href="https://docs.csmm.app/en/cpm/reset-regions.html" rel="nofollow">Reset
+                        href="https://docs.csmm.app/en/CPM/reset-regions.html" rel="nofollow">Reset
                         Regions</a> functionality, because all areas that are <u>not</u> a reset region will be wiped.
                 </p>
                 <p>This command can also be triggered as a parameter of the <em>shutdownba</em> command.</p>
@@ -1783,8 +1783,7 @@ Available commands:
                     Bloodmoon has started, the shutdown process will wait until 10AM the morning after the event, and
                     then start the timer, allowing players time to loot following the horde. <span>Prior to the
                         shutdown, players will be kicked and world will be saved.</span></p>
-                <p>Optional flags for the shutdown include <a class="createlink"
-                        href="/pages/createpage.action?spaceKey=CPM&amp;title=abc1&amp;linkCreation=true&amp;fromPageId=1114588">resetting
+                <p>Optional flags for the shutdown include resetting
                         marked regions</a>, as well as the opposite command, resetting all regions that are <em>not</em>
                     marked for reset.</p>
                 <p>Entering 0 for the minute parameter will check for a blood moon, and if none is found, immediately
@@ -1808,9 +1807,7 @@ Available commands:
                 <p>shutdownba 10 reset</p>
             </td>
             <td>This command starts a Bloodmoon-aware shutdown with 10 minute timer and
-                automatically <a class="createlink"
-                    href="/pages/createpage.action?spaceKey=CPM&amp;title=abc1&amp;linkCreation=true&amp;fromPageId=1114588">resets
-                    marked regions</a>. Prior to the shutdown, players will be kicked and world will be saved.</td>
+                automatically. Prior to the shutdown, players will be kicked and world will be saved.</td>
         </tr>
         <tr role="row">
             <td>

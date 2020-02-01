@@ -1,6 +1,6 @@
 # Chat Commands
 
-_Starting with CPM 5.28, the CPM chat command prefix is configurable by using the [console command](/en/cpm/console-commands)_ cpmprefix. The default prefix is / for all versions.
+_Starting with CPM 5.28, the CPM chat command prefix is configurable by using the [console command](/en/CPM/console-commands.html)_ cpmprefix. The default prefix is / for all versions.
 
 The chat commands are available in two varieties: Admin commands, and Player commands. By default, all Admin commands require Level 0 access in order to execute them. You can use the 'changechatpermissions' (ccp) command to adjust the access level required for each command. This allows you to grant Players access to an Admin command, and allows you to prevent Players from using a command they normally have access to.
 
@@ -90,7 +90,7 @@ As of CPM Version 5.26, the Move and FlyTo commands can be used on Offline playe
 
 ### Player Protection
 
-Admins have the ability to place a protective bubble around a player. This bubble will automatically kill all hostile creatures (but not players!) that enter the 25 meter radius of the bubble. This command can be used to protect yourself from zombies while you are out-of-window doing Admin things, or even used to place a shield around a new player who is being overwhelmed by zombies during a horde night. This chat command triggers the [console command](/en/cpm/console-commands) _protectplayer_.
+Admins have the ability to place a protective bubble around a player. This bubble will automatically kill all hostile creatures (but not players!) that enter the 25 meter radius of the bubble. This command can be used to protect yourself from zombies while you are out-of-window doing Admin things, or even used to place a shield around a new player who is being overwhelmed by zombies during a horde night. This chat command triggers the [console command](/en/CPM/console-commands.html) _protectplayer_.
 
 /bubble
 

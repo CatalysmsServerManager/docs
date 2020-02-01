@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Install [Alloc's Server Fixes](https://7dtd.illy.bz/wiki/Server%20fixes) if you haven't done so already. An [install guide](/allocs) is available. 
+Install [Alloc's Server Fixes](https://7dtd.illy.bz/wiki/Server%20fixes) if you haven't done so already. An [install guide](/en/CSMM/allocs.html) is available.
 
 ## Set up web API credentials
 
@@ -21,7 +21,7 @@ Don’t forget the 0 at the end! It’s important CSMM has privilege 0 to ensure
 
 ## Add your server to CSMM via the website.
 
-Once CSMM is connected to your server, it's time to perform the detailed configuration process. 
+Once CSMM is connected to your server, it's time to perform the detailed configuration process.
 
 - Set up [Roles](https://docs.csmm.app/en/CSMM/roles.html) in order to add additional Administrators, Moderators, and more.
 - Configure the server Economy for your players

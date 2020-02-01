@@ -1,48 +1,55 @@
-const sidebars = require('./sidebars');
-const navs = require('./navs');
+const sidebars = require("./sidebars");
+const navs = require("./navs");
 
 module.exports = {
-  title: 'CSMM',
-  description: 'Documentation for the web based 7 days to die server manager',
+  title: "CSMM",
+  description: "Documentation for the web based 7 days to die server manager",
   locales: {
-    '/': {
-      lang: 'en-US'
-    },
-    '/nl/': {
-      lang: 'nl',
-      description: 'Documentatie voor de web based 7 days to die server manager',
+    "/": {
+      lang: "en-US"
     }
+    /*     "/nl/": {
+      lang: "nl",
+      description: "Documentatie voor de web based 7 days to die server manager"
+    } */
   },
-  ga: 'UA-104087733-8',
-  plugins: ['@vuepress/back-to-top', 'vuepress-plugin-smooth-scroll', ['vuepress-plugin-medium-zoom', {
-    selector: '.content__default img'
-  }]],
+  ga: "UA-104087733-8",
+  plugins: [
+    "@vuepress/back-to-top",
+    "vuepress-plugin-smooth-scroll",
+    [
+      "vuepress-plugin-medium-zoom",
+      {
+        selector: ".content__default img"
+      }
+    ]
+  ],
   themeConfig: {
-    repo: 'CatalysmsServerManager/docs',
-    repoLabel: 'Contribute',
-    docsDir: 'docs',
+    repo: "CatalysmsServerManager/docs",
+    repoLabel: "Contribute",
+    docsDir: "docs",
     editLinks: true,
-    lastUpdated: 'Last updated',
+    lastUpdated: "Last updated",
     locales: {
-      '/': {
-        lang: 'en',
+      "/": {
+        lang: "en",
         // text for the language dropdown
-        selectText: 'Languages',
+        selectText: "Languages",
         // label for this locale in the language dropdown
-        label: 'English',
+        label: "English",
         // text for the edit-on-github link
-        editLinkText: 'Help us improve this page!',
-        sidebar: sidebars['en'],
-        nav: navs['en']
-      },
-      '/nl/': {
+        editLinkText: "Help us improve this page!",
+        sidebar: sidebars["en"],
+        nav: navs["en"]
+      }
+      /*       '/nl/': {
         lang: 'nl',
         selectText: 'Taal',
         label: 'Nederlands',
         editLinkText: 'Help ons deze pagina te verbeteren!',
         sidebar: sidebars['nl'],
         nav: navs['nl']
-      }
+      } */
     }
   }
-}
+};
