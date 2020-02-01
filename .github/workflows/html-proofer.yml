@@ -14,7 +14,7 @@ jobs:
         run: |
           cd backend
           yarn build
-  Check html:
+  Check-html:
     runs-on: ubuntu-latest
     steps:
       - name: Check HTML
