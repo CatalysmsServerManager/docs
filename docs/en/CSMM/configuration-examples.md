@@ -1,6 +1,8 @@
 # Configuration examples
 
-These examples show you some of the things possible with CSMMs custom modules. Not all of the commands used are included in the vanilla version of the game but require extra mods installed like CPM. If an example is not clear, make sure to read the documentation for that specific module.
+So, you've got a 7 Days To Die server set up, got CSMM connected to it for management, and have [CPM](/en/CPM/index.html) installed and running. So...now what? Are there some standard things every server admin must do? Settings you could set that will make things better/simpler/safer for the server? This page will get you started with some of the more common follow-on tasks that veteran CSMM server managers typically do once everything is up and running.
+
+This page assumes that you have completed the basic setup process covered in the [CSMM Installation Guide](/en/CSMM/installation.html), and that you are at least familiar with the medium/advanced topic areas such as [Roles](/en/CSMM/roles.html), [Scheduled Commands](/en/CSMM/automation.html), etc. Detailed explanations for how to use each part of the tool are _not_ covered here.
 
 [[toc]]
 
@@ -151,7 +153,7 @@ Search string - bioHazardZombie
 
 ## Cron jobs / server automation
 
-You will want to think about how often you execute these. It's fine to save the world every 30 minutes but you do not want the server to restart every 30 minutes!
+Scheduled commands include things like automated world saving, scheduled reboots, server announcements, etc. Most of the time, these will be administrative or behind-the-scenes functionality things that the users won't interact with. You will want to think about how often you execute these. It's fine to save the world every 30 minutes but you do not want the server to restart every 30 minutes!
 
 ### Automatic server restart after 30 seconds, with one warning at the beginning of the timer.
 
