@@ -35,7 +35,7 @@ Roles are created via the CSMM Web UI.
 
 Repeat these steps as needed to create additional roles. Remember to leave space between each major role type so that you can add roles in the future without starting over.
 
-![](/assets/images/CSMM/roles/1114514.png)
+![Missing image](/assets/images/CSMM/roles/1114514.png)
 
 ## Editing and Deleting Roles
 
@@ -73,7 +73,7 @@ To remove a Role entirely, repeat the above steps 1-4, but click _Remove_ instea
 
   
 
-![](/assets/images/CSMM/roles/6553602.png)
+![Missing image](/assets/images/CSMM/roles/6553602.png)
 
 ## Assigning Roles
 
@@ -90,5 +90,5 @@ Repeat these steps as necessary to assign roles to existing players.
 
 **Note**: To remove a Role from a player, repeat the above steps, but set the Role field to 'None'.
 
-![](/assets/images/CSMM/roles/1114511.png) 
+![Missing image](/assets/images/CSMM/roles/1114511.png) 
 

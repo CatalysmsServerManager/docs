@@ -130,7 +130,7 @@ ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <a
 This is used for creating hostile free areas. All hostiles will despawn in this type of advanced claim.
 
 :::warning
-Traders are marked as hostile by default! If you do not want your traders to dissapear, consider using the [no hostile traders modlet](/assets/public/modlets/No_Hostile_Traders.zip)
+Traders are marked as hostile by default! If you do not want your traders to dissapear, consider using the [no hostile traders modlet](/assets/modlets/No_Hostile_Traders.zip)
 :::
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> hostilefree

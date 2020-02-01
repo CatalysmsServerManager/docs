@@ -1,8 +1,6 @@
 # Chat Commands
 
-_Starting with CPM 5.28, the CPM chat command prefix is configurable by using the [console command](https://confluence.catalysm.net/display/CPM/CPM+Console+Commands)_ cpmprefix. The default prefix is / for all versions.
-
-  
+_Starting with CPM 5.28, the CPM chat command prefix is configurable by using the [console command](/en/CPM/console-commands.html)_ cpmprefix. The default prefix is / for all versions.
 
 The chat commands are available in two varieties: Admin commands, and Player commands. By default, all Admin commands require Level 0 access in order to execute them. You can use the 'changechatpermissions' (ccp) command to adjust the access level required for each command. This allows you to grant Players access to an Admin command, and allows you to prevent Players from using a command they normally have access to.
 
@@ -34,8 +32,7 @@ Deletes the specified waypoint.
 
 Teleporting comes in three flavors: Move, which moves a player from one location to another, FlyTo, which allows you to teleport yourself around the map, and Grab, which brings a player to you, but lets you send them back where they came from afterward. Both the Move and FlyTo options can be used to move yourself, but using Move to teleport yourself requires you to specify yourself each time, whereas FlyTo is focused on you every time.
 
-
-**/mv \<moving\_player\> \<destination\_player\>**
+**/mv \<moving_player\> \<destination_player\>**
 
 /mv Corran Prisma501
 
@@ -93,7 +90,7 @@ As of CPM Version 5.26, the Move and FlyTo commands can be used on Offline playe
 
 ### Player Protection
 
-Admins have the ability to place a protective bubble around a player. This bubble will automatically kill all hostile creatures (but not players!) that enter the 25 meter radius of the bubble. This command can be used to protect yourself from zombies while you are out-of-window doing Admin things, or even used to place a shield around a new player who is being overwhelmed by zombies during a horde night. This chat command triggers the [console command](https://confluence.catalysm.net/display/CPM/CPM+Console+Commands) _protectplayer_.
+Admins have the ability to place a protective bubble around a player. This bubble will automatically kill all hostile creatures (but not players!) that enter the 25 meter radius of the bubble. This command can be used to protect yourself from zombies while you are out-of-window doing Admin things, or even used to place a shield around a new player who is being overwhelmed by zombies during a horde night. This chat command triggers the [console command](/en/CPM/console-commands.html) _protectplayer_.
 
 /bubble
 
@@ -103,22 +100,19 @@ Toggles the protective bubble around yourself. Repeat the command to reverse the
 
 Toggles the protective bubble around the specified player. Repeat the command to reverse the status.
 
-  
-
 ## Unrestricted Chat Commands
 
 These commands are available to both Players and Admins, unless the Admin has altered the permission level using the _ccp_ console command.
 
 ### Location Tracking
 
-Admins can use the _loctrack _command to determine which players have been in a specific area within a certain time frame. This is intended to be a short-term solution to help determine who was in a specific area; if you need to perform a detailed track of a player, you should use CSMM's Player Tracking feature. Using _loctrack_ can help determine which players need to be followed in Player Tracking.
+Admins can use the _loctrack \_command to determine which players have been in a specific area within a certain time frame. This is intended to be a short-term solution to help determine who was in a specific area; if you need to perform a detailed track of a player, you should use CSMM's Player Tracking feature. Using \_loctrack_ can help determine which players need to be followed in Player Tracking.
 
 Depending on your server configuration, the command may not be _loctrack_. The chat command can be changed or even disabled using the following console commands:
 
 **loctrack commandenabled \<true/false\>**
 
-**loctrack command \<command\_name\>**
-
+**loctrack command \<command_name\>**
 
 /loctrack
 
@@ -175,7 +169,6 @@ The process is as follows:
 5.  If both parties agree to the trade, they then type **/ati \<playername\>** to complete the trade.
 6.  Once completed, the items will swap places and the trade is complete.
 
-
 /rtc
 
 Marks a storage chest for use as a trading chest. You must stand atop it at the moment of creation for this to take effect.
@@ -198,12 +191,9 @@ Cancels the trade process, returning the items to their original owners.
 
 Lists all items currently marked for trade.
 
-  
-
 ### Advanced Claim Commands
 
 While Players can't place Advanced Claims, they _can_ interact with Advanced Claims that were created and assigned to them in order to manage the whitelist for the claim. With most advanced claim types, any player not on the whitelist is typically not able to enter, unless they are added to the whitelist. Similarly, anyone inside a Reversed claim region can't leave unless they are whitelisted, and players on the whitelist for an OpenHours claim can enter the region off-hours.
-
 
 /acf \<playername\>
 

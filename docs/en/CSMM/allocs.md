@@ -4,7 +4,6 @@ Alloc's Fixes are a group of mod addons for 7 Days To Die that enable some advan
 
 If you are hosting your game with a professional hosting company, your game server was probably deployed with a copy of Alloc's Fixes installed. If you are self-hosting, you will have to install the files yourself. In either case, you want to make sure you have the most up to date version installed. You can obtain the Alloc's Fixes zip file at the [official site](https://7dtd.illy.bz/wiki/Server%20fixes).
 
-
 ## Determine whether Alloc's server fixes is already installed
 
 The first step is to confirm whether Alloc's Fixes is installed and running properly. To do that, you can simply type 'version' into your console or RCON window. The output should look something like below. There are three separate Alloc's Fixes mods that need to be installed, and depending on the version you install, the numbers (18, 21, 31) can be different.
@@ -30,23 +29,16 @@ Next, you'll need your server's IP Address. Once you have it, in your browser, b
 
 http://serverip:allocport
 
-![Allocs webmap](/assets/images/allocs-webmap-screenshot.png "Allocs webmap")
-
 If you don't have a map login page, continue to the next section, which will help you install the mod properly. If you see a page like the above, it means that you have the port and have access to the interactive map, and Alloc's is successfully installed and working. You can skip the Installation section, and move on to the Configuration section if you wish.
 
 ## Installation of Alloc's server fixes
 
-Download the latest version of Alloc's Fixes, and then extract the zip file. After working through the TAR and GZ files, you will eventually end up with a 'Mods' folder.  You will need to transfer this Mods folder to the main folder of your 7 Days installation. Copied properly, you will see a folder structure similar to the screenshot below; note the Mods folder at the top level.
-
-![Mods file structure](/assets/images/allocs-file-structure-screenshot.png "Mods file structure")
-
-If you expand the mods folder, you should see a structure similar to the following:
-
-![Mods file structure 2](/assets/images/allocs-file-structure-2-screenshot.png "Mods file structure 2")
+Download the latest version of Alloc's Fixes, and then extract the zip file. After working through the TAR and GZ files, you will eventually end up with a 'Mods' folder. You will need to transfer this Mods folder to the main folder of your 7 Days installation.
 
 Clicking one of the Alloc's folders should given you a structure like this:
 
 ```
+Mods/
 ├── Allocs_CommandExtensions
 │   ├── AllocsCommands.dll
 │   └── ModInfo.xml
@@ -68,14 +60,13 @@ Note that each Mod folder has a ModInfo.xml file and a DLL file for the mod. If 
 
 Note the extra 'mods' subfolder. This will not work.
 
-
 Once the mod files are installed, restart your 7 Days To Die server, and then go back to the previous section to test whether the mod is installed correctly.
 
 ## Configuring Alloc's Live Map Permissions
 
 Properly configured with permissions and admin rights, an Alloc's Live Map should look something like the below. By default, however, not all of this functionality is enabled, and you should be careful with what user access levels you give specific permissions to.
 
-![Allocs full map](/assets/images/allocs-full-map-screenshot.png "Allocs full map")
+![Allocs full map](/assets/images/CSMM/allocs/allocs-full-map-screenshot.png "Allocs full map")
 
 The live map has several specific features you can grant granular access to, such as:
 
@@ -93,33 +84,33 @@ You set these permissions by modifying the webserver.xml file, which is stored i
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <webpermissions>
- 
+
     <admintokens>
         <!-- <token name="adminuser1" token="supersecrettoken" permission_level="0" /> -->
     </admintokens>
- 
+
     <permissions>
         <permission module="web.map" permission_level="2000" />
         <!-- <permission module="web.map" permission_level="1000" /> -->
- 
+
         <!-- <permission module="webapi.getlog" permission_level="0" /> -->
         <!-- <permission module="webapi.executeconsolecommand" permission_level="0" /> -->
- 
+
         <!-- <permission module="webapi.getstats" permission_level="1000" /> -->
         <!-- <permission module="webapi.getplayersonline" permission_level="1000" /> -->
- 
+
         <!-- <permission module="webapi.getplayerslocation" permission_level="1000" /> -->
         <!-- <permission module="webapi.viewallplayers" permission_level="1" /> -->
- 
+
         <!-- <permission module="webapi.getlandclaims" permission_level="1000" /> -->
         <!-- <permission module="webapi.viewallclaims" permission_level="1" /> -->
- 
+
         <!-- <permission module="webapi.getplayerinventory" permission_level="1" /> -->
- 
+
         <!-- <permission module="webapi.gethostilelocation" permission_level="1" /> -->
         <!-- <permission module="webapi.getanimalslocation" permission_level="1" /> -->
     </permissions>
- 
+
 </webpermissions>
 ```
 

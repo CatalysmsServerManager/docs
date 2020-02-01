@@ -22,7 +22,7 @@ Announcements are very easy to create, but the scheduling part of the job is tri
       
 Eventually, these timers will overlap. At the top of the hour, #1 and #3 go off at the same time. At the top of every even-numbered hour, all three will go off at the same time. This creates a huge chat spam, and in some cases, the first or even second message may instantly scroll off-screen.   
       
-![](/assets/images/CSMM/commonAdminTasks/5210470.png)  
+![Missing image](/assets/images/CSMM/commonAdminTasks/5210470.png)  
       
 This problem can be solved by configuring your announcements for exact times using the [cron time selection tool](https://crontab.guru/) linked in the CSMM scheduled task creation page, and spacing them out evenly. In the screenshot above, the 'rules' announcement fires every half hour, but does so specifically at minute 10 and minute 40 of every hour. Two minutes later, the minibike rule will go off as well. A few minutes later, the Discord alert goes off. Between these two groups of events, the vote reminder goes off. Specifying the exact time is only really useful if you have a lot of chat events that trigger regularly.
 
