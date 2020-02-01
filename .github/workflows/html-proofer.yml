@@ -1,6 +1,6 @@
 name: HTML Proofer
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   Validate_HTML:
