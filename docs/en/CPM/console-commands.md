@@ -1,26 +1,28 @@
 # Console Commands
 
-Below is a list of Console Commands added to the server by CPM. 
- 
+Below is a list of Console Commands added to the server by CPM.
+
 ::: tip
 New command prefix
 
 Starting with CPM 5.35, all CPM-specific commands have been given the prefix 'cpm-' to identify which mod they are part of. As a result, commands like 'brender' are now named 'cpm-brender'; however, an alias has been added to the older name, so that Admins with experience in the older names can still use them. As an example, all three of the following commands would be valid and produce the same result:
 
-*   cpm-chatgroupcolor
-*   chatgroupcolor
-*   cgc
-    
+- cpm-chatgroupcolor
+- chatgroupcolor
+- cgc
+
 You can type 'help' to see all possible commands, and any command provided by CPM will have the prefix listed. Alternately, to only see CPM-related commands, you can type 'cpm-help' instead.
 :::
 
 CPM has a built in function to list all avalaible console commands (cpm-help), which give you a global description of the available commands. For detailed info on a command do:
-````
+
+```
 help <command>
-````
+```
 
 Available commands:
-````
+
+```
  cpm-additemloot additemloot => add item to SecureLoot below the given entity
  cpm-announcenighttime announcenighttime an => Turn NightTime announcement on/off
  cpm-arrest arrest => Put a player in jail (reversed claim jail required!)
@@ -108,7 +110,7 @@ Available commands:
  cpm-wlf wlf => Adds all friends of a player to whitelist(s) of their claim(s)
  cpm-wpc wpc => Manage CPM waypoints
 
-````
+```
 
 <table role="grid" resolved="">
     <thead>
@@ -425,7 +427,7 @@ Available commands:
                 <p>ccc</p>
             </td>
             <td>Claim Control Commands
-                used to work with <a href="https://confluence.catalysm.net/display/CPM/Advanced+Claims"
+                used to work with <a href="/en/cpm/advanced-claims"
                     rel="nofollow">Advanced Claims</a>.</td>
         </tr>
         <tr role="row">
@@ -1277,7 +1279,7 @@ Available commands:
             <td>markresetregion [alias:
                 mrr]</td>
             <td>Marked <a
-                    href="https://confluence.catalysm.net/display/CPM/Functional+Overview" rel="nofollow">Reset
+                    href="/en/cpm/reset-regions" rel="nofollow">Reset
                     Regions</a> are specific region files that have been marked for deletion so that they regenerate,
                 the next time a specific resetcommand is given. This command is used to mark/unmark regions, see the
                 list of regions, and set the message displayed to players when they enter a reset region.</td>
