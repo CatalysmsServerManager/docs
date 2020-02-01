@@ -12,5 +12,5 @@ CSMM keeps track of every servers ban list. You can use this information to keep
 You can also check if a player is on the Global ban list via the control panel on the left and side, this will show if a play has been banned on another server and why
 
 
-![](/assets/images/CSMM/gbl/gbl-profile.png)
+![Missing image](/assets/images/CSMM/gbl/gbl-profile.png)
 

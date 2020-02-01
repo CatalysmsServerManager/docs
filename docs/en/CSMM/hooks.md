@@ -43,7 +43,7 @@ Each different type of Custom Hook triggers for a different event, but they all 
   - RegEx - Unlike a Search String which must have an exact match, [regular expressions](https://en.wikipedia.org/wiki/Regular_expression) can detect variable combinations of things, such as any four numbers from 1-10, followed by any 3 letters, followed by a \$ or # symbol.
 - Cooldown _\[optional\]_ - The amount of time that must elapse before the event hook fires again. If you have an 'on player kill' with a 60 second cooldown, it would announce the first kill it saw, and not another one for 60 seconds
 
-![](/assets/images/CSMM/customHooks/9797807.png)
+![Missing image](/assets/images/CSMM/customHooks/9797807.png)
 
 The examples above show a few different ways to use the Search String and RegEx features. In the first example, anyone who says 'test message' in global chat will cause the server to respond back and include their name in the message. In the second example, the RegEx script will detect any player who says 'test' followed by a number, such as 'test1' or 'test2' or 'test3'. Regardless of which number is used, the script will detect the message and trigger, as long as the required 3600 seconds (1 hour) has passed since the last time it sent a message out. The final example sends a message whenever players re-join the server, but only if their name includes 'John Smith' in it. This last kind of event hook can be used to trigger announcements only for specific players.
 

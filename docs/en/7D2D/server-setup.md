@@ -26,7 +26,7 @@ Installation process is very easy.
 - Download mirror (choose default) (6/11)
 - "Use entire disk" (if you want to use all available space) and confirm disk partitioning. Do NOT use LVM (7/11)
 
-![](/assets/images/7D2D/server-setup/5210178.png)![](/assets/images/7D2D/server-setup/5210179.png)![](/assets/images/7D2D/server-setup/5210180.png)![](/assets/images/7D2D/server-setup/5210181.png)
+![Missing image](/assets/images/7D2D/server-setup/5210178.png)![Missing image](/assets/images/7D2D/server-setup/5210179.png)![Missing image](/assets/images/7D2D/server-setup/5210180.png)![Missing image](/assets/images/7D2D/server-setup/5210181.png)
 
 - Choose name/username (enter same name, all in lowercase).  
   Choose server name. It MUST start from lowercase english letter and consist only from of "a-z" "A-Z" "\_" "-" ) This means "7DTDServer" is not allowed name. "server7dt" is OK. (9/11)
@@ -34,7 +34,7 @@ Installation process is very easy.
 - Install finished! Choose "reboot now"
 - When you prompted to remove USB stick, do it and press enter
 
-![](/assets/images/7D2D/server-setup/5210184.png)![](/assets/images/7D2D/server-setup/5210185.png)![](/assets/images/7D2D/server-setup/5210187.png)
+![Missing image](/assets/images/7D2D/server-setup/5210184.png)![Missing image](/assets/images/7D2D/server-setup/5210185.png)![Missing image](/assets/images/7D2D/server-setup/5210187.png)
 
 ## OS configuration and updates
 
@@ -51,7 +51,7 @@ Password: *************
 
 After login process you will see some something like this
 
-![](/assets/images/7D2D/server-setup/5210191.png)
+![Missing image](/assets/images/7D2D/server-setup/5210191.png)
 
 At this moment, if you have problems with network (IP address is not recieved by DHCP or whatever), its time to fix it. [Documentation from Ubuntu](https://help.ubuntu.com/lts/serverguide/network-configuration.html)
 
@@ -284,9 +284,9 @@ After this operation, 95.6 MB of additional disk space will be used.
 Do you want to continue? **[Y/n]**
 ```
 
-![](/assets/images/7D2D/server-setup/5210393.png)
+![Missing image](/assets/images/7D2D/server-setup/5210393.png)
 
-![](/assets/images/7D2D/server-setup/5210394.png)
+![Missing image](/assets/images/7D2D/server-setup/5210394.png)
 
 Wait for progress bar to reach 100% and installation is finished. Command prompt `(dobriyded@server7dt:~$)` appears
 

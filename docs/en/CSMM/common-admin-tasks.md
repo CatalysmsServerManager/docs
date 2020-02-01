@@ -14,11 +14,11 @@ Scheduled commands include things like automated world saving, scheduled reboots
 
 1.  **Automated world saves** - Depending on your hosting method, your game server most likely has an automated world saving mechanism enabled. People who rent servers that have a game control panel, for example, usually have a setting that looks something like the below, which forces the game to save the settings every 15 minutes. Not all panels have this sort of setting, and in some cases the save interval may be long (3-4 hours), which means you will lose too much data if you have an unexpected crash.
 
-    ![](/assets/images/CSMM/commonAdminTasks/5210465.png)
+    ![Missing image](/assets/images/CSMM/commonAdminTasks/5210465.png)
 
     Instead of using the panel hosting option for saves, you can create a scheduled cron command within CSMM to force a world save.
 
-    ![](/assets/images/CSMM/commonAdminTasks/5210467.png)
+    ![Missing image](/assets/images/CSMM/commonAdminTasks/5210467.png)
 
     This world save will trigger every 20 minutes, forever.
 
@@ -28,7 +28,7 @@ Scheduled commands include things like automated world saving, scheduled reboots
 
     The screenshot below shows two separate reboot commands; the first is a normal reboot that runs every day of the week except Friday, and the second is the same command, but with the 'reset' parameter enabled, which only runs on Fridays. On this specific server, several of the major cities on the map are permanently marked as a reset zone, and each Friday, the server reboots and resets those cities in order to restore all damaged and destroyed buildings and loot containers.
 
-    ![](/assets/images/CSMM/commonAdminTasks/5210469.png)
+    ![Missing image](/assets/images/CSMM/commonAdminTasks/5210469.png)
 
     The above commands will trigger a reboot at exactly 10AM EST. Because CSMM is located in London, cron jobs must be set to run in the GMT-0 time zone. You can [look up your offset calculation](https://en.wikipedia.org/wiki/List_of_UTC_time_offsets) in order to determine how to schedule your settings properly. In this case, '50 14' means 9:50AM EST (14:50 GMT), and the command 'cpm-shutdownba 10' will trigger a 10-minute delayed reboot, which will execute exactly at 10AM.
 
@@ -76,7 +76,7 @@ CSMM can generate [Discord notifications](/en/CSMM/discord-integration.html#admi
 
 This alert will trigger whenever \_pfb \_sends out an alert because the number of falling blocks exceeded the configured amount. In the documented examples below, both block falls exceeded the 'pfb 20' configuration on the server.
 
-![](/assets/images/CSMM/commonAdminTasks/5210472.png)
+![Missing image](/assets/images/CSMM/commonAdminTasks/5210472.png)
 
 # Custom Commands
 

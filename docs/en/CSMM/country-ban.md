@@ -15,7 +15,7 @@ Select countries that you do not wish on your server. CSMM will automatically ki
     
 3.  Enable Country Ban
 
-![](/assets/images/CSMM/countryBan/1114318.png)
+![Missing image](/assets/images/CSMM/countryBan/1114318.png)
 
 1.  *optional* Add a reason to why the player was kicked/banned and click set
 2.  Click on manage banned countries, enter the country you would like to ban and click the Add button 
