@@ -1,0 +1,23 @@
+name: HTML Proofer
+
+on: [push]
+
+jobs:
+  Build:
+    runs on: ubuntu-latest
+    steps:
+      - name: yarn install
+        run: |
+          cd backend
+          yarn
+      - name: yarn build
+        run: |
+          cd backend
+          yarn build
+  Check html:
+    runs on: ubuntu-latest
+    steps:
+      - name: Check HTML
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: "./docs/.vuepress/dist"
