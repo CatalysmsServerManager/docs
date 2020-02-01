@@ -1,5 +1,11 @@
 # Contributing
 
+::: tip
+We are always looking for help maintaining these docs! If you would like to help CSMM by writing documentation or translations, please reach out to us on Discord! 😀
+:::
+
+## Web editor
+
 For small changes (like fixing a typo), you can use the links at the bottom of a page to use the Github web editor.
 
 ## Local development
@@ -9,9 +15,8 @@ Install [Nodejs](https://nodejs.org/en/). VuePress requires Node.js >= 8
 ```
 git clone https://github.com/CatalysmsServerManager/docs
 npm install
+npm run dev
 ```
-
-This will install the necessary dev dependencies, so that you can view the site locally. You can start the development server with `npm run dev`.
 
 ## Submitting changes
 
