@@ -6,8 +6,8 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - name: npm ci
-        run: npm ci
+      - name: npm install
+        run: npm install
       - name: npm build
         run: npm run build
   Check-html:
