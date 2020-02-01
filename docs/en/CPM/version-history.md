@@ -1,5 +1,47 @@
 # Version History
 
+**Version 13.8 A18.3 b4 Stable + CPMcc 1.4.0 (2020.01.28)**
+
+* changed consolecommand tprotect: implemented usage of radius when traderprotecting blocks
+* CPMcc 1.4.0 is out! Big thanks to Catalysm!
+    * Added: icon for playhomes
+    * Added: Permission overview of loggedin user in navigation menu
+    * Fixed: bug when API endpoints are set to permission level 2000 (map can be used for players now)
+    * Fixed: popup message for (claimed) quest POIs
+    * Fixed: Claimed quest POIs still show up in quest POI layer
+
+**Version 13.7.1 A18.3 b4 Stable (2020.01.26)**
+
+* Bugfixes in chatgroupcolor (cgc): 
+   * adduser: when using name as parameter and player was offline, the player record got added wrongly regarding primairy db key. Adding offline players now requires steamId.
+   * listmembers: membership would not be shown
+* Persistent playerdata: playername is now saved in persistent playerdata of CPM
+* NOT A18.2 compatible
+* CPM 13.5.1 is NOT compatible with A18.3
+
+**Version 13.7 A18.3 b4 Stable (2020.01.24)**
+
+* Changed shutdownba consolecommand: added forced server kill if server /hangs/ in the reboot process
+* Changed resetplayerdata consolecommand: if player online, cpm will wait 5 secs after the kick before file wipe
+* Changed adv. claim lcbFree: implemented ownership. Now also the lcbfree adv. claim sees the steamid in the name of the claim as owner. 
+* NOT A18.2 compatible
+* CPM 13.5.1 is NOT compatible with A18.3
+
+**Version 13.6 A18.3 b3 Experimental (2019.12.22)**
+
+* Fixed A18.3 b3 Experimental compatibility. CPM 13.5.1 and lower is NOT compatible with A18.3 b3 Experimental
+
+**Version 13.5.1 A18.2 b5 Stable (2019.12.19)**
+
+* Bugfix in consolecommand mv: player to player move made moving player always tp to him/her self.
+* Changed consolecommand mv and mvw: playernames params are now case insensitive.
+
+**Version 13.5 A18.2 b5 Stable (2019.12.18)**
+
+* Changed Vehicle adv. claim intrusion handling: warning and handling only when adv. claim intrusion conditions are met (openhours, leveled etc)
+* Changed consolecommand mvw: removed partial playername support (still present in chatcommand /mvw) to prevent ambiguous name failures. Still possible to move offline player to waypoint and online player to waypoint.
+* Changed consolecommand mv: removed partial playername support (still present in chatcommand /mv) to prevent ambiguous name failures. Still possible to move offline player to offline player, online player to online player, offline player to online player, online player to offline player, offline player to coordinates and online player to coordinates.
+
 **Version 13.4 A18.2 b5 Stable (2019.12.04)**
 
 * A18.2 b5 Stable compatibility
