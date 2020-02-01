@@ -30,7 +30,6 @@ module.exports = {
       children: ["/en/CSMM/custom-commands", "/en/CSMM/hooks"]
     },
     "/en/CSMM/catching-dupers",
-    "/en/CSMM/common-admin-tasks",
     "/en/CSMM/configuration-examples",
     "/en/CSMM/support",
     "/en/contributing"

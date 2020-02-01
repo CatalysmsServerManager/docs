@@ -1,4 +1,4 @@
-# Discord Integration
+# Discord integration
 
 Created by Catalysm, last modified by Corran on Oct 28, 2018
 
