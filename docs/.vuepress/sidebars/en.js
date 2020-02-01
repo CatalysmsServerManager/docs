@@ -21,6 +21,7 @@ module.exports = {
         "/en/CSMM/GBL",
         "/en/CSMM/max-ping-kicker",
         "/en/CSMM/country-ban",
+        "/en/CSMM/economy",
         "/en/CSMM/automation"
       ]
     },
