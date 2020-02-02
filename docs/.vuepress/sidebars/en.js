@@ -1,6 +1,7 @@
 module.exports = {
   "/en/CSMM/": [
     "/",
+    "/en/CSMM/test-htmlproofer",
     {
       title: "Installation",
       children: ["/en/CSMM/installation", "/en/CSMM/allocs"]

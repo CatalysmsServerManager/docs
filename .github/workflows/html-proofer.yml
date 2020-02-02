@@ -18,4 +18,4 @@ jobs:
         uses: chabad360/htmlproofer@master
         with:
           directory: "./docs/.vuepress/dist"
-          arguments: --url-ignore "/(docs/edit/master)/" --check-html
+          arguments: '--url-ignore "/(docs/edit/master)/" --check-html'
