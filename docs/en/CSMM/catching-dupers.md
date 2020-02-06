@@ -6,6 +6,10 @@ title: Catching Dupers Using CSMM
 
 Every server has dupers, and they're a pain in the ass to catch. Unless you literally watch them in the process of duping, it's often hard to tell that it's happened unless they are foolish enough to dupe quantities of items that are exactly the same quality. Until now.CSMM's player and inventory tracking feature allows you to definitively tell when/where a player obtained items, narrowing down whether it was a lucky find or a duplicated item, and exactly how many things they found at that exact moment. Below is a real example of a duper that was caught on a server using CSMM, and how little information was needed to determine who did it, when they did it, and what the results were.
 
+<div align="center">
+    <iframe src='https://gfycat.com/ifr/ThickShinyCrustacean' frameborder='0' scrolling='no' allowfullscreen width='640' height='535'></iframe>
+</div>
+
 ## The Problem
 
 A player reported to an Admin that they'd found a box in the region of 2000W/2500S that had two full stacks of vitamins one real-world day after a server wipe, and that they had just seen a specific player leaving the area. It seemed like a slam dunk, but it turned out to be much more complicated, as it always does.
