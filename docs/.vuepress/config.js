@@ -30,6 +30,10 @@ module.exports = {
     docsDir: "docs",
     editLinks: true,
     lastUpdated: "Last updated",
+    algolia: {
+      apiKey: "90a9d46357cd912e096d7e15022689ff",
+      indexName: "csmm"
+    },
     locales: {
       "/": {
         lang: "en",
