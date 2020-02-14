@@ -2,8 +2,8 @@
 
 In this guide, I will assume you are installing on Ubuntu 18. Installation steps for other distros or Windows will be similar but keep that in mind. If you do not have a server yet, you can use one of these referral links to get some free credit and support the project :).
 
-- [DigitalOcean - $100 credit](https://m.do.co/c/9053905671f8)
-- [Vultr - $50 credit](https://www.vultr.com/?ref=7942157-4F)
+- [DigitalOcean - \$100 credit](https://m.do.co/c/9053905671f8)
+- [Vultr - \$50 credit](https://www.vultr.com/?ref=7942157-4F)
 
 ## API keys
 
@@ -15,13 +15,19 @@ Go to the [Valve API key page](https://steamcommunity.com/dev/apikey) and regist
 
 ### Discord bot account
 
- Go to the [Discord developer page](https://discordapp.com/developers/applications) and create a new application. You must also make this application a bot account. For more info, see [this guide by Reactiflux](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) or Google.
+Go to the [Discord developer page](https://discordapp.com/developers/applications) and create a new application. You must also make this application a bot account. For more info, see [this guide by Reactiflux](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) or Google.
 
 Collect the following values from the page:
 
 - Client ID
 - Client secret
 - Bot token
+
+Finally, you must also set a redirect URL for Oauth2 authentication. This is done in the "Oauth2" section of Discord.
+
+![Discord auth redirect](/assets/images/CSMM/discordIntegration/discord-redirect.png)
+
+Make sure you use your own domain here. This is required to be able to link your Discord profile to CSMM.
 
 ## Installing Node.js
 
@@ -72,6 +78,7 @@ You should not run CSMM as root! Instead, create a separate user & switch to the
 sudo adduser csmm
 su - csmm
 ```
+
 Get the latest files from Github and install the dependencies.
 
 ```bash
@@ -90,9 +97,9 @@ Copy the example file to a new file
 cp .env.example .env
 ```
 
-DBSTRING, a [special syntax](https://sailsjs.com/documentation/reference/configuration/sails-config-datastores#?the-connection-url) is used. protocol://user:password@host:port/database 
+DBSTRING, a [special syntax](https://sailsjs.com/documentation/reference/configuration/sails-config-datastores#?the-connection-url) is used. protocol://user:password@host:port/database
 
-CSMM_HOSTNAME is used to generate links, CORS and other things. You should set this to the ip/domain you will access CSMM from.  Do NOT add a trailing slash to this.
+CSMM_HOSTNAME is used to generate links, CORS and other things. You should set this to the ip/domain you will access CSMM from. Do NOT add a trailing slash to this.
 
 Redis configuration uses a similar system to the MySQL connection string. redis://[:password]127.0.0.1:6379
 
