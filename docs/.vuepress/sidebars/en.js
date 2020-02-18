@@ -21,6 +21,7 @@ module.exports = {
         "/en/CSMM/GBL",
         "/en/CSMM/max-ping-kicker",
         "/en/CSMM/country-ban",
+        "/en/CSMM/economy",
         "/en/CSMM/automation"
       ]
     },
@@ -29,15 +30,7 @@ module.exports = {
       children: ["/en/CSMM/custom-commands", "/en/CSMM/hooks"]
     },
     "/en/CSMM/catching-dupers",
-    "/en/CSMM/common-admin-tasks",
-    {
-      title: "Configuration examples",
-      children: [
-        "/en/CSMM/configuration-examples",
-        "/en/CSMM/custom-command-examples",
-        "/en/CSMM/hooks-examples"
-      ]
-    },
+    "/en/CSMM/configuration-examples",
     "/en/CSMM/support",
     "/en/contributing"
   ],

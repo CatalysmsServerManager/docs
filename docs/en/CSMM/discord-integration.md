@@ -1,10 +1,12 @@
-# Discord Integration
-
-Created by Catalysm, last modified by Corran on Oct 28, 2018
+# Discord integration
 
 CSMM has the ability to integrate itself with your Discord server, allowing you to send and receive chat messages to your servers, get statistical information (most kills, playtime, etc.), as well as generate admin-oriented messages that can be sent to a separate hidden room for details about when players connect, disconnect, warnings about players with Global Ban List entries, and more. To do this, you need to enable the Discord bot on your Discord server.
 
 Already have the Discord Chat Bridge integrated and are looking for the next steps? Hop down to the [Administrative Notifications](/en/CSMM/discord-integration.html#administrative-discord-notifications) section to get instructions for adding administrative-type alerts to Discord.
+
+<div align=center>
+<iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/94r8lKRr6l0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Configuring the Integration Settings
 

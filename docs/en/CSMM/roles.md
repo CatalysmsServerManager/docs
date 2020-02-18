@@ -1,11 +1,15 @@
 # Roles
 
-**Roles** allow the server owner to create groups that players can be assigned to in order to utilize the various parts of the CSMM functionality. Roles can be used to grant or limit access to the CSMM Server Management UI, grant access to in-game custom commands, and even have special settings for features such as Earned Currency modifications and Allowed Teleports quantities. Each Role has a specific Name to identify it, and a numeric Level assigned to it, with the lowest number (zero) being the most-powerful and the highest number (user defined) being the _least_ powerful.  
+<div align=center>
+<iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/56hZDOHUpK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+**Roles** allow the server owner to create groups that players can be assigned to in order to utilize the various parts of the CSMM functionality. Roles can be used to grant or limit access to the CSMM Server Management UI, grant access to in-game custom commands, and even have special settings for features such as Earned Currency modifications and Allowed Teleports quantities. Each Role has a specific Name to identify it, and a numeric Level assigned to it, with the lowest number (zero) being the most-powerful and the highest number (user defined) being the _least_ powerful.
 
 _Example Role structure_:
 
 | Role    | Level |
-|---------|-------|
+| ------- | ----- |
 | Owner   | 0     |
 | Admin   | 5     |
 | Mod     | 10    |
@@ -17,7 +21,6 @@ It is recommended to leave space between each major Role type, for future use if
 Players who join are automatically assigned the lowest ranking (i.e. largest number) Role automatically. You should ensure that you always have a Role for new players that has the minimum options set. For example, the 'Player' Role above might have no Currency modifiers or extra Teleports added. All new players will receive the 'Player' Role by default.
 
 If you add a new Role below the lowest ranked role, only _new_ Players will be automatically assigned to that role; existing players will remain in the role they were first auto-assigned to. For example, in the table above, if a player joins and is given the 'Player' rank, and then a new 'Newbie' rank is added at Level 2005, all new players will be assigned to 'Newbie', but all existing players will retain their 'Player' rank.
-
 
 ## Creating Roles
 
@@ -64,14 +67,10 @@ Editing an existing Role is necessary in order to change the Name, Level, and to
         7.  Use Tracking - Grants the ability to use the Player Tracking and Inventory modules on various pages.
         8.  Use Chat - Grants the ability for the user to chat directly with the in-game players via the web chat panel on the server dashboard. The chat window automatically tags the outgoing chat message with the player's name.
         9.  Execute Commands - Grants the ability for the user to interact with the server console on the server dashboard.
-        10.  Discord Lookup - Grants the ability for the user to execute the 'lookup' command via the Discord bridge, allowing them to gather information about specific players.
+        10. Discord Lookup - Grants the ability for the user to execute the 'lookup' command via the Discord bridge, allowing them to gather information about specific players.
 7.  Click Save.
 
-  
-
-To remove a Role entirely, repeat the above steps 1-4, but click _Remove_ instead of _Edit. _If you remove a Role with players actively assigned to it, those players will no longer have a Role assigned. They do not automatically inherit Roles above or below the rank they lost.
-
-  
+To remove a Role entirely, repeat the above steps 1-4, but click _Remove_ instead of \_Edit. \_If you remove a Role with players actively assigned to it, those players will no longer have a Role assigned. They do not automatically inherit Roles above or below the rank they lost.
 
 ![Missing image](/assets/images/CSMM/roles/6553602.png)
 
@@ -90,5 +89,4 @@ Repeat these steps as necessary to assign roles to existing players.
 
 **Note**: To remove a Role from a player, repeat the above steps, but set the Role field to 'None'.
 
-![Missing image](/assets/images/CSMM/roles/1114511.png) 
-
+![Missing image](/assets/images/CSMM/roles/1114511.png)
