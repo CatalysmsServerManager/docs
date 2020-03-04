@@ -60,6 +60,7 @@ module.exports = {
     "/en/7D2D/Hardware&OS",
     "/en/7D2D/server-setup",
     "/en/7D2D/switching-to-beta-versions",
+    "/en/7D2D/server-management",
     "/en/7D2D/useful-scripts",
     "/en/contributing"
   ]
