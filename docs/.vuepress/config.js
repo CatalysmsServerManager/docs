@@ -16,6 +16,9 @@ module.exports = {
   },
   ga: "UA-104087733-8",
   plugins: [
+    ['vuepress-plugin-code-copy', {
+      selector: 'div[class*="language-"] pre',
+    }],
     'seo',
     "@vuepress/back-to-top",
     "vuepress-plugin-smooth-scroll",
