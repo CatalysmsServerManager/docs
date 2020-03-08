@@ -29,11 +29,14 @@ Don’t forget the 0 at the end! It’s important CSMM has privilege 0 to ensure
 ::: warning These credentials are sensitive! You should treat these as a password. (Keep it secret, no obvious names/tokens). It's advised to use a combination of numbers, letters, lowercase and uppercase aswell as symbols
 :::
 
-Once CSMM is connected to your server, it's time to perform the detailed configuration process.
+### Finding the port for Allocs web API
 
-- Set up [Roles](https://docs.csmm.app/en/CSMM/roles.html) in order to add additional Administrators, Moderators, and more.
-- Configure the server Economy for your players
-- Get a Shop up and running that uses the economy.
-- Configure your Support Ticketing system.
+Finding you web API port can be challenging, especially if you are renting your server. There are 2 easy methods to find the port though
 
-That's it! CSMM should now have access to your server, and be monitoring for changes and other events.
+- Via serverconfig.xml
+  The port is defined as ControlPanelPort +2. Find that value and in your browser go to http://\<yourserverip\>:\<value\>. If you see the Allocs webmap, you've found the correct port! It's possible that this method is not accurate if you are renting your server from a game hosting company. The port in your serverconfig.xml is not always correct!
+
+- Via logs
+  In the output log of your server, find a line like this `2018-09-15T01:27:41 61.339 INF Started Webserver on 8090.` There's your port value!
+
+Finally, you can use the webtokens you created and the port you've found to add your server to CSMM. If done correctly, CSMM should now have access to your server, and be monitoring for changes and other events.
