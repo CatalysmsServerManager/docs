@@ -23,6 +23,12 @@ module.exports = {
       {
         selector: ".content__default img"
       }
+    ],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-104087733-8'
+      }
     ]
   ],
   themeConfig: {
