@@ -10,10 +10,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "10.x"
-      - name: npm ci
-        run: npm ci
-      - name: npm build
-        run: npm run build
+      - name: yarn
+        run: yarn
+      - name: yarn build
+        run: yarn build
       - name: Check HTML
         uses: chabad360/htmlproofer@master
         with:
