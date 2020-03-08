@@ -40,10 +40,3 @@ Finding you web API port can be challenging, especially if you are renting your 
   In the output log of your server, find a line like this `2018-09-15T01:27:41 61.339 INF Started Webserver on 8090.` There's your port value!
 
 Finally, you can use the webtokens you created and the port you've found to add your server to CSMM. If done correctly, CSMM should now have access to your server, and be monitoring for changes and other events.
-
-Once CSMM is connected to your server, it's time to perform the detailed configuration process.
-
-- Set up [Roles](https://docs.csmm.app/en/CSMM/roles.html) in order to add additional Administrators, Moderators, and more.
-- Configure the server [economy](/en/CSMM/economy.html) for your players
-- Get a Shop up and running that uses the economy.
-- Configure your Support Ticketing system.
