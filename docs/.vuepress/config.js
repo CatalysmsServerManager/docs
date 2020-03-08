@@ -4,6 +4,7 @@ const navs = require("./navs");
 module.exports = {
   title: "CSMM",
   description: "Documentation for the web based 7 days to die server manager",
+  theme: 'yuu',
   locales: {
     "/": {
       lang: "en-US"
@@ -25,6 +26,11 @@ module.exports = {
     ]
   ],
   themeConfig: {
+    yuu: {
+      defaultDarkTheme: true,
+      defaultColorTheme: 'blue',
+      disableThemeIgnore: true,
+    },
     repo: "CatalysmsServerManager/docs",
     repoLabel: "Contribute",
     docsDir: "docs",
