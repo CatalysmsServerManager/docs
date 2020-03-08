@@ -16,6 +16,7 @@ module.exports = {
   },
   ga: "UA-104087733-8",
   plugins: [
+    'seo',
     "@vuepress/back-to-top",
     "vuepress-plugin-smooth-scroll",
     [
