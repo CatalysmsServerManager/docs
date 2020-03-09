@@ -80,3 +80,42 @@ _Credit to Quicken from oxidemod.org_
 #### Service
 
 [FireDaemon](https://firedaemon.com/) is a tool that allows you to run any programs as a Windows service.
+
+Now, we won’t go into how to install and setup a dedicated server. We assume you have already installed your dedicated server on windows, configured your serverconfig.xml with appropriate settings, and have your server in a directory located at `c:\7d2d\`
+
+Install and launch FireDaemon. You’ll want to “add a new service”, to do this hover over the + symbol and you will get a tool-tip. Your setting will look something like this. The name doesn’t matter so long as if you’re using multiple servers or instances on this server, you’ll want them named differently.
+
+![Fire daemon example](/assets/images/7D2D/server-management/fire-daemon-1.png)
+
+Settings:
+
+- Executable = “The Path to the file you want to execute.” Since you’re going to use FireDaemon to babysit this application as a “process” you DON’T want to use the batch file. Point this directly at your server.exe.
+- Working Directory = This is where that executable lives. It will auto-magically populate.
+- Parameters = These are the settings after the executable that tell it what to do. In the case of a dedicated server they are: `-quit -batchmode -nographics -configfile=serverconfig.xml -dedicated`
+
+Now, on the left hand side you have some other options. Click on “Settings”
+
+Logon: A user on windows needs permissions to launch an application. The same applies for services. FireDaemon isn’t a user, it’s a utility. So, FireDaemon needs to be told a user account it can use to execute the server application. You can use any user account that has permission to execute the app. Best practice dictates you create a special user account that has no other system privileges, but that’s beyond the scope of this guide. In the case below we are RDP’d into a Windows VPS. So we are just using the same user account and PW I use to manage my VPS over RDP.
+
+![Fire daemon example](/assets/images/7D2D/server-management/fire-daemon-2.png)
+
+Now, click the left hand item “LifeCycle”. This is where we configure the magic. “Service Lifecycle”
+
+- Upon Program Exit: Set this to “restart program”
+- Fail Detection: Disable this feature. Our only failure detection will be whether the process is present in the process list in task manager, or not.
+
+Leave the other options unchecked as in the screenshot. Now, click the disk icon, which is “Save”
+
+![Fire daemon example](/assets/images/7D2D/server-management/fire-daemon-3.png)
+
+![Fire daemon example](/assets/images/7D2D/server-management/fire-daemon-4.png)
+
+You now see your process running, and your server should have started.
+
+::: warning
+When you run the server from the batch file, you get a local window console you can interact with. That will NOT be the case with FireDaemon. The process will be running in the background. So, to console in you’ll either need to log in via the control panel, or you’ll need to telnet to your server. Make sure you accommodate for this in the serverconfig.xml because by default; control panel is disabled.
+:::
+
+I assume if you’re trying to handle automatic restarts, then you are already using a management tool, or something else which would mean you likely have already done this configuration.
+
+_Credit to 2ndRecon_
