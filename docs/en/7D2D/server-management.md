@@ -85,7 +85,7 @@ Now, we won’t go into how to install and setup a dedicated server. We assume y
 
 Install and launch FireDaemon. You’ll want to “add a new service”, to do this hover over the + symbol and you will get a tool-tip. Your setting will look something like this. The name doesn’t matter so long as if you’re using multiple servers or instances on this server, you’ll want them named differently.
 
-![](/assets/images/7D2D/server-management/fire-daemon-1.png)
+![Fire daemon example](/assets/images/7D2D/server-management/fire-daemon-1.png)
 
 Settings:
 
@@ -97,7 +97,7 @@ Now, on the left hand side you have some other options. Click on “Settings”
 
 Logon: A user on windows needs permissions to launch an application. The same applies for services. FireDaemon isn’t a user, it’s a utility. So, FireDaemon needs to be told a user account it can use to execute the server application. You can use any user account that has permission to execute the app. Best practice dictates you create a special user account that has no other system privileges, but that’s beyond the scope of this guide. In the case below we are RDP’d into a Windows VPS. So we are just using the same user account and PW I use to manage my VPS over RDP.
 
-![](/assets/images/7D2D/server-management/fire-daemon-2.png)
+![Fire daemon example](/assets/images/7D2D/server-management/fire-daemon-2.png)
 
 Now, click the left hand item “LifeCycle”. This is where we configure the magic. “Service Lifecycle”
 
@@ -106,9 +106,9 @@ Now, click the left hand item “LifeCycle”. This is where we configure the ma
 
 Leave the other options unchecked as in the screenshot. Now, click the disk icon, which is “Save”
 
-![](/assets/images/7D2D/server-management/fire-daemon-3.png)
+![Fire daemon example](/assets/images/7D2D/server-management/fire-daemon-3.png)
 
-![](/assets/images/7D2D/server-management/fire-daemon-4.png)
+![Fire daemon example](/assets/images/7D2D/server-management/fire-daemon-4.png)
 
 You now see your process running, and your server should have started.
 
