@@ -53,19 +53,75 @@ _Credit to Highhope for this script_
 
 #### Batch script
 
-1. Create a batch file. For example: \_start7DTDServer.bat
+1. Create a batch file. For example: startdedicated.bat
 2. Make sure the 7DTD Server is not already running, if so shut it down using the shutdown command via Telnet so that you have a clean saved state
 3. Run the batch file (make sure you are Admin or have the right permissions)
-4. **DO NOT CLOSE** the batch file. it will stay something like "Starting 7DTD Dedicated Server..."
+4. **DO NOT CLOSE** the batch file.
 5. Every time you shutdown the server using Telnet/RCON and the shutdown command, the batch file will restart the server and you will see a "restarting" time stamp in the console/command window.
 
 ```batch
-@Echo off
-cls
-:start
-@Echo Starting 7DTD Dedicated Server...
+@echo off
 
-7DaysToDieServer.exe -batchmode -nographics -configfile=serverconfig.xml -dedicated
+title startdedicated.bat
+
+set LOGTIMESTAMP=
+
+
+IF EXIST 7DaysToDieServer.exe (
+    set GAMENAME=7DaysToDieServer
+    set LOGNAME=output_log_dedi
+) ELSE (
+    set GAMENAME=7DaysToDie
+    set LOGNAME=output_log
+)
+
+:: --------------------------------------------
+:: REMOVE OLD LOGS (only keep latest 20)
+
+for /f "tokens=* skip=19" %%F in ('dir %GAMENAME%_Data\%LOGNAME%*.txt /o-d /tc /b') do del %GAMENAME%_Data\%%F
+
+
+
+:: --------------------------------------------
+:: BUILDING TIMESTAMP FOR LOGFILE
+
+:: Check WMIC is available
+WMIC.EXE Alias /? >NUL 2>&1 || GOTO s_start
+
+:: Use WMIC to retrieve date and time
+FOR /F "skip=1 tokens=1-6" %%G IN ('WMIC Path Win32_LocalTime Get Day^,Hour^,Minute^,Month^,Second^,Year /Format:table') DO (
+    IF "%%~L"=="" goto s_done
+    Set _yyyy=%%L
+    Set _mm=00%%J
+    Set _dd=00%%G
+    Set _hour=00%%H
+    Set _minute=00%%I
+    Set _second=00%%K
+)
+:s_done
+
+:: Pad digits with leading zeros
+Set _mm=%_mm:~-2%
+Set _dd=%_dd:~-2%
+Set _hour=%_hour:~-2%
+Set _minute=%_minute:~-2%
+Set _second=%_second:~-2%
+
+Set LOGTIMESTAMP=__%_yyyy%-%_mm%-%_dd%__%_hour%-%_minute%-%_second%
+
+:s_start
+:: --------------------------------------------
+:: STARTING SERVER
+
+echo|set /p="251570" > steam_appid.txt
+set SteamAppId=251570
+set SteamGameId=251570
+
+set LOGFILE=%~dp0\%GAMENAME%_Data\%LOGNAME%%LOGTIMESTAMP%.txt
+
+echo Writing log file to: %LOGFILE%
+
+7DaysToDieServer.exe -logfile "%LOGFILE%" -quit -batchmode -nographics -configfile=serverconfig.xml -dedicated
 
 echo.
 for /F "tokens=2" %%i in ('date /t') do set mydate=%%i
@@ -73,9 +129,13 @@ set mytime=%time%
 echo Restarting Server: %mydate%:%mytime%
 echo.
 goto start
+timeout 3
+
+:start
+startdedicated.bat
 ```
 
-_Credit to Quicken from oxidemod.org_
+_Credit to sLim Long#9007_
 
 #### Service
 
