@@ -35,6 +35,11 @@ SSLProxyEngine On
 ProxyRequests Off
 ProxyPreserveHost on
 
+RewriteEngine On
+RewriteCond %{REQUEST_URI}  ^/socket.io [NC]
+RewriteCond %{QUERY_STRING} transport=websocket [NC]
+RewriteRule /(.*) ws://127.0.0.1:1337/$1 [P,L]
+
 ProxyPass / http://127.0.0.1:1337/
 ProxyPassReverse / http://127.0.0.1:1337/
 
