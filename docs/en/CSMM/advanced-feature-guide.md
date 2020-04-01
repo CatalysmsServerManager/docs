@@ -109,7 +109,7 @@ Now we want to extract some info from the log line. Namely, we want to know whic
 
   `(?<=item=casinoCoin, qnty=)(\d+)`
 
-  This regular expression uses negative lookahead to make sure only what we need is matched. For more info on how this works, see this example on [regexr.com](https://regexr.com/51kil).
+  This regular expression uses positive lookahead to make sure only what we need is matched. For more info on how this works, see this example on [regexr.com](https://regexr.com/51kil).
 
 ![](/assets/images/CSMM/advanced-feature-guide/bank-hook-3.png)
 
