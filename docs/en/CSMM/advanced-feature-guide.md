@@ -107,7 +107,7 @@ Now we want to extract some info from the log line. Namely, we want to know whic
 
   Now this one is a little trickier. the quantity in our example is "1000". How can we match that and extract only the value? We will use some advanced Regex syntax for this one.
 
-  `(?!lootRemover:)item=casinoCoin, qnty=`
+  `(?<=item=casinoCoin, qnty=)(\d+)`
 
   This regular expression uses negative lookahead to make sure only what we need is matched. For more info on how this works, see this example on [regexr.com](https://regexr.com/51kil).
 
