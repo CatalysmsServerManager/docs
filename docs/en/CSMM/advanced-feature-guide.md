@@ -74,18 +74,56 @@ So what does this do? If a player executes our custom command and then keeps the
 
 ## Giving CSMM currency to a player
 
-TODO
-
 - Trigger regex
 - Variables
 
+So now we have some output in our server logs, cool. We can now create a [hook](/en/CSMM/hooks.html) to react to this message.
+
+Let's figure out what we need our hook to do. The hook has to see the logline generated from the previous step and react to it. Furthermore, we want to extract exactly how many coins were deposited from the log line and use this as a variable in our hook.
+
 `lootRemover: 1, player=76561198424822412, item=casinoCoin, qnty=1000, quality=0, used=0`
 
-## Sending the response
+### Seeing the log line
 
-Finally, we'd like to let the player know the command worked. To do this, we can add a customized message with CPMs `pm2` command.
+The easiest way to have a hook pick up on a log line is with string filtering. For this, we want to find a part of the log message that is **exclusively** present in the log line we want to capture and which is static. So how about ", item=casinoCoin, qnty=" ?
 
-`addCurrency(${custom.receiver}, ${custom.qnt}; pm2 [Exchange] ${custom.receiver} "You have deposited ${custom.qnt} casino coins."`
+::: tip
+You can also use a regex for matching a log message. This can be used if you want to selectively match messages.
+:::
+
+![](/assets/images/CSMM/advanced-feature-guide/bank-hook-2.png)
+
+### Creating variables
+
+Now we want to extract some info from the log line. Namely, we want to know which player executed the command and how much they deposited exactly. We will create custom variables inside the hook for this. Custom variables take a regex and will contain whatever your regex matches in the message.
+
+- Steam ID
+
+  We need to know who executed the command. There is a Steam ID in the log line which we can extract as a variable. The regex for this simply looks for a string of 17 digits.
+
+  `\d{17}`
+
+- Quantity
+
+  Now this one is a little trickier. the quantity in our example is "1000". How can we match that and extract only the value? We will use some advanced Regex syntax for this one.
+
+  `(?!lootRemover:)item=casinoCoin, qnty=`
+
+  This regular expression uses negative lookahead to make sure only what we need is matched. For more info on how this works, see this example on [regexr.com](https://regexr.com/51kil).
+
+![](/assets/images/CSMM/advanced-feature-guide/bank-hook-3.png)
+
+### The final hook
+
+What should the hook actually do? Well it should give the player some amount of CSMM currency and then respond to the player, letting them know it worked.
+
+To give the player currency, we can use the CSMM built-in function [addCurrency()](/en/csmm/custom-commands.html#addcurrency-playerid-amount) and to respond to the player, we can add a customized message with CPMs `pm2` command.
+
+```
+addCurrency(${custom.receiver}, ${custom.qnt}; pm2 [Exchange] ${custom.receiver} "You have deposited ${custom.qnt} casino coins."
+```
+
+![](/assets/images/CSMM/advanced-feature-guide/bank-hook-1.png)
 
 ## Finishing up
 
