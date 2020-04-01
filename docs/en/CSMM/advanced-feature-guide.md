@@ -1,8 +1,8 @@
-# Practical example: Exchanging ingame coins for CSMM currency
+# Practical example: Exchanging in-game coins for CSMM currency
 
-Letting players transfer their CSMM currency into ingame currency is very easy; you can simply sell casino coins in your CSMM shop! However, the reverse is not possible... or is it? :)
+Letting players transfer their CSMM currency into in-game currency is very easy; you can simply sell casino coins in your CSMM shop! However, the reverse is not possible... or is it? :)
 
-Players spending their ingame currency and obtaining CSMM currency is not a feature of CSMM but we can create this feature ourselves using a hook. This command is an example on how to use several advanced features from CSMM and CPM and combine them into a very powerful hook. We will take you through the process of building this hook to show you how you can approach making your own hooks.
+Players spending their in-game currency and obtaining CSMM currency is not a feature of CSMM but we can create this feature ourselves using a hook. This command is an example on how to use several advanced features from CSMM and CPM and combine them into a very powerful hook. We will take you through the process of building this hook to show you how you can approach making your own hooks.
 
 [[toc]]
 
@@ -10,7 +10,7 @@ Players spending their ingame currency and obtaining CSMM currency is not a feat
 
 Okay, so first of all let's figure out the hardest part. This requires some 7D2D server knowledge usually.
 
-So how can we remove an item from a players inventory? Well luckily, CPM has `remitem`. Let's figure out what this does, open up a console to your server. You can do this via the CSMM dashboard, a telnet client or even ingame.
+So how can we remove an item from a players inventory? Well luckily, CPM has `remitem`. Let's figure out what this does, open up a console to your server. You can do this via the CSMM dashboard, a telnet client or even in-game.
 
 `help remitem`
 
@@ -24,7 +24,7 @@ This is a great way to learn how a command works.
 Removes items from SecureLoot below the given entity
 Usage:
 1. remitem <name / entity id>
-1. Remove all itens from SecureLoot
+1. Remove all items from SecureLoot
 ```
 
 </details>
@@ -37,11 +37,11 @@ Now, this will remove the items from a chest the player is standing on. That's g
 
 `w2l command "remitem <STEAMID>"`
 
-If you execute this command (substituting \<STEAMID\> with a valid Steam ID ofcourse), you will now see that the output is actually written to your logs. This might seem insignificant now, but will be very useful later when designing the hook.
+If you execute this command (substituting \<STEAMID\> with a valid Steam ID of course), you will now see that the output is actually written to your logs. This might seem insignificant now, but will be very useful later when designing the hook.
 
 ## The command to execute
 
-To allow the player to trigger this feature, we will let them execute a chat command. To configure this, we'll make use of [custom commands](/en/CSMM/custom-commands.html). We are providing the command a variable `${player.steamId}`, this ofcourse translates into the steam ID of the player who executed the command. CSMM supports lots of special variables you can use in your commands.
+To allow the player to trigger this feature, we will let them execute a chat command. To configure this, we'll make use of [custom commands](/en/CSMM/custom-commands.html). We are providing the command a variable `${player.steamId}`, this of course translates into the steam ID of the player who executed the command. CSMM supports lots of special variables you can use in your commands.
 
 `w2l command "remitem ${player.steamId}"`
 
