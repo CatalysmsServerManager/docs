@@ -127,4 +127,4 @@ addCurrency(${custom.receiver}, ${custom.qnt}; pm2 [Exchange] ${custom.receiver}
 
 ## Finishing up
 
-CSMM and CPM each have very customizable features. If you combine the two, you can make really powerful and unique things. We hope that this guide can help you understand how to make different modules work together. If you want some more inspiration, be sure to check out the [configuration examples](/en/CSMM/configuration-examples.html#configuration-examples.html).
+CSMM and CPM each have very customizable features. If you combine the two, you can make really powerful and unique things. We hope that this guide can help you understand how to make different modules work together. If you want some more inspiration, be sure to check out the [configuration examples](/en/CSMM/configuration-examples.html).
