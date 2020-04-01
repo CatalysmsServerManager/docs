@@ -117,7 +117,7 @@ Now we want to extract some info from the log line. Namely, we want to know whic
 
 What should the hook actually do? Well it should give the player some amount of CSMM currency and then respond to the player, letting them know it worked.
 
-To give the player currency, we can use the CSMM built-in function [addCurrency()](/en/csmm/custom-commands.html#addcurrency-playerid-amount.html) and to respond to the player, we can add a customized message with CPMs `pm2` command.
+To give the player currency, we can use the CSMM built-in function [addCurrency()](/en/csmm/custom-commands.html#addcurrency-playerid-amount) and to respond to the player, we can add a customized message with CPMs `pm2` command.
 
 ```
 addCurrency(${custom.receiver}, ${custom.qnt}; pm2 [Exchange] ${custom.receiver} "You have deposited ${custom.qnt} casino coins."
