@@ -41,7 +41,7 @@ If you execute this command (substituting \<STEAMID\> with a valid Steam ID ofco
 
 ## The command to execute
 
-To allow the player to trigger this feature, we will let them execute a chat command. To configure this, we'll make use of [custom commands](/en/CSMM/custom-commands). We are providing the command a variable `${player.steamId}`, this ofcourse translates into the steam ID of the player who executed the command. CSMM supports lots of special variables you can use in your commands.
+To allow the player to trigger this feature, we will let them execute a chat command. To configure this, we'll make use of [custom commands](/en/CSMM/custom-commands.html). We are providing the command a variable `${player.steamId}`, this ofcourse translates into the steam ID of the player who executed the command. CSMM supports lots of special variables you can use in your commands.
 
 `w2l command "remitem ${player.steamId}"`
 
@@ -91,7 +91,7 @@ The easiest way to have a hook pick up on a log line is with string filtering. F
 You can also use a regex for matching a log message. This can be used if you want to selectively match messages.
 :::
 
-![](/assets/images/CSMM/advanced-feature-guide/bank-hook-2.png)
+![Search string hook config](/assets/images/CSMM/advanced-feature-guide/bank-hook-2.png)
 
 ### Creating variables
 
@@ -111,20 +111,20 @@ Now we want to extract some info from the log line. Namely, we want to know whic
 
   This regular expression uses positive lookahead to make sure only what we need is matched. For more info on how this works, see this example on [regexr.com](https://regexr.com/51kil).
 
-![](/assets/images/CSMM/advanced-feature-guide/bank-hook-3.png)
+![Custom hook variable config](/assets/images/CSMM/advanced-feature-guide/bank-hook-3.png)
 
 ### The final hook
 
 What should the hook actually do? Well it should give the player some amount of CSMM currency and then respond to the player, letting them know it worked.
 
-To give the player currency, we can use the CSMM built-in function [addCurrency()](/en/csmm/custom-commands.html#addcurrency-playerid-amount) and to respond to the player, we can add a customized message with CPMs `pm2` command.
+To give the player currency, we can use the CSMM built-in function [addCurrency()](/en/csmm/custom-commands.html#addcurrency-playerid-amount.html) and to respond to the player, we can add a customized message with CPMs `pm2` command.
 
 ```
 addCurrency(${custom.receiver}, ${custom.qnt}; pm2 [Exchange] ${custom.receiver} "You have deposited ${custom.qnt} casino coins."
 ```
 
-![](/assets/images/CSMM/advanced-feature-guide/bank-hook-1.png)
+![The final hook configuration](/assets/images/CSMM/advanced-feature-guide/bank-hook-1.png)
 
 ## Finishing up
 
-CSMM and CPM each have very customizable features. If you combine the two, you can make really powerful and unique things. We hope that this guide can help you understand how to make different modules work together. If you want some more inspiration, be sure to check out the [configuration examples](/en/CSMM/configuration-examples.html#configuration-examples).
+CSMM and CPM each have very customizable features. If you combine the two, you can make really powerful and unique things. We hope that this guide can help you understand how to make different modules work together. If you want some more inspiration, be sure to check out the [configuration examples](/en/CSMM/configuration-examples.html#configuration-examples.html).
