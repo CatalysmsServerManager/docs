@@ -138,7 +138,7 @@ Using the above order, there's a few specific things you can see:
 - **Unlike the built-in event types, logLine hooks will execute on the _all_ matching hook conditions that it can find.**  
   For example, if you have a hook that detects the word 'test', and another hook that detects the word 'test message', both events will fire. Be careful to specify unique filter criteria.
 
-## Examples of Custom Hooks
+### Examples
 
 - Reward players for leveling up
 
