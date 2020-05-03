@@ -140,13 +140,34 @@ Using the above order, there's a few specific things you can see:
 
 ### Examples
 
-- Reward players for leveling up
+#### Dynamic MaxSpawnedZombies in relation with online players.
+
+As servers get bigger, performance can become a problem. With this hook, you can automatically adjust how many zombies can spawn on your server.
+
+1. Create a new custom hook in CSMM
+2. Choose Event -> "Log Line"
+3. Commands "sg MaxSpawnedZombies 128"
+4. Cool down should be 0 MS
+5. Add Regex Condition `(Ply:\s)(2[0]|[01]?[0-9])(\sZom:)`.
+
+This will make your server set MaxSpawnedZombies to 128 if it detects 0-20 players online in your server.
+Some other regex condition that can be used is.
+
+`(Ply:\s)(2[1]|[2]{1}?[1-9])(\sZom:)` -> Online Players 21-29
+`(Ply:\s)([3-9][0-9]|\d{3,})(\sZom:)` -> Online Players >30
+
+You can play around with the numbers to adjust it to your server needs.
+
+As a base, you can use this line below for your regex test.
+`2020-01-01T12:12:12 1.0 INF Time: 0.0m FPS: 20.00 Heap: 1000.0MB Max: 1000.0MB Chunks: 1234 CGO: 123 Ply: 0 Zom: 108 Ent: 0 (0) Items: 0 CO: 0 RSS: 0.0MB`
+
+#### Reward players for leveling up
 
 `say "${player.name} has reached level ${newLvl} and has earned ${newLvl} zcoins"; addCurrency(${player.id}, ${newLvl})`
 
 This will reward a player for leveling up with currency equal to their newly gained level. Note that this will reward a player for **every** level they get. If you only want to reward players for getting a level that is a multiple of 10 you can use this regex: `(level )(\[0-9\])\*0`
 
-- Bounty for killing players in PvP
+#### Bounty for killing players in PvP
 
 `say "${killer.name} has eliminated ${victim.name} and was awarded ${victim.playerKills}0 zcoins as bounty reward!"; addCurrency(${killer.id}, ${victim.playerKills}0)`
 
