@@ -151,14 +151,16 @@ As servers get bigger, performance can become a problem. With this hook, you can
 5. Add Regex Condition `(Ply:\s)(2[0]|[01]?[0-9])(\sZom:)`.
 
 This will make your server set MaxSpawnedZombies to 128 if it detects 0-20 players online in your server.
-Some other regex condition that can be used is.
+Some other regex conditions that can be used are:
 
 `(Ply:\s)(2[1]|[2]{1}?[1-9])(\sZom:)` -> Online Players 21-29
+
 `(Ply:\s)([3-9][0-9]|\d{3,})(\sZom:)` -> Online Players >30
 
-You can play around with the numbers to adjust it to your server needs.
+You can play around with the numbers and command to adjust it to your server needs.
 
 As a base, you can use this line below for your regex test.
+
 `2020-01-01T12:12:12 1.0 INF Time: 0.0m FPS: 20.00 Heap: 1000.0MB Max: 1000.0MB Chunks: 1234 CGO: 123 Ply: 0 Zom: 108 Ent: 0 (0) Items: 0 CO: 0 RSS: 0.0MB`
 
 #### Reward players for leveling up
