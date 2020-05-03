@@ -14,9 +14,9 @@ Additionally, land claim blocks can't be placed in a reset region, and any that 
 
 ![Missing image](/assets/images/CPM/resetRegions/9797644.png)
 
-To see what the regions look like on your map, use the [Alloc's Live Map](/en/CSMM/allocs.html) utility, and enable the Region File checkbox in the upper right corner. It should resemble the grid shown in the screenshot above. You can also install the [CPM Alloc's Map Patch](https://github.com/Prisma501/Allocs-Webmap-for-CPM) to enable you to see the reset regions and other advanced CPM map features.
+To see what the regions look like on your map, use the [Alloc's Live Map](/en/CSMM/allocs.html) utility, and enable the Region File checkbox in the upper right corner. It should resemble the grid shown in the screenshot above.
 
-Managing Region Markers
+### Managing Region Markers
 
 The command for managing reset regions is called 'mrr', and the syntax for the command is as shown below. Note that this command is used to mark regions for reset; nothing happens to these regions until a reset reboot is triggered. See the next section below for these commands.
 
