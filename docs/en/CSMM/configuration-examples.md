@@ -151,6 +151,22 @@ Commands to execute - `say "[ff77ee]${player.name} just killed [ff7777]Bio Hazar
 
 Search string - bioHazardZombie
 
+### Reward players for leveling up
+
+Event - PlayerLevel
+
+`say "[FF7F00]${player.name} [FFFF00]has reached level [9400D3]${newLvl} [FFFF00]and has earned ${newLvl} Dukes"; giveplus ${player.steamId} casinoCoin ${newLvl}`
+
+You can also reward players for reaching milestone levels (25,50,100,...). For this you will need to use a regex to detect these special levels. For example:
+
+```regex
+.*made level\s*(\d*(25|50|75|100|125|150|175|200)\b)
+```
+
+::: warning
+To detect special levels, you must have CPM installed as this creates the log lines.
+:::
+
 ## Cron jobs / server automation
 
 Scheduled commands include things like automated world saving, scheduled reboots, server announcements, etc. Most of the time, these will be administrative or behind-the-scenes functionality things that the users won't interact with. You will want to think about how often you execute these. It's fine to save the world every 30 minutes but you do not want the server to restart every 30 minutes!

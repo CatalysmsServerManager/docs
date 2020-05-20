@@ -4,6 +4,7 @@ const navs = require("./navs");
 module.exports = {
   title: "CSMM",
   description: "Documentation for the web based 7 days to die server manager",
+  theme: 'yuu',
   locales: {
     "/": {
       lang: "en-US"
@@ -15,6 +16,10 @@ module.exports = {
   },
   ga: "UA-104087733-8",
   plugins: [
+    ['vuepress-plugin-code-copy', {
+      selector: 'div[class*="language-"] pre',
+    }],
+    'seo',
     "@vuepress/back-to-top",
     "vuepress-plugin-smooth-scroll",
     [
@@ -22,9 +27,20 @@ module.exports = {
       {
         selector: ".content__default img"
       }
+    ],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-104087733-8'
+      }
     ]
   ],
   themeConfig: {
+    yuu: {
+      defaultDarkTheme: true,
+      defaultColorTheme: 'blue',
+      disableThemeIgnore: true,
+    },
     repo: "CatalysmsServerManager/docs",
     repoLabel: "Contribute",
     docsDir: "docs",

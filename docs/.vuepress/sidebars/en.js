@@ -27,7 +27,11 @@ module.exports = {
     },
     {
       title: "Advanced",
-      children: ["/en/CSMM/custom-commands", "/en/CSMM/hooks"]
+      children: [
+        "/en/CSMM/custom-commands",
+        "/en/CSMM/hooks",
+        "/en/CSMM/advanced-feature-guide"
+      ]
     },
     "/en/CSMM/catching-dupers",
     "/en/CSMM/configuration-examples",
@@ -60,6 +64,7 @@ module.exports = {
     "/en/7D2D/Hardware&OS",
     "/en/7D2D/server-setup",
     "/en/7D2D/switching-to-beta-versions",
+    "/en/7D2D/server-management",
     "/en/7D2D/useful-scripts",
     "/en/contributing"
   ]
