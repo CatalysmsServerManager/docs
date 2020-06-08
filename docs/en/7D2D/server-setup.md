@@ -238,7 +238,7 @@ Note: You need to set tuned to „throughput-performance“. Otherwise all chang
 
 ## Installation of gameserver software and scripts
 
-We reach the point, where operating system is installed, remote access is set up. Now we can proceed to installing gameserver and additional scripts. To make our server as lightweight as possible, we install [7dtd dedicated server](https://steamdb.info/app/294420/) (its different app from [7dtd game](https://steamdb.info/app/251570/)) using Valve's [STEAMcmd](https://developer.valvesoftware.com/wiki/SteamCMD) with help of [LinuxGameServerManager](https://linuxgsm.com/) scripts. Process is really short, easy and **INCORRECTLY** described in 7DTD section of LinuxGSM site here [https://linuxgsm.com/lgsm/sdtdserver/](https://linuxgsm.com/lgsm/sdtdserver/)
+We reach the point, where operating system is installed, remote access is set up. Now we can proceed to installing gameserver and additional scripts. To make our server as lightweight as possible, we install 7dtd dedicated server (its different app from 7dtd game) using Valve's [STEAMcmd](https://developer.valvesoftware.com/wiki/SteamCMD) with help of [LinuxGameServerManager](https://linuxgsm.com/) scripts. Process is really short, easy and **INCORRECTLY** described in 7DTD section of LinuxGSM site here [https://linuxgsm.com/lgsm/sdtdserver/](https://linuxgsm.com/lgsm/sdtdserver/)
 
 ### Installing all prerequisites
 
