@@ -117,13 +117,12 @@ REDISSTRING=redis://127.0.0.1:6379
 
 ## Running the application
 
-Time to get to the fun part, running CSMM! If you are running CSMM for the first time, with a fresh database, you should start the application in dev mode once. CSMM will create all tables & columns it needs automatically. Check the logs it creates to make sure there are no errors during start up
+Time to get to the fun part, running CSMM! If you are running CSMM for the first time, with a fresh database, you should run the `create_tables.js` script once. CSMM will create all tables & columns it needs automatically. Check the logs it creates to make sure there are no errors during start up
 
 ```bash
-node app.js
-```
-
-```bash
+# Create database tables
+node create_tables.js
+# Run the application
 NODE_ENV=production node app.js
 ```
 
