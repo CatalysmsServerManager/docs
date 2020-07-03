@@ -1,5 +1,92 @@
 # Version History
 
+**Version 15.2 A19 b157 Experimental (02-07-2020*)**
+
+* Fixed consolecommand bexport
+* Fixed questpoi protection
+* Fixed consolecommand db (deactivatebed)
+
+**Version 14.6 A18.4 b4 Stable (NOT A18.3 compatible)**
+
+Some ttp love this release. All new commands alter data that is stored in the players ttp file. That can only be editted when player is not online. So all new commands do a player kick if player is online.
+
+* New consolecommand rl (resetlevel): set a players level to a level of your choice
+* New consolecomand rs (resetskillpoints): set the number of skillpoints of a player to the count of your choice
+* New consolecommand red (removeexpdeficit): remove a players ExpDeficit on demand. ExpDeficit is the XP penalty you get after dying (red bar in the XP bar above belt)
+
+**Version 14.5 A18.4 b4 Stable (NOT A18.3 compatible)**
+
+* changed donorslots: added admin notification on expired donor server join. All online admins of a configurable level get a PM notification when an expired donor joins. Configure admin level in CpmSettings.xml ( NotifyAdmin_Level). Default is level 0.
+
+Also added logline for easy CSMM custom hooking. Logline is:
+[CSMM_Patrons] Donorslot expired! Playername: <name> SteamID: <steamID>
+So hook can be placed on ” [CSMM_Patrons] Donorslot expired! ” for discord notification.
+* changed consolecommand remitem: changed commandresponse player entityId to steamId for easier CSMM regex custom variable extraction in custom hooks.
+
+Speaking of hooks: Catalysm wrote an excellent example that shows how incredible powerful the combination of features of CSMM and CPM can be.
+This example will show how to create the functionality of giving players the tools to deposit casinoCoins to the virtual CSMM economy. It even shows how to “fix” an exploit that rises while creating this.
+
+Check it out!
+https://docs.csmm.app/en/CSMM/advanced-feature-guide.html
+
+**Version 14.4 A18.4 b4 Stable (NOT A18.3 compatible)**
+
+* Changed consolecommand shutdownba: added on demand vehicle removal. Use “shutdownba <minutes> resetvehicles”. All vehicles on map will be removed at restart.
+* Added consolecommand af (addfriend): add yourself to friend list of a player without invite or confirmation needed. Works on off,- and online players. To remove from friendlist, use the player list window ingame. Beware that if the player is online, the removal will be shown as a popup on screen (adding is silent/invisible).
+* Changed consolecommand wpc (waypointcontrol): fixed wrong number of arguments error response.
+
+**Version 14.3 A18.4 b4 Stable (NOT A18.3 compatible)**
+
+* Added vehicle removal on restart: duping vehicles is still a major problem on MP servers. CPM now offers a way to control that pest. You can enable vehicle removal on restart in CpmSettings.xml :
+<Vehicles_RemoveOnRestart>true</Vehicles_RemoveOnRestart>
+Default value is false.
+When enabled CPM will remove ALL vehicles in the world that are not stored away in containers or backpacks/belt on server restart.
+Strongly recommended to make a warning about this functionality in server login confirmation message or by (auto) chat communication. Or there will be tears.
+
+**Version 14.2 A18.4 b4 Stable (NOT A18.3 compatible)**
+
+* Improved “getprefab reset” and resetrwgprefabs: now sleepervolumes in prefabs that got reset manually or automatically, will get despawned and reset too. This will fix the free loot runs on prefabs in which the sleepervolumes were cleared (all killed) and get reset after that. Previously the sleepervolumes would stay cleared until respawn timer would expire again, but the prefab was reset and full of loot again. Now they are all waiting and active again after the prefab resets. Thanks to SylenThunder for reporting.
+
+**Version 14.1 A18.4 b4 Stable (NOT A18.3 compatible)**
+
+* 18.4 b4 Stable compatibility
+* Changed sleepers consolecommand: added option to count sleepervolumes in marked area.
+* Changed write2log (w2l) consolecommand: added option to add output of a command to log. Now you have full control on what data is written in log. You can use a cronjob for w2l using gt consolecommand for example to be able to make a CSMM custom hook for checking that ingame time and fire one or multiple commands on a specific gametime. Options are limitless.
+* New features since 18.3 stable:
+    * Sleeperspawn control (with bloodmoon only option)
+    * Sleeperrespawn control
+    * Anticheat: Spectator mode detection
+    * Jail auto-release bugfix
+    * Chunkreset consolecommand! Reset chunks on live server
+
+**Version 14.0 A18.4 b4 Experimental (NOT A18.3 Stable compatible)**
+
+* Proudly presenting consolecommand resetchunks: reset chunks point to point (p1,p2) or with radius. Reset chunks to RWG default while server is running with this new command!
+
+**Version 13.9.2 A18.4 b4 Experimental (NOT A18.3 b4 Stable compatible)**
+
+* Jail auto-release bugfix: auto-releasing from jail was not using the new db persistent storage yet, so it failed to actually release the player from jail.
+
+**Version 13.9.1 18.4. b3E (NOT A18.3 b4 Stable compatible) + CPMcc 1.4.0 (2020.02.22)**
+
+* AntiCheat: added Spectator Mode detection. Can be hacked in easily clientside and offers complete invisibility towards other players and zombies/animals. Now CPM will detect unauthorized use.
+Configure in CpmSettings.xml: “MaxAdminLevelSpectatorMode” (default permission level 0).
+Optional command(s) can be fired on detection. Default is no command “SpectatorModeDetectedCommand “. To enable command(s) just put the command(s) in the setting.
+To use multiple commands just seperate them with ;
+Supported placeholders: ${entityId}, ${steamId} and ${playerName}.
+CPM will write to log upon detection for easy hooking of CSMM custom hooks/discord notifications:
+
+[CSMM_Patrons]Unauthorized SpectatorMode detected on <playerName> (<steamId>) !!!!!
+Command example: <SpectatorModeDetectedCommand>ban add ${steamId} 10 years “Hackers not welcome”</SpectatorModeDetectedCommand>
+
+**Version 13.9 A18.3 b4 Stable + CPMcc 1.4.0 (2020.02.21)**
+
+* Added sleeper spawn control: disable sleepers everywhere on the map. CpmSettings.xml ->
+<DisableSleepers_Enabled>true</DisableSleepers_Enabled>. To disable sleepers on map only during bloodmoon -> <DisableSleepers_BloodmoonOnly_Enabled>true</DisableSleepers_BloodmoonOnly_Enabled>
+
+* Added sleeper respawn control: configure if sleepers respawn after being cleared or dont ever respawn again.
+CpmSettings.xml -> <DisableSleeperRespawn_Enabled>true</DisableSleeperRespawn_Enabled>
+
 **Version 13.8 A18.3 b4 Stable + CPMcc 1.4.0 (2020.01.28)**
 
 * changed consolecommand tprotect: implemented usage of radius when traderprotecting blocks
@@ -603,7 +690,7 @@ re-enabled consolecommand lps (listplayerskill): list all levels of player's att
 **Version 7.3 (2018.12.14)**
 
 * Added consolecommand resetplayerdata (rpd): reset a player. Deletes .ttp, .map and .bak files of a player. Resetting him/her to new player state.
-* Added webapi interface: Resetregions / advanced claims on webmap make use of the new webapi, making it suitable for displaying reset/claim data on mulitiple server instances.
+* Added webapi interface: Resetregions / advanced claims on webmap make use of the new webapi, making it suitable for displaying reset/claim data on mulitiple server instances. Thanks to Alloc for the base code of his webapi.
 Make sure to update your map.js to hook into the new webapi. 
 
 
