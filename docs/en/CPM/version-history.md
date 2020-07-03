@@ -1,6 +1,6 @@
 # Version History
 
-**Version 15.2 A19 b157 Experimental (02-07-2020*)**
+**Version 15.2 A19 b157 Experimental (02-07-2020)**
 
 * Fixed consolecommand bexport
 * Fixed questpoi protection
