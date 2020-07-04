@@ -1,5 +1,9 @@
 # Version History
 
+**Version 15.3 A19 b157 Experimental (04-07-2020)**
+
+* Fixed consolecommand lce (listcustomentity)
+
 **Version 15.2 A19 b157 Experimental (02-07-2020)**
 
 * Fixed consolecommand bexport
