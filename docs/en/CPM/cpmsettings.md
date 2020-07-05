@@ -137,6 +137,14 @@ Command (optional) that will be executed when Spectatormode anticheat gets trigg
 
 Define the maximum allowed number of characters in chat. The chatmessage will get blocked if length exceeds this setting.
 
+`<NighttimeAnnouncer_Enabled>true</NighttimeAnnouncer_Enabled>`
+
+Enable/Disable the nighttime announcer.
+
+`<NighttimeAnnouncer_Warnhours>2</NighttimeAnnouncer_Warnhours>`
+
+Number of ingame hours before 22:00 the nighttimeannouncer should announce.
+
 `<NotifyAdmin_Level>0</NotifyAdmin_Level>`
 
 The level of players/admins that will get notified (if online) when a player with an expired reserved slot joins the server.
