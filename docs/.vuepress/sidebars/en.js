@@ -50,6 +50,7 @@ module.exports = {
     },
     "/en/CPM/claimcreator",
     "/en/CPM/pvpve-server-configuration",
+    "/en/CPM/cpmsettings",
     "/en/CPM/version-history",
     "/en/contributing"
   ],
