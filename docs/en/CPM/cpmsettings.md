@@ -12,24 +12,40 @@ Prevent or allow players to connect that have UTF-8 charset characters in their 
 
 `<Bundo_HistorySize>5</Bundo_HistorySize>`
 
-The number of bundo's you can do after prefab commands like fblock, brender, bdup, brepblock etc.
+The number of bundo's that are stored and you can do after prefab commands like fblock, brender, bdup, brepblock etc.
 
 `<ChatCommandPermissions_ft>0</ChatCommandPermissions_ft>`
+
 `<ChatCommandPermissions_ftw>0</ChatCommandPermissions_ftw>`
+
 `<ChatCommandPermissions_mv>0</ChatCommandPermissions_mv>`
+
 `<ChatCommandPermissions_mvw>0</ChatCommandPermissions_mvw>`
+
 `<ChatCommandPermissions_bubble>0</ChatCommandPermissions_bubble>`
+
 `<ChatCommandPermissions_listwp>0</ChatCommandPermissions_listwp>`
+
 `<ChatCommandPermissions_setwp>0</ChatCommandPermissions_setwp>`
+
 `<ChatCommandPermissions_delwp>0</ChatCommandPermissions_delwp>`
+
 `<ChatCommandPermissions_tb>0</ChatCommandPermissions_tb>`
+
 `<ChatCommandPermissions_rt>0</ChatCommandPermissions_rt>`
+
 `<ChatCommandPermissions_get>0</ChatCommandPermissions_get>`
+
 `<ChatCommandPermissions_rtc>0</ChatCommandPermissions_rtc>`
+
 `<ChatCommandPermissions_bag>1000</ChatCommandPermissions_bag>`
+
 `<ChatCommandPermissions_ls>0</ChatCommandPermissions_ls>`
+
 `<ChatCommandPermissions_day7>1000</ChatCommandPermissions_day7>`
+
 `<ChatCommandPermissions_hostiles>0</ChatCommandPermissions_hostiles>`
+
 `<ChatCommandPermissions_bed>0</ChatCommandPermissions_bed>`
 
 Set permissionlevel for all available CPM chatcommands. For free for all use permission level 1000.
@@ -63,8 +79,11 @@ When enabled there will be no sleeperspawns in the world. Not permanent. When di
 Same as disablesleepers above but ONLY prevents sleeperspawns during bloodmoon. Not permanent.
 
 `<GMSG_PlayerJoined_Enabled>true</GMSG_PlayerJoined_Enabled>`
+
 `<GMSG_PlayerLeft_Enabled>true</GMSG_PlayerLeft_Enabled>`
+
 `<GMSG_PlayerDied_Enabled>true</GMSG_PlayerDied_Enabled>`
+
 `<GMSG_PlayerKilled_Enabled>true</GMSG_PlayerKilled_Enabled>`
 
 Show native gamemessages in chat for joining, leaving, dying and killing. These are the vanilla global gamemessages and disabling them can have impact on CSMM hooks you might have on those actions.
