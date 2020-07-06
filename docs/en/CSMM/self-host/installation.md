@@ -123,7 +123,7 @@ Time to get to the fun part, running CSMM! If you are running CSMM for the first
 # Create database tables
 node create_tables.js
 # Run the application
-NODE_ENV=production node app.js
+NODE_ENV=production npm run start
 ```
 
 ::: warning
