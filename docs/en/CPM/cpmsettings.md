@@ -58,6 +58,10 @@ The prefix for CPM chatcommands
 
 The amount of damage done on entities which will trigger the damagedetection anticheat.
 
+Logline example for using for custom CSMM discord notification:
+
+[CSMM_Patrons]damageDetection(Entity): Player Prisma501 (7656114567822412) triggered damage detection! Damage done: 5000
+
 `<DamageDetection_DetectedCommand>ban add ${steamId} 10 years "Nice hack mate"</DamageDetection_DetectedCommand>`
 
 The (optional) command to execute when damagedetections gets triggered.

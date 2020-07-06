@@ -1,5 +1,13 @@
 # Version History
 
+**Version 15.4 A19 b157 Experimental (06-07-2020)**
+
+* Fixed anticheat damagedetection not logging when triggered.
+
+Example logline for creating CSMM custom discord notifcation hook:
+
+[CSMM_Patrons]damageDetection(Entity): Player Prisma501 (7656114567822412) triggered damage detection! Damage done: 5000
+
 **Version 15.3 A19 b157 Experimental (04-07-2020)**
 
 * Fixed consolecommand lce (listcustomentity)
