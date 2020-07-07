@@ -1,5 +1,15 @@
 # Version History
 
+**Version 15.5 A19 b157 Experimental (07-07-2020)**
+
+* fixed shutdownba not considdering bloodmoon off and random bloodmoon
+* fixed nighttime announcer not considdering bloodmoon off
+* fixed day7 chatcommand not considdering bloodmoon off
+* fixed permadeath. A19e compatibility
+* upped waiting time after kick to 10 seconds on ttp edit/delete commands on online players: resetlevel, resetskillpoints, removeexpdeficit, resetplayerdata and removevendingrental. Should work better when using on online players. Using on offline players is still failsafe.
+
+Sometimes it takes a while for the player profile to be saved to ttp file by the game. When its not saved completely when CPM does the edit/delete, the Pimps backup mechanism will kick in and the edit/delete will be undone. For offline players it works 100% of the time. 10 seconds should be enough to save but not long enough for the player to have joined again thus loading and using the ttp file and causing the edit to be undone again.
+
 **Version 15.4 A19 b157 Experimental (06-07-2020)**
 
 * Fixed anticheat damagedetection not logging when triggered.
