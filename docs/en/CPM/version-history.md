@@ -1,5 +1,9 @@
 # Version History
 
+**Version 15.6 A19 b157 Experimental (09-07-2020)**
+
+* fixed QuestPoiProtection, ResetRegions and Adv. Claim LcbFree not being able to handle allready existing lcb's/bedrolls in unloaded chunks on use/enable in an ongoing map. You can now use/enable those on an existing map with lcb's/bedrolls allready present in QuestPoi's, ResetRegions and Adv. Claims LcbFree.
+
 **Version 15.5 A19 b157 Experimental (07-07-2020)**
 
 * fixed shutdownba not considdering bloodmoon off and random bloodmoon
