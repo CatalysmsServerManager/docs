@@ -1,5 +1,9 @@
 # Version History
 
+**Version 15.6.1 A19 b157 Experimental (09-07-2020)**
+
+* fixed an error i let slip in on 15.6 on ResetRegions. When placing a LCB in a ResetRegion and the claim borders are overlapping a neighbouring ResetRegion, the player would get back 2 LCB's instead of one.
+
 **Version 15.6 A19 b157 Experimental (09-07-2020)**
 
 * fixed QuestPoiProtection, ResetRegions and Adv. Claim LcbFree not being able to handle allready existing lcb's/bedrolls in unloaded chunks on use/enable in an ongoing map. You can now use/enable those on an existing map with lcb's/bedrolls allready present in QuestPoi's, ResetRegions and Adv. Claims LcbFree.
