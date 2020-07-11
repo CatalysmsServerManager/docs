@@ -1,6 +1,6 @@
 # Version History
 
-**Version 15.6.1 A19 b157 Experimental (09-07-2020)**
+**Version 15.6.1 A19 b163 Experimental (not 18.4 Stable Compatible) (09-07-2020)**
 
 * fixed an error i let slip in on 15.6 on ResetRegions. When placing a LCB in a ResetRegion and the claim borders are overlapping a neighbouring ResetRegion, the player would get back 2 LCB's instead of one.
 
