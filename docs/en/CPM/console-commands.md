@@ -62,9 +62,10 @@ Available commands:
 
 ```
  cpm-additemloot additemloot => add item to SecureLoot below the given entity
+ cpm-af af addfriend => Add yourself to a player friends list and vice versa.
  cpm-announcenighttime announcenighttime an => Turn NightTime announcement on/off
  cpm-arrest arrest => Put a player in jail (reversed claim jail required!)
- cpm-bcheck bcheck => Checks the kind of a block
+ cpm-bcheck bcheck => Checks the type of block by coordinates or under your feet.
  cpm-bdup bdup => Copy an Area to another location
  cpm-bexport bexport => Exports as Prefab some space
  cpm-brender brender => Renders a Prefab on given location
@@ -109,7 +110,7 @@ Available commands:
  cpm-mrr mrr markresetregion => Manage the reset regions list.
  cpm-multipleentityspawn multipleentityspawn mes => spawn multiple entities around some coordinate or player
  cpm-mutechatplayer mutechatplayer mcp => mute a player on public chat
- cpm-mv mv => Move player command (to coordinates and to other player). Optionally restrict of friends only.
+ cpm-mv mv => Move player command (to coordinates and to other player). Optionally restrict to friends only.
  cpm-mvw mvw => Move player to waypoint.
  cpm-ov ov ownvehicle => take ownership of a vehicle.
  cpm-overridechatname overridechatname ocn => Change a player's chat name.
@@ -119,21 +120,26 @@ Available commands:
  cpm-playerchatcolor playerchatcolor pcc => Change default player chat color.
  cpm-playsound playsound => Play an ingame sound on any server/player position.
  cpm-protectplayer protectplayer protect => Set protective bubble on player.
+ cpm-red red removeexpdeficit => Remove a player's ExpDeficit.
  cpm-release release => Release a player from jail.
  cpm-remitem remitem => remove items from SecureLoot below the given entity
  cpm-removelandprotection2 removelandprotection2 rlp2 => removes the association of a land protection block without players needing to be near
+ cpm-resetchunks resetchunks => Reset chunks to RWG default.
  cpm-resetregionsnow resetregionsnow => Execute shutdown immediately and reset marked regions.
  cpm-resetrwgprefabs resetrwgprefabs rrp => Reset all RWG prefabs.
  cpm-resetunclaimedregionsnow resetunclaimedregionsnow => Execute shutdown immediately and reset ALL regions except the ones that have LCB/Adv. Claim on.
+ cpm-rl rl resetlevel => Reset a player's level.
  cpm-rpd rpd resetplayerdata => Reset a player
+ cpm-rs rs resetskillpoints => Reset a player's skillpoints.
  cpm-rt rt repairtrees => Repair indestructable trees (only with damageindicator)
+ cpm-rvr rvr removevendingrental => Remove a player's vendingmachine rental status
  cpm-say2 say2 => Sends a message to all connected clients with specific sender
  cpm-sayadmin sayadmin => Send a PM to all players meeting the minimum receipients permisson level
  cpm-sayplayer2 sayplayer2 pm2 => send a message to a single player with a specific sender name
  cpm-scn scn serverchatname => Set server chatname globally
  cpm-sdc sdc setdeathcount => Set a player's deathcount.
  cpm-setbundosize setbundosize => Set the size of history on bundo
- cpm-setplayerstatus setplayerstatus sps => Set a value on players attributes (zombiekill, playerkill)
+ cpm-setplayerstatus setplayerstatus sps => Change players attributes (zombiekills, playerkills)
  cpm-showinventory2 showinventory2 si2 => list inventory of a given player
  cpm-shutdownba shutdownba => Timed shutdown with bloodmoon awareness.
  cpm-sleepers sleepers => Remove sleepervolumes from world
@@ -147,7 +153,6 @@ Available commands:
  cpm-wi wi wipeinventory => Reset a player's inventory completely (bag, belt and equipment).
  cpm-wlf wlf => Adds all friends of a player to whitelist(s) of their claim(s)
  cpm-wpc wpc => Manage CPM waypoints
-
 ```
 
 <table role="grid" resolved="">
