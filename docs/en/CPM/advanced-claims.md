@@ -9,7 +9,7 @@ Advanced Claims are a CPM-specific feature intended to allow Admins a more granu
 
 ## Creating A Claim
 
-All advanced claims are created using the same two methods: either by specifying the 4 corners of the rectangle (individually or by using the p1/p2 syntax), or by specifying a player and then specifying a square-sided radius around them to create the claim in. Additionally, all claim commands follow the same general syntax, though certain claims have optional things at the beginning or end.
+All advanced claims are created using the same three methods: either by specifying the 4 corners of the rectangle (individually or by using the p1/p2 syntax), or by specifying a player and then specifying a square-sided radius around them to create the claim in or by using the ClaimCreator WebUI which is HIGHLY recommended for ease of use. Additionally, all claim commands follow the same general syntax, though certain claims have optional things at the beginning or end.
 
 ## Special claim names
 
