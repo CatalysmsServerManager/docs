@@ -1,5 +1,9 @@
 # Version History
 
+**Version 15.8 A19 b163 Experimental (not A18.4 Stable Compatible) (13-07-2020)**
+
+* Implemented using a dedicated thread for handling online players on ttp edit commands resetskillpoints (rs), resetlevel (rl), resetplayerdata (rpd), removexpdeficit (red) and removevendingrent (rvr) to not hold up the main server thread while working.
+
 **Version 15.7 A19 b163 Experimental (not A18.4 Stable Compatible) (12-07-2020)**
 
 * Found the cause of the bedroll persistency problem in A19 and re-introduced asynchronously handling lcb/bedroll. Highly recommended to upgrade.
