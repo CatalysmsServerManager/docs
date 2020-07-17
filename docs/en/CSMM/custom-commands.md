@@ -126,6 +126,23 @@ With this function, you can add or substract currency from a players balance. Fo
 
 Sets a players role. The role parameter is the name of the role, this has to be **exactly** the same. This can be used if you have a \$adddonor command, in the vote reward command to give voters access to special commands, ...
 
+## Special Variables
+
+- \${randNum:start:end}
+- \${randList:item1,item2,item3}
+
+### ${randNum:min,max}
+
+Generates a random number between min and max (inclusive) every time its encountered
+
+For example, "\${randNum:5:10} \${randNum:5:10} \${randNum:5:10}" would generate 3 random numbers
+
+### ${randList:item1,item2,item3...}
+
+Picks a random item fom the list of provided items its encountered
+
+For example, "\${randList:apple,orange,grape} \${randList:apple,orange,grape}" could produce "apple grape"
+
 ## Legacy variables
 
 ::: warning
@@ -141,6 +158,10 @@ These were the first variables added to CSMM. They are still in the application 
 - \${posZ}
 
 ## Examples
+
+### Winning the lottery
+
+addCurrency(${player.id}, ${randNum:5,10}); say "${player.name} just won the lottery and got some coins!"
 
 ### Remove Near Death Trauma Debuff
 
