@@ -1,5 +1,10 @@
 # Version History
 
+**Version 15.9 A19 b163 Experimental (not A18.4 Stable Compatible) (17-07-2020)**
+
+* Changed consolecommand listcustomentities (lce): Pimps changed the entityType for traders. Changed searchstring npc to trader. For listing traders do "lce trader". Used to be "lce npc"
+* Changed Questpoi protection: the bedroll handling ingame is an absolute chaos. Changed it again to be more robust but less functional. This version wont support existing bedrolls in questpois anymore. If you enable questpoi protection after players have allready placed bedroll in questpoi's they will only get deactivated when the owning player is online. If owning player never comes online again, the bedroll has to be removed manually. If a bedroll is deactivated it will not be seen as blocking for a questpoi on queststart immediately. It will however be the players spawnpoint until he/she places a new bedroll or the server restarts.
+
 **Version 15.8 A19 b163 Experimental (not A18.4 Stable Compatible) (13-07-2020)**
 
 * Implemented using a dedicated thread for handling online players on ttp edit commands resetskillpoints (rs), resetlevel (rl), resetplayerdata (rpd), removexpdeficit (red) and removevendingrent (rvr) to not hold up the main server thread while working.
