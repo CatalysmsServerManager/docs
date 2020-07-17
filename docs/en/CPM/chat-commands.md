@@ -207,6 +207,14 @@ Lists all players whitelisted for your advanced claim(s).
 
 Removes the specified player from the whitelist for your advanced claim(s).
 
+/aaf
+
+Adds all ingame friends to the whitelist for your advanced claim(s).
+
+/raf
+
+Removes all ingame friends from the whitelist for your advanced claim(s).
+
 ## Working With Player Names
 
 When using a command that requires a player's name, the mod will understand if you use only a portion of the name, and the search is not case sensitive. For example, with a player named Prisma501, there are various ways to use them in a command
