@@ -1,5 +1,9 @@
 # Version History
 
+**Version 15.9.1 A19 b163 Experimental (not A18.4 Stable Compatible) (17-07-2020)**
+
+* After simplifying the QuestPoi protection code drastically in 15.9, a bug became clearly visible. Lcb's/bedrolls that overlap multiple questpois would cause multiple removals/deactivations of lcb's/bedroll. Fixed with this hotfix.
+
 **Version 15.9 A19 b163 Experimental (not A18.4 Stable Compatible) (17-07-2020)**
 
 * Changed consolecommand listcustomentities (lce): Pimps changed the entityType for traders. Changed searchstring npc to trader. For listing traders do "lce trader". Used to be "lce npc"
