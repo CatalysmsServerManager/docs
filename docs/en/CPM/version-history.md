@@ -1,8 +1,9 @@
 # Version History
 
-**Version 15.9.1 A19 b163 Experimental (not A18.4 Stable Compatible) (17-07-2020)**
+**Version 15.9.1 A19 b169 Experimental (not A18.4 Stable Compatible) (17-07-2020)**
 
-* After simplifying the QuestPoi protection code drastically in 15.9, a bug became clearly visible. Lcb's/bedrolls that overlap multiple questpois would cause multiple removals/deactivations of lcb's/bedroll. Fixed with this hotfix.
+* A19 b169 Compatibility
+* After simplifying the QuestPoi protection code drastically in 15.9, a bug became clearly visible. Lcb's/bedrolls that overlap multiple questpois would cause multiple removals/deactivations of lcb's/bedroll. Fixed with this version.
 
 **Version 15.9 A19 b163 Experimental (not A18.4 Stable Compatible) (17-07-2020)**
 
