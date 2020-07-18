@@ -8,6 +8,19 @@ This page assumes that you have completed the basic setup process covered in the
 
 ## Custom commands
 
+### Create a teleport home and return
+
+Teleport home to bed(roll) and have the option to return to where you were before the home teleport
+
+In pseudo: remove any existing return waypoint -> add the current position as new return waypoint -> teleport player to bed(roll)
+
+`wpc remove return_${player.steamId};wpc add return_${player.steamId} ${player.positionX} ${player.positionY} ${player.positionZ};teleh ${player.steamId}`
+
+For the return command. 
+In pseudo: teleport the player to the saved return waypoint -> delete the saved return waypoint (one time use only)
+
+`mvw ${player.steamId} return_${player.steamId};wpc remove return_${player.steamId}`
+
 ### Spawn animals to hunt
 
 Spawn a bunch of animals so your players can get meat easily. Recommended to set a cost for this
