@@ -25,7 +25,7 @@ In pseudo: teleport the player to the saved return waypoint -> delete the saved 
 
 Spawn a bunch of animals so your players can get meat easily. Recommended to set a cost for this
 
-`multipleentityspawn ${entityId} 4 @ 81 81 81 84 84 83`
+`multipleentityspawn ${entityId} 4 @ 85 85 86 86 87 88`
 
 ### Spawn horde of zombies
 
