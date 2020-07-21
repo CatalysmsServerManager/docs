@@ -30,7 +30,8 @@ module.exports = {
       children: [
         "/en/CSMM/custom-commands",
         "/en/CSMM/hooks",
-        "/en/CSMM/advanced-feature-guide"
+        "/en/CSMM/advanced-feature-guide",
+        "/en/CSMM/advanced-feature-guide-chathook"
       ]
     },
     "/en/CSMM/catching-dupers",
