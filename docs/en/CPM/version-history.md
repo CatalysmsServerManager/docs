@@ -1,5 +1,17 @@
 # Version History
 
+**Version 16.0 A19 b169 Experimental (not A18.4 Stable Compatible) (23-07-2020)**
+
+* Heavily optimized ResetRegion, QuestPoiProtection and LcbFree Adv. Claim handling: Moved away from heartbeat thread. Now using gamehook to instantly(!) remove/giveback LCB/Bedroll.
+
+Implemented 2 requests:
+
+* Added new adv. claim antiblock: Use this claim to prevent placement of configurable block(s). Blocks that are not allowed in this claim will be instantly(!) removed.
+
+Usage: create claim with type "antiblock:block1;block2;block3". Blocknames are casesenstive (use fblock to find exact blocknames) and must be separated by semicolon when adding more than 1 block. Follows standard claim rules regarding accesslevel and whitelisting.
+
+* Added writable storage to consolecommands unlockall and own.
+
 **Version 15.9.1 A19 b169 Experimental (not A18.4 Stable Compatible) (17-07-2020)**
 
 * A19 b169 Compatibility
