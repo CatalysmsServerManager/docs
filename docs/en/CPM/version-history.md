@@ -1,8 +1,12 @@
 # Version History
 
-**Version 16.0 A19 b169 Experimental (not A18.4 Stable Compatible) (23-07-2020)**
+**Version 16.1 A19 b169 Experimental (not A18.4 Stable Compatible) (23-07-2020)**
 
 * Heavily optimized ResetRegion, QuestPoiProtection and LcbFree Adv. Claim handling: Moved away from heartbeat thread. Now using gamehook to instantly(!) remove/giveback LCB/Bedroll.
+
+* Added WebApi for viewing new Adv. Claim AntiBlock.
+
+* Updated [Allocs Patched map.js](https://github.com/Prisma501/Allocs-Webmap-for-CPM) for viewing new Adv. Claim AntiBlock
 
 Implemented 2 requests:
 
