@@ -1,5 +1,10 @@
 # Version History
 
+**Version 16.2 A19 b173 Experimental (not A18.4 Stable Compatible) (25-07-2020)**
+
+* A19 b173 Compatibility. 16.1 seems 100% compatible, but recompiled, repacked and re-encrypted against A19 b173 binaries. In case of problems with 16.1 upgrade first before asking for support.
+* Changed command help text and description for rl (resetlevel) and rs (resetskillpoints) to make it....more clear.
+
 **Version 16.1 A19 b169 Experimental (not A18.4 Stable Compatible) (23-07-2020)**
 
 * Heavily optimized ResetRegion, QuestPoiProtection and LcbFree Adv. Claim handling: Moved away from heartbeat thread. Now using gamehook to instantly(!) remove/giveback LCB/Bedroll.
