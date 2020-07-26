@@ -9,7 +9,7 @@
 * fixed sleeper control (DisableSleepers_Enabled in CpmSettings.xml) due to changes in sleepervolumes in A19 b173.
 * fixed sleeper control for bloodmoons only (DisableSleepers_BloodmoonOnly_Enabled in CpmSettings.xml) due to changes in sleepervolumes in A19 b173.
 * Catalysm updated CPM WebUI and added support for new adv. claim AntiBlock! Version 1.5.0 is included in this release.
-* Making something clear: The new resetregions, adv. claim LcbFree, Questpoi protection and adv. claim AntiBlock are only checking on block placement of LCB/Bedroll/AntiBlock. CPM will handle them instantly(!). CPM will however NOT remove allready existing LCB/Bedroll in resetregions, adv. claim LcbFree, Questpois and adv. claim Antiblock after you set/enable them. Be aware of that when enabling any of those functionalities and check on CPM WebUI if you have some manual cleaning up to do.
+* Making something clear: The new resetregions, adv. claim LcbFree, Questpoi protection and adv. claim AntiBlock are only checking on block placement of LCB/Bedroll/AntiBlock. CPM will handle them instantly(!). CPM will however NOT remove allready existing LCB/Bedroll/AntiBlock in resetregions, adv. claim LcbFree, Questpois and adv. claim Antiblock after you set/enable them. Be aware of that when enabling any of those functionalities and check on CPM WebUI if you have some manual cleaning up to do.
 
 **Version 16.2 A19 b173 Experimental (not A18.4 Stable Compatible) (25-07-2020)**
 
