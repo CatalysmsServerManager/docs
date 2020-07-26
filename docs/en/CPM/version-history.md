@@ -1,5 +1,16 @@
 # Version History
 
+**Version 16.3 A19 b173 Experimental (not A18.4 Stable Compatible) (26-07-2020)**
+
+* fixed Questpoi protection being always on regardless of setting in CpmSettings.xml.
+* Reverted from killing to despawning hostiles in hostilefree adv. claim, consolecmd protect and chatcmd /bubble for server stability/performance.
+* Implemented sleeper support for hostilefree adv. claim, consolecmd protect and chatcmd /bubble. No more infinite sleeper respawn loops if using any of those functionalities. Sleepers will just not spawn when in hostilefree adv. claim or within 25 blocks of a player while protection is on with protect or /bubble.
+* fixed sleeper respawn control (DisableSleeperRespawn_Enabled in CpmSettings.xml) due to changes in sleepervolumes in A19 b173.
+* fixed sleeper control (DisableSleepers_Enabled in CpmSettings.xml) due to changes in sleepervolumes in A19 b173.
+* fixed sleeper control for bloodmoons only (DisableSleepers_BloodmoonOnly_Enabled in CpmSettings.xml) due to changes in sleepervolumes in A19 b173.
+* Catalysm updated CPM WebUI and added support for new adv. claim AntiBlock! Version 1.5.0 is included in this release.
+* Making something clear: The new resetregions, adv. claim LcbFree, Questpoi protection and adv. claim AntiBlock are only checking on block placement of LCB/Bedroll/AntiBlock. CPM will handle them instantly(!). CPM will however NOT remove allready existing LCB/Bedroll in resetregions, adv. claim LcbFree, Questpois and adv. claim Antiblock after you set/enable them. Be aware of that when enabling any of those functionalities and check on CPM WebUI if you have some manual cleaning up to do.
+
 **Version 16.2 A19 b173 Experimental (not A18.4 Stable Compatible) (25-07-2020)**
 
 * A19 b173 Compatibility. 16.1 seems 100% compatible, but recompiled, repacked and re-encrypted against A19 b173 binaries. In case of problems with 16.1 upgrade first before asking for support.
