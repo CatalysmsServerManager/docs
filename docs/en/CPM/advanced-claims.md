@@ -179,4 +179,12 @@ Control abillity to place LCB's within the boundaries of the lcbfree adv. claim.
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> lcbfree
 ```
-
+## AntiBlock
+Prevent configurable blocks being placed within the boundaries of the AntiBlock adv. claim. Allow certain blocks to be placed by accesslevel and/or whitelist. If not allowed to place a configured block, it will be removed instantly and the player get a message about it in chat. Use antiblock as type when creating this advanced claim. Violation message is configurable in CpmStrings.xml (AdvClaims_AntiBlock). When disallowing more than 1 block separate the blocknames with ; . Blocknames are casesensitive. You can use fblock to search and find exact blocknames.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> antiblock:block1;block2
+```
+Example for the type:
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> antiblock:woodFrameBlock;rebarFrameBlock
+```
