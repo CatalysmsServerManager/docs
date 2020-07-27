@@ -1,5 +1,9 @@
 # Version History
 
+**Version 16.5 A19 b173 Experimental (not A18.4 Stable Compatible) (27-07-2020)**
+
+* Fixed ResetRegions, QuestPoiProtection, Adv. CLaim LcbFree and Adv. Claim AntiBlock not triggering when LCB/Bedroll/AntiBlock was placed on plant (like grass) or in water. This is it boyz and galz, the new system is completely fleshed out and to my liking. There wont be an update for a good while now. 
+
 **Version 16.4 A19 b173 Experimental (not A18.4 Stable Compatible) (27-07-2020)**
 
 * CPM is using harmony for runtime server patching and litedb for persistent data storage. Until now i merged those helper dll's into the CPM dll, because the modloader system of the game did not allow multiple dll's/xml's in the Mod folder. That is now allowed and because it positively affects performance, i dont merged them anymore. This version uses the unmerged helper dll's but is exactly the same as version 16.3.
