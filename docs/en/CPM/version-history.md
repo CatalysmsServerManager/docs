@@ -1,5 +1,9 @@
 # Version History
 
+**Version 16.4 A19 b173 Experimental (not A18.4 Stable Compatible) (27-07-2020)**
+
+* CPM is using harmony for runtime server patching and litedb for persistent data storage. Until now i merged those helper dll's into the CPM dll, because the modloader system of the game did not allow multiple dll's/xml's in the Mod folder. That is now allowed and because it positively affects performance, i dont merged them anymore. This version uses the unmerged helper dll's but is exactly the same as version 16.3.
+
 **Version 16.3 A19 b173 Experimental (not A18.4 Stable Compatible) (26-07-2020)**
 
 * fixed Questpoi protection being always on regardless of setting in CpmSettings.xml.
