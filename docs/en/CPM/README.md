@@ -19,7 +19,10 @@ Your Mods/ folder structure should look similar to this:
 ```
 └── 1CSMM_Patrons
     ├── cpmcc
+    ├── 0Harmony.dll
     ├── CSMM_Patrons.dll
+    ├── LiteDB.dll
+    ├── LiteDB.xml
     └── ModInfo.xml
     └── steam-intermediate.cer
     └── steam-rootca.cer
@@ -34,7 +37,7 @@ Your Mods/ folder structure should look similar to this:
 │   ├── MapRendering.dll
 │   ├── ModInfo.xml
 ```
-([Allocs server fixes](https://7dtd.illy.bz/wiki/Server%20fixes#Download) is included here as it is a VERY common mod for servers)
+([Allocs server fixes](https://7dtd.illy.bz/wiki/Server%20fixes#Download) is included here as it is required for CPM)
 
 ::: warning
 Make sure the CSMM\_Patrons folder has the ModInfo.xml and CSMM\_Patrons.dll file!  
