@@ -145,3 +145,7 @@ All your reset regions have been created and are active immediately including en
 ### lcbfree:
 
 ![Missing image](/assets/images/CPM/claimCreator/lcbfree.png)
+
+### antiblock:
+
+![Missing image](/assets/images/CPM/claimCreator/antiblock.png)
