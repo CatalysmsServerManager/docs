@@ -1,5 +1,9 @@
 # Version History
 
+**Version 16.6 A19 b173 Experimental (not A18.4 Stable Compatible) (27-07-2020)**
+
+* HOTFIX for all sleeper related functionality. Since CPM adapting to the new sleepervolume handling of the game i noticed high CPU spikes after logging off. Somehow the sleeper spawn hook keeps firing over and over and over again when last player of the server disconnects near sleepervolumes. Resulting in high CPU usage on an empty server. Added a check for no players on server and give back control to game then. That fixes the problem. HIGHLY recommended to upgrade if on version 16.3 or higher!!
+
 **Version 16.5 A19 b173 Experimental (not A18.4 Stable Compatible) (27-07-2020)**
 
 * Fixed ResetRegions, QuestPoiProtection, Adv. CLaim LcbFree and Adv. Claim AntiBlock not triggering when LCB/Bedroll/AntiBlock was placed on plant (like grass) or in water. This is it boyz and galz, the new system is completely fleshed out and to my liking. There wont be an update for a good while now. 
