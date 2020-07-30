@@ -1,5 +1,9 @@
 # Version History
 
+**Version 16.7 A19 b173 Experimental (not A18.4 Stable Compatible) (31-07-2020)**
+
+* The sleeper support on hostilefree adv. claim is giving me serious headaches. Seems the sleeper hook fires so fast and much that the litedb database on filesystem gets opened so much (60 times a second) that it can't process it all and queing up the open filehandles on the server, which is bad. I moved the hostilefree claims to memory and check inmemory in the sleeper hook. This should prevent exceeding the open file limit on linux. Downside of this solution is that any hostilefree adv. claim you create on an active gamesession will not support sleeper spawn prevention until the next gameserver restart (hostilefree adv. claims get loaded into memory on gamerestart). Again this is a HIGHLY recommended update if you are on CPM version 16.3 or higher!!
+
 **Version 16.6 A19 b173 Experimental (not A18.4 Stable Compatible) (29-07-2020)**
 
 * HOTFIX for all sleeper related functionality. Since CPM adapting to the new sleepervolume handling of the game i noticed high CPU spikes after logging off. Somehow the sleeper spawn hook keeps firing over and over and over again when last player of the server disconnects near sleepervolumes. Resulting in high CPU usage on an empty server. Added a check for no players on server and give back control to game then. That fixes the problem. HIGHLY recommended to upgrade if on version 16.3 or higher!!
