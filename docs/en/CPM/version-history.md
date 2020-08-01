@@ -1,5 +1,13 @@
 # Version History
 
+**Version 17.0 A19 b173 Experimental (not A18.4 Stable Compatible) (01-08-2020)**
+
+* Major maintenance upgrade:
+    - Reworked/optimized the litedb database layer for performance. Mainly ditching the use of LiteCollection which appearantly keept a reference to the db on disk open.
+    - Reviewed all (5 year worth) of code and cleaned up/optimized to today's standards.
+    - Reworked the harmony patch handling to be able to easily maintain a harmony 2.0 branch.
+* This release will have 2 versions. One with harmony 1.2.0.1 and one with harmony 2.0.2. The version to choose is depending on what other api mod(s) you use that use harmony for runtime patching too. When you use or plan to use any DMT mod (which uses harmony 2.0) you will have to go for the harmony 2.0 CPM version. If you use or plan to use Servertools or Botman mod (which are using harmony 1.2 at the time of this writing) you will have to go for the harmony 1.2 CPM version. Harmony 1.2 and 2.0 are not intermixable so the choice matters. If you dont use any other api mod(s), any of the 2 versions will do, but harmony 2.0 is the most recent maintained version of them both.
+
 **Version 16.7 A19 b173 Experimental (not A18.4 Stable Compatible) (31-07-2020)**
 
 * The sleeper support on hostilefree adv. claim is giving me serious headaches. Seems the sleeper hook fires so fast and much that the litedb database on filesystem gets opened so much (60 times a second) that it can't process it all and queing up the open filehandles on the server, which is bad. I moved the hostilefree claims to memory and check inmemory in the sleeper hook. This should prevent exceeding the open file limit on linux. Downside of this solution is that any hostilefree adv. claim you create on an active gamesession will not support sleeper spawn prevention until the next gameserver restart (hostilefree adv. claims get loaded into memory on gamerestart). Again this is a HIGHLY recommended update if you are on CPM version 16.3 or higher!!
