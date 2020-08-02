@@ -1,5 +1,11 @@
 # Version History
 
+**Version 17.1 A19 b173 Experimental (not A18.4 Stable Compatible) (03-08-2020)**
+
+* Updated Confuser.Core to 1.4.1
+* Disabled one of the confuser protections at expence of a little protection loss for a BIG performance gain.
+* CPM has 2 versions. One with harmony 1.2.0.1 and one with harmony 2.0.2. The version to choose is depending on what other api mod(s) you use that use harmony for runtime patching too. When you use or plan to use any DMT mod (which uses harmony 2.0) you will have to go for the harmony 2.0 CPM version. If you use or plan to use Servertools or Botman mod (which are using harmony 1.2 at the time of this writing) you will have to go for the harmony 1.2 CPM version. Harmony 1.2 and 2.0 are not intermixable so the choice matters. If you dont use any other api mod(s) that use harmony for patching, any of the 2 versions will do, but harmony 2.0 is the most recent maintained version of them both.
+
 **Version 17.0 A19 b173 Experimental (not A18.4 Stable Compatible) (01-08-2020)**
 
 * Major maintenance upgrade:
