@@ -79,7 +79,7 @@ The live map has several specific features you can grant granular access to, suc
 
 This map updates in a near-live fashion, and is a simple and easy way to track all of the above items. However, for servers with a PVP element, this information can often be super impactful to gameplay, so controlling who can see what is very important.
 
-You set these permissions by modifying the webserver.xml file, which is stored in the base 'save' folder where all of your world data is kept. This folder can be configured to any value, but is commonly kept in the 'saves' or 'World' folder within the 7 Days installation folder. If you know where your serveradmin.xml file is, this will be in the same place. When editing the XML file, you will see something like the below:
+You set these permissions by modifying the webpermissions.xml file, which is stored in the base 'savegames' folder where all of your world data is kept. This folder can be configured to any value, but is commonly kept in the 'saves' or 'World' folder within the 7 Days installation folder. If you know where your serveradmin.xml file is, this will be in the same place. When editing the XML file, you will see something like the below:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
