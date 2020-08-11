@@ -149,3 +149,7 @@ All your reset regions have been created and are active immediately including en
 ### antiblock:
 
 ![Missing image](/assets/images/CPM/claimCreator/antiblocks.png)
+
+### reset:
+
+![Missing image](/assets/images/CPM/claimCreator/reset.png)

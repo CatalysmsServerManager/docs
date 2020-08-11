@@ -179,7 +179,7 @@ Control abillity to place LCB's within the boundaries of the lcbfree adv. claim.
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> lcbfree
 ```
-## AntiBlock
+### AntiBlock
 Prevent configurable blocks being placed within the boundaries of the AntiBlock adv. claim. Allow certain blocks to be placed by accesslevel and/or whitelist. If not allowed to place a configured block, it will be removed instantly and the player get a message about it in chat. Use antiblock as type when creating this advanced claim. Violation message is configurable in CpmStrings.xml (AdvClaims_AntiBlock). When disallowing more than 1 block separate the blocknames with ; . Blocknames are casesensitive. You can use fblock to search and find exact blocknames.
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> antiblock:block1;block2
@@ -187,4 +187,9 @@ ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <a
 Example for the type:
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> antiblock:woodFrameBlock;rebarFrameBlock
+```
+### Reset
+Reset areas on the map on chunk(!) level. Use this claim to very precisely mark areas you want to reset on demand. Use consolecommand rac(resetadvclaim) to actually reset the chunks that are marked with this claim. When creating this claim with ccc consolecommand or CPM Web UI the claim borders will automatically snap to the nearest chunk border. That way the claim always shows exactly what is going to be reset. Advise: resetting chunks is very memory consuming. Better to have multiple smaller claims (city/town level) than few big claims as they will consume more memory when processed. Be aware that the world will be in a time vacuum during any reset. Online players will experience it like X-men member Quicksilver. Use parameter kicklockreboot on consolecommand rac to kick all online players, lock the server during reset and reboot when done.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> reset
 ```
