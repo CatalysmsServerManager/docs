@@ -6,7 +6,7 @@ If you are hosting your game with a professional hosting company, your game serv
 
 ## Determine whether Alloc's server fixes is already installed
 
-The first step is to confirm whether Alloc's Fixes is installed and running properly. To do that, you can simply type 'version' into your console or RCON window. The output should look something like below. There are three separate Alloc's Fixes mods that need to be installed, and depending on the version you install, the numbers (18, 21, 31) can be different.
+The first step is to confirm whether Alloc's Fixes is installed and running properly. To do that, you can simply type 'version' into your console or RCON window. The output should look something like below. There are three separate Alloc's Fixes mods that need to be installed, and depending on the version you install, the numbers (20, 23, 35) can be different.
 
 ```
     Game version: Alpha 19 (b178) Compatibility Version: Alpha 19
