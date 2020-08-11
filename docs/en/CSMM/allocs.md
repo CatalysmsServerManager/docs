@@ -9,10 +9,10 @@ If you are hosting your game with a professional hosting company, your game serv
 The first step is to confirm whether Alloc's Fixes is installed and running properly. To do that, you can simply type 'version' into your console or RCON window. The output should look something like below. There are three separate Alloc's Fixes mods that need to be installed, and depending on the version you install, the numbers (18, 21, 31) can be different.
 
 ```
-    Game version: Alpha 17.4 (b4) Compatibility Version: Alpha 17.4
-    Mod Allocs command extensions: 18
-    Mod Allocs server fixes: 21
-    Mod Allocs MapRendering and Webinterface: 31
+    Game version: Alpha 19 (b178) Compatibility Version: Alpha 19
+    Mod Allocs command extensions: 20
+    Mod Allocs server fixes: 23
+    Mod Allocs MapRendering and Webinterface: 35
 ```
 
 Once you've confirmed that the mods are installed, the next step is to try and access the Alloc's web server. To do this, you'll need to know what ports your server has been configured for, and you can determine this by looking at your serverconfig.xml file on your server. You should see a section similar to this in the config file:
@@ -126,9 +126,8 @@ Each of the features of the Alloc Map have an associated permission module to de
 
 ```
 <admins>
- <admin steamID="76561197961408188" permission_level="0" />
- <admin steamID="23589037298298381" permission_level="1" />
- <admin steamID="57910983591238332" permission_level="100" />
+ <user steamID="76561198021925107" name="Hint on who this user is" permission_level="0" />
+ <group steamID="103582791434672565" name="Steam Universe" permission_level_default="1000" permission_level_mod="0" />
 </admins>
 ```
 
