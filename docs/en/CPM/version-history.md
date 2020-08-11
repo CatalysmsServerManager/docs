@@ -1,6 +1,12 @@
 # Version History
 
-**Version 17.2 A19 b178 Experimental (not A18.4 Stable Compatible)**
+**Version 17.3 A19 b178 Experimental (not A18.4 Stable Compatible) (11-08-2020)**
+
+* Changed consolecommand rrp (resetrwgprefabs): added parameter "tradersonly" for resetting all traders on the map only. Usefull when having used settime command and the traders restock time has gone out of sync.
+* Changed consolecommands rrp (resetrwgprefabs), rac (resetadvclaim): added parameter "kicklockreboot". When using this parameter all online players will get kicked, the server gets locked (players cant connect) during the reset and reboots server when reset is done. You can still use rrp and rac and rac unclaimed without kicklockreboot for full manual control but keep in mind that de world will be in a time vacuum during the reset. Any online players will experience it like X-men member Quicksilver. Literally.
+* Catalysm has updated CPM WebUI to 1.6! It contains the new Adv. Claim Reset. Included in this release.
+
+**Version 17.2 A19 b178 Experimental (not A18.4 Stable Compatible) (08-08-2020)**
 
 * Changed consolecommand resetchunks: No need for chunks to be loaded to be reset. Makes larger areas of resetting possible. Theoratically up to 16K x 16K blocks. The larger the area the more memory you need to have available for the reset. So be wise when using.
 * Changed rrp (resetrwgprefabs): Complete overhaul. All prefabs will be reset live on map in one run. No need for players to load the chunks anymore. Added restoring decorations on prefab reset.

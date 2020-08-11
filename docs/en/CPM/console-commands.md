@@ -124,6 +124,7 @@ Available commands:
  cpm-release release => Release a player from jail.
  cpm-remitem remitem => remove items from SecureLoot below the given entity
  cpm-removelandprotection2 removelandprotection2 rlp2 => removes the association of a land protection block without players needing to be near
+ cpm-resetadvclaim rac resetadvclaim => Reset the area(s) covered by Adv. Claim Reset to RWG default on chunk level.
  cpm-resetchunks resetchunks => Reset chunks to RWG default.
  cpm-resetregionsnow resetregionsnow => Execute shutdown immediately and reset marked regions.
  cpm-resetrwgprefabs resetrwgprefabs rrp => Reset all RWG prefabs.
