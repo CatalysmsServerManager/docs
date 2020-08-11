@@ -6,13 +6,13 @@ If you are hosting your game with a professional hosting company, your game serv
 
 ## Determine whether Alloc's server fixes is already installed
 
-The first step is to confirm whether Alloc's Fixes is installed and running properly. To do that, you can simply type 'version' into your console or RCON window. The output should look something like below. There are three separate Alloc's Fixes mods that need to be installed, and depending on the version you install, the numbers (18, 21, 31) can be different.
+The first step is to confirm whether Alloc's Fixes is installed and running properly. To do that, you can simply type 'version' into your console or RCON window. The output should look something like below. There are three separate Alloc's Fixes mods that need to be installed, and depending on the version you install, the numbers (20, 23, 35) can be different.
 
 ```
-    Game version: Alpha 17.4 (b4) Compatibility Version: Alpha 17.4
-    Mod Allocs command extensions: 18
-    Mod Allocs server fixes: 21
-    Mod Allocs MapRendering and Webinterface: 31
+    Game version: Alpha 19 (b178) Compatibility Version: Alpha 19
+    Mod Allocs command extensions: 20
+    Mod Allocs server fixes: 23
+    Mod Allocs MapRendering and Webinterface: 35
 ```
 
 Once you've confirmed that the mods are installed, the next step is to try and access the Alloc's web server. To do this, you'll need to know what ports your server has been configured for, and you can determine this by looking at your serverconfig.xml file on your server. You should see a section similar to this in the config file:
@@ -79,7 +79,7 @@ The live map has several specific features you can grant granular access to, suc
 
 This map updates in a near-live fashion, and is a simple and easy way to track all of the above items. However, for servers with a PVP element, this information can often be super impactful to gameplay, so controlling who can see what is very important.
 
-You set these permissions by modifying the webserver.xml file, which is stored in the base 'save' folder where all of your world data is kept. This folder can be configured to any value, but is commonly kept in the 'saves' or 'World' folder within the 7 Days installation folder. If you know where your serveradmin.xml file is, this will be in the same place. When editing the XML file, you will see something like the below:
+You set these permissions by modifying the webpermissions.xml file, which is stored in the base 'savegames' folder where all of your world data is kept. This folder can be configured to any value, but is commonly kept in the 'saves' or 'World' folder within the 7 Days installation folder. If you know where your serveradmin.xml file is, this will be in the same place. When editing the XML file, you will see something like the below:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -126,9 +126,8 @@ Each of the features of the Alloc Map have an associated permission module to de
 
 ```
 <admins>
- <admin steamID="76561197961408188" permission_level="0" />
- <admin steamID="23589037298298381" permission_level="1" />
- <admin steamID="57910983591238332" permission_level="100" />
+ <user steamID="76561198021925107" name="Hint on who this user is" permission_level="0" />
+ <group steamID="103582791434672565" name="Steam Universe" permission_level_default="1000" permission_level_mod="0" />
 </admins>
 ```
 

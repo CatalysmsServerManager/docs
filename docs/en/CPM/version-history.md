@@ -1,10 +1,26 @@
 # Version History
 
+**Version 17.3 A19 b178 Experimental (not A18.4 Stable Compatible) (11-08-2020)**
+
+* Changed consolecommand rrp (resetrwgprefabs): added parameter "tradersonly" for resetting all traders on the map only. Usefull when having used settime command and the traders restock time has gone out of sync.
+* Changed consolecommands rrp (resetrwgprefabs), rac (resetadvclaim): added parameter "kicklockreboot". When using this parameter all online players will get kicked, the server gets locked (players cant connect) during the reset and reboots server when reset is done. You can still use rrp and rac and rac unclaimed without kicklockreboot for full manual control but keep in mind that de world will be in a time vacuum during the reset. Any online players will experience it like X-men member Quicksilver. Literally.
+* Catalysm has updated CPM WebUI to 1.6! It contains the new Adv. Claim Reset. Included in this release.
+
+**Version 17.2 A19 b178 Experimental (not A18.4 Stable Compatible) (08-08-2020)**
+
+* Changed consolecommand resetchunks: No need for chunks to be loaded to be reset. Makes larger areas of resetting possible. Theoratically up to 16K x 16K blocks. The larger the area the more memory you need to have available for the reset. So be wise when using.
+* Changed rrp (resetrwgprefabs): Complete overhaul. All prefabs will be reset live on map in one run. No need for players to load the chunks anymore. Added restoring decorations on prefab reset.
+* Changed consolecommand "getprefab reset": Added restoring decorations on prefab reset.
+* Added new Adv. Claim Reset: mark an area for reset on chunklevel.
+* Added new consolecommand rac (resetadvclaim): use for resetting all chunks within the new Adv. Claim Reset areas. Very memory intensive! Better use multiple smaller claims instead of few big claims. The bigger the claim the more memory is needed for CPM to be able to handle. Has an option to reset the complete map excluding claimed chunks -> Very VERY memory intensive. Tested on a 8GB virtual system with NO players on and the 8GB were almost FULLY used. Use with care. Server will crash with out of memory exception if your hardware isnt up for this.
+* added webapi for displaying new Adv. Claim Reset on allocs,- or CPM webUI map.
+* changed consolecommand ccc: added option to create new Adv. Claim Reset. New claim borders will automatically snap to nearest chunk borders so you know exactly what is going to reset when using consolecommand rac. Use claim type=reset for creating Adv. Claim Reset.
+* changed allocs patched map.js to be able to display new Adv. Claim Reset
+
 **Version 17.1 A19 b173 Experimental (not A18.4 Stable Compatible) (03-08-2020)**
 
 * Updated Confuser.Core to 1.4.1
 * Disabled one of the confuser protections at expence of a little protection loss for a BIG performance gain.
-* CPM has 2 versions. One with harmony 1.2.0.1 and one with harmony 2.0.2. The version to choose is depending on what other api mod(s) you use that use harmony for runtime patching too. When you use or plan to use any DMT mod (which uses harmony 2.0) you will have to go for the harmony 2.0 CPM version. If you use or plan to use Servertools or Botman mod (which are using harmony 1.2 at the time of this writing) you will have to go for the harmony 1.2 CPM version. Harmony 1.2 and 2.0 are not intermixable so the choice matters. If you dont use any other api mod(s) that use harmony for patching, any of the 2 versions will do. I do prefer servermanagement api mods compatibility so my advice would be the CPM harmony 1.2 version.
 
 **Version 17.0 A19 b173 Experimental (not A18.4 Stable Compatible) (01-08-2020)**
 
@@ -12,7 +28,6 @@
     - Reworked/optimized the litedb database layer for performance. Mainly ditching the use of LiteCollection which appearantly keept a reference to the db on disk open.
     - Reviewed all (5 year worth) of code and cleaned up/optimized to today's standards.
     - Reworked the harmony patch handling to be able to easily maintain a harmony 2.0 branch.
-* This release will have 2 versions. One with harmony 1.2.0.1 and one with harmony 2.0.2. The version to choose is depending on what other api mod(s) you use that use harmony for runtime patching too. When you use or plan to use any DMT mod (which uses harmony 2.0) you will have to go for the harmony 2.0 CPM version. If you use or plan to use Servertools or Botman mod (which are using harmony 1.2 at the time of this writing) you will have to go for the harmony 1.2 CPM version. Harmony 1.2 and 2.0 are not intermixable so the choice matters. If you dont use any other api mod(s), any of the 2 versions will do, but harmony 2.0 is the most recent maintained version of them both.
 
 **Version 16.7 A19 b173 Experimental (not A18.4 Stable Compatible) (31-07-2020)**
 
