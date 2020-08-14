@@ -1,6 +1,6 @@
 # Version History
 
-**Version 17.3 A19 b178 Experimental (not A18.4 Stable Compatible) (11-08-2020)**
+**Version 17.3 A19 b180 Experimental (not A18.4 Stable Compatible) (11-08-2020)**
 
 * Changed consolecommand rrp (resetrwgprefabs): added parameter "tradersonly" for resetting all traders on the map only. Usefull when having used settime command and the traders restock time has gone out of sync.
 * Changed consolecommands rrp (resetrwgprefabs), rac (resetadvclaim): added parameter "kicklockreboot". When using this parameter all online players will get kicked, the server gets locked (players cant connect) during the reset and reboots server when reset is done. You can still use rrp and rac and rac unclaimed without kicklockreboot for full manual control but keep in mind that de world will be in a time vacuum during the reset. Any online players will experience it like X-men member Quicksilver. Literally.
