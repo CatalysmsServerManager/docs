@@ -1,5 +1,13 @@
 # Version History
 
+**Version 17.4 A19 b180 Experimental (not A18.4 Stable Compatible) (18-08-2020)**
+
+* Fixed consolecommand sleepers: removing sleepers broke with A19. Fixed now. Added reset functionality. Now you can despawn and reset sleepers in the marked area so that they are ready to haunt players again.
+* Added serverkill on hanging/unresponsive server in rrp (resetrwgprefabs) and rac (resetadvclaim) consolecommands when using the kicklockreboot parameter. Now they will handle a hanging/unresponsive server in the reboot process like shutdownba does.
+* Removed all dependencies to allocs persistent data for playerdata. CPM will store all nescesary data in own persistent storage now, so if allocs mod loses data, CPM will not be affected.
+* Updated CPM Web UI to version 1.6.1: Catalysm fixed a bug where a claim would get double displayed in the Adv. Claim list when a type of claim would be in the string parameters of another claim.
+* Since ServerTools has recently found its way to Harmony 2, i decided to not maintain 2 CPM versions anymore (Harmony 1.2 and 2.0). CPM will only come in the flavor of Harmony 2 from this release on. This means it will not be compatible with mods that use Harmony 1.2 anymore. Botman mod is one of the last that uses the old Harmony version 1.2 and thus will be not be compatible with CPM until they upgrade Harmony to 2.0.
+
 **Version 17.3 A19 b180 Experimental (not A18.4 Stable Compatible) (11-08-2020)**
 
 * Changed consolecommand rrp (resetrwgprefabs): added parameter "tradersonly" for resetting all traders on the map only. Usefull when having used settime command and the traders restock time has gone out of sync.
