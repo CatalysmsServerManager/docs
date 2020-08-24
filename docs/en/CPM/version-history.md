@@ -1,5 +1,10 @@
 # Version History
 
+**Version 17.5 A19 b180 Stable (not A18.4 Stable Compatible) (24-08-2020)**
+
+* Added sleeper volume resets to "getprefab reset", rac (resetadvclaim), "rac unclaimed" and rrp (resetrwgprefabs). Now all sleepervolumes in prefabs and chunks in an adv. claim reset will get reset also with a reset. This means no free lootruns (new fresh prefab without sleepers).
+* Added ServerTools compatibility for when using ST Reserved slots and server is full. The harmony patch in ST will break CPM functionality when that kicks in. That is countered in this version.
+
 **Version 17.4 A19 b180 Experimental (not A18.4 Stable Compatible) (18-08-2020)**
 
 * Fixed consolecommand sleepers: removing sleepers broke with A19. Fixed now. Added reset functionality. Now you can despawn and reset sleepers in the marked area so that they are ready to haunt players again.
