@@ -1,5 +1,10 @@
 # Version History
 
+**Version 17.6 A19 b180 Stable (not A18.4 Stable Compatible) (26-08-2020)**
+
+* There is a serious vanilla game bug in the region file management code that was causing CPM reset commands to reset chunks that should not be reset. This version contains a harmony patch that overrides the bugged region file manager method with fixed code.
+* Fixed locationtracker throwing null reference exception when game player dictionary would add/remove players to/from dictionary during location saving.
+
 **Version 17.5 A19 b180 Stable (not A18.4 Stable Compatible) (24-08-2020)**
 
 * Added sleeper volume resets to "getprefab reset", rac (resetadvclaim), "rac unclaimed" and rrp (resetrwgprefabs). Now all sleepervolumes in prefabs and chunks in an adv. claim reset will get reset also with a reset. This means no free lootruns (new fresh prefab without sleepers).
