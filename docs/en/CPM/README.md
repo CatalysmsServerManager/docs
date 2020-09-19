@@ -17,15 +17,14 @@ title: CSMM Patrons Mod (CPM)
 Your Mods/ folder structure should look similar to this: 
 
 ```
-└── 1CSMM_Patrons
-    ├── cpmcc
-    ├── 0Harmony.dll
-    ├── CSMM_Patrons.dll
-    ├── LiteDB.dll
-    ├── LiteDB.xml
-    └── ModInfo.xml
-    └── steam-intermediate.cer
-    └── steam-rootca.cer
+├── 1CSMM_Patrons
+│   ├── cpmcc
+│   ├── 0Harmony.dll
+│   ├── CSMM_Patrons.dll
+│   ├── LiteDB.dll
+│   ├── ModInfo.xml
+│   ├── steam-intermediate.cer
+│   └── steam-rootca.cer
 ├── Allocs_CommandExtensions
 │   ├── AllocsCommands.dll
 │   └── ModInfo.xml
@@ -34,10 +33,13 @@ Your Mods/ folder structure should look similar to this:
 │   ├── 7dtd-server-fixes_version.txt
 │   └── ModInfo.xml
 ├── Allocs_WebAndMapRendering
+│   ├── webserver
 │   ├── MapRendering.dll
 │   ├── ModInfo.xml
+│   ├── steam-intermediate.cer
+│   └── steam-rootca.cer
 ```
-([Allocs server fixes](https://7dtd.illy.bz/wiki/Server%20fixes#Download) is included here as it is required for CPM)
+([Allocs server fixes](https://7dtd.illy.bz/wiki/Server%20fixes#Download) need to be installed as it is required for CPM)
 
 ::: warning
 Make sure the CSMM\_Patrons folder has the ModInfo.xml and CSMM\_Patrons.dll file!  
