@@ -4,6 +4,10 @@ Since CSMM requires HTTPS to set session cookies, it is recommended to reverse p
 
 ## Nginx
 
+You can use the [Digital Ocean nginx config tool](https://www.digitalocean.com/community/tools/nginx?domains.0.server.domain=csmm.example.com&domains.0.php.php=false&domains.0.reverseProxy.reverseProxy=true&domains.0.reverseProxy.proxyPass=http%3A%2F%2F127.0.0.1%3A1337&domains.0.routing.root=false) to quickly and easily configure nginx
+
+Minimal example:
+
 ```nginx
 server {
 
