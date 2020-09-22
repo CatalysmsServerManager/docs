@@ -1,5 +1,10 @@
 # Version History
 
+**Version 17.7 A19.1 b8 Stable (not A18.4 Stable Compatible) (22-09-2020)**
+
+* Fixed consolecommand release: Fixed offline usage. Now it's possible to release a player from jail while offline again.
+* Added bedroll support to adv. claim antiblock: Now you can add bedroll as antiblock in an adv. claim antiblock.
+
 **Version 17.6 A19 b180 Stable (not A18.4 Stable Compatible) (26-08-2020)**
 
 * There is a serious vanilla game bug in the region file management code that was causing CPM reset commands to reset chunks that should not be reset. This version contains a harmony patch that overrides the bugged region file manager method with fixed code.
