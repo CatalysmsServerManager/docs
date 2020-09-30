@@ -1,5 +1,11 @@
 # Version History
 
+**Version 17.8 A19.1 b8 Stable (not A18.4 Stable Compatible) (30-09-2020)**
+* Added character based name login blocking: prevent players with specified characters in name from logging in. Configure in CpmSettings.xml (SpecialCharacters and SpecialCharactersNameBlock_Enabled). Beware of adding xml breaking chars to CpmSettings.xml. Escape them if needed. 
+```& becomes &amp; , < becomes &lt; , > becomes &gt;```
+Kickmessage is configurable in CpmStrings.xml
+* Added AllPoi Protection: same as QuestPoi Protection but for all prefabs. Prevents LCB and bedrolls to be placed in any POI. Configure in CpmSettings.xml (AllPoiProtection_Enabled). Not allowed messages for bed and LCB are configurable in CpmStrings.xml
+
 **Version 17.7 A19.1 b8 Stable (not A18.4 Stable Compatible) (22-09-2020)**
 
 * Fixed consolecommand release: Fixed offline usage. Now it's possible to release a player from jail while offline again.
