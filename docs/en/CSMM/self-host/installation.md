@@ -117,11 +117,11 @@ REDISSTRING=redis://127.0.0.1:6379
 
 ## Running the application
 
-Time to get to the fun part, running CSMM! If you are running CSMM for the first time, with a fresh database, you should run the `create_tables.js` script once. CSMM will create all tables & columns it needs automatically. Check the logs it creates to make sure there are no errors during start up
+Time to get to the fun part, running CSMM! If you are running CSMM for the first time, with a fresh database, you should run the `npm run db:migrate` script once. CSMM will create all tables & columns it needs automatically. Check the logs it creates to make sure there are no errors during start up
 
 ```bash
 # Create database tables
-node create_tables.js
+NODE_ENV=production npm run db:migrate
 # Run the application
 NODE_ENV=production npm run start
 ```
