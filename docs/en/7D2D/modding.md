@@ -1,5 +1,5 @@
 ---
-title: 'Important Modding Info'
+title: 'Important modding info'
 ---
 
 
