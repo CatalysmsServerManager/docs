@@ -23,7 +23,7 @@ To make sure it's easy for players to join your server, you'll probably want to 
 
 ## CSMM/CPM Compatibility
 
-CSMM and CPM do not need to be made aware of new items that are added by mods; the server itself looks after this information. However, when adding any custom items it's important to make sure that they have a unique name that follows the existing standard.
+CSMM and CPM do not need to be made aware of new items that are added by mods; the server itself looks after this information. However, when adding any custom items it's important to make sure that they have a unique name that follows the existing standard, and importantly **does not contain spaces**.
 
 For instance, if you are adding a new type of Beer to the game, you can do this by appending a new item in the items.xml file, duplicating (or extending) the existing Beer item, and giving it different properties. The original Beer item is "drinkJarBeer". Your new item should be named something along the lines of "drinkJarBeerLager" - this way, any searches for people carrying drinks will include your item, and if you decide to write another mod that changes something about Beer you can apply the same change to both drinks with one line of code.
 
@@ -40,5 +40,43 @@ Under this header, the following lines should follow the same order of blocks of
 `Key` is the item name you have added (e.g. drinkJarBeerLager)  
 `File` is the name of the file in which it is added (e.g. Items)  
 `Type` is only need in certain circumstances; if you've duplicated an item check what Type the original item had (e.g. Food)
-`UsedInMainMenu` is usually left blank for mods, especially server-side ones.
-`NoTranslate` is 
+`UsedInMainMenu` is usually left blank for mods, especially server-side ones
+`NoTranslate` is similar to UsedInMainMenu, leave it blank in almost all cases
+`english` is the column where the friendly name for your item goes (e.g. Lager)
+
+It's also worth adding another line for the description of the item. This can be reference in the items.xml by the property DescriptionKey.
+
+## Example code
+
+items.xml
+``` xml
+<configs>
+<append xpath="items/">
+  <item name="drinkJarBeerLager">
+    <property name="Extends" value="drinkJarBeer"/> <!-- Reuse everything from normal Beer, except what's specified below -->
+    <property name="CustomIcon" value="drinkJarBeer"/> <!-- It'll try to use the icon drinkJarBeerLogo.png which doesn't exist, so point it at this one -->
+    <property name="DescriptionKey" value="drinkJarBeerLagerDesc"/> <!-- Give it a description that indicates how it's different from Beer -->
+    <effect_group tiered="false" name="Drink Tier 3"> <!-- This is where we change the behaviour - it lasts longer and gives more bonus damage -->
+      <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+      <display_value name="dStaminaRegen" value=".5"/>
+      <display_value name="dEntityDamageBrawling" value="4"/>
+      <display_value name="dStunResist" value="1"/>
+      <display_value name="dDuration" value="60"/>
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBeerDuration" operation="add" value="48"/>
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBeerDuration" operation="set" value="138">
+        <requirement name="CVarCompare" cvar="$buffBeerDuration" operation="GT" value="138"/></triggered_effect>
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBeer"/>
+    </effect_group>
+  </item>
+</append>
+</configs>
+```
+
+Localization.txt
+```
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+drinkJarBeerLager,items,Food,,,Lager
+drinkJarBeerLagerDesc,items,Food,,,"Why just drink a beer, when you can have a fancy European lager? Extra damage and longer lasting!\n400% Fist Melee Damage\n50% Stamina Gain"
+```
+
+At this stage, we just have a new item in the game. There's still more to do if you want to show up in loot, or be craftable in the stove, but you can spawn it in the creativemenu and give it to people via CSMM.
