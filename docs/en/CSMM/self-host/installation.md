@@ -119,6 +119,8 @@ REDISSTRING=redis://127.0.0.1:6379
 
 Time to get to the fun part, running CSMM! If you are running CSMM for the first time, with a fresh database, you should run the `npm run db:migrate` script once. CSMM will create all tables & columns it needs automatically. Check the logs it creates to make sure there are no errors during start up
 
+Note: if you get an error after running the migrate script like ERROR: getaddrinfo EAI_AGAIN csmm csmm:3306 make sure your MySQL password doesn't contain $ or any other symbols that could cause issues which include (" ' $ , [ ] * ? { } ~ # % \ < > | ^ ;)
+
 ```bash
 # Create database tables
 NODE_ENV=production npm run db:migrate
