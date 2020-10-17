@@ -16,7 +16,7 @@
   "author": "Catalysm",
   "license": "ISC",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.7.0",
+    "@vuepress/plugin-back-to-top": "^1.7.1",
     "@vuepress/plugin-google-analytics": "^1.7.0",
     "vuepress": "^1.7.1",
     "vuepress-plugin-seo": "^0.1.3"
