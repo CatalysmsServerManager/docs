@@ -131,7 +131,7 @@ Sets a players role. The role parameter is the name of the role, this has to be 
 - \${randNum:start:end}
 - \${randList:item1,item2,item3}
 
-### ${randNum:min,max}
+### ${randNum:min:max}
 
 Generates a random number between min and max (inclusive) every time its encountered
 
@@ -161,7 +161,7 @@ These were the first variables added to CSMM. They are still in the application 
 
 ### Winning the lottery
 
-addCurrency(${player.id}, ${randNum:5,10}); say "${player.name} just won the lottery and got some coins!"
+addCurrency(${player.id}, ${randNum:5:10}); say "${player.name} just won the lottery and got some coins!"
 
 ### Remove Near Death Trauma Debuff
 
