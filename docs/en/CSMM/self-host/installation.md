@@ -2,6 +2,8 @@
 
 In this guide, I will assume you are installing on Ubuntu 18. Installation steps for other distros or Windows will be similar but keep that in mind. If you do not have a server yet, you can use one of these referral links to get some free credit and support the project :).
 
+It is recommended to choose a server with atleast 2GB of RAM (if you are using less than that and experience errors on startup)
+
 - [DigitalOcean - \$100 credit](https://m.do.co/c/9053905671f8)
 - [Vultr - \$50 credit](https://www.vultr.com/?ref=7942157-4F)
 
