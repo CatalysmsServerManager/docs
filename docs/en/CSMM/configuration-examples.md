@@ -184,6 +184,10 @@ To detect special levels, you must have CPM installed as this creates the log li
 
 Scheduled commands include things like automated world saving, scheduled reboots, server announcements, etc. Most of the time, these will be administrative or behind-the-scenes functionality things that the users won't interact with. You will want to think about how often you execute these. It's fine to save the world every 30 minutes but you do not want the server to restart every 30 minutes!
 
+::: tip
+After creating a cron job, you will be able to test the command works successfully. By clicking the 'Test' button next to the job, it will run the command on the server immediately. Be aware of this if you are running a reboot or reset command!
+:::
+
 ### Automatic server restart after 30 seconds, with one warning at the beginning of the timer.
 
 ::: warning
