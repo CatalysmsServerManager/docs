@@ -103,7 +103,7 @@ DBSTRING, a [special syntax](https://sailsjs.com/documentation/reference/configu
 
 CSMM_HOSTNAME is used to generate links, CORS and other things. You should set this to the ip/domain you will access CSMM from. Do NOT add a trailing slash to this.
 
-Redis configuration uses a similar system to the MySQL connection string. redis://[:password]127.0.0.1:6379
+Redis configuration uses a similar system to the MySQL connection string. redis://:password@127.0.0.1:6379 or redis://127.0.0.1:6379 (if you did not set a password)
 
 Your .env file should look similar to this
 
@@ -114,7 +114,7 @@ API_KEY_STEAM=FSQO42FQSF878FSV89B4C3AFSP789423VDDE0
 DISCORDBOTTOKEN=MzI0ODQzMDUzOTIxODYxNjM0.DTjClA.Y8kzPIq2kSWZmh5SAIAp5VOTcO4
 DISCORDCLIENTSECRET=pfsqFpfvPfqs4562V-OFJSvpqscl487qszmL
 DISCORDCLIENTID=19846168795143546
-REDISSTRING=redis://127.0.0.1:6379
+REDISSTRING=redis://:password@127.0.0.1:6379
 ```
 
 ## Running the application
