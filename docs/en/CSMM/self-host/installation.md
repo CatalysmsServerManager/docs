@@ -2,6 +2,8 @@
 
 In this guide, I will assume you are installing on Ubuntu 18. Installation steps for other distros or Windows will be similar but keep that in mind. If you do not have a server yet, you can use one of these referral links to get some free credit and support the project :).
 
+It is recommended to choose a server with atleast 2GB of RAM (if you are using less than that and experience errors on startup)
+
 - [DigitalOcean - \$100 credit](https://m.do.co/c/9053905671f8)
 - [Vultr - \$50 credit](https://www.vultr.com/?ref=7942157-4F)
 
@@ -101,7 +103,7 @@ DBSTRING, a [special syntax](https://sailsjs.com/documentation/reference/configu
 
 CSMM_HOSTNAME is used to generate links, CORS and other things. You should set this to the ip/domain you will access CSMM from. Do NOT add a trailing slash to this.
 
-Redis configuration uses a similar system to the MySQL connection string. redis://[:password]127.0.0.1:6379
+Redis configuration uses a similar system to the MySQL connection string. redis://:password@127.0.0.1:6379 or redis://127.0.0.1:6379 (if you did not set a password)
 
 Your .env file should look similar to this
 
@@ -112,7 +114,7 @@ API_KEY_STEAM=FSQO42FQSF878FSV89B4C3AFSP789423VDDE0
 DISCORDBOTTOKEN=MzI0ODQzMDUzOTIxODYxNjM0.DTjClA.Y8kzPIq2kSWZmh5SAIAp5VOTcO4
 DISCORDCLIENTSECRET=pfsqFpfvPfqs4562V-OFJSvpqscl487qszmL
 DISCORDCLIENTID=19846168795143546
-REDISSTRING=redis://127.0.0.1:6379
+REDISSTRING=redis://:password@127.0.0.1:6379
 ```
 
 ## Running the application
