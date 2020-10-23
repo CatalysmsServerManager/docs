@@ -1,5 +1,15 @@
 # Version History
 
+**Version 18.0 A19.2 b4 Stable (not A18.4 Stable Compatible) (23-10-2020)**
+
+* Added Adv. Claim Landclaim: only claimowners, whitelisted players and accesslevel allowed players can place any block within this adv. claim. Type= "landclaim". Violation string configurable in CpmStrings.xml (AdvClaims_Landclaim). Auto giveback to placing player.
+* Added Adv. Claim ProBlock: Use this claim to prevent placement of blocks that are not configured as problock(s). Violation string configurable in CpmStrings.xml (AdvClaims_ProBlock). Auto giveback to placing player.
+Usage: create claim with type "problock:block1;block2;block3". Blocknames are casesenstive (use fblock to find exact blocknames) and must be separated by semicolon when adding more than 1 block. Follows standard claim rules regarding accesslevel, ownership and whitelisting.
+* Added webapi for querying new Adv. Claims Landclaim and ProBlock
+* Changed Adv. Claim PVE: skip chatmessage when exitmessage of the claim is omitted.
+* Changed Adv. Claim AntiBlock: implemented auto giveback to placing player.
+* Updated patched Allocs Webmap: added checkboxes and handlers for new Adv. Claims Landclaim and ProBlock
+
 **Version 17.8 A19.1 b8 Stable (not A18.4 Stable Compatible) (30-09-2020)**
 * Added character based name login blocking: prevent players with specified characters in name from logging in. Configure in CpmSettings.xml (SpecialCharacters and SpecialCharactersNameBlock_Enabled). Beware of adding xml breaking chars to CpmSettings.xml. Escape them if needed. 
 ```& becomes &amp; , < becomes &lt; , > becomes &gt;```
