@@ -1,6 +1,6 @@
 # Installation
 
-In this guide, I will assume you are installing on Ubuntu 18. Installation steps for other distros or Windows will be similar but keep that in mind. If you do not have a server yet, you can use one of these referral links to get some free credit and support the project :).
+In this guide, I will assume you are installing on Ubuntu 20. Installation steps for other distros or Windows will be similar but keep that in mind. If you do not have a server yet, you can use one of these referral links to get some free credit and support the project :).
 
 It is recommended to choose a server with atleast 2GB of RAM (if you are using less than that and experience errors on startup)
 
@@ -29,16 +29,16 @@ Finally, you must also set a redirect URL for Oauth2 authentication. This is don
 
 ![Discord auth redirect](/assets/images/CSMM/discordIntegration/discord-redirect.png)
 
-Make sure you use your own domain here. This is required to be able to link your Discord profile to CSMM.
+Make sure you use your CSMM domain here. If your domain were example.com, the Oauth2 redirect URL would be `https://example.com/auth/discord/return`. This is required to be able to link your Discord profile to CSMM.
 
 ## Installing Node.js
 
-For official install instructions, you should consult [the Node.js website](https://nodejs.org/en/), the following commands will install v10.
+For official install instructions, you should consult [the Node.js website](https://nodejs.org/en/), the following commands will install v14.
 
 ```bash
 sudo apt-get update
 sudo apt-get install curl python-software-properties
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install nodejs
 ```
 
@@ -63,14 +63,14 @@ Once MySQL is installed, you should prepare a user and database for CSMM.
 
 ```sql
 CREATE DATABASE csmm;
-CREATE USER 'csmm'@'localhost' IDENTIFIED BY 'secret-password';
+CREATE USER 'csmm'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your-db-password';
 GRANT ALL PRIVILEGES ON csmm.* TO 'csmm'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
 ## Installing Redis
 
-As this is outside the scope of this guide, I will refer you to a [Digital Ocean guide](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04).
+As this is outside the scope of this guide, I will refer you to a [Digital Ocean guide](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-20-04).
 
 ## Installing CSMM
 
@@ -108,13 +108,46 @@ Redis configuration uses a similar system to the MySQL connection string. redis:
 Your .env file should look similar to this
 
 ```bash
-DBSTRING=mysql2://csmm:my-secret-pw@127.0.0.1:3306/csmm
-CSMM_HOSTNAME=http://localhost:1337
+# For a local server, use https://localhost. For an externally accessible server, use your domain i.e. https://example.com.
+CSMM_HOSTNAME=https://localhost
+CSMM_LOGLEVEL=info
+CSMM_PORT=1337
+
+# This overrides the default donator check
+CSMM_DONATOR_TIER=patron
+# How often CSMM will check for new logs
+CSMM_LOG_CHECK_INTERVAL=3000
+# How many logs CSMM will gather per request
+CSMM_LOG_COUNT=50
+
+# Comma separated list of steam IDs for users that get extended control, uncomment and add your own IDs
+# CSMM_ADMINS=76561198070944214
+
+
+# External APIs
+
 API_KEY_STEAM=FSQO42FQSF878FSV89B4C3AFSP789423VDDE0
+DISCORDOWNERIDS=293112752531308544
 DISCORDBOTTOKEN=MzI0ODQzMDUzOTIxODYxNjM0.DTjClA.Y8kzPIq2kSWZmh5SAIAp5VOTcO4
 DISCORDCLIENTSECRET=pfsqFpfvPfqs4562V-OFJSvpqscl487qszmL
 DISCORDCLIENTID=19846168795143546
-REDISSTRING=redis://:password@127.0.0.1:6379
+
+# Datastores
+# Note that the HOST vars assumes Docker usage
+MYSQL_HOST=db
+MYSQL_PORT=3306
+MYSQL_USER=csmm
+MYSQL_PASSWORD=your-db-password
+MYSQL_DATABASE=csmm
+MYSQL_RANDOM_ROOT_PASSWORD=true
+
+REDIS_HOST=cache
+
+DBSTRING=mysql2://csmm:your-db-password@127.0.0.1:3306/csmm
+REDISSTRING=redis://:your-redis-password@127.0.0.1:6379
+
+# Invite link for the dev server
+INVITELINK=https://catalysm.net/discord
 ```
 
 ## Running the application
