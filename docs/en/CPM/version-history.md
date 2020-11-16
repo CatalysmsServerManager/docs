@@ -1,5 +1,18 @@
 # Version History
 
+**Version 18.3 A19.2 b4 Stable & A19.3 b3 Experimental (16-11-2020)**
+
+* Catalysm updated CPM Web UI to 1.7.1: added support for the getvehicles api. Now all vehicles can be viewed on CPM Web UI. New version is included in this release.
+
+**Version 18.2 A19.2 b4 Stable & A19.3 b3 Experimental (16-11-2020)**
+
+* added webapi for displaying all vehicles on the map. Both loaded and unloaded vehicles will be shown. When vehicle name starts with "Entity", the vehicle is not currently loaded in the world. When vehicle name starts with "vehicle", the vehicle is currently loaded in the world. For permission control add "permission module="cpmcc.getvehicles" permission_level="0"" to cpmcc_permissions.xml. By default the permission level is 0.
+* added vehicles to allocs patched [map.js](https://github.com/Prisma501/Allocs-Webmap-for-CPM) to make use of the new webapi
+
+**Version 18.1 A19.2 b4 Stable (not A18.4 Stable Compatible) (23-10-2020)**
+
+* Catalysm updated CPM Web UI to 1.7: new Adv. Claims Landclaim and ProBlock are supported now. Improved readability on coordinates information. New CPM Web UI 1.7 is included in this release.
+
 **Version 18.0 A19.2 b4 Stable (not A18.4 Stable Compatible) (23-10-2020)**
 
 * Added Adv. Claim Landclaim: only claimowners, whitelisted players and accesslevel allowed players can place any block within this adv. claim. Type= "landclaim". Violation string configurable in CpmStrings.xml (AdvClaims_Landclaim). Auto giveback to placing player.
@@ -11,6 +24,7 @@ Usage: create claim with type "problock:block1;block2;block3". Blocknames are ca
 * Updated patched Allocs Webmap: added checkboxes and handlers for new Adv. Claims Landclaim and ProBlock
 
 **Version 17.8 A19.1 b8 Stable (not A18.4 Stable Compatible) (30-09-2020)**
+
 * Added character based name login blocking: prevent players with specified characters in name from logging in. Configure in CpmSettings.xml (SpecialCharacters and SpecialCharactersNameBlock_Enabled). Beware of adding xml breaking chars to CpmSettings.xml. Escape them if needed. 
 ```& becomes &amp; , < becomes &lt; , > becomes &gt;```
 Kickmessage is configurable in CpmStrings.xml
