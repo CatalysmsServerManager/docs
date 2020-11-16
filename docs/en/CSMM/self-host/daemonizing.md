@@ -12,7 +12,7 @@ Now you have access to the pm2 command.
 
 To start CSMM with pm2:
 
-`pm2 start app.js --name csmm`
+`pm2 start npm --name "CSMM" -- start`
 
 There are many more options available in pm2, we suggest you head over to the [pm2 documentation](https://pm2.keymetrics.io/docs/usage/quick-start/) for more info.
 

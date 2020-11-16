@@ -1,5 +1,6 @@
 # Version History
 
+
 **Version 18.3 A19.2 b4 Stable & A19.3 b3 Experimental (16-11-2020)**
 
 * Catalysm updated CPM Web UI to 1.7.1: added support for the getvehicles api. Now all vehicles can be viewed on CPM Web UI. New version is included in this release.
