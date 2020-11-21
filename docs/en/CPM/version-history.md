@@ -1,5 +1,14 @@
 # Version History
 
+**Version 18.4 A19.2 b4 Stable & A19.3 b5 Experimental (21-11-2020)**
+
+* Added tooltip communication (instead of chatmessages) for enterresetregion, exitresetregion, enterpveclaim, exitpveclaim, reversed claim, normal claim, lcbfree claim, landclaim claim, lcbinregion (resetregion), lcb2close (resetregion), allpoiprotectionlcb, allpoiprotectionbed, questpoiprotectionlcb, questpoiprotectionbed and onvehicle warnig for all relevant claims.
+* optional visual indicator on players gamescreen during the time present on an adv. claim.
+* Backwards compatible with existing claims.
+* Choice for owners to use tooltips or the "old" chatsystem.
+* no changes in claim creation process
+* maximum flexibility by using tooltip modlet (see help text in the xml in /config in CPM mod folder)
+* added consolecommand tooltip: show a custom tooltip to a (or all) player(s) on demand.
 
 **Version 18.3 A19.2 b4 Stable & A19.3 b3 Experimental (16-11-2020)**
 
