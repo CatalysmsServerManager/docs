@@ -1,5 +1,9 @@
 # Version History
 
+**Version 18.4.1 A19.2 b4 Stable & A19.3 b5 Experimental (24-11-2020)**
+
+* Added option for using minimum uptime of server to be taken into account on shutdownba consolecommand. Define in CpmSettings.xml in minutes (ShutdownBA_MinimumUptimeRequired). Server crashed or did a manual reboot just before a scheduled reboot? Dont want to have players face a new reboot in a short amount of time? Then this setting is for you. Default value is 0, so shutdownba will not considder server uptime. If the minimum uptime of the server has not been reached while doing shutdownba, the reboot will wait until the minimum server uptime has been reached and then finish the shutdownba command.
+
 **Version 18.4 A19.2 b4 Stable & A19.3 b5 Experimental (21-11-2020)**
 
 * Added tooltip communication (instead of chatmessages) for enterresetregion, exitresetregion, enterpveclaim, exitpveclaim, reversed claim, normal claim, lcbfree claim, landclaim claim, lcbinregion (resetregion), lcb2close (resetregion), allpoiprotectionlcb, allpoiprotectionbed, questpoiprotectionlcb, questpoiprotectionbed and onvehicle warnig for all relevant claims.
