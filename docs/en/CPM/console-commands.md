@@ -146,6 +146,7 @@ Available commands:
  cpm-sleepers sleepers => Remove sleepervolumes from world
  cpm-targetedhorde targetedhorde th => Spawn targeted horde near a (or all) player or coordinate
  cpm-teleportplayerhome teleportplayerhome teleh => teleport a player to his home (on bedroll)
+ cpm-tooltip tooltip => Show a tooltip on a specific connected client
  cpm-tp2bag tp2bag teleport2bag => Teleport player to his/her backpack after death.
  cpm-tprotect tprotect => Set protection to a location in same way as trader.
  cpm-traderlist traderlist => List Trader Areas
