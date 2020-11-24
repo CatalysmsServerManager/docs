@@ -208,6 +208,10 @@ Shutdownba console command is bloodmoon aware. Here you define at which hour dur
 
 The hour after bloodmoon that the delayed server shutdown will kick in again after a delayed shutdownba.
 
+`<ShutdownBA_MinimumUptimeRequired>0</ShutdownBA_MinimumUptimeRequired>`
+
+The minimum amount of minutes the server has to be up before shutdownba will reboot the server. 0 means reboot without considdering the server uptime. Any number higher than 0 will define the number of minutes the server has to be up before the shutdownba will actually reboot the server.
+
 `<Vehicles_RemoveOnRestart>false</Vehicles_RemoveOnRestart>`
 
 If true, all vehicles that are NOT stored (backpack, container etc) will be removed at every server restart.
