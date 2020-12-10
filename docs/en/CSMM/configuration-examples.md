@@ -70,7 +70,7 @@ These provide better protection than regular land claim blocks. This includes 2 
 
 `buffplayer ${entityId} firstAid; debuffplayer ${entityId} bleeding; sayplayer ${entityId} "Healed!!"`
 
-For healing players, Prisma has created a [Healme modlet](/assets/modlets/HealmeBuff.zip)
+For healing players, Prisma has created a Healme modlet [A18](/assets/modlets/HealmeBuff.zip) [A19](/assets/modlets/HealmeBuffA19.zip)
 You could add new custom commands, one for players like $healme and one for admins like $heal PLAYERNAME
 
 "healme" is the buff you need to call in your custom command. It will give a player godmode for a given time (in seconds) using the wait() command.
