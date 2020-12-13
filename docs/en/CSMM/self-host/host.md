@@ -67,7 +67,7 @@ cd 7-days-to-die-server-manager
 npm install --only=prod
 ```
 ::: warning
-At this point, you should set up your env file! [Follow the instructions](/en/CSMM/self-host/configuration) and then come back and continue following these steps
+At this point, you should set up your env file! [Follow the instructions](/en/CSMM/self-host/configuration.html) and then come back and continue following these steps
 :::
 
 ## Running the application
@@ -86,7 +86,7 @@ It is very important to run CSMM in **production** mode for security reasons, ap
 :::
 
 ::: tip
-You should set up a [reverse proxy](/en/CSMM/self-host/reverse-proxy) and enable HTTPS!
+You should set up a [reverse proxy](/en/CSMM/self-host/reverse-proxy.html) and enable HTTPS!
 :::
 
 
