@@ -13,7 +13,8 @@ module.exports = {
         "/en/CSMM/self-host/docker",
         "/en/CSMM/self-host/host",
         "/en/CSMM/self-host/configuration",
-        "/en/CSMM/self-host/reverse-proxy"
+        "/en/CSMM/self-host/reverse-proxy",
+        "/en/CSMM/self-host/upgrading"
       ]
     },
     {
