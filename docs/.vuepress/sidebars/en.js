@@ -9,8 +9,11 @@ module.exports = {
       title: "Self hosting",
       children: [
         "/en/CSMM/self-host/installation",
-        "/en/CSMM/self-host/reverse-proxy",
-        "/en/CSMM/self-host/daemonizing"
+        "/en/CSMM/self-host/one-click",
+        "/en/CSMM/self-host/docker",
+        "/en/CSMM/self-host/host",
+        "/en/CSMM/self-host/configuration",
+        "/en/CSMM/self-host/reverse-proxy"
       ]
     },
     {
