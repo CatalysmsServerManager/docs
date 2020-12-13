@@ -12,6 +12,10 @@ The image has been tested to deploy successfully on a 1GB RAM droplet, but may b
 
 
 
-Once your image is deployed and you log in for the first time, you will be prompted for some configuration values. You can find more info on these values on the [configuration guide](/en/CSMM/self-host/configuration.html)
+Once your image is deployed, you can SSH into the box
+
+`ssh root@your_droplet_ip`
+
+You will be prompted for some configuration values. You can find more info on these values on the [configuration guide](/en/CSMM/self-host/configuration.html)
 
 After this, CSMM should be running on the domain you specified!
