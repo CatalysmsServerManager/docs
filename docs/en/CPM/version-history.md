@@ -1,5 +1,9 @@
 # Version History
 
+**Version 18.4.3 A19.2 b4 Stable & A19.3 b6 Experimental (19-12-2020)**
+
+* Added item (weapon) used to logline on zombie, animal and PVP kill. Can be used for CSMM hooks.
+
 **Version 18.4.2 A19.3 Experimental Only (16-12-2020)**
 
 * Changed consolecommand shutdownba: the server shutdown logic has changed in 19.3. Adapted shutdownba to handle the shutdown properly. This version is for A19.3 only.
