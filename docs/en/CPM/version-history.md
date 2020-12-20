@@ -1,5 +1,9 @@
 # Version History
 
+**Version 18.4.4 A19.2 b4 Stable & A19.3 b6 Experimental (20-12-2020)**
+
+* Added anticheat leveljump: CPM will issue a warning into log for use with discord notification or csmm hook (for custom punishment) on jumping more than one level at once. Example logline: [CSMM_Patrons] WARNING: Prisma501 (73653876287651987) jumped up more than one level (10 -> 75).
+
 **Version 18.4.3 A19.2 b4 Stable & A19.3 b6 Experimental (19-12-2020)**
 
 * Added item (weapon) used to logline on zombie, animal and PVP kill. Can be used for CSMM hooks.
