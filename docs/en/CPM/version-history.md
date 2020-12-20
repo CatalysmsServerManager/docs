@@ -1,5 +1,17 @@
 # Version History
 
+**Version 18.4.4 A19.2 b4 Stable & A19.3 b6 Experimental (20-12-2020)**
+
+* Added anticheat leveljump: CPM will issue a warning into log for use with discord notification or csmm hook (for custom punishment) on jumping more than one level at once. Example logline: [CSMM_Patrons] WARNING: Prisma501 (73653876287651987) jumped up more than one level (10 -> 75).
+
+**Version 18.4.3 A19.2 b4 Stable & A19.3 b6 Experimental (19-12-2020)**
+
+* Added item (weapon) used to logline on zombie, animal and PVP kill. Can be used for CSMM hooks.
+
+**Version 18.4.2 A19.3 Experimental Only (16-12-2020)**
+
+* Changed consolecommand shutdownba: the server shutdown logic has changed in 19.3. Adapted shutdownba to handle the shutdown properly. This version is for A19.3 only.
+
 **Version 18.4.1 A19.2 b4 Stable & A19.3 b5 Experimental (24-11-2020)**
 
 * Added option for using minimum uptime of server to be taken into account on shutdownba consolecommand. Define in CpmSettings.xml in minutes (ShutdownBA_MinimumUptimeRequired). Server crashed or did a manual reboot just before a scheduled reboot? Dont want to have players face a new reboot in a short amount of time? Then this setting is for you. Default value is 0, so shutdownba will not considder server uptime. If the minimum uptime of the server has not been reached while doing shutdownba, the reboot will wait until the minimum server uptime has been reached and then finish the shutdownba command.

@@ -20,6 +20,7 @@ module.exports = {
     {
       title: "Configuration",
       children: [
+        "/en/CSMM/ingame-commands",
         "/en/CSMM/roles",
         "/en/CSMM/discord-integration",
         "/en/CSMM/GBL",
