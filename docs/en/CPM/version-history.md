@@ -1,5 +1,18 @@
 # Version History
 
+**Version 18.5 A19.3 b6 Stable (29-12-2020)**
+
+* Bundled CPM WebUI 1.7.3: fixed permission handler to break menu icon because of casesensitivity of permissions. Permissions in cpmcc_permissions.xml now get applied regardless of case. This will ensure the menu icon to show.
+
+Implemented 2 small user requests:
+* With CPM 18.4.3 release (adding item used on player, zombie and animal kill) the PVE violation logline was changed and a "Player killed" logline was added to show item used on kill. This broke existing CSMM custom hooks relying on the old PVE violation logline. This version contains the "old" logline with item used appended at absolute end. This will ensure existing PVE violation hooks to be compatible.
+
+Player killed logline (use to extract PVP kill info):
+```[CSMM_Patrons] Player killed! Player offenderName (-128,60,-189) killed victimName (-130,60,-190) with Pistol```
+PVE violation logline (use to extract PVE violation kill info):
+```[CSMM_Patrons] PVE violation! Player offenderName (-128,60,-189) killed victimName (-130,60,-190) with Pistol```
+* Added signs to be unlocked with unlockall consolecommand.
+
 **Version 18.4.4 A19.2 b4 Stable & A19.3 b6 Experimental (20-12-2020)**
 
 * Added anticheat leveljump: CPM will issue a warning into log for use with discord notification or csmm hook (for custom punishment) on jumping more than one level at once. Example logline: [CSMM_Patrons] WARNING: Prisma501 (73653876287651987) jumped up more than one level (10 -> 75).
