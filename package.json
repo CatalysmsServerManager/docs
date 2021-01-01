@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "commands:cpm": "node scripts/getCPMCommands.js"
   },
   "keywords": [
     "csmm",
@@ -16,8 +17,10 @@
   "author": "Catalysm",
   "license": "ISC",
   "devDependencies": {
+    "7daystodie-api-wrapper": "^1.5.6",
     "@vuepress/plugin-back-to-top": "^1.4.1",
     "@vuepress/plugin-google-analytics": "^1.4.1",
+    "dotenv": "^8.2.0",
     "vuepress": "^1.4.1",
     "vuepress-plugin-seo": "^0.1.2"
   },
