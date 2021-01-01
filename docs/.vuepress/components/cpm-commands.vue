@@ -5,7 +5,11 @@
     </tr>
 
     <tr v-for="command in commands">
-      <td v-for="header in headers">{{ command[header.value] }}</td>
+      <td>{{ command.command }}</td>
+      <td>{{ command.description }}</td>
+      <td>
+        <p v-for="line in command.help.split('\n')">{{ line }}<br /></p>
+      </td>
     </tr>
   </table>
 </template>
