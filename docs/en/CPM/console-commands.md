@@ -58,6 +58,6 @@ CPM has a built in function to list all avalaible console commands (cpm-help), w
 help <command>
 ```
 
-Also available [as JSON](/assets/cpmCommands.json)
+Also available [as JSON](/assets/commands/cpmCommands.json)
 
 <cpm-commands />

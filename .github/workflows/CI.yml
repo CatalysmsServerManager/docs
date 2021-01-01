@@ -22,8 +22,8 @@ jobs:
         with:
           node-version: 14.x
       - run: npm ci
-      - name: get CPM commands
-        run: npm run commands:cpm
+      - name: get commands json
+        run: npm run commands
         env:
           CPM_IP: ${{secrets.CPM_IP}}
           CPM_PORT: ${{secrets.CPM_PORT}}
@@ -39,7 +39,7 @@ jobs:
         with:
           # The arguments for the `git add` command (see the paragraph below for more info)
           # Default: '.'
-          add: "docs/.vuepress/public/assets/cpmCommands.json"
+          add: "docs/.vuepress/public/assets/commands"
 
           # The message for the commit
           # Default: 'Commit from GitHub Actions (name of the workflow)'

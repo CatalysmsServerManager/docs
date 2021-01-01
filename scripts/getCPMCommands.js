@@ -25,5 +25,5 @@ async function main() {
 
   console.log(commands);
 
-  fs.writeFileSync('docs/.vuepress/public/assets/cpmCommands.json', JSON.stringify(commands))
+  fs.writeFileSync('docs/.vuepress/public/assets/commands/cpmCommands.json', JSON.stringify(commands))
 }

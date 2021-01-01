@@ -5,25 +5,25 @@
     </tr>
 
     <tr v-for="command in commands">
-      <td>{{ command.command }}</td>
+      <td>{{ command.name }}</td>
+      <td>{{ command.aliases }}</td>
       <td>{{ command.description }}</td>
-      <td>
-        <p v-for="line in command.help.split('\n')">{{ line }}<br /></p>
-      </td>
+      <td>{{ command.extendedDescription }}</td>
     </tr>
   </table>
 </template>
 
 <script>
-const commands = require("../public/assets/commands/cpmCommands.json");
+const commands = require("../public/assets/commands/csmmCommands.json");
 
 export default {
   data() {
     return {
       headers: [
-        { text: "Command", value: "command" },
+        { text: "Command", value: "name" },
+        { text: "Aliases", value: "aliases" },
         { text: "Description", value: "description" },
-        { text: "Help", value: "help" },
+        { text: "Help", value: "extendedDescription" },
       ],
       commands,
     };
