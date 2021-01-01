@@ -1,5 +1,314 @@
 # Version History
 
+**Version 18.5 A19.3 b6 Stable (29-12-2020)**
+
+* Bundled CPM WebUI 1.7.3: fixed permission handler to break menu icon because of casesensitivity of permissions. Permissions in cpmcc_permissions.xml now get applied regardless of case. This will ensure the menu icon to show.
+
+Implemented 2 small user requests:
+* With CPM 18.4.3 release (adding item used on player, zombie and animal kill) the PVE violation logline was changed and a "Player killed" logline was added to show item used on kill. This broke existing CSMM custom hooks relying on the old PVE violation logline. This version contains the "old" logline with item used appended at absolute end. This will ensure existing PVE violation hooks to be compatible.
+
+Player killed logline (use to extract PVP kill info):
+
+```[CSMM_Patrons] Player killed! Player offenderName (-128,60,-189) killed victimName (-130,60,-190) with Pistol```
+
+PVE violation logline (use to extract PVE violation kill info):
+
+```[CSMM_Patrons] PVE violation! Player offenderName (-128,60,-189) killed victimName (-130,60,-190) with Pistol```
+
+* Added signs to be unlocked with unlockall consolecommand.
+
+**Version 18.4.4 A19.2 b4 Stable & A19.3 b6 Experimental (20-12-2020)**
+
+* Added anticheat leveljump: CPM will issue a warning into log for use with discord notification or csmm hook (for custom punishment) on jumping more than one level at once. Example logline: [CSMM_Patrons] WARNING: Prisma501 (73653876287651987) jumped up more than one level (10 -> 75).
+
+**Version 18.4.3 A19.2 b4 Stable & A19.3 b6 Experimental (19-12-2020)**
+
+* Added item (weapon) used to logline on zombie, animal and PVP kill. Can be used for CSMM hooks.
+
+**Version 18.4.2 A19.3 Experimental Only (16-12-2020)**
+
+* Changed consolecommand shutdownba: the server shutdown logic has changed in 19.3. Adapted shutdownba to handle the shutdown properly. This version is for A19.3 only.
+
+**Version 18.4.1 A19.2 b4 Stable & A19.3 b5 Experimental (24-11-2020)**
+
+* Added option for using minimum uptime of server to be taken into account on shutdownba consolecommand. Define in CpmSettings.xml in minutes (ShutdownBA_MinimumUptimeRequired). Server crashed or did a manual reboot just before a scheduled reboot? Dont want to have players face a new reboot in a short amount of time? Then this setting is for you. Default value is 0, so shutdownba will not considder server uptime. If the minimum uptime of the server has not been reached while doing shutdownba, the reboot will wait until the minimum server uptime has been reached and then finish the shutdownba command.
+
+**Version 18.4 A19.2 b4 Stable & A19.3 b5 Experimental (21-11-2020)**
+
+* Added tooltip communication (instead of chatmessages) for enterresetregion, exitresetregion, enterpveclaim, exitpveclaim, reversed claim, normal claim, lcbfree claim, landclaim claim, lcbinregion (resetregion), lcb2close (resetregion), allpoiprotectionlcb, allpoiprotectionbed, questpoiprotectionlcb, questpoiprotectionbed and onvehicle warnig for all relevant claims.
+* optional visual indicator on players gamescreen during the time present on an adv. claim.
+* Backwards compatible with existing claims.
+* Choice for owners to use tooltips or the "old" chatsystem.
+* no changes in claim creation process
+* maximum flexibility by using tooltip modlet (see help text in the xml in /config in CPM mod folder)
+* added consolecommand tooltip: show a custom tooltip to a (or all) player(s) on demand.
+
+**Version 18.3 A19.2 b4 Stable & A19.3 b3 Experimental (16-11-2020)**
+
+* Catalysm updated CPM Web UI to 1.7.1: added support for the getvehicles api. Now all vehicles can be viewed on CPM Web UI. New version is included in this release.
+
+**Version 18.2 A19.2 b4 Stable & A19.3 b3 Experimental (16-11-2020)**
+
+* added webapi for displaying all vehicles on the map. Both loaded and unloaded vehicles will be shown. When vehicle name starts with "Entity", the vehicle is not currently loaded in the world. When vehicle name starts with "vehicle", the vehicle is currently loaded in the world. For permission control add "permission module="cpmcc.getvehicles" permission_level="0"" to cpmcc_permissions.xml. By default the permission level is 0.
+* added vehicles to allocs patched [map.js](https://github.com/Prisma501/Allocs-Webmap-for-CPM) to make use of the new webapi
+
+**Version 18.1 A19.2 b4 Stable (not A18.4 Stable Compatible) (23-10-2020)**
+
+* Catalysm updated CPM Web UI to 1.7: new Adv. Claims Landclaim and ProBlock are supported now. Improved readability on coordinates information. New CPM Web UI 1.7 is included in this release.
+
+**Version 18.0 A19.2 b4 Stable (not A18.4 Stable Compatible) (23-10-2020)**
+
+* Added Adv. Claim Landclaim: only claimowners, whitelisted players and accesslevel allowed players can place any block within this adv. claim. Type= "landclaim". Violation string configurable in CpmStrings.xml (AdvClaims_Landclaim). Auto giveback to placing player.
+* Added Adv. Claim ProBlock: Use this claim to prevent placement of blocks that are not configured as problock(s). Violation string configurable in CpmStrings.xml (AdvClaims_ProBlock). Auto giveback to placing player.
+Usage: create claim with type "problock:block1;block2;block3". Blocknames are casesenstive (use fblock to find exact blocknames) and must be separated by semicolon when adding more than 1 block. Follows standard claim rules regarding accesslevel, ownership and whitelisting.
+* Added webapi for querying new Adv. Claims Landclaim and ProBlock
+* Changed Adv. Claim PVE: skip chatmessage when exitmessage of the claim is omitted.
+* Changed Adv. Claim AntiBlock: implemented auto giveback to placing player.
+* Updated patched Allocs Webmap: added checkboxes and handlers for new Adv. Claims Landclaim and ProBlock
+
+**Version 17.8 A19.1 b8 Stable (not A18.4 Stable Compatible) (30-09-2020)**
+
+* Added character based name login blocking: prevent players with specified characters in name from logging in. Configure in CpmSettings.xml (SpecialCharacters and SpecialCharactersNameBlock_Enabled). Beware of adding xml breaking chars to CpmSettings.xml. Escape them if needed. 
+```& becomes &amp; , < becomes &lt; , > becomes &gt;```
+Kickmessage is configurable in CpmStrings.xml
+* Added AllPoi Protection: same as QuestPoi Protection but for all prefabs. Prevents LCB and bedrolls to be placed in any POI. Configure in CpmSettings.xml (AllPoiProtection_Enabled). Not allowed messages for bed and LCB are configurable in CpmStrings.xml
+
+**Version 17.7 A19.1 b8 Stable (not A18.4 Stable Compatible) (22-09-2020)**
+
+* Fixed consolecommand release: Fixed offline usage. Now it's possible to release a player from jail while offline again.
+* Added bedroll support to adv. claim antiblock: Now you can add bedroll as antiblock in an adv. claim antiblock.
+
+**Version 17.6 A19 b180 Stable (not A18.4 Stable Compatible) (26-08-2020)**
+
+* There is a serious vanilla game bug in the region file management code that was causing CPM reset commands to reset chunks that should not be reset. This version contains a harmony patch that overrides the bugged region file manager method with fixed code.
+* Fixed locationtracker throwing null reference exception when game player dictionary would add/remove players to/from dictionary during location saving.
+
+**Version 17.5 A19 b180 Stable (not A18.4 Stable Compatible) (24-08-2020)**
+
+* Added sleeper volume resets to "getprefab reset", rac (resetadvclaim), "rac unclaimed" and rrp (resetrwgprefabs). Now all sleepervolumes in prefabs and chunks in an adv. claim reset will get reset also with a reset. This means no free lootruns (new fresh prefab without sleepers).
+* Added ServerTools compatibility for when using ST Reserved slots and server is full. The harmony patch in ST will break CPM functionality when that kicks in. That is countered in this version.
+
+**Version 17.4 A19 b180 Experimental (not A18.4 Stable Compatible) (18-08-2020)**
+
+* Fixed consolecommand sleepers: removing sleepers broke with A19. Fixed now. Added reset functionality. Now you can despawn and reset sleepers in the marked area so that they are ready to haunt players again.
+* Added serverkill on hanging/unresponsive server in rrp (resetrwgprefabs) and rac (resetadvclaim) consolecommands when using the kicklockreboot parameter. Now they will handle a hanging/unresponsive server in the reboot process like shutdownba does.
+* Removed all dependencies to allocs persistent data for playerdata. CPM will store all nescesary data in own persistent storage now, so if allocs mod loses data, CPM will not be affected.
+* Updated CPM Web UI to version 1.6.1: Catalysm fixed a bug where a claim would get double displayed in the Adv. Claim list when a type of claim would be in the string parameters of another claim.
+* Since ServerTools has recently found its way to Harmony 2, i decided to not maintain 2 CPM versions anymore (Harmony 1.2 and 2.0). CPM will only come in the flavor of Harmony 2 from this release on. This means it will not be compatible with mods that use Harmony 1.2 anymore. Botman mod is one of the last that uses the old Harmony version 1.2 and thus will be not be compatible with CPM until they upgrade Harmony to 2.0.
+
+**Version 17.3 A19 b180 Experimental (not A18.4 Stable Compatible) (11-08-2020)**
+
+* Changed consolecommand rrp (resetrwgprefabs): added parameter "tradersonly" for resetting all traders on the map only. Usefull when having used settime command and the traders restock time has gone out of sync.
+* Changed consolecommands rrp (resetrwgprefabs), rac (resetadvclaim): added parameter "kicklockreboot". When using this parameter all online players will get kicked, the server gets locked (players cant connect) during the reset and reboots server when reset is done. You can still use rrp and rac and rac unclaimed without kicklockreboot for full manual control but keep in mind that de world will be in a time vacuum during the reset. Any online players will experience it like X-men member Quicksilver. Literally.
+* Catalysm has updated CPM WebUI to 1.6! It contains the new Adv. Claim Reset. Included in this release.
+
+**Version 17.2 A19 b178 Experimental (not A18.4 Stable Compatible) (08-08-2020)**
+
+* Changed consolecommand resetchunks: No need for chunks to be loaded to be reset. Makes larger areas of resetting possible. Theoratically up to 16K x 16K blocks. The larger the area the more memory you need to have available for the reset. So be wise when using.
+* Changed rrp (resetrwgprefabs): Complete overhaul. All prefabs will be reset live on map in one run. No need for players to load the chunks anymore. Added restoring decorations on prefab reset.
+* Changed consolecommand "getprefab reset": Added restoring decorations on prefab reset.
+* Added new Adv. Claim Reset: mark an area for reset on chunklevel.
+* Added new consolecommand rac (resetadvclaim): use for resetting all chunks within the new Adv. Claim Reset areas. Very memory intensive! Better use multiple smaller claims instead of few big claims. The bigger the claim the more memory is needed for CPM to be able to handle. Has an option to reset the complete map excluding claimed chunks -> Very VERY memory intensive. Tested on a 8GB virtual system with NO players on and the 8GB were almost FULLY used. Use with care. Server will crash with out of memory exception if your hardware isnt up for this.
+* added webapi for displaying new Adv. Claim Reset on allocs,- or CPM webUI map.
+* changed consolecommand ccc: added option to create new Adv. Claim Reset. New claim borders will automatically snap to nearest chunk borders so you know exactly what is going to reset when using consolecommand rac. Use claim type=reset for creating Adv. Claim Reset.
+* changed allocs patched map.js to be able to display new Adv. Claim Reset
+
+**Version 17.1 A19 b173 Experimental (not A18.4 Stable Compatible) (03-08-2020)**
+
+* Updated Confuser.Core to 1.4.1
+* Disabled one of the confuser protections at expence of a little protection loss for a BIG performance gain.
+
+**Version 17.0 A19 b173 Experimental (not A18.4 Stable Compatible) (01-08-2020)**
+
+* Major maintenance upgrade:
+    - Reworked/optimized the litedb database layer for performance. Mainly ditching the use of LiteCollection which appearantly keept a reference to the db on disk open.
+    - Reviewed all (5 year worth) of code and cleaned up/optimized to today's standards.
+    - Reworked the harmony patch handling to be able to easily maintain a harmony 2.0 branch.
+
+**Version 16.7 A19 b173 Experimental (not A18.4 Stable Compatible) (31-07-2020)**
+
+* The sleeper support on hostilefree adv. claim is giving me serious headaches. Seems the sleeper hook fires so fast and much that the litedb database on filesystem gets opened so much (60 times a second) that it can't process it all and queing up the open filehandles on the server, which is bad. I moved the hostilefree claims to memory and check inmemory in the sleeper hook. This should prevent exceeding the open file limit on linux. Downside of this solution is that any hostilefree adv. claim you create on an active gamesession will not support sleeper spawn prevention until the next gameserver restart (hostilefree adv. claims get loaded into memory on gamerestart). Again this is a HIGHLY recommended update if you are on CPM version 16.3 or higher!!
+
+**Version 16.6 A19 b173 Experimental (not A18.4 Stable Compatible) (29-07-2020)**
+
+* HOTFIX for all sleeper related functionality. Since CPM adapting to the new sleepervolume handling of the game i noticed high CPU spikes after logging off. Somehow the sleeper spawn hook keeps firing over and over and over again when last player of the server disconnects near sleepervolumes. Resulting in high CPU usage on an empty server. Added a check for no players on server and give back control to game then. That fixes the problem. HIGHLY recommended to upgrade if on version 16.3 or higher!!
+
+**Version 16.5 A19 b173 Experimental (not A18.4 Stable Compatible) (27-07-2020)**
+
+* Fixed ResetRegions, QuestPoiProtection, Adv. CLaim LcbFree and Adv. Claim AntiBlock not triggering when LCB/Bedroll/AntiBlock was placed on plant (like grass) or in water. This is it boyz and galz, the new system is completely fleshed out and to my liking. There wont be an update for a good while now. 
+
+**Version 16.4 A19 b173 Experimental (not A18.4 Stable Compatible) (27-07-2020)**
+
+* CPM is using harmony for runtime server patching and litedb for persistent data storage. Until now i merged those helper dll's into the CPM dll, because the modloader system of the game did not allow multiple dll's/xml's in the Mod folder. That is now allowed and because it positively affects performance, i dont merged them anymore. This version uses the unmerged helper dll's but is exactly the same as version 16.3.
+
+**Version 16.3 A19 b173 Experimental (not A18.4 Stable Compatible) (26-07-2020)**
+
+* fixed Questpoi protection being always on regardless of setting in CpmSettings.xml.
+* Reverted from killing to despawning hostiles in hostilefree adv. claim, consolecmd protect and chatcmd /bubble for server stability/performance.
+* Implemented sleeper support for hostilefree adv. claim, consolecmd protect and chatcmd /bubble. No more infinite sleeper respawn loops if using any of those functionalities. Sleepers will just not spawn when in hostilefree adv. claim or within 25 blocks of a player while protection is on with protect or /bubble.
+* fixed sleeper respawn control (DisableSleeperRespawn_Enabled in CpmSettings.xml) due to changes in sleepervolumes in A19 b173.
+* fixed sleeper control (DisableSleepers_Enabled in CpmSettings.xml) due to changes in sleepervolumes in A19 b173.
+* fixed sleeper control for bloodmoons only (DisableSleepers_BloodmoonOnly_Enabled in CpmSettings.xml) due to changes in sleepervolumes in A19 b173.
+* Catalysm updated CPM WebUI and added support for new adv. claim AntiBlock! Version 1.5.0 is included in this release.
+* Making something clear: The new resetregions, adv. claim LcbFree, Questpoi protection and adv. claim AntiBlock are only checking on block placement of LCB/Bedroll/AntiBlock. CPM will handle them instantly(!). CPM will however NOT remove allready existing LCB/Bedroll/AntiBlock in resetregions, adv. claim LcbFree, Questpois and adv. claim Antiblock after you set/enable them. Be aware of that when enabling any of those functionalities and check on CPM WebUI if you have some manual cleaning up to do.
+
+**Version 16.2 A19 b173 Experimental (not A18.4 Stable Compatible) (25-07-2020)**
+
+* A19 b173 Compatibility. 16.1 seems 100% compatible, but recompiled, repacked and re-encrypted against A19 b173 binaries. In case of problems with 16.1 upgrade first before asking for support.
+* Changed command help text and description for rl (resetlevel) and rs (resetskillpoints) to make it....more clear.
+
+**Version 16.1 A19 b169 Experimental (not A18.4 Stable Compatible) (23-07-2020)**
+
+* Heavily optimized ResetRegion, QuestPoiProtection and LcbFree Adv. Claim handling: Moved away from heartbeat thread. Now using gamehook to instantly(!) remove/giveback LCB/Bedroll.
+
+* Added WebApi for viewing new Adv. Claim AntiBlock.
+
+* Updated [Allocs Patched map.js](https://github.com/Prisma501/Allocs-Webmap-for-CPM) for viewing new Adv. Claim AntiBlock
+
+Implemented 2 requests:
+
+* Added new adv. claim antiblock: Use this claim to prevent placement of configurable block(s). Blocks that are not allowed in this claim will be instantly(!) removed.
+
+Usage: create claim with type "antiblock:block1;block2;block3". Blocknames are casesenstive (use fblock to find exact blocknames) and must be separated by semicolon when adding more than 1 block. Follows standard claim rules regarding accesslevel and whitelisting.
+
+* Added writable storage to consolecommands unlockall and own.
+
+**Version 15.9.1 A19 b169 Experimental (not A18.4 Stable Compatible) (17-07-2020)**
+
+* A19 b169 Compatibility
+* After simplifying the QuestPoi protection code drastically in 15.9, a bug became clearly visible. Lcb's/bedrolls that overlap multiple questpois would cause multiple removals/deactivations of lcb's/bedroll. Fixed with this version.
+
+**Version 15.9 A19 b163 Experimental (not A18.4 Stable Compatible) (17-07-2020)**
+
+* Changed consolecommand listcustomentities (lce): Pimps changed the entityType for traders. Changed searchstring npc to trader. For listing traders do "lce trader". Used to be "lce npc"
+* Changed Questpoi protection: the bedroll handling ingame is an absolute chaos. Changed it again to be more robust but less functional. This version wont support existing bedrolls in questpois anymore. If you enable questpoi protection after players have allready placed bedroll in questpoi's they will only get deactivated when the owning player is online. If owning player never comes online again, the bedroll has to be removed manually. If a bedroll is deactivated it will not be seen as blocking for a questpoi on queststart immediately. It will however be the players spawnpoint until he/she places a new bedroll or the server restarts.
+* Changed hostilefree adv. claim and protective bubble to do a kill instead of a despawn. Sleepers wont get into a respawn loop this way.
+
+**Version 15.8 A19 b163 Experimental (not A18.4 Stable Compatible) (13-07-2020)**
+
+* Implemented using a dedicated thread for handling online players on ttp edit commands resetskillpoints (rs), resetlevel (rl), resetplayerdata (rpd), removexpdeficit (red) and removevendingrent (rvr) to not hold up the main server thread while working.
+
+**Version 15.7 A19 b163 Experimental (not A18.4 Stable Compatible) (12-07-2020)**
+
+* Found the cause of the bedroll persistency problem in A19 and re-introduced asynchronously handling lcb/bedroll. Highly recommended to upgrade.
+
+**Version 15.6.1 A19 b163 Experimental (not 18.4 Stable Compatible) (09-07-2020)**
+
+* fixed an error i let slip in on 15.6 on ResetRegions. When placing a LCB in a ResetRegion and the claim borders are overlapping a neighbouring ResetRegion, the player would get back 2 LCB's instead of one.
+
+**Version 15.6 A19 b157 Experimental (09-07-2020)**
+
+* fixed QuestPoiProtection, ResetRegions and Adv. Claim LcbFree not being able to handle allready existing lcb's/bedrolls in unloaded chunks on use/enable in an ongoing map. You can now use/enable those on an existing map with lcb's/bedrolls allready present in QuestPoi's, ResetRegions and Adv. Claims LcbFree.
+
+**Version 15.5 A19 b157 Experimental (07-07-2020)**
+
+* fixed shutdownba not considdering bloodmoon off and random bloodmoon
+* fixed nighttime announcer not considdering bloodmoon off
+* fixed day7 chatcommand not considdering bloodmoon off
+* fixed permadeath. A19e compatibility
+* upped waiting time after kick to 10 seconds on ttp edit/delete commands on online players: resetlevel, resetskillpoints, removeexpdeficit, resetplayerdata and removevendingrental. Should work better when using on online players. Using on offline players is still failsafe.
+
+Sometimes it takes a while for the player profile to be saved to ttp file by the game. When its not saved completely when CPM does the edit/delete, the Pimps backup mechanism will kick in and the edit/delete will be undone. For offline players it works 100% of the time. 10 seconds should be enough to save but not long enough for the player to have joined again thus loading and using the ttp file and causing the edit to be undone again.
+
+**Version 15.4 A19 b157 Experimental (06-07-2020)**
+
+* Fixed anticheat damagedetection not logging when triggered.
+
+Example logline for creating CSMM custom discord notifcation hook:
+
+[CSMM_Patrons]damageDetection(Entity): Player Prisma501 (7656114567822412) triggered damage detection! Damage done: 5000
+
+**Version 15.3 A19 b157 Experimental (04-07-2020)**
+
+* Fixed consolecommand lce (listcustomentity)
+
+**Version 15.2 A19 b157 Experimental (02-07-2020)**
+
+* Fixed consolecommand bexport
+* Fixed questpoi protection
+* Fixed consolecommand db (deactivatebed)
+
+**Version 14.6 A18.4 b4 Stable (NOT A18.3 compatible)**
+
+Some ttp love this release. All new commands alter data that is stored in the players ttp file. That can only be editted when player is not online. So all new commands do a player kick if player is online.
+
+* New consolecommand rl (resetlevel): set a players level to a level of your choice
+* New consolecomand rs (resetskillpoints): set the number of skillpoints of a player to the count of your choice
+* New consolecommand red (removeexpdeficit): remove a players ExpDeficit on demand. ExpDeficit is the XP penalty you get after dying (red bar in the XP bar above belt)
+
+**Version 14.5 A18.4 b4 Stable (NOT A18.3 compatible)**
+
+* changed donorslots: added admin notification on expired donor server join. All online admins of a configurable level get a PM notification when an expired donor joins. Configure admin level in CpmSettings.xml ( NotifyAdmin_Level). Default is level 0.
+
+Also added logline for easy CSMM custom hooking. Logline is:
+[CSMM_Patrons] Donorslot expired! Playername: <name> SteamID: <steamID>
+So hook can be placed on ” [CSMM_Patrons] Donorslot expired! ” for discord notification.
+* changed consolecommand remitem: changed commandresponse player entityId to steamId for easier CSMM regex custom variable extraction in custom hooks.
+
+Speaking of hooks: Catalysm wrote an excellent example that shows how incredible powerful the combination of features of CSMM and CPM can be.
+This example will show how to create the functionality of giving players the tools to deposit casinoCoins to the virtual CSMM economy. It even shows how to “fix” an exploit that rises while creating this.
+
+Check it out!
+https://docs.csmm.app/en/CSMM/advanced-feature-guide.html
+
+**Version 14.4 A18.4 b4 Stable (NOT A18.3 compatible)**
+
+* Changed consolecommand shutdownba: added on demand vehicle removal. Use “shutdownba <minutes> resetvehicles”. All vehicles on map will be removed at restart.
+* Added consolecommand af (addfriend): add yourself to friend list of a player without invite or confirmation needed. Works on off,- and online players. To remove from friendlist, use the player list window ingame. Beware that if the player is online, the removal will be shown as a popup on screen (adding is silent/invisible).
+* Changed consolecommand wpc (waypointcontrol): fixed wrong number of arguments error response.
+
+**Version 14.3 A18.4 b4 Stable (NOT A18.3 compatible)**
+
+* Added vehicle removal on restart: duping vehicles is still a major problem on MP servers. CPM now offers a way to control that pest. You can enable vehicle removal on restart in CpmSettings.xml :
+<Vehicles_RemoveOnRestart>true</Vehicles_RemoveOnRestart>
+Default value is false.
+When enabled CPM will remove ALL vehicles in the world that are not stored away in containers or backpacks/belt on server restart.
+Strongly recommended to make a warning about this functionality in server login confirmation message or by (auto) chat communication. Or there will be tears.
+
+**Version 14.2 A18.4 b4 Stable (NOT A18.3 compatible)**
+
+* Improved “getprefab reset” and resetrwgprefabs: now sleepervolumes in prefabs that got reset manually or automatically, will get despawned and reset too. This will fix the free loot runs on prefabs in which the sleepervolumes were cleared (all killed) and get reset after that. Previously the sleepervolumes would stay cleared until respawn timer would expire again, but the prefab was reset and full of loot again. Now they are all waiting and active again after the prefab resets. Thanks to SylenThunder for reporting.
+
+**Version 14.1 A18.4 b4 Stable (NOT A18.3 compatible)**
+
+* 18.4 b4 Stable compatibility
+* Changed sleepers consolecommand: added option to count sleepervolumes in marked area.
+* Changed write2log (w2l) consolecommand: added option to add output of a command to log. Now you have full control on what data is written in log. You can use a cronjob for w2l using gt consolecommand for example to be able to make a CSMM custom hook for checking that ingame time and fire one or multiple commands on a specific gametime. Options are limitless.
+* New features since 18.3 stable:
+    * Sleeperspawn control (with bloodmoon only option)
+    * Sleeperrespawn control
+    * Anticheat: Spectator mode detection
+    * Jail auto-release bugfix
+    * Chunkreset consolecommand! Reset chunks on live server
+
+**Version 14.0 A18.4 b4 Experimental (NOT A18.3 Stable compatible)**
+
+* Proudly presenting consolecommand resetchunks: reset chunks point to point (p1,p2) or with radius. Reset chunks to RWG default while server is running with this new command!
+
+**Version 13.9.2 A18.4 b4 Experimental (NOT A18.3 b4 Stable compatible)**
+
+* Jail auto-release bugfix: auto-releasing from jail was not using the new db persistent storage yet, so it failed to actually release the player from jail.
+
+**Version 13.9.1 18.4. b3E (NOT A18.3 b4 Stable compatible) + CPMcc 1.4.0 (2020.02.22)**
+
+* AntiCheat: added Spectator Mode detection. Can be hacked in easily clientside and offers complete invisibility towards other players and zombies/animals. Now CPM will detect unauthorized use.
+Configure in CpmSettings.xml: “MaxAdminLevelSpectatorMode” (default permission level 0).
+Optional command(s) can be fired on detection. Default is no command “SpectatorModeDetectedCommand “. To enable command(s) just put the command(s) in the setting.
+To use multiple commands just seperate them with ;
+Supported placeholders: ${entityId}, ${steamId} and ${playerName}.
+CPM will write to log upon detection for easy hooking of CSMM custom hooks/discord notifications:
+
+[CSMM_Patrons]Unauthorized SpectatorMode detected on <playerName> (<steamId>) !!!!!
+Command example: <SpectatorModeDetectedCommand>ban add ${steamId} 10 years “Hackers not welcome”</SpectatorModeDetectedCommand>
+
+**Version 13.9 A18.3 b4 Stable + CPMcc 1.4.0 (2020.02.21)**
+
+* Added sleeper spawn control: disable sleepers everywhere on the map. CpmSettings.xml ->
+<DisableSleepers_Enabled>true</DisableSleepers_Enabled>. To disable sleepers on map only during bloodmoon -> <DisableSleepers_BloodmoonOnly_Enabled>true</DisableSleepers_BloodmoonOnly_Enabled>
+
+* Added sleeper respawn control: configure if sleepers respawn after being cleared or dont ever respawn again.
+CpmSettings.xml -> <DisableSleeperRespawn_Enabled>true</DisableSleeperRespawn_Enabled>
+
 **Version 13.8 A18.3 b4 Stable + CPMcc 1.4.0 (2020.01.28)**
 
 * changed consolecommand tprotect: implemented usage of radius when traderprotecting blocks
@@ -603,7 +912,7 @@ re-enabled consolecommand lps (listplayerskill): list all levels of player's att
 **Version 7.3 (2018.12.14)**
 
 * Added consolecommand resetplayerdata (rpd): reset a player. Deletes .ttp, .map and .bak files of a player. Resetting him/her to new player state.
-* Added webapi interface: Resetregions / advanced claims on webmap make use of the new webapi, making it suitable for displaying reset/claim data on mulitiple server instances.
+* Added webapi interface: Resetregions / advanced claims on webmap make use of the new webapi, making it suitable for displaying reset/claim data on mulitiple server instances. Thanks to Alloc for the base code of his webapi.
 Make sure to update your map.js to hook into the new webapi. 
 
 

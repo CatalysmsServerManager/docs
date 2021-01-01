@@ -8,11 +8,24 @@ This page assumes that you have completed the basic setup process covered in the
 
 ## Custom commands
 
+### Create a teleport home and return
+
+Teleport home to bed(roll) and have the option to return to where you were before the home teleport
+
+In pseudo: remove any existing return waypoint -> add the current position as new return waypoint -> teleport player to bed(roll)
+
+`wpc remove return_${player.steamId};wpc add return_${player.steamId} ${player.positionX} ${player.positionY} ${player.positionZ};teleh ${player.steamId}`
+
+For the return command. 
+In pseudo: teleport the player to the saved return waypoint -> delete the saved return waypoint (one time use only)
+
+`mvw ${player.steamId} return_${player.steamId};wpc remove return_${player.steamId}`
+
 ### Spawn animals to hunt
 
 Spawn a bunch of animals so your players can get meat easily. Recommended to set a cost for this
 
-`multipleentityspawn ${entityId} 4 @ 81 81 81 84 84 83`
+`multipleentityspawn ${entityId} 4 @ 85 85 86 86 87 88`
 
 ### Spawn horde of zombies
 
@@ -57,7 +70,7 @@ These provide better protection than regular land claim blocks. This includes 2 
 
 `buffplayer ${entityId} firstAid; debuffplayer ${entityId} bleeding; sayplayer ${entityId} "Healed!!"`
 
-For healing players, Prisma has created a [Healme modlet](/assets/modlets/HealmeBuff.zip)
+For healing players, Prisma has created a Healme modlet [A18](/assets/modlets/HealmeBuff.zip) [A19](/assets/modlets/HealmeBuffA19.zip)
 You could add new custom commands, one for players like $healme and one for admins like $heal PLAYERNAME
 
 "healme" is the buff you need to call in your custom command. It will give a player godmode for a given time (in seconds) using the wait() command.
@@ -170,6 +183,10 @@ To detect special levels, you must have CPM installed as this creates the log li
 ## Cron jobs / server automation
 
 Scheduled commands include things like automated world saving, scheduled reboots, server announcements, etc. Most of the time, these will be administrative or behind-the-scenes functionality things that the users won't interact with. You will want to think about how often you execute these. It's fine to save the world every 30 minutes but you do not want the server to restart every 30 minutes!
+
+::: tip
+After creating a cron job, you will be able to test the command works successfully. By clicking the 'Run now' button next to the job, it will run the command on the server immediately. Be aware of this if you are running a reboot or reset command!
+:::
 
 ### Automatic server restart after 30 seconds, with one warning at the beginning of the timer.
 

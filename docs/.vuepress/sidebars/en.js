@@ -9,13 +9,18 @@ module.exports = {
       title: "Self hosting",
       children: [
         "/en/CSMM/self-host/installation",
+        "/en/CSMM/self-host/one-click",
+        "/en/CSMM/self-host/docker",
+        "/en/CSMM/self-host/host",
+        "/en/CSMM/self-host/configuration",
         "/en/CSMM/self-host/reverse-proxy",
-        "/en/CSMM/self-host/daemonizing"
+        "/en/CSMM/self-host/upgrading"
       ]
     },
     {
       title: "Configuration",
       children: [
+        "/en/CSMM/ingame-commands",
         "/en/CSMM/roles",
         "/en/CSMM/discord-integration",
         "/en/CSMM/GBL",
@@ -30,7 +35,8 @@ module.exports = {
       children: [
         "/en/CSMM/custom-commands",
         "/en/CSMM/hooks",
-        "/en/CSMM/advanced-feature-guide"
+        "/en/CSMM/advanced-feature-guide",
+        "/en/CSMM/advanced-feature-guide-chathook"
       ]
     },
     "/en/CSMM/catching-dupers",
@@ -50,7 +56,8 @@ module.exports = {
     },
     "/en/CPM/claimcreator",
     "/en/CPM/pvpve-server-configuration",
-    //"/en/CPM/version-history",
+    "/en/CPM/cpmsettings",
+    "/en/CPM/version-history",
     "/en/contributing"
   ],
   "/en/3SM/": [
@@ -65,6 +72,7 @@ module.exports = {
     "/en/7D2D/server-setup",
     "/en/7D2D/switching-to-beta-versions",
     "/en/7D2D/server-management",
+    "/en/7D2D/modding",
     "/en/7D2D/useful-scripts",
     "/en/contributing"
   ]

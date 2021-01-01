@@ -9,7 +9,17 @@ Advanced Claims are a CPM-specific feature intended to allow Admins a more granu
 
 ## Creating A Claim
 
-All advanced claims are created using the same two methods: either by specifying the 4 corners of the rectangle (individually or by using the p1/p2 syntax), or by specifying a player and then specifying a square-sided radius around them to create the claim in. Additionally, all claim commands follow the same general syntax, though certain claims have optional things at the beginning or end.
+All advanced claims are created using the same three methods: either by specifying the 4 corners of the rectangle (individually or by using the p1/p2 syntax), or by specifying a player and then specifying a square-sided radius around them to create the claim in or by using the ClaimCreator WebUI which is HIGHLY recommended for ease of use. Additionally, all claim commands follow the same general syntax, though certain claims have optional things at the beginning or end.
+
+## Special claim names
+
+You are free to choose any name for any type of claim. However, there are some special "tags" you can add to a claimname that will change its behaviour in special ways.
+
+"bmonly(fromHour-toHour)_" : when a claimname contains this "tag" it will become a claim that is only active during bloodmoons between the specified hours "fromHour-toHour". Example: bmonly(20-7)_NoEnemies: this will activate this claim every bloodday from 20:00 until after bloodmoon 07:00.
+
+PVP punishment activates when there is a notify claim with "pve" in the name AND a 3rd notify parameter is issued. The 3rd parameter can be used to fire (multiple) console command(s) at an offending player (spawn zeds, kick, ban, jail, kill, tp etc etc) for punishment. Check Advanced Claims (type Command) for syntax on commands. The mod will know a player killed a player even before the game itself does ^^. Enter,- and exitmessages are required within a PVE notify claim that has punishment. A logmessage will be written on punishment including victim and offender and their positions. This could be used to create a CSMM discord notification on PVP punishment.
+Example: ccc add PVEzone -10000 10000 10000 0 0 "notify:You are entering a PVE zone!:You are leaving a PVE zone!:kick ${entityId} 'You have been violating PVE rules.'"
+When adding NPF (Not Punish Friends) to the PVE zone claimname, any violation in that zone will not trigger punishment if killing an in-game friend.
 
 ## Understanding Claim Parameters
 
@@ -97,12 +107,20 @@ This is used for protecting player made structures/bases. The player that owns i
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel>
 ```
 
+accessLevel: permission level that is allowed to enter the claim
+
+whitelist: players that are allowed to enter the claim
+
 ### Reversed
 
 This is used for containing players in a specified area. Whitelisting players for a Reversed Advanced Claim will keep them within the boundaries of the claim like a forcefield. If they leave the area, they will be teleported back in.
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> reversed
 ```
+
+accessLevel: required but has no function in this claim
+
+whitelist: players that are not allowed to leave the claim
 
 ### Timed
 
@@ -111,12 +129,20 @@ Similar to a Normal claim, but for a specified amount of time. This was requeste
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> timed:<numbeOfHoursToLive>
 ```
 
+accessLevel: permission level that is allowed to enter the claim
+
+whitelist: players that are allowed to enter the claim
+
 ### Leveled
 
 Similar to a Normal claim, but with the option to define a 'top' and 'bottom' to the claim. A normal claim reaches from bedrock to heaven, but a Leveled claim has a specified height. Designed specifically to protect underground bases (with a normal claim, players walking on ground above the base would get teleported out without knowing what they intruded) or for bases that have public tunnels under them (with a normal claim, players wouldn't be able to use the tunnel under the protected base).
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> leveled:<YcoordHigh>,<YcoordLow>
 ```
+
+accessLevel: permission level that is allowed to always enter the claim
+
+whitelist: players that are allowed to always enter the claim
 
 ### Portal
 
@@ -125,9 +151,13 @@ Allows you to define an area as small as 1 block, along with a maximum trigger h
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> portal:<stepHeight>:<x>,<y>,<z>
 ```
 
+accessLevel: permission level that is allowed to always use the portal claim
+
+whitelist: players that are allowed to use the portal claim (do "ccc wl add claimname public" to make it a public portal)
+
 ### Hostilefree
 
-This is used for creating hostile free areas. All hostiles will despawn in this type of advanced claim.
+This is used for creating hostile free areas. All hostiles will despawn in this type of advanced claim. Sleepers inside this claim will not spawn.
 
 :::warning
 Traders are marked as hostile by default! If you do not want your traders to dissapear, consider using the [no hostile traders modlet](/assets/modlets/No_Hostile_Traders.zip)
@@ -136,6 +166,10 @@ Traders are marked as hostile by default! If you do not want your traders to dis
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> hostilefree
 ```
 
+accessLevel: required but has no function in this claim
+
+whitelist: has no function in this claim
+
 ### Openhours
 
 Similar to a Normal claim, but with assigned opening hours, like a trader. Particularly useful to protect lobby or trading areas from being overwhelmed of players attempt to hide there during horde night; set the opening hours to 0400 to 2200 and players will get teleported out if they attempt to enter outside the specified hours.
@@ -143,6 +177,9 @@ Similar to a Normal claim, but with assigned opening hours, like a trader. Parti
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> openhours:<openFrom>-<openTo>
 ```
 
+accessLevel: permission level that is allowed to always enter the claim
+
+whitelist: players that are allowed to always enter the claim
 
 ### Notify
 
@@ -152,11 +189,19 @@ ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <a
 ```
 Exit message is optional. If omitted, a chat message will only show on entering the claim.
 
+accessLevel: required but has no function in this claim
+
+whitelist: has no function in this claim
+
 ### Command
 
 Trigger one or multiple console commands when a player enter this claim area. The claim type must be enclosed in double quotes and parameters with spaces within each command must be enclosed in single quotes. Use semicolon ( ; ) to seperate commands. Below is an example shows all 3 supported placeholders (casesensitive): ${playerName}, ${entityId} and ${steamId}:
 
 `ccc add deathzone -10 10 10 -10 0 "command:say '${playerName} has entered the DeathZone!!! mwuhahahaha!';pm ${entityId} 'I wish you luck my friend. Lots of it...';spawnhorde ${steamId} 30"`
+
+accessLevel: permissionlevel for which the commands will NOT fire when inside claim.
+
+whitelist: has no function in this claim
 
 ### Playerlevel
 
@@ -164,9 +209,65 @@ This claim can be used to restrict/grant access to a claim by player level. Bui
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> "playerlevel:logicalExpression>"
 ```
+
+accessLevel: permission level that is allowed to always enter the claim
+
+whitelist: has no function in this claim
+
 ### LcbFree
 Control abillity to place LCB's within the boundaries of the lcbfree adv. claim. Allow to place LCB's by accesslevel and/or whitelist. If not allowed to place LCB, it will be removed and put back in player inventory. Use lcbfree as type when creating this advanced claim. Violation message is configurable in CpmStrings.xml (AdvClaims_LcbFree).
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> lcbfree
 ```
 
+accessLevel: permission level that is allowed to place landclaim blocks inside claim
+
+whitelist: players that are allowed to place landclaim blocks inside claim
+
+### AntiBlock
+Prevent configurable blocks being placed within the boundaries of the AntiBlock adv. claim. Allow certain blocks to be placed by accesslevel and/or whitelist. If not allowed to place a configured block, it will be removed instantly and the player get a message about it in chat. Use antiblock as type when creating this advanced claim. Violation message is configurable in CpmStrings.xml (AdvClaims_AntiBlock). When disallowing more than 1 block separate the blocknames with ; . Blocknames are casesensitive. You can use fblock to search and find exact blocknames.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> antiblock:block1;block2
+```
+Example for the type:
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> antiblock:woodFrameBlock;rebarFrameBlock
+```
+
+accessLevel: permission level that is allowed to place anti blocks inside claim
+
+whitelist: players that are allowed to place anti blocks inside claim
+
+### Reset
+Reset areas on the map on chunk(!) level. Use this claim to very precisely mark areas you want to reset on demand. Use consolecommand rac(resetadvclaim) to actually reset the chunks that are marked with this claim. When creating this claim with ccc consolecommand or CPM Web UI the claim borders will automatically snap to the nearest chunk border. That way the claim always shows exactly what is going to be reset. Advise: resetting chunks is very memory consuming. Better to have multiple smaller claims (city/town level) than few big claims as they will consume more memory when processed. Be aware that the world will be in a time vacuum during any reset. Online players will experience it like X-men member Quicksilver. Use parameter kicklockreboot on consolecommand rac to kick all online players, lock the server during reset and reboot when done.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> reset
+```
+
+accessLevel: required but has no function in this claim
+
+whitelist: has no function in this claim
+
+### ProBlock
+Prevent placements of blocks other than configurable problocks within the boundaries of the ProBlock adv. claim. Allow non-problocks to be placed by accesslevel, claimownership and/or whitelist. If not allowed to place a configured block, it will be removed instantly and the player get a message about it in chat. Use problock as type when creating this advanced claim. Violation message is configurable in CpmStrings.xml (AdvClaims_ProBlock). When disallowing more than 1 block separate the blocknames with ; . Blocknames are casesensitive. You can use fblock to search and find exact blocknames.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> problock:block1;block2
+```
+Example for the type:
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> problock:woodFrameBlock;rebarFrameBlock
+```
+
+accessLevel: permission level that is allowed to place blocks that are not problocks inside claim
+
+whitelist: players that are allowed to place blocks that are not problocks inside claim
+
+### Landclaim
+Only claimowners, whitelisted players and accesslevel allowed players can place any block within this adv. claim. Type= "landclaim". Violation string configurable in CpmStrings.xml (AdvClaims_Landclaim). Auto giveback to placing player.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> landclaim
+```
+
+accessLevel: permission level that is allowed to place any blocks inside claim
+
+whitelist: players that are allowed to place any blocks inside claim
