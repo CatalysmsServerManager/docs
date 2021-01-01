@@ -28,6 +28,11 @@ jobs:
       - run: npm ci
       - name: get CPM commands
         run: npm run commands:cpm
+        env:
+          CPM_IP: ${{secrets.CPM_IP}}
+          CPM_PORT: ${{secrets.CPM_PORT}}
+          CPM_ADMINUSER: ${{secrets.CPM_ADMINUSER}}
+          CPM_ADMINTOKEN: ${{secrets.CPM_ADMINTOKEN}}
       - run: npm run build
       - uses: EndBug/add-and-commit@v6
         with:
