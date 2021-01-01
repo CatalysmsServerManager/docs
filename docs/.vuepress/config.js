@@ -17,6 +17,9 @@ module.exports = {
   plugins: [
     'seo',
     "@vuepress/back-to-top",
+    ['sitemap', {
+      hostname: 'https://docs.csmm.app'
+    }],
   ],
   themeConfig: {
     yuu: {
