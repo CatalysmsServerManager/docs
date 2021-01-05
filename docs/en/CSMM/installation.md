@@ -1,5 +1,9 @@
 # Quick Start Guide
 
+::: warning
+Free hosting of CSMM is being discontinued. [Forum post](https://community.7daystodie.com/topic/5797-csmm-cloud-hosted-server-manager/page/15/?tab=comments#comment-415249) or join [the Discord](https://catalysm.net/discord) for more info.
+:::
+
 ## Video tutorial
 
 This video tutorial will show you the basics of adding a server.
