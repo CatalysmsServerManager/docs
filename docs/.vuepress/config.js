@@ -14,26 +14,12 @@ module.exports = {
       description: "Documentatie voor de web based 7 days to die server manager"
     } */
   },
-  ga: "UA-104087733-8",
   plugins: [
-    ['vuepress-plugin-code-copy', {
-      selector: 'div[class*="language-"] pre',
-    }],
     'seo',
     "@vuepress/back-to-top",
-    "vuepress-plugin-smooth-scroll",
-    [
-      "vuepress-plugin-medium-zoom",
-      {
-        selector: ".content__default img"
-      }
-    ],
-    [
-      '@vuepress/google-analytics',
-      {
-        'ga': 'UA-104087733-8'
-      }
-    ]
+    ['sitemap', {
+      hostname: 'https://docs.csmm.app'
+    }],
   ],
   themeConfig: {
     yuu: {

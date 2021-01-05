@@ -247,3 +247,27 @@ ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <a
 accessLevel: required but has no function in this claim
 
 whitelist: has no function in this claim
+
+### ProBlock
+Prevent placements of blocks other than configurable problocks within the boundaries of the ProBlock adv. claim. Allow non-problocks to be placed by accesslevel, claimownership and/or whitelist. If not allowed to place a configured block, it will be removed instantly and the player get a message about it in chat. Use problock as type when creating this advanced claim. Violation message is configurable in CpmStrings.xml (AdvClaims_ProBlock). When disallowing more than 1 block separate the blocknames with ; . Blocknames are casesensitive. You can use fblock to search and find exact blocknames.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> problock:block1;block2
+```
+Example for the type:
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> problock:woodFrameBlock;rebarFrameBlock
+```
+
+accessLevel: permission level that is allowed to place blocks that are not problocks inside claim
+
+whitelist: players that are allowed to place blocks that are not problocks inside claim
+
+### Landclaim
+Only claimowners, whitelisted players and accesslevel allowed players can place any block within this adv. claim. Type= "landclaim". Violation string configurable in CpmStrings.xml (AdvClaims_Landclaim). Auto giveback to placing player.
+```
+ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> landclaim
+```
+
+accessLevel: permission level that is allowed to place any blocks inside claim
+
+whitelist: players that are allowed to place any blocks inside claim

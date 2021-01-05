@@ -10,6 +10,14 @@ CPM has a lot of flexibility when it comes to how it behaves and what features a
 
 Prevent or allow players to connect that have UTF-8 charset characters in their name.
 
+`<SpecialCharacters>!@#$%^&amp;*(),.?":;|&lt;&gt;'</SpecialCharacters>`
+
+Define explicit special characters that are not allowed in playernames. Beware of xml breaking characters. They need to be escaped.
+
+`<SpecialCharactersNameBlock_Enabled>false</SpecialCharactersNameBlock_Enabled>`
+
+Enable/Disable preventing players with special characters in their name from connecting.
+
 `<Bundo_HistorySize>5</Bundo_HistorySize>`
 
 The number of bundo's that are stored and you can do after prefab commands like fblock, brender, bdup, brepblock etc.
@@ -194,7 +202,11 @@ Logline example for using for custom CSMM discord notification:
 
 `<QuestPoiProtection_Enabled>true</QuestPoiProtection_Enabled>`
 
-Quests wont activate if there is a bedroll/lcb in the quest poi. Enable protection and players cannot place bedrolls/lcb's in poi's that can be selected as questpoi by the game.
+Quests wont activate if there is a bedroll/lcb in the quest poi. Enable protection and players cannot place bedrolls/lcb's in poi's that can be selected as questpoi by the game. Exceptions per POI or POI type can be added in /Saves/ResetRegions/QuestPoi_Exceptions.txt
+
+`<AllPoiProtection_Enabled>false</AllPoiProtection_Enabled>`
+
+Enable protection and players cannot place bedrolls/lcb's in ALL poi's on map. Exceptions per POI or POI type can be added in /Saves/ResetRegions/AllPoi_Exceptions.txt
 
 `<ResetPrefabs_ExcludeClaimedPrefabs>true</ResetPrefabs_ExcludeClaimedPrefabs>`
 
@@ -207,6 +219,10 @@ Shutdownba console command is bloodmoon aware. Here you define at which hour dur
 `<ShutdownBA_DelayRestartAfterBloodmoonUntil>10</ShutdownBA_DelayRestartAfterBloodmoonUntil>`
 
 The hour after bloodmoon that the delayed server shutdown will kick in again after a delayed shutdownba.
+
+`<ShutdownBA_MinimumUptimeRequired>0</ShutdownBA_MinimumUptimeRequired>`
+
+The minimum amount of minutes the server has to be up before shutdownba will reboot the server. 0 means reboot without considdering the server uptime. Any number higher than 0 will define the number of minutes the server has to be up before the shutdownba will actually reboot the server.
 
 `<Vehicles_RemoveOnRestart>false</Vehicles_RemoveOnRestart>`
 
