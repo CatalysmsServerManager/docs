@@ -1,5 +1,9 @@
 # Quick Start Guide
 
+::: warning
+Free hosting of CSMM is being discontinued. Please check the Discord for more info.
+:::
+
 ## Video tutorial
 
 This video tutorial will show you the basics of adding a server.
