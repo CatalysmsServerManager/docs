@@ -10,7 +10,7 @@ The image has been tested to deploy successfully on a 1GB RAM droplet, but may b
 :::
 
 
-Once your image is deployed, you can SSH into the server. If you do not already have a preferred SSH application, you can download Putty [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+Once your image is deployed, you can SSH into the server. If you do not already have a preferred SSH application, you can [download PuTTY here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
 `ssh root@your_droplet_ip`
 
@@ -20,4 +20,4 @@ If at any point you encounter an error that crashes the installation guide, you 
 
 If you do not already have a domain name you wish to use for CSMM, you can create one for free at [Duck DNS](https://www.duckdns.org/).
 
-After this, CSMM should be running on the domain you specified!
+After this, CSMM should be running on the domain you specified! You can proceed to add your first 7 Days to Die server without any further configuration.
