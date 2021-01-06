@@ -21,9 +21,16 @@ If you installed CSMM with Docker compose, you can add the following service to 
       - ./caddy/data:/data/caddy:Z
 ```
 
-If you'd rather run Caddy directly on the host, choose an [installation method from their site](https://caddyserver.com/docs/install). After that, you can create a reverse proxy with
+If you'd rather run Caddy directly on the host, choose an [installation method from their site](https://caddyserver.com/docs/install). We recommend using the apt/dnf packages for your distro because they will automatically install Caddy as a service.
 
-`caddy reverse-proxy --to 127.0.0.1:1337 --from csmm.yourdomain.com`
+Once Caddy is installed, it will have created a default config file in `/etc/caddy/Caddyfile`. Take a look at the different options. We just want to reverse proxy CSMM, so you can replace everything currently in that file with
+
+```
+csmm.yourdomain.com
+
+reverse_proxy 127.0.0.1:1337
+```
+After that, reload the service to apply the new config and surf to csmm.yourdomain.com!
 
 ## Nginx
 
