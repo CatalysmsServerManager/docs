@@ -2,6 +2,29 @@
 
 Since CSMM requires HTTPS to set session cookies, it is recommended to reverse proxy the application with your favourite webserver. Included here are example configs for webservers.
 
+## Caddy
+
+If you are new to webservers, we recommend Caddy for its ease of use. Caddy will default to security best practices and automatically provision SSL certificates.
+
+If you installed CSMM with Docker compose, you can add the following service to your compose file
+
+```yml
+  caddy:
+    restart: unless-stopped
+    image: caddy
+    ports:
+      - 80:80
+      - 443:443
+    command: caddy reverse-proxy --to csmm:1337 --from csmm.yourdomain.com
+    volumes:
+      - ./caddy/config:/config/caddy:Z
+      - ./caddy/data:/data/caddy:Z
+```
+
+If you'd rather run Caddy directly on the host, choose an [installation method from their site](https://caddyserver.com/docs/install). After that, you can create a reverse proxy with
+
+`caddy reverse-proxy --to 127.0.0.1:1337 --from csmm.yourdomain.com`
+
 ## Nginx
 
 You can use the [Digital Ocean nginx config tool](https://www.digitalocean.com/community/tools/nginx?domains.0.server.domain=csmm.example.com&domains.0.php.php=false&domains.0.reverseProxy.reverseProxy=true&domains.0.reverseProxy.proxyPass=http%3A%2F%2F127.0.0.1%3A1337&domains.0.routing.root=false) to quickly and easily configure nginx
