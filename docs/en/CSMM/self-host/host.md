@@ -7,6 +7,9 @@ It is recommended to choose a server with atleast 2GB of RAM (if you are using l
 - [DigitalOcean - \$100 credit](https://m.do.co/c/9053905671f8)
 - [Vultr - \$50 credit](https://www.vultr.com/?ref=7942157-4F)
 
+::: warning
+Installing CSMM straight on the host is possible but can cause all sorts of weird configuration issues, outdated packages and in general is much harder. We recommend using a different method if you are not comfortable with reading error messages and figuring things out via Google.
+:::
 
 
 ## Installing Node.js
