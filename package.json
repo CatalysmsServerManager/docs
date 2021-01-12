@@ -8,7 +8,7 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "commands": "run-p commands:*",
-    "commands:cpm": "node scripts/getCPMCommands.js",
+    "commands:7d2d": "node scripts/get7D2DCommands.js",
     "commands:csmm": "./scripts/getCSMMCommands.sh"
   },
   "keywords": [

@@ -58,6 +58,8 @@ CPM has a built in function to list all avalaible console commands (cpm-help), w
 help <command>
 ```
 
+Following here is a reference list of **all commands** included with CPM, Allocs fixes and the base game. 
+
 Also available [as JSON](/assets/commands/cpmCommands.json)
 
 <cpm-commands />
