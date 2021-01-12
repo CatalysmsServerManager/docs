@@ -6,7 +6,7 @@ title: CSMM Patrons Mod (CPM)
 
  CSMM Patron's Mod (CPM) is a companion mod to CSMM. Its free to use and can be used without CSMM. CPM is a forked extension of Coppi's Mod (used and continued under a new name with permission of original author Danilo Coppi), extending the functionality of existing commands, and adding new commands and features. CPM - Features like the Advanced Claims, Claim Creator WebUI, AntiCheat (Damage,- SpectatorMode,- GodMode,- and Flyingdetection) Reset Regions, Location Tracking, Protective Bubble, Nighttime Announcer, Sleeper control, Falling blocks control, Trading system, Questpoi Protection, Reset RWG Prefabs, Chatcoloring and more. These features include both console commands, as well as chat commands. Use it to extend the possibilities of what you can do with CSMM.
 
- [Download](https://cpm.7d2d.download/) latest CPM.
+ [Download](http://cpm.7d2d.download/) latest CPM.
 
 # Installation
 
