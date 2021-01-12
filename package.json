@@ -20,7 +20,7 @@
   "license": "ISC",
   "devDependencies": {
     "7daystodie-api-wrapper": "^1.5.6",
-    "@vuepress/plugin-back-to-top": "^1.7.1",
+    "@vuepress/plugin-back-to-top": "^1.8.0",
     "dotenv": "^8.2.0",
     "npm-run-all": "^4.1.5",
     "vuepress": "^1.8.0",
