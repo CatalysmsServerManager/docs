@@ -56,7 +56,7 @@ The number of bundo's that are stored and you can do after prefab commands like 
 
 `<ChatCommandPermissions_bed>0</ChatCommandPermissions_bed>`
 
-Set permissionlevel for all available CPM chatcommands. For free for all use permission level 1000.
+Set permissionlevel for all available CPM chatcommands. For free for all use permission level 1000. To completely disable a chatcommand use permission level -1.
 
 `<CPMPrefix>/</CPMPrefix>`
 
