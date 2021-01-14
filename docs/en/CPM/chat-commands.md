@@ -2,7 +2,7 @@
 
 _Starting with CPM 5.28, the CPM chat command prefix is configurable by using the [console command](/en/CPM/console-commands.html)_ cpmprefix. The default prefix is / for all versions.
 
-The chat commands are available in two varieties: Admin commands, and Player commands. By default, all Admin commands require Level 0 access in order to execute them. You can use the 'changechatpermissions' (ccp) command to adjust the access level required for each command. This allows you to grant Players access to an Admin command, and allows you to prevent Players from using a command they normally have access to.
+The chat commands are available in two varieties: Admin commands, and Player commands. By default, all Admin commands require Level 0 access in order to execute them. You can use the 'changechatpermissions' (ccp) command to adjust the access level required for each command. This allows you to grant Players access to an Admin command, and allows you to prevent Players from using a command they normally have access to. You can completely disable a chatcommand by assigning permission -1.
 
 [[toc]]
 
