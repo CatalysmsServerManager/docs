@@ -1,5 +1,9 @@
 # Version History
 
+**Version 18.6 A19.3 b6 Stable (13-01-2021)**
+
+- Removed CPM chatcommand exclusivity. Added ability to disable CPM chatcommands. Set permission to -1 (with ccp or in CpmSettings.xml) and the chatcommand of choice is disabled. Now you can use CPM chatcommand names within CSMM without conflicts.
+
 **Version 18.5 A19.3 b6 Stable (29-12-2020)**
 
 - Bundled CPM WebUI 1.7.3: fixed permission handler to break menu icon because of casesensitivity of permissions. Permissions in cpmcc_permissions.xml now get applied regardless of case. This will ensure the menu icon to show.

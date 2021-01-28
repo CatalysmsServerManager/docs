@@ -16,6 +16,25 @@ To upgrade the containers, you must pull the new version.
 
 You can get the new files the same way you did when installing. Usually this means a `git pull` or `git checkout <tag>`.
 
+
+```
+# Install dependencies
+npm ci --only=prod
+# Run database migrations
+npm run db:migrate
+```
+
 ## One-click
 
-// TODO
+
+The systemd service will automatically pull a new version on restart
+
+```
+sudo service csmm restart
+```
+
+If you'd like to force a pull you can use
+
+```
+sudo docker pull catalysm/csmm:${version}
+```
