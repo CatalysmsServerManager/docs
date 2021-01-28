@@ -23,11 +23,11 @@ You may want to use a lower value for the chance. The value `100` specified here
 
 ## Removing the default claim
 
-We now need to create a hook which will identify the claim that is created by Deadly Air Drops, and remove it.
-
-To generate this log line, we actually need to run a test server and have a supply drop spawn. If you want to follow along with this for yourself, you'll either need a test server instance OR to have your production server run for long enough that an air drop spawns automatically. There is a console command to spawn an airdrop on the player, but this does not use the same spawner and as a result, does not trigger the Deadly Air Drop code.
+We now need to create a hook which will identify the claim that is created by Deadly Air Drops, and remove it. To generate this log line, we actually need to run a test server and have a supply drop spawn. If you want to follow along with this for yourself, you'll either need a test server instance OR to have your production server run for long enough that an air drop spawns automatically. There is a console command to spawn an airdrop on the player, but this does not use the same spawner and as a result, does not trigger the Deadly Air Drop code.
 
 If you don't want to go through this yourself, you can trust me: the log line looks like this:
+
+`2021-01-28T14:35:58 18414.761 INF Executing command 'ccc add 629121 -1318 -1298 906 886 -1 "command:pm2 Deadly Air Drop ${entityId} 'You are under attack!';mes ${entityId} 15 @ 24 21 18 12 18;ccc remove 629121"'`
 
 
 
