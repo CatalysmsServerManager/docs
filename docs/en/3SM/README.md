@@ -5,7 +5,7 @@ title: 3rdshift mod
 # 3rdshift mod
 3rdshift mod is a server side mod with a few features to enhance gameplay. Allocs server fixes are required to run.
 
-Download current version [here](https://drive.google.com/file/d/1WZb1edcR23huiqBhdWHOpF1K8y0zLIew/) (4.0 - for Alpha 19 only)
+For download details, please [join the discord](https://catalysm.net/discord/)
 
 ## Current features    
 - Check for bad items (cbi) - checks players bags and belt for items that they shouldn't be allowed to have like admin tools. use help cbi in console for more help or check console command page.
