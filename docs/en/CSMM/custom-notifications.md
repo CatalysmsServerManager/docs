@@ -32,9 +32,9 @@ CSMM custom notifications support named captures, this means you can easily extr
 `/\[CSMM_Patrons\]entityKilled: (?<playerName>.*) \((?<steamId>\d{17})\) killed zombie (?<zombieType>zombieScreamer) with (?<weapon>.*)/`
 
 
-![](/assets/images/CSMM/custom-notifications/named-capture-1.png)
+![Example config](/assets/images/CSMM/custom-notifications/named-capture-1.png)
 
 By adding these named captures, we can now use that info in our message: `Wow! ${playerName} just totally destroyed a ${zombieType} with a ${weapon}`
 
-![](/assets/images/CSMM/custom-notifications/named-capture-2.png)
+![Example result](/assets/images/CSMM/custom-notifications/named-capture-2.png)
 
