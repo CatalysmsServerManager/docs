@@ -23,6 +23,7 @@ module.exports = {
         "/en/CSMM/ingame-commands",
         "/en/CSMM/roles",
         "/en/CSMM/discord-integration",
+        "/en/CSMM/custom-notifications",
         "/en/CSMM/GBL",
         "/en/CSMM/max-ping-kicker",
         "/en/CSMM/country-ban",
