@@ -1,5 +1,9 @@
 # Version History
 
+**Version 18.7 A19.3 b6 Stable (A19.4 b3 Experimental Compatible) (21-02-2021)**
+
+- added consolecommand fixdeathloop (fdl): fixes the most common cause for a player having a deathloop. Use "fdl steamId analyse" to check if the deathloop is fixable by this command. If analysis returns fixable, do "fdl steamId fix" to flip the bytes in ttp to fix the corruption.
+
 **Version 18.6 A19.3 b6 Stable (13-01-2021)**
 
 - Removed CPM chatcommand exclusivity. Added ability to disable CPM chatcommands. Set permission to -1 (with ccp or in CpmSettings.xml) and the chatcommand of choice is disabled. Now you can use CPM chatcommand names within CSMM without conflicts.
