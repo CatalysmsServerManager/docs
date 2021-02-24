@@ -1,6 +1,6 @@
 # Version History
 
-**Version 18.6 A19.3 b6 Stable (13-01-2021)**
+**Version 18.6 A19.3 b6 Stable (A19.4 b7 Experimental Compatible) (13-01-2021)**
 
 - Removed CPM chatcommand exclusivity. Added ability to disable CPM chatcommands. Set permission to -1 (with ccp or in CpmSettings.xml) and the chatcommand of choice is disabled. Now you can use CPM chatcommand names within CSMM without conflicts.
 
