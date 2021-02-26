@@ -177,6 +177,8 @@ Similar to a Normal claim, but with assigned opening hours, like a trader. Parti
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> openhours:<openFrom>-<openTo>
 ```
 
+Ex: `ccc add traderSpot -150 225 50 -300 1 openHours:6-14` (only use the nr. of hours like 4-17, 11-4, 22-11)
+
 accessLevel: permission level that is allowed to always enter the claim
 
 whitelist: players that are allowed to always enter the claim
