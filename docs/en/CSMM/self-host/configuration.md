@@ -16,6 +16,10 @@ Collect the following values from the page:
 - Client secret
 - Bot token
 
+If you want to sync roles between CSMM and Discord, make sure you enable the server members intent
+
+![server members intent](/assets/images/CSMM/discordIntegration/serverMembersIntent.png)
+
 Finally, you must also set a redirect URL for Oauth2 authentication. This is done in the "Oauth2" section of Discord.
 
 ![Discord auth redirect](/assets/images/CSMM/discordIntegration/discord-redirect.png)
