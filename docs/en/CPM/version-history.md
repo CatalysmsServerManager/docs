@@ -1,6 +1,6 @@
 # Version History
 
-**Version 18.8 A19.3 b6 Stable (A19.4 b7 Experimental Compatible) (27-02-2021)**
+**Version 18.8 A19.4 Stable (27-02-2021)**
 
 * Added consolecommands getblimp and gethelicopter: use for custom CSMM commands to let players get their custom vehicles back that are based on the blimp (jetpack) and/or helicopter class.
 
