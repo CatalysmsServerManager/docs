@@ -22,7 +22,7 @@ Advanced examples:
 
 ### each loops
 
-To loop through every item in an array, e.g. the list of players currently online, use the `{{each}}` command. Within this loop, variables related to the current item can be called using `{{this.variable}}`. For example:
+To loop through every item in an array, e.g. the list of players currently online, use the <code v-pre>{{ each }}</code> command. Within this loop, variables related to the current item can be called using <code v-pre>{{this.variable}}</code> . For example:
 
 ```handlebars
 {{#each server.onlinePlayers}}
@@ -42,7 +42,7 @@ Sorting can be ascending or descending. For descending order, replace the `"asc"
 
 ### if .. else
 
-Conditional statements can be used to run a command only in certain cirscumstances, or different commands for different circumstances.
+Conditional statements can be used to run a command only in certain circumstances, or different commands for different circumstances.
 
 ```handlebars
 {{#if (gt player.level 100)}}
@@ -52,7 +52,7 @@ Conditional statements can be used to run a command only in certain cirscumstanc
 {{/if}}
 ```
 
-Note that you do not need to close the `\{\{else\}\}` section. You can chain multiple `\{\{else\}\}` sections with different conditions - the system will use the first match.
+Note that you do not need to close the <code v-pre>{{else}}</code>  section. You can chain multiple <code v-pre>{{else}}</code> sections with different conditions - the system will use the first match.
 
 ```handlebars
 {{#if (gt player.zombieKills 1000)}}
@@ -74,25 +74,25 @@ Conditions:
 
 #### and/or conditions
 
-To test against multiple conditions at once, `\{\{#if\}\}` statements can contain `(and)` or `(or)` statements. These statements work as follows:
+To test against multiple conditions at once, <code v-pre>{{#if}}</code> statements can contain `(and)` or `(or)` statements. These statements work as follows:
 
-- `\{\{and (one condition) (second condition)\}\}` - both conditions must be true
-- `\{\{or (one condition) (alternate condition)\}\}` - only condition must be true; if both are true the result is still true.
+- <code v-pre>{{and (one condition) (second condition)}}}</code> - both conditions must be true
+- <code v-pre>{{or (one condition) (alternate condition)}}</code> - only condition must be true; if both are true the result is still true.
 
-To use these inside an `\{\{#if\}\}` statement, the conditions must be nested:
+To use these inside an <code v-pre>{{#if}}</code>  statement, the conditions must be nested:
 
-`\{\{#if (or (gt player.level 100) (gt player.zombieKills 1000))\}\}` - this returns true if the player is above level 100, or has more than 1000 zombie kills.
+<code v-pre>{{#if (or (gt player.level 100) (gt player.zombieKills 1000))}}</code> - this returns true if the player is above level 100, or has more than 1000 zombie kills.
 
 ### mathematical operations
 
 It is possible to manipulate the values of variables on the fly. The following operations are available:
 
-* Addition: `\{\{sum a b\}\}` returns `a + b`
-* Subtraction: `\{\{subtract a b\}\}` returns `a - b`
-* Mutiplication: `\{\{multiply a b\}\}` returns `a * b`
-* Division: `\{\{divide a b\}\}` returns `a / b`
-* Modulus: `\{\{mod a b\}\}` returns the whole number remainder of the result of `a / b`
-* Rounding: `\{\{round a decimals\}\}` returns `a` rounded to the number of decimals specified e.g. `\{\{round (divide 54 7) 2\}\}` returns `7.71`
+* Addition: <code v-pre>{{sum a b}}</code>  returns `a + b`
+* Subtraction: <code v-pre>{{subtract a b}}</code>  returns `a - b`
+* Multiplication: <code v-pre>{{multiply a b}}</code>  returns `a * b`
+* Division: <code v-pre>{{divide a b}}</code>  returns `a / b`
+* Modulus: <code v-pre>{{mod a b}}</code>  returns the whole number remainder of the result of `a / b`
+* Rounding: <code v-pre>{{round a decimals}}</code>  returns `a` rounded to the number of decimals specified e.g. <code v-pre>{{round (divide 54 7) 2}}</code>  returns `7.71`
 
 Note that ensuring proper order of operation is important. The system will not check PEMDAS; you should use braces appropriately to make sure the operations are performed in the desired order.
 
@@ -127,7 +127,7 @@ pm {{player.steamId}} "The following high-level players are online:
 {{/each}}"
 ```
 
-Note that because the `{{each}}` loop does not contain a ; the system will generate one long PM with each player that matches the condition, rather than a bunch of PMs. To send multiple PMs, the `pm` command should be moved inside the loop, and the command ended with a ; before the loop repeats.
+Note that because the <code v-pre>{{ each }}</code> loop does not contain a ; the system will generate one long PM with each player that matches the condition, rather than a bunch of PMs. To send multiple PMs, the `pm` command should be moved inside the loop, and the command ended with a ; before the loop repeats.
 
 ```handlebars
 pm {{player.steamId}} "The following high-level players are online:";
@@ -167,7 +167,7 @@ Using a hook based on the "player death" event, check their zombie and player ki
 ### List players' kills, deaths, and kill-life ratio
 
 ```handlebars
-say "Top 5 players online by Kills:";
+say "Top 5 players online by kills:";
 {{#each (sort server.onlinePlayers "zombieKills" "desc")}}
     {{#if (lt @index 5)}}
         say "{{sum @index 1}}: {{this.name}}";
@@ -178,7 +178,7 @@ say "Top 5 players online by Kills:";
 ```
 
 Notes:
-Note the `@index` variable used. This counts the iterations of the `{{each}}` loop. The first iteration is 0, so to limit to the first 5 iterations we use `(lt @index 5)` rather than `lte` - index 5 would be the 6th iteration.
+Note the `@index` variable used. This counts the iterations of the <code v-pre>{{each}}</code> loop. The first iteration is 0, so to limit to the first 5 iterations we use `(lt @index 5)` rather than `lte` - index 5 would be the 6th iteration.
 
 When displaying the player's rank in the list, the index is increased by 1. This displays the rank as 1-5, rather than 0-4.
 
