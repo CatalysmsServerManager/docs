@@ -2,6 +2,10 @@
 
 Handlebars is an extension to the standard commands available in CSMM. Its use allows loops, if-else logic, and mathematical functions. It can be used anywhere in CSMM that will send commands to the 7D2D server: custom commands, hooks, automation, banned items, vote rewards etc.
 
+:::tip
+Use the [Playground](https://catalysmsservermanager.github.io/custom-commands-playground/) for easier testing!
+:::
+
 Features:
 * each loops
 * if .. else
