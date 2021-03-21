@@ -20,6 +20,8 @@ The examples will assume you have set \$ as the prefix. You can change the prefi
 
 To create a custom command, you must choose a name for your command. This is what players will type to trigger the command. For example: you select "helloworld" as name, then you will type "\$helloworld" ingame to trigger it. Next, you need to enter the command(s) that will be executed on your server. This can be any console command that is available from remote sources. (layman's terms: if you can execute the command via telnet, you can use it).
 
+`say "Hello world!"`
+
 Now you can go ingame and try it out!
 
 ::: warning
@@ -28,13 +30,15 @@ Note: If a custom command has same name as an existing CSMM command, the existin
 
 ## Built-in variables
 
-You can add dynamic values to your commands. This is useful if you need to do something specific to the executing player like PMing the reply instead of a global message. Let's extend our hello world command.Every variable looks like this: "${variableName}". This might look familiar to people who know about template literals. When a command is executed, CSMM will look for exact matches to the built-in variables (capitalization matters!). If found, it will replace the variable with the value relating to the executing player. So if you use ${steamId}, it will be replaced by the Steam ID of the player who triggered the command.
+You can add dynamic values to your commands. This is useful if you need to do something specific to the executing player like PMing the reply instead of a global message. Let's extend our hello world command. Every variable looks like this: "${variableName}". This might look familiar to people who know about [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). When a command is executed, CSMM will look for exact matches to the built-in variables (capitalization matters!). If found, it will replace the variable with the value relating to the executing player. So if you use ${player.steamId}, it will be replaced by the Steam ID of the player who triggered the command.
+
+`pm ${player.steamId} "Hello world"`
 
 Great! The server sent us a PM instead of displaying the message to everyone on the server.
 
-### New variables
+### Variables
 
-CSMM now uses a new syntax for variables. You can access these variables with
+CSMM populates the data of custom commands, you can access these variables with
 
 - \${date},
 - \${time},
@@ -96,17 +100,23 @@ See the list below for a list of all available variables with examples of their 
 
 To execute several commands inside one custom command, you have to separate them with ";".
 
+`pm ${player.steamId} "Hello world"; pm ${player.steamId} "Here's a second command!"`
+
 That's it! You're done! You now have a grasp on the basics. Check out some configuration examples if you need some inspiration.
 
 # Advanced
 
 ## Custom arguments
 
-Let's make our hello world command a bit more dynamic!
+Let's make our hello world command a bit more dynamic and add the players name to the greeting.
+
+![custom command argument](/assets/images/CSMM/custom-commands/custom-command-argument.png)
 
 Argument name is what you will use to substitute the value in your command. In the example, we will use \${name}
-Argument type is used for validation (currently only text works, still a WIP )
+Argument type is used for validation
 An argument can be required or optional. If you deselect required, you must provide a default value.
+
+`pm ${player.steamId} "Hello ${name}"`
 
 As you can see, when we pass a parameter "dave" to the command, it will say hello to Dave! When we do not add a parameter, it will use the default value.
 
@@ -146,7 +156,7 @@ For example, "\${randList:apple,orange,grape} \${randList:apple,orange,grape}" c
 ## Legacy variables
 
 ::: warning
-These were the first variables added to CSMM. They are still in the application for backwards compatibility, but it is recommended to use the new syntax
+These were the first variables added to CSMM. They are still in the application for backwards compatibility, but it is recommended to use the new syntax (eg `${player.steamId}`)
 :::
 
 - \${steamId}
