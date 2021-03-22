@@ -23,6 +23,7 @@ module.exports = {
         "/en/CSMM/ingame-commands",
         "/en/CSMM/roles",
         "/en/CSMM/discord-integration",
+        "/en/CSMM/custom-notifications",
         "/en/CSMM/GBL",
         "/en/CSMM/max-ping-kicker",
         "/en/CSMM/country-ban",
@@ -34,6 +35,7 @@ module.exports = {
       title: "Advanced",
       children: [
         "/en/CSMM/custom-commands",
+        "/en/CSMM/advanced-handlebars",
         "/en/CSMM/hooks",
         "/en/CSMM/advanced-feature-guide",
         "/en/CSMM/advanced-feature-guide-chathook"
