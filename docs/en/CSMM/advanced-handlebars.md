@@ -1,4 +1,6 @@
-## Handlebars
+---
+title: Handlebars
+---
 
 Handlebars is an extension to the standard commands available in CSMM. Its use allows loops, if-else logic, and mathematical functions. It can be used anywhere in CSMM that will send commands to the 7D2D server: custom commands, hooks, automation, banned items, vote rewards etc.
 
@@ -6,21 +8,7 @@ Handlebars is an extension to the standard commands available in CSMM. Its use a
 Use the [Playground](https://catalysmsservermanager.github.io/custom-commands-playground/) for easier testing!
 :::
 
-Features:
-* each loops
-* if .. else
-* mathematical operations
-* nested commands
-
-Basic examples:
-* Give all players an item
-* List players above a certain level
-* Restrict a command to players over a certain level
-
-Advanced examples:
-* Give a player an item if they die before getting their first kill
-* List players' kills, deaths, and kill-life ratio
-* Set chat color and admin levels based on CSMM roles
+[[toc]]
 
 ## Features
 
