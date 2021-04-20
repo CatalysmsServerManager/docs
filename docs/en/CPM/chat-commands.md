@@ -132,7 +132,13 @@ Reports all living players within the radius defined by the _loctrack_ _neardist
 
 /day7
 
-Reports the next bloodmoon, number of players, number of zombies and server fps in chat
+Reports the next bloodmoon, number of players, number of zombies and server fps in chat.
+
+You can disable the number of zombies and fps stats reporting by setting them to "off" in CpmStrings.xml:
+
+Zombiecount: <Day7_Stats>off</Day7_Stats>
+
+Server FPS: <Day7_Fps>off</Day7_Fps>
 
 /bag
 
