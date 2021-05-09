@@ -1,5 +1,11 @@
 # Version History
 
+**Version 19.0 A19.4 Stable (09-05-2021)**
+
+* Changed consolecommand db (deactivatebedroll): added auto chunkloader and bedroll block remover. Removed requirement for owning player to be online.
+
+* Changed consolecommand w2l (write2log): added parameter "splitlog" for usage with "w2l command [command]". When writing output of a command to log it will by default create one logline for all output of the command. When using parameter "splitlog" there will be one logline created for every output line of the command. This makes using regex on the output with custom CSMM hooks, commands and handlebars way easier if there are multiple lines of output for a command.
+
 **Version 18.9 A19.4 Stable (12-04-2021)**
 
 * Added option for logfile timestamping: for serverowners that have a server start mechanism in place that will overwrite the logfile over and over again. Enable in CpmSettings.xml (CreateTimeStampedCopyLogFile). Disabled (false) by default. For enabling the logfile timestamping set it to true.
