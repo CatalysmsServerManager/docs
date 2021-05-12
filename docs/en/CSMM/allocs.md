@@ -19,7 +19,7 @@ Once you've confirmed that the mods are installed, the next step is to try and a
 
 ```
     <property name="ControlPanelEnabled" value="false"/>
-    <property name="ControlPanelPort" value="28003"/>
+    <property name="ControlPanelPort" value="8084"/>
     <property name="ControlPanelPassword" value="CHANGEME"/>
 ```
 
