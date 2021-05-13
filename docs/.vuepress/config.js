@@ -20,6 +20,7 @@ module.exports = {
     ['sitemap', {
       hostname: 'https://docs.csmm.app'
     }],
+    ['plausible', { domain: 'docs.csmm.app' }],
   ],
   themeConfig: {
     yuu: {
