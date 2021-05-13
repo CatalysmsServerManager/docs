@@ -30,11 +30,6 @@ jobs:
           CPM_ADMINUSER: ${{secrets.CPM_ADMINUSER}}
           CPM_ADMINTOKEN: ${{secrets.CPM_ADMINTOKEN}}
       - run: npm run build
-      - name: Check HTML
-        uses: chabad360/htmlproofer@master
-        with:
-          directory: "./docs/.vuepress/dist"
-          arguments: --url-ignore "/(docs/edit/master)/,/(https://support.discordapp.com)/" --check-html --allow-hash-href true
       - uses: EndBug/add-and-commit@v6
         with:
           # The arguments for the `git add` command (see the paragraph below for more info)
