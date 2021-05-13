@@ -38,7 +38,8 @@ module.exports = {
         "/en/CSMM/advanced-handlebars",
         "/en/CSMM/hooks",
         "/en/CSMM/advanced-feature-guide",
-        "/en/CSMM/advanced-feature-guide-chathook"
+        "/en/CSMM/advanced-feature-guide-chathook",
+        "/en/CSMM/advanced-feature-guide-fallingblocks"
       ]
     },
     "/en/CSMM/catching-dupers",
