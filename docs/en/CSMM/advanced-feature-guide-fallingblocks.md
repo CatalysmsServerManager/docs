@@ -40,7 +40,7 @@ First we need to loop through the online players. This is done with handlebars a
 
 Inside this loop, we will test each player's coordinates against our custom variables. To call a player's position within this loop, we will use the variable <code v-pre>{{this.positionX}}</code>. To call the custom variable we need to go up one level in the variable tree, which looks like <code v-pre>{{../custom.xcoord}}</code>.
 
-In this example we will check check if the player is within 20 blocks of the detection. To do this, we get the custom X coordinate minus 20 blocks, and the custom X coordinate plus 20 blocks, and check if the player's X coordinate is more than the lower number and also less than the higher number. We'll repeat this with the Z coordinates, and if both are true, the player is nearby.
+In this example we will check if the player is within 20 blocks of the detection. To do this, we get the custom X coordinate minus 20 blocks, and the custom X coordinate plus 20 blocks, and check if the player's X coordinate is more than the lower number and also less than the higher number. We'll repeat this with the Z coordinates, and if both are true, the player is nearby.
 
 ```handlebars
     {{#if (and (gte this.positionX (subtract ../custom.PositionX 20)) (lte this.positionX (sum ../custom.PositionX 20)))}}
