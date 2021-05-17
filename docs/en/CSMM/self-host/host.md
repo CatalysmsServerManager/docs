@@ -18,7 +18,7 @@ For official install instructions, you should consult [the Node.js website](http
 
 ```bash
 sudo apt-get update
-sudo apt-get install curl python-software-properties
+sudo apt-get install curl python3-software-properties
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install nodejs
 ```
