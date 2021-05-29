@@ -1,5 +1,11 @@
 # Version History
 
+**Version 19.3 A19.5 b60 Stable (29-05-2021)**
+
+* Bugfixes for chatcommand /ft (flyto)
+    - Fixed error on using doublequoted names with spaces in parameters
+    - Fixed double teleports on ambiguous names in offline,- and online players
+
 **Version 19.2 A19.5 b60 Stable (29-05-2021)**
 
 * Updated harmony to 2.0.4
