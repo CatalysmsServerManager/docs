@@ -43,8 +43,8 @@ Inside this loop, we will test each player's coordinates against our custom vari
 In this example we will check if the player is within 20 blocks of the detection. To do this, we get the custom X coordinate minus 20 blocks, and the custom X coordinate plus 20 blocks, and check if the player's X coordinate is more than the lower number and also less than the higher number. We'll repeat this with the Z coordinates, and if both are true, the player is nearby.
 
 ```handlebars
-    {{#if (and (gte this.positionX (subtract ../custom.PositionX 20)) (lte this.positionX (sum ../custom.PositionX 20)))}}
-        {{#if (and (gte this.positionZ (subtract ../custom.PositionZ 20)) (lte this.positionZ (sum ../custom.PositionZ 20)))}}
+    {{#if (and (gte this.positionX (subtract ../custom.xcoord 20)) (lte this.positionX (sum ../custom.xcoord 20)))}}
+        {{#if (and (gte this.positionZ (subtract ../custom.zcoord 20)) (lte this.positionZ (sum ../custom.zcoord 20)))}}
         
         {{/if}}
     {{/if}}
@@ -64,8 +64,8 @@ Our resulting command for the hook is:
 
 ```handlebars
 {{#each server.onlinePlayers}}
-    {{#if (and (gte this.positionX (subtract ../custom.PositionX 20)) (lte this.positionX (sum ../custom.PositionX 20)))}}
-        {{#if (and (gte this.positionZ (subtract ../custom.PositionZ 20)) (lte this.positionZ (sum ../custom.PositionZ 20)))}}
+    {{#if (and (gte this.positionX (subtract ../custom.xcoord 20)) (lte this.positionX (sum ../custom.xcoord 20)))}}
+        {{#if (and (gte this.positionZ (subtract ../custom.zcoord 20)) (lte this.positionZ (sum ../custom.zcoord 20)))}}
             pm {{this.steamId}} "{{this.name}}, You have been detected drop mining at {{this.positionX}}, {{this.positionZ}}. Staff have been alerted.";
         {{/if}}
     {{/if}}
