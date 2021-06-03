@@ -46,7 +46,7 @@ To mention a member, you will need the member's ID. This is similar to identifyi
 To mention a channel, the process is almost identical to mentioning a user. Send a message within your Discord server with the format `\\@rolename` and copy the resulting string into your message to mention a role.
 
 :::warning
-If you are using handlebars elements within your message, you may find that the system converts some special characters to HTML entity codes, e.g. \&\#27\; for an apostrophe. To prevent this, use triple curly braces instead of the usual double curly braces, e.g. `{{{player.name}}}`
+If you are using handlebars elements within your message, you may find that the system converts some special characters to HTML entity codes, e.g. \&\#27\; for an apostrophe. To prevent this, use triple curly braces instead of the usual double curly braces, e.g. `\{\{\{player.name\}\}\}`
 :::
 
 Example:
