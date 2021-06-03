@@ -35,6 +35,7 @@ module.exports = {
       title: "Advanced",
       children: [
         "/en/CSMM/custom-commands",
+        "/en/CSMM/functions",
         "/en/CSMM/advanced-handlebars",
         "/en/CSMM/hooks",
         "/en/CSMM/advanced-feature-guide",

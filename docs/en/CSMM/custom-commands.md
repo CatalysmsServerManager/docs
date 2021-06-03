@@ -120,22 +120,6 @@ An argument can be required or optional. If you deselect required, you must prov
 
 As you can see, when we pass a parameter "dave" to the command, it will say hello to Dave! When we do not add a parameter, it will use the default value.
 
-## Functions
-
-Functions are actions you can do inside the execution of a custom command.
-
-### wait(x)
-
-Will wait x seconds before continuing with command execution. Warning: you should not use this for long delays. Whenever CSMM restarts, it will forget about commands that are still running.
-
-### addCurrency(playerId, amount)
-
-With this function, you can add or substract currency from a players balance. For example: addCurrency(\${player.id}, 50)
-
-### setRole(steamId, role)
-
-Sets a players role. The role parameter is the name of the role, this has to be **exactly** the same. This can be used if you have a \$adddonor command, in the vote reward command to give voters access to special commands, ...
-
 ## Special Variables
 
 - \${randNum:start:end}
