@@ -1,0 +1,17 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: vuepress-theme-yuu
+    versions:
+    - 3.0.0
+  - dependency-name: vuepress
+    versions:
+    - 1.8.1
+  - dependency-name: "@vuepress/plugin-back-to-top"
+    versions:
+    - 1.8.1

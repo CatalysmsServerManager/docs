@@ -1,5 +1,23 @@
 # Version History
 
+**Version 19.3 A19.5 b60 Stable (29-05-2021)**
+
+* Bugfixes for chatcommand /ft (flyto)
+    - Fixed error on using doublequoted names with spaces in parameters
+    - Fixed double teleports on ambiguous names in offline,- and online players
+
+**Version 19.2 A19.5 b60 Stable (29-05-2021)**
+
+* Updated harmony to 2.0.4
+
+* A19.5 b60 Stable Compatability
+
+**Version 19.1 A19.4 b7 Stable and A19.5 b50 Experimental Compatible (14-05-2021)**
+
+* Added loctrack chatcommand to chatpermissions. Now its possible to shield /loctrack behind permissions with ccp command or CpmSettings.xml (ChatCommandPermissions_loctrack)
+
+* A19.5 b50 Experimental Compatability
+
 **Version 19.0 A19.4 Stable (09-05-2021)**
 
 * Changed consolecommand db (deactivatebedroll): added auto chunkloader and bedroll block remover. Removed requirement for owning player to be online.
