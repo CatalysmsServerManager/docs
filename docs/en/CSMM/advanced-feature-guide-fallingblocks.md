@@ -101,7 +101,7 @@ For the purpose of this example, our #alerts channel ID is 718425258742527034 an
 The `sendDiscord()` function takes two arguments, a destination channel and a message. The message can include any variables, and we can include discord IDs to mention roles or users. To let the admins know about the drop mining detection, this hook's command will be:
 
 ```
-sendDiscord(718425258742527034,"<@&710992520425246426> - \{{{custom.miner\}}} has been detected drop mining at {{custom.location}}. Please investigate.")
+sendDiscord(718425258742527034,"<@&710992520425246426> - {{{custom.miner}}} has been detected drop mining at {{custom.location}}. Please investigate.")
 ```
 
 :::warning
