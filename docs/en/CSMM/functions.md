@@ -37,13 +37,25 @@ setRole(\${player.steamId}, Donator)
 
 ### sendDiscord(channel, message)
 
-Sends a discord message via the CSMM bot. Note that you must have already authorised the bot in your Discord server.
+Sends a discord message via the CSMM bot. Note that you must have already authorized the bot in your Discord server.
 
-To identify a channel, send a message within your Discord server using the format `\\#channel-name`. The message will appear in the chat window with the channel ID rather than its display name. Copy this number (excluding the <# and >) to set the channel you wish your Discord message to appear in.
+In order to use a channel, role or user in this command, you must identify the Discord ID for the object. This is the unique number assigned to the object and will persist when name changes etc. are made. There are two methods to identify these IDs:
 
-To mention a member, you will need the member's ID. This is similar to identifying the channel: send a message within your Discord server with the format `\\@username`. The message will appear with the user's discord ID. Copy this ID **including the <# and >** into your message to mention the user.
+#### Method 1 - Developer Mode
 
-To mention a channel, the process is almost identical to mentioning a user. Send a message within your Discord server with the format `\\@rolename` and copy the resulting string into your message to mention a role.
+In your Discord **User Settings**, go to **Advanced** and enable **Developer Mode**. You can now right-click on an object in your server and use the menu option **Copy ID**.
+
+For a user ID, right-click the user in the server user list and select Copy ID. You will need to include the <# and > in your message.
+
+For a role ID, go into the **Server Settings**, go to **Roles**, right-click the role and select Copy ID. You will need to include the <# and > in your message.
+
+To identify a channel to send your message to, right-click the channel in your server's channel list and select Copy ID. You should only include the number, excluding the <# and >, in the function - see the example below.
+
+#### Method 2 - Backslash in chat
+
+For a channel ID, send a message within your Discord server using the format `\\#channel-name`. The message will appear in the chat window with the channel ID rather than its display name. Copy this number **excluding the <# and >** to set the channel you wish your Discord message to appear in - see the example below.
+
+To get a member or role ID, send a message within your Discord server with the format `\\@username` or `\\@role`. The message will appear with the user's discord ID. Copy this ID **including the <# and >** into your message to mention the user.
 
 :::warning
 If you are using handlebars elements within your message, you may find that the system converts some special characters to HTML entity codes, e.g. \&\#27\; for an apostrophe. To prevent this, use triple curly braces instead of the usual double curly braces, e.g. `\{\{\{player.name\}\}\}`
