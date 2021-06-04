@@ -100,12 +100,12 @@ For the purpose of this example, our #alerts channel ID is 718425258742527034 an
 
 The `sendDiscord()` function takes two arguments, a destination channel and a message. The message can include any variables, and we can include discord IDs to mention roles or users. To let the admins know about the drop mining detection, this hook's command will be:
 
-```
-sendDiscord(718425258742527034,"<@&710992520425246426> - &lcub;&lcub;&lcub;custom.miner&rcub;&rcub;&rcub; has been detected drop mining at &lcub;&lcub;custom.location&rcub;&rcub;. Please investigate.")
-```
+:::v-pre
+sendDiscord(718425258742527034,"<@&710992520425246426> - {{{custom.miner}}} has been detected drop mining at {{custom.location}}. Please investigate.")
+:::
 
 :::warning
-Because player names often include special characters like apostrophes, we need to use triple curly braces `&lcub;&lcub;&lcub; &rcub;&rcub;&rcub;`. By default, handlebars turns these special characters into code-safe HTML entities like \&\#27;. Using triple braces will pass through special characters unchanged to keep the discord message readable.
+Because player names often include special characters like apostrophes, we need to use triple curly braces <code v-pre>{{{ }}}</code v-pre>. By default, handlebars turns these special characters into code-safe HTML entities like \&\#27;. Using triple braces will pass through special characters unchanged to keep the discord message readable.
 :::
 
 Again, be aware that this command completely replaces the temporary `wait(1)` filler we used to create the hook.
