@@ -16,13 +16,13 @@ Now that the hook is saved, we can edit it and create our variables. To create t
 
 For our first variable, enter the name `xcoord`. For this we need to identify the first 1 to 4 digit number following the @ in the log line, using the following regex:
 
-```regex
+```
 (?<=falling blocks prevented! @ )(-?\d{1,4})
 ```
 
 Save this variable, and then enter the name `zcoord`. This time, we want to identify the 1 to 4 digit number after the other coordinates, which are separated by commas:
 
-```regex
+```
 (?<=falling blocks prevented! @ -?\d{1,4}, -?\d{1,4}, )(-?\d{1,4})
 ```
 
@@ -32,7 +32,7 @@ Once we have these two variables, we can use them to check against the positions
 
 First we need to loop through the online players. This is done with handlebars as follows:
 
-```handlebars
+```
 {{#each server.onlinePlayers}}
 
 {{/each}}
@@ -42,7 +42,7 @@ Inside this loop, we will test each player's coordinates against our custom vari
 
 In this example we will check if the player is within 20 blocks of the detection. To do this, we get the custom X coordinate minus 20 blocks, and the custom X coordinate plus 20 blocks, and check if the player's X coordinate is more than the lower number and also less than the higher number. We'll repeat this with the Z coordinates, and if both are true, the player is nearby.
 
-```handlebars
+```
     {{#if (and (gte this.positionX (subtract ../custom.xcoord 20)) (lte this.positionX (sum ../custom.xcoord 20)))}}
         {{#if (and (gte this.positionZ (subtract ../custom.zcoord 20)) (lte this.positionZ (sum ../custom.zcoord 20)))}}
         
@@ -52,7 +52,7 @@ In this example we will check if the player is within 20 blocks of the detection
 
 In the middle of this block we can put the command that we would like to fire, in this case a notification to the player.
 
-```handlebars
+```
             pm {{this.steamId}} "{{this.name}}, You have been detected drop mining at {{this.positionX}}, {{this.positionZ}}. Staff have been alerted.";
 ```
 
@@ -62,7 +62,7 @@ Note the semicolon at the end of this line. As there may be multiple players in 
 
 Our resulting command for the hook is:
 
-```handlebars
+```
 {{#each server.onlinePlayers}}
     {{#if (and (gte this.positionX (subtract ../custom.xcoord 20)) (lte this.positionX (sum ../custom.xcoord 20)))}}
         {{#if (and (gte this.positionZ (subtract ../custom.zcoord 20)) (lte this.positionZ (sum ../custom.zcoord 20)))}}
@@ -101,11 +101,11 @@ For the purpose of this example, our #alerts channel ID is 718425258742527034 an
 The `sendDiscord()` function takes two arguments, a destination channel and a message. The message can include any variables, and we can include discord IDs to mention roles or users. To let the admins know about the drop mining detection, this hook's command will be:
 
 ```
-sendDiscord(718425258742527034,"<@&710992520425246426> - \{\{\{custom.miner\}\}\} has been detected drop mining at \{\{custom.location\}\}. Please investigate.")
+sendDiscord(718425258742527034,"<@&710992520425246426> - {{{custom.miner}}} has been detected drop mining at {{custom.location}}. Please investigate.")
 ```
 
 :::warning
-Because player names often include special characters like apostrophes, we need to use triple curly braces `\{\{\{ \}\}\}`. By default, handlebars turns these special characters into code-safe HTML entities like \&\#27;. Using triple braces will pass through special characters unchanged to keep the discord message readable.
+Because player names often include special characters like apostrophes, we need to use triple curly braces <code v-pre>{{{ }}}</code>. By default, handlebars turns these special characters into code-safe HTML entities like \&\#27;. Using triple braces will pass through special characters unchanged to keep the discord message readable.
 :::
 
 Again, be aware that this command completely replaces the temporary `wait(1)` filler we used to create the hook.
