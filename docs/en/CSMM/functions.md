@@ -58,7 +58,7 @@ For a channel ID, send a message within your Discord server using the format `\#
 To get a member or role ID, send a message within your Discord server with the format `\@username` or `\@role`. The message will appear with the user's discord ID. Copy this ID **including the <# and >** into your message to mention the user.
 
 :::warning
-If you are using handlebars elements within your message, you may find that the system converts some special characters to HTML entity codes, e.g. \&\#27\; for an apostrophe. To prevent this, use triple curly braces instead of the usual double curly braces, e.g. `{{{player.name}}}`
+If you are using handlebars elements within your message, you may find that the system converts some special characters to HTML entity codes, e.g. \&\#27\; for an apostrophe. To prevent this, use triple curly braces instead of the usual double curly braces, e.g. <code v-pre>{{{player.name}}}</code>
 :::
 
 Example:
