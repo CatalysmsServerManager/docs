@@ -107,3 +107,5 @@ sendDiscord(718425258742527034,"<@&710992520425246426> - \{\{\{custom.miner\}\}\
 :::warning
 Because player names often include special characters like apostrophes, we need to use triple curly braces \{\{\{ \}\}\}. By default, handlebars turns these special characters into code-safe HTML entities like \&\#27;. Using triple braces will pass through special characters unchanged to keep the discord message readable.
 :::
+
+Again, be aware that this command completely replaces the temporary `wait(1)` filler we used to create the hook.
