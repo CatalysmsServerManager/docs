@@ -53,12 +53,12 @@ To identify a channel to send your message to, right-click the channel in your s
 
 #### Method 2 - Backslash in chat
 
-For a channel ID, send a message within your Discord server using the format `\\#channel-name`. The message will appear in the chat window with the channel ID rather than its display name. Copy this number **excluding the <# and >** to set the channel you wish your Discord message to appear in - see the example below.
+For a channel ID, send a message within your Discord server using the format `\#channel-name`. The message will appear in the chat window with the channel ID rather than its display name. Copy this number **excluding the <# and >** to set the channel you wish your Discord message to appear in - see the example below.
 
-To get a member or role ID, send a message within your Discord server with the format `\\@username` or `\\@role`. The message will appear with the user's discord ID. Copy this ID **including the <# and >** into your message to mention the user.
+To get a member or role ID, send a message within your Discord server with the format `\@username` or `\@role`. The message will appear with the user's discord ID. Copy this ID **including the <# and >** into your message to mention the user.
 
 :::warning
-If you are using handlebars elements within your message, you may find that the system converts some special characters to HTML entity codes, e.g. \&\#27\; for an apostrophe. To prevent this, use triple curly braces instead of the usual double curly braces, e.g. `\{\{\{player.name\}\}\}`
+If you are using handlebars elements within your message, you may find that the system converts some special characters to HTML entity codes, e.g. \&\#27\; for an apostrophe. To prevent this, use triple curly braces instead of the usual double curly braces, e.g. `{{{player.name}}}`
 :::
 
 Example:
