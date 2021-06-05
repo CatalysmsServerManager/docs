@@ -37,7 +37,7 @@ Sorting can be ascending or descending. For descending order, replace the `"asc"
 Conditional statements can be used to run a command only in certain circumstances, or different commands for different circumstances.
 
 ```handlebars
-{{#if (gt player.level 100)}}
+{{#if (gte player.level 100)}}
     pm {{player.steamId}} "That worked"
 {{else}}
     pm {{player.steamId}} "Sorry, you must be at least level 100 for this command"
@@ -47,9 +47,9 @@ Conditional statements can be used to run a command only in certain circumstance
 Note that you do not need to close the <code v-pre>{{else}}</code>  section. You can chain multiple <code v-pre>{{else}}</code> sections with different conditions - the system will use the first match.
 
 ```handlebars
-{{#if (gt player.zombieKills 1000)}}
+{{#if (gte player.zombieKills 1000)}}
     pm {{player.steamId}} "You have over 1000 kills"
-{{else if (gt player.zombieKills 500)}}
+{{else if (gte player.zombieKills 500)}}
     pm {{player.steamId}} "Keep going, you're over halfway there"
 {{else}}
     pm {{player.steamId}} "You need to get 1000 kills."
