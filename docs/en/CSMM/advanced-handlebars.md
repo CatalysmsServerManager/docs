@@ -16,7 +16,7 @@ Use the [Playground](https://catalysmsservermanager.github.io/custom-commands-pl
 
 To loop through every item in an array, e.g. the list of players currently online, use the <code v-pre>{{ each }}</code> command. Within this loop, variables related to the current item can be called using <code v-pre>{{this.variable}}</code> . For example:
 
-```handlebars
+```
 {{#each server.onlinePlayers}}
     {{this.name}}
 {{/each}}
@@ -24,7 +24,7 @@ To loop through every item in an array, e.g. the list of players currently onlin
 
 This can be sorted by any attribute that the items in the list have, for example by name:
 
-```handlebars
+```
 {{#each (sort server.onlinePlayers "name" "asc")}}
     {{this.name}}
 {{/each}}
@@ -36,7 +36,7 @@ Sorting can be ascending or descending. For descending order, replace the `"asc"
 
 Conditional statements can be used to run a command only in certain circumstances, or different commands for different circumstances.
 
-```handlebars
+```
 {{#if (gte player.level 100)}}
     pm {{player.steamId}} "That worked"
 {{else}}
@@ -46,7 +46,7 @@ Conditional statements can be used to run a command only in certain circumstance
 
 Note that you do not need to close the <code v-pre>{{else}}</code>  section. You can chain multiple <code v-pre>{{else}}</code> sections with different conditions - the system will use the first match.
 
-```handlebars
+```
 {{#if (gte player.zombieKills 1000)}}
     pm {{player.steamId}} "You have over 1000 kills"
 {{else if (gte player.zombieKills 500)}}
@@ -92,7 +92,7 @@ Note that ensuring proper order of operation is important. The system will not c
 
 To call helpers within other helpers, use `( )` instead of `{{}}`.
 
-```handlebars
+```
 {{round (divide player.zombieKills (divide player.playtime 60)) 2}}
 ```
 
@@ -100,7 +100,7 @@ To call helpers within other helpers, use `( )` instead of `{{}}`.
 
 ### Give all players an item
 
-```handlebars
+```
 {{#each server.onlinePlayers}}
     giveplus {{this.entityId}} foodBaconAndEggs 2;
 {{/each}}
@@ -110,7 +110,7 @@ Note the ; after the command - this is necessary to split the repeated commands.
 
 ### List players above a certain level
 
-```handlebars
+```
 pm {{player.steamId}} "The following high-level players are online:
 {{#each server.onlinePlayers}}
     {{#if (gt this.level 150)}}
@@ -121,7 +121,7 @@ pm {{player.steamId}} "The following high-level players are online:
 
 Note that because the <code v-pre>{{ each }}</code> loop does not contain a ; the system will generate one long PM with each player that matches the condition, rather than a bunch of PMs. To send multiple PMs, the `pm` command should be moved inside the loop, and the command ended with a ; before the loop repeats.
 
-```handlebars
+```
 pm {{player.steamId}} "The following high-level players are online:";
 {{#each server.onlinePlayers}}
     {{#if (gt this.level 150)}}
@@ -132,7 +132,7 @@ pm {{player.steamId}} "The following high-level players are online:";
 
 ### Restrict a command to players over a certain level
 
-```handlebars
+```
 {{#if (gt player.level 100)}}
     cpm-targetedhorde {{player.entityId}} 25
     pm {{player.steamId}} "Here they come!"
@@ -147,7 +147,7 @@ pm {{player.steamId}} "The following high-level players are online:";
 
 Using a hook based on the "player death" event, check their zombie and player kills and if both are zero, give them a pistol:
 
-```handlebars
+```
 {{#if (and (eq player.zombieKills 0) (eq player.playerKills 0))}}
     wait 60;
     pm {{player.steamId}} "Died before you did any damage? That's no good. Here's a pity prize."
@@ -158,7 +158,7 @@ Using a hook based on the "player death" event, check their zombie and player ki
 
 ### List players' kills, deaths, and kill-life ratio
 
-```handlebars
+```
 say "Top 5 players online by kills:";
 {{#each (sort server.onlinePlayers "zombieKills" "desc")}}
     {{#if (lt @index 5)}}
@@ -178,7 +178,7 @@ When calculating the kill-life ratio, the death count is increased by 1. This av
 
 ### Set chat color and admin levels based on CSMM roles
 
-```handlebars
+```
 {{#each server.onlinePlayers}}
     {{#if (lte this.role.level 1)}}
         cgc adduser {{this.entityId}} admins;
