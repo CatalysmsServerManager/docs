@@ -1,5 +1,10 @@
 # Version History
 
+**Version 19.4 A19.5 b60 Stable (09-07-2021)**
+
+* Fixed scrambler to be reflection safe.
+* Changed consolecommand wi (wipeinventory): moved the handler to a dedicated thread to eliminate any chance that the Pimps ttp backup mechanism undoes the ttp edit made by CPM while the player is online.
+
 **Version 19.3 A19.5 b60 Stable (29-05-2021)**
 
 * Bugfixes for chatcommand /ft (flyto)
