@@ -26,6 +26,27 @@ pm ${player.steamId} "Thanks for your vote!"; addCurrency(${player.id}, 50)
 addCurrency(${player.id}, -500); teleh ${player.entityId}
 ```
 
+### addCurrency custom command(playerId, amount)
+
+How to pay a player currency
+
+Set the name to use as the ingame command to use
+
+Create a new custom command with the command
+
+```
+addCurrency(${steam},${amount})
+```
+You will also need 2 arguments
+Argument name "steam" type "text"
+Argument name "amount" type "text"
+
+Additionally you can send yourself a pm saying who you paid to and how much by adding this line to the end
+```
+;pm ${player.steamId} "You have just sent ${amount} to ${steam}"
+```
+
+
 ### setRole(steamId, role)
 
 Sets a players role. The role parameter is the name of the role, this has to be **exactly** the same. This can be used if you have an \$adddonor command, in the vote reward command to give voters access to special commands, etc.
