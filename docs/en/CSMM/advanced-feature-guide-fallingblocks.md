@@ -83,7 +83,7 @@ Finally we will set up a Custom Discord notification to alert admins about the a
 
 For the purpose of this example, our #alerts channel ID is 718425258742527034 and the role we want to alert (@admins) has the ID <@&710992520425246426>. For your discord server these will be different.
 
-The `sendDiscord()` function takes two arguments, a destination channel and a message. The message can include any variables, and we can include discord IDs to mention roles or users. To let the admins know about the drop mining detection, this hook's command will be:
+The `sendDiscord()` function takes two arguments, a destination channel and a message. The message can include any variables, and we can include Discord IDs to mention roles or users. To let the admins know about the drop mining detection, this hook's command will be:
 
 ```
  sendDiscord(718425258742527034,"<@&710992520425246426> {{{this.name}}} has been detected drop mining at {{{this.positionX}}}, {{{this.positionZ}}}. Please investigate.")
