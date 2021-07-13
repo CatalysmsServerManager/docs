@@ -73,8 +73,9 @@ Our resulting command for the hook is:
     {{/if}}
 {{/each}}
 ```
-
-NOTE: Be aware that this command should completely replace our temporary `wait(1)` that we entered to begin with.
+::: warning
+Be aware that this command should completely replace our temporary `wait(1)` that we entered to begin with.
+:::
 
 ## The discord notification for admins
 
@@ -113,7 +114,7 @@ For details on how to identify the channel and role IDs, see [Functions](/en/CSM
 
 
 
-:::warning
+::: warning
 Because player names often include special characters like apostrophes, we need to use triple curly braces <code v-pre>{{{ }}}</code>. By default, handlebars turns these special characters into code-safe HTML entities like \&\#27;. Using triple braces will pass through special characters unchanged to keep the discord message readable.
 :::
 
