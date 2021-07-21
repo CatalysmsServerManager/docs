@@ -15,13 +15,13 @@ Persistent variables are stored as key-value pairs.
 etc
 ```
 
-Persistent variables can have 2 scopes: 'server' and 'player'. When the 'server' scope is used, a variable name is global. When the 'player' scope is used, a variable name can be reused by multiple players.
+Persistent variables can have multiple scopes depending on the type of variable.
 
 So for example, if you want to store a counter of how many times a player has executed the commend, you can use the following code:
 
 ```
-setVariable('player', 'my-command:counter', {{getVariable('player', 'counter') + 1}});
-say "You have executed this command {{getVariable('player', 'counter)}} times"
+setVariable('player:{{player.steamId}}:counter', {{getVariable('player:{{player.steamId}}:counter') + 1}});
+say "You have executed this command {{getVariable('player:{{player.steamId}}:counter')}} times"
 ```
 
 // TODO: Note the syntax I used here. It implies a few things which are going to be important for implementation:
@@ -32,7 +32,7 @@ say "You have executed this command {{getVariable('player', 'counter)}} times"
 
 // This syntax might need to change if these points are not achievable
 
-Because the variable is using the 'player' scope, the value will be different for each player.
+Because the variable is using the players steam ID in the key name, the value will be different for each player.
 
 ```
 player1: $test
@@ -44,11 +44,11 @@ player2: $test
 server: You have executed this command 1 times
 ```
 
-If you instead want to keep track of how many times the command has been executed in total, you can use the 'server' scope:
+If you instead want to keep track of how many times the command has been executed in total, you can use a key name with no dynamic part. For example:
 
 ```
-setVariable('server', 'my-command:counter', {{getVariable('server', 'counter') + 1}})
-say "This command has been executed {{getVariable('player', 'counter)}} times"
+setVariable('my-command:counter', {{getVariable('my-command:counter') + 1}})
+say "This command has been executed {{getVariable('my-command:counter)}} times"
 
 ```
 
@@ -66,10 +66,10 @@ server: This command has been executed 3 times
 
 ```
 // Use the player scope
-setVariable('player', 'my-key', '1')
+setVariable('player:{{player.steamId}}:my-key', '1')
 
-// Use the server scope
-setVariable('server', 'my-key', '1')
+// Use the global scope
+setVariable('my-key', '1')
 ```
 
 Variables can also get an expiry time. This is useful for storing temporary data which gets deleted automatically after a certain amount of time.
@@ -77,13 +77,20 @@ Note that when the variable gets updated, the expiry time is also updated.
 
 ```
 // Set a variable with an expiry (in seconds)
-setVariable('player', 'my-key-expiring', 'my-value', 10)
+// After 10 seconds have passed, the variable will be deleted
+setVariable('my-key-expiring', 'my-value', 10)
 ```
 
 ## Getting a variable
 
 ```
-getVariable('player', 'my-key')
+getVariable('my-key')
+```
+
+## Deleting a variable
+
+```
+deleteVariable('my-key')
 ```
 
 ## Limitations
@@ -92,7 +99,7 @@ CSMM cannot keep track of an infinite amount of variables. There are limits to h
 
 Some options:
 
-When a player tries to add a new variable, CSMM will check if the player has reached the limit. If so, CSMM will return an error.
+When a player tries to add a new variable, CSMM will check if the player has reached the limit. If so, CSMM will return an error. (this will make it so commands 'randomly' fail)
 
 When a player tries to update a variable, CSMM will check if the player has reached the limit. If so, CSMM will find the least recently read variable and delete it to make room.
 
