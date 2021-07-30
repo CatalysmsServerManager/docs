@@ -25,7 +25,7 @@ We will use these coordinates to create the claim, but we also need to make sure
 
 ## The 'command' advanced claim
 
-Now we have the coordinates and a unique name, we need to put these together to create the command claim. This will trigger our second hook when it someone enters the area. We'll use the coordinates of the crate plus and minus 20 to create a square 40 blocks by 40 blocks around it. The command the claim will execute is simply to log a keyword along with the victim's steamID for our next hook, and then delete itself. The command for this is as follows:
+Now we have the coordinates and a unique name, we need to put these together to create the command claim. This will trigger our second hook when someone enters the area. We'll use the coordinates of the crate plus and minus 20 to create a square 40 blocks by 40 blocks around it. The command the claim will execute is simply to log a keyword along with the victim's steamID for our next hook, and then delete itself. The command for this is as follows:
 
 ```
 ccc add DeadlyDrop{{time}} {{subtract custom.xcoord 20}} {{subtract custom.xcoord -20}} {{subtract custom.zcoord -20}} {{subtract custom.zcoord 20}} -1 "command: w2l 'DADambush ${steamId}'; ccc remove DeadlyDrop{{time}}"
