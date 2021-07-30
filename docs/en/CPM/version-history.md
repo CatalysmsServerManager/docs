@@ -1,5 +1,10 @@
 # Version History
 
+**Version 19.6 A19.6 b8 Stable (30-07-2021)**
+
+* Updated harmony to v2.1.1
+* A19.6 b8 compatibility
+
 **Version 19.5 A19.5 b60 Stable & A19.6 b7 Experimental (26-07-2021)**
 
 * changed consolecommand getprefab: added optional parameter (steamId/entityId/name) for resetting a prefab. This will make it possible to use the reset functionality through a custom CSMM command. Ingame "getprefab reset" can still be used as it was.
