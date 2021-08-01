@@ -239,7 +239,7 @@ Argument name "amount" type "text"
 
 Additionally you can send yourself a pm saying who you paid to and how much by adding this line to the end
 ```
-;pm ${player.steamId} "You have just sent ${amount} to ${steam}"
+pm ${player.steamId} "You have just sent ${amount} to ${steam}"
 ```### addCurrency custom command(playerId, amount)
 
 How to pay a player currency
