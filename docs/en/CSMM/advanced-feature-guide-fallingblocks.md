@@ -92,7 +92,7 @@ The `sendDiscord()` function takes two arguments, a destination channel and a me
  
 You can then add aditional commands afer the discord message has been sent such as
 ```
-;kick  {{this.steamId}}  "You have been detected drop mining"
+kick  {{this.steamId}}  "You have been detected drop mining"
 ```
 
 The completed code will look like this
