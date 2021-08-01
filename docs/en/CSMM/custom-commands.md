@@ -125,13 +125,13 @@ As you can see, when we pass a parameter "dave" to the command, it will say hell
 - \${randNum:start:end}
 - \${randList:item1,item2,item3}
 
-### ${randNum:min:max}
+### \${randNum:min:max}
 
 Generates a random number between min and max (inclusive) every time its encountered
 
 For example, "\${randNum:5:10} \${randNum:5:10} \${randNum:5:10}" would generate 3 random numbers
 
-### ${randList:item1,item2,item3...}
+### \${randList:item1,item2,item3...}
 
 Picks a random item fom the list of provided items its encountered
 
@@ -152,10 +152,6 @@ These were the first variables added to CSMM. They are still in the application 
 - \${posZ}
 
 ## Examples
-
-### Winning the lottery
-
-addCurrency(${player.id}, ${randNum:5:10}); say "${player.name} just won the lottery and got some coins!"
 
 ### Remove Near Death Trauma Debuff
 
@@ -193,10 +189,12 @@ CSMM will combine the letters 'cpm-get' with whatever the users typed after '/gv
 If the user were to type '/gv smith', the server would attempt to execute 'cpm-getsmith', which would fail.
 
 An example command for players to retreive their own vehicle would look like this
+
 ```
   getjeep ${player.steamId}
 
 ```
+
 ### User-Created Advanced Claims
 
 _Requires CPM 8.1.1 or higher._
@@ -211,7 +209,6 @@ There are several protections in place with this command to prevent abuse by the
 
 Leaving the radius at 20 will mimic the size of a standard LCB radius. Note the second 'ccc radius' command; this places an additional hostileFree claim atop the base advanced claim, preventing zombies from spawning any closer than a short distance away from the base. Additionally, any zombies that wander too close to the base will simply disappear. Deleting the second 'ccc remove ' and 'ccc radius 30' lines will simply create a player-protected area but still allow zombies in. Be aware that with the hostileFree zone created, you will not be able to fight zombies near your base; they will simply disappear without giving you XP.
 
-
 Commands:
 
 ccc remove ${steamId}\_mybase\_norm;  
@@ -221,41 +218,29 @@ wlf add ${steamId};
 ccc radius 30 ${steamId} ${steamId}\_mybase\_hfree 1 hostilefree;  
 pm ${steamId} "Base safe zone created. All of your friends have been whitelisted automatically."
 
-
 ### addCurrency custom command(playerId, amount)
 
-How to pay a player currency
-
-Set the name to use as the ingame command to use
+How to pay a player currency from an ingame command. This command will allow you to give **another** player some amount of CSMM currency.
 
 Create a new custom command with the command
 
 ```
 addCurrency(${steam},${amount})
 ```
+
 You will also need 2 arguments
-Argument name "steam" type "text"
-Argument name "amount" type "text"
+
+- Argument name "steam" type "text"
+- Argument name "amount" type "text"
 
 Additionally you can send yourself a pm saying who you paid to and how much by adding this line to the end
+
 ```
 pm ${player.steamId} "You have just sent ${amount} to ${steam}"
-```### addCurrency custom command(playerId, amount)
+```
 
-How to pay a player currency
-
-Set the name to use as the ingame command to use
-
-Create a new custom command with the command
+The final command is
 
 ```
-addCurrency(${steam},${amount})
-```
-You will also need 2 arguments
-Argument name "steam" type "text"
-Argument name "amount" type "text"
-
-Additionally you can send yourself a pm saying who you paid to and how much by adding this line to the end
-```
-;pm ${player.steamId} "You have just sent ${amount} to ${steam}"
+addCurrency(${steam},${amount});pm ${player.steamId} "You have just sent ${amount} to ${steam}"
 ```

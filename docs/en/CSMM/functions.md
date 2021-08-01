@@ -11,6 +11,7 @@ Functions are actions you can do inside the execution of a custom command.
 Will wait x seconds before continuing with command execution. Warning: you should not use this for long delays. Whenever CSMM restarts, it will forget about commands that are still running.
 
 Example:
+
 ```
 pm ${player.steamId} "You will be teleported in one minute."; wait(60); cpm-mvw ${player.steamId} home
 ```
@@ -20,38 +21,19 @@ pm ${player.steamId} "You will be teleported in one minute."; wait(60); cpm-mvw 
 With this function, you can add or subtract currency from a players balance.
 
 Examples:
+
 ```
 pm ${player.steamId} "Thanks for your vote!"; addCurrency(${player.id}, 50)
 
 addCurrency(${player.id}, -500); teleh ${player.entityId}
 ```
 
-### addCurrency custom command(playerId, amount)
-
-How to pay a player currency
-
-Set the name to use as the ingame command to use
-
-Create a new custom command with the command
-
-```
-addCurrency(${steam},${amount})
-```
-You will also need 2 arguments
-Argument name "steam" type "text"
-Argument name "amount" type "text"
-
-Additionally you can send yourself a pm saying who you paid to and how much by adding this line to the end
-```
-;pm ${player.steamId} "You have just sent ${amount} to ${steam}"
-```
-
-
 ### setRole(steamId, role)
 
 Sets a players role. The role parameter is the name of the role, this has to be **exactly** the same. This can be used if you have an \$adddonor command, in the vote reward command to give voters access to special commands, etc.
 
 Example:
+
 ```
 setRole(${player.steamId}, Donator)
 ```
@@ -83,6 +65,7 @@ If you are using handlebars elements within your message, you may find that the 
 :::
 
 Example:
+
 ```
 sendDiscord(719405252740197044), "${player.name} has reached level 100!")
 ```

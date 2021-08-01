@@ -16,13 +16,13 @@ Save the hook.
 
 Now that the hook is saved, we can edit it and create our variables. To create the variables, click the Edit button on the hook and look for the section "**Custom variables**". Our variables will be the X and Z coordinates (as we are not interested in checking altitude - the Y coordinate).
 
-For our first variable, enter the name `xcoord`. use the following regex:
+For our first variable, enter the name `xcoord`. For this we need to identify the first 1 to 4 digit number following the @ in the log line, using the following regex:
 
 ```
 (?<=falling blocks prevented! @ )(-?\d{1,4})
 ```
 
-Save this variable, and then enter the name `zcoord`. use the following regex:
+Save this variable, and then enter the name `zcoord`. This time, we want to identify the 1 to 4 digit number after the other coordinates, which are separated by commas:
 
 ```
 (?<=falling blocks prevented! @ -?\d{1,4}, -?\d{1,4}, )(-?\d{1,4})
@@ -47,7 +47,6 @@ In this example we will check if the player is within 20 blocks of the detection
 ```
     {{#if (and (gte this.positionX (subtract ../custom.xcoord 20)) (lte this.positionX (sum ../custom.xcoord 20)))}}
         {{#if (and (gte this.positionZ (subtract ../custom.zcoord 20)) (lte this.positionZ (sum ../custom.zcoord 20)))}}
-        
         {{/if}}
     {{/if}}
 ```
@@ -73,6 +72,7 @@ Our resulting command for the hook is:
     {{/if}}
 {{/each}}
 ```
+
 ::: warning
 Be aware that this command should completely replace our temporary `wait(1)` that we entered to begin with.
 :::
@@ -89,8 +89,9 @@ The `sendDiscord()` function takes two arguments, a destination channel and a me
  sendDiscord(718425258742527034,"<@&710992520425246426> {{{this.name}}} has been detected drop mining at {{{this.positionX}}}, {{{this.positionZ}}}. Please investigate.")
 
 ```
- 
+
 You can then add aditional commands afer the discord message has been sent such as
+
 ```
 kick  {{this.steamId}}  "You have been detected drop mining"
 ```
@@ -109,10 +110,8 @@ The completed code will look like this
 ```
 
 :::tip
-For details on how to identify the channel and role IDs, see [Functions](/en/CSMM/functions.html). 
+For details on how to identify the channel and role IDs, see [Functions](/en/CSMM/functions.html).
 :::
-
-
 
 ::: warning
 Because player names often include special characters like apostrophes, we need to use triple curly braces <code v-pre>{{{ }}}</code>. By default, handlebars turns these special characters into code-safe HTML entities like \&\#27;. Using triple braces will pass through special characters unchanged to keep the discord message readable.
