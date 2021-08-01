@@ -125,13 +125,13 @@ As you can see, when we pass a parameter "dave" to the command, it will say hell
 - \${randNum:start:end}
 - \${randList:item1,item2,item3}
 
-### \${randNum:min:max}
+### ${randNum:min:max}
 
 Generates a random number between min and max (inclusive) every time its encountered
 
 For example, "\${randNum:5:10} \${randNum:5:10} \${randNum:5:10}" would generate 3 random numbers
 
-### \${randList:item1,item2,item3...}
+### ${randList:item1,item2,item3...}
 
 Picks a random item fom the list of provided items its encountered
 
