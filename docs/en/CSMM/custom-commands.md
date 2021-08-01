@@ -153,10 +153,6 @@ These were the first variables added to CSMM. They are still in the application 
 
 ## Examples
 
-### Winning the lottery
-
-addCurrency(${player.id}, ${randNum:5:10}); say "${player.name} just won the lottery and got some coins!"
-
 ### Remove Near Death Trauma Debuff
 
 NDT is a debuff applied to players when they die. It temporarily lowers some of their stat and perk counts by 1 or more points depending on how many times they've died recently. This command will remove the debuff completely, returning them back to normal health and stats. This version of the command below sends a message to the player shortly before removing the debuff. The message is colored via the [hex color picker](https://htmlcolorcodes.com/color-picker/) feature in CPM. In this case, the color is a light teal (29bbaf), and the message is shown to come from 'Your Server Name' as a PM.
@@ -192,6 +188,13 @@ CSMM will combine the letters 'cpm-get' with whatever the users typed after '/gv
 
 If the user were to type '/gv smith', the server would attempt to execute 'cpm-getsmith', which would fail.
 
+An example command for players to retreive their own vehicle would look like this
+
+```
+  getjeep ${player.steamId}
+
+```
+
 ### User-Created Advanced Claims
 
 _Requires CPM 8.1.1 or higher._
@@ -214,3 +217,30 @@ ccc radius 20 ${steamId} ${steamId}\_mybase_norm 1;
 wlf add ${steamId};  
 ccc radius 30 ${steamId} ${steamId}\_mybase\_hfree 1 hostilefree;  
 pm ${steamId} "Base safe zone created. All of your friends have been whitelisted automatically."
+
+### addCurrency custom command(playerId, amount)
+
+How to pay a player currency from an ingame command. This command will allow you to give **another** player some amount of CSMM currency.
+
+Create a new custom command with the command
+
+```
+addCurrency(${steam},${amount})
+```
+
+You will also need 2 arguments
+
+- Argument name "steam" type "text"
+- Argument name "amount" type "text"
+
+Additionally you can send yourself a pm saying who you paid to and how much by adding this line to the end
+
+```
+pm ${player.steamId} "You have just sent ${amount} to ${steam}"
+```
+
+The final command is
+
+```
+addCurrency(${steam},${amount});pm ${player.steamId} "You have just sent ${amount} to ${steam}"
+```
