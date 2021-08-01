@@ -35,7 +35,8 @@ jobs:
           # The arguments for the `git add` command (see the paragraph below for more info)
           # Default: '.'
           add: "docs/.vuepress/public/assets/commands"
-
+          author_name: Command updater bot
+          author_email: bot@csmm.app
           # The message for the commit
           # Default: 'Commit from GitHub Actions (name of the workflow)'
           message: "Update commands reference"
