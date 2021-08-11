@@ -67,5 +67,5 @@ If you are using handlebars elements within your message, you may find that the 
 Example:
 
 ```
-sendDiscord(719405252740197044), "${player.name} has reached level 100!")
+sendDiscord(719405252740197044, "${player.name} has reached level 100!")
 ```
