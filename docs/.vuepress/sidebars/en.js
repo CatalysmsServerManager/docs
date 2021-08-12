@@ -37,6 +37,7 @@ module.exports = {
         "/en/CSMM/custom-commands",
         "/en/CSMM/functions",
         "/en/CSMM/advanced-handlebars",
+        "/en/CSMM/advanced-persistent-variables",
         "/en/CSMM/hooks",
         "/en/CSMM/advanced-feature-guide",
         "/en/CSMM/advanced-feature-guide-chathook",
