@@ -21,7 +21,7 @@ zcoord :    (?<=Spawned supply crate at \(-?\d{1,4}\.\d, -?\d{1,4}\.\d, )(-?\d{1
 
 Note that we are avoiding the decimal points in the coordinates and only grabbing the integers, but when including the coordinates in the lookbehind for the zcoord variable we do need to account for the extra characters.
 
-We will use these coordinates to create the claim, but we also need to make sure that the next airdrop doesn't try to create a claim with the same name. For this, we will use the `\{\{time\}\}` variable. This outputs the real-world time when the command is run, and it is unlikely that another supply drop will happen at exactly the same time on another day. We'll call our claim `DeadlyDrop\{\{time\}\}`.
+We will use these coordinates to create the claim, but we also need to make sure that the next airdrop doesn't try to create a claim with the same name. For this, we will use the `{{time}}` variable. This outputs the real-world time when the command is run, and it is unlikely that another supply drop will happen at exactly the same time on another day. We'll call our claim `DeadlyDrop{{time}}`.
 
 ## The 'command' advanced claim
 
