@@ -81,6 +81,9 @@ See the list below for a list of all available variables with examples of their 
     "score": 27,
     "level": 18,
     "lastTeleportTime": "2019-03-15 13:17:44.245",
+    "lastDeathLocationX": -352,
+    "lastDeathLocationY": 57,
+    "lastDeathLocationZ": 1328,
     "server": 1,
     "user": 1,
     "role": 1
@@ -244,3 +247,15 @@ The final command is
 ```
 addCurrency(${steam},${amount});pm ${player.steamId} "You have just sent ${amount} to ${steam}"
 ```
+
+### Teleport to last death
+
+A custom command to teleport the player back to where they last died (works even if no backpack was dropped)
+
+Command:
+
+```
+teleportplayer ${player.steamId} ${player.lastDeathLocationX} ${player.lastDeathLocationY} ${player.lastDeathLocationZ}
+```
+
+You may want to give this command a cost, or allow it only for players with a specific role.
