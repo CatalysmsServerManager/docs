@@ -1,5 +1,11 @@
 # Version History
 
+**Version 19.6.2 A19.6 b8 Stable (20-08-2021)**
+
+* Added logline with position on player death: for easy CSMM hook creation on player death where location of death is relevant. For creating a "return to location a player died"-command for example.
+
+Example logline: INF [CSMM_Patrons]playerDied: Prisma501 (76561198103885860) died @ 218 58 -1094
+
 **Version 19.6.1 A19.6 b8 Stable (14-08-2021)**
 
 * Added colon ( : ) support to commands in an Adv. Command Claim: Makes it possible to use colons in command(s) within an Adv. Command claim. Specifically implemented to support the use of CSMM variables that contain colon(s) like {{time}} (used in Deadly Airdrops for example).
