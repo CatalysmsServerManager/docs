@@ -8,7 +8,7 @@ Example logline: INF [CSMM_Patrons]playerDied: Prisma501 (76561198103885860) die
 
 **Version 19.6.1 A19.6 b8 Stable (14-08-2021)**
 
-* Added colon ( : ) support to commands in an Adv. Command Claim: Makes it possible to use colons in command(s) within an Adv. Command claim. Specifically implemented to support the use of CSMM variables that contain colon(s) like {{time}} (used in Deadly Airdrops for example).
+* Added colon ( : ) support to commands in an Adv. Command Claim: Makes it possible to use colons in command(s) within an Adv. Command claim. Specifically implemented to support the use of CSMM variables that contain colon(s) like ```{{time}}``` (used in Deadly Airdrops for example).
 
 **Version 19.6 A19.6 b8 Stable (30-07-2021)**
 
