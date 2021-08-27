@@ -175,25 +175,25 @@ The process is as follows:
 5.  If both parties agree to the trade, they then type **/ati \<playername\>** to complete the trade.
 6.  Once completed, the items will swap places and the trade is complete.
 
-/rtc
+/rtc (register trading chest)
 
 Marks a storage chest for use as a trading chest. You must stand atop it at the moment of creation for this to take effect.
 
 You can only have one active chest at a time; running the command again will revert the previous trading chest back into a storage box only.
 
-/rti \<playername\>
+/rti \<playername\> (release trading items)
 
-Releases any and all items in a trading chest for trade to another player that you specify. Both sides must run this command, but the chest does not have to actually contain items to make a trade. It **is** possible to trade nothing to a player in return for something (ie, the other player just gives you an item for free) by typing /rti with an empty chest. The other player will be informed of this.
+Releases any and all items in a trading chest for trade to another player that you specify. Both sides must run this command. The other player will be informed of this with quality colorcoded items in chat. Eventual mods on items will get listed also.
 
-/ati \<playername\>
+/ati \<playername\> (accept trading items)
 
 Accept the trade from the other player. Both sides must run this command.
 
-/cti
+/cti (cancel trading items)
 
 Cancels the trade process, returning the items to their original owners.
 
-/lti
+/lti (list trading items)
 
 Lists all items currently marked for trade.
 
