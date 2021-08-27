@@ -1,5 +1,11 @@
 # Version History
 
+**Version 19.6.3 A19.6 b8 Stable (27-08-2021)**
+
+* Changed Adv. Claim Reversed: added setting for TpHeight on teleporting back into a reversed claim (AdvClaims_Reversed_TpHeight in CpmSettings.xml)
+* Changed consolecommand sleepers: added sleeper despawn and reset by coordinates. No need to be ingame anymore because coordinates can be used instead of only p1, p2.
+* Fixed consolecommand cvc (checkvehiclecontent): fixed always using Jetpack for vehiclename when a vehicle is locked and owner is returned.
+
 **Version 19.6.2 A19.6 b8 Stable (20-08-2021)**
 
 * Added logline with position on player death: for easy CSMM hook creation on player death where location of death is relevant. For creating a "return to location a player died"-command for example.
