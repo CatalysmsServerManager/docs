@@ -1,5 +1,10 @@
 # Version History
 
+**Version 19.6.4 A19.6 b8 Stable (05-09-2021)**
+
+* Added bloodmoon despawner: Allows to despawn all zombies alive on map right before bloodmoon starts. Disabled by default. Enable in CpmSettings.xml (BloodmoonSpawner_DespawnAllOnStart).
+* Changed consolecommand protect, chatcommand /bubble and Adv. claim hostilefree: traders (which are hostile by design) will not be despawned anymore. No need for a modlet anymore to remove the hostile tag from traders.
+
 **Version 19.6.3 A19.6 b8 Stable (27-08-2021)**
 
 * Changed Adv. Claim Reversed: added setting for TpHeight on teleporting back into a reversed claim (AdvClaims_Reversed_TpHeight in CpmSettings.xml)
