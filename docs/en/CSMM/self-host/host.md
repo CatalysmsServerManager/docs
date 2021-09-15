@@ -65,6 +65,11 @@ su - csmm
 Get the latest files from Github and install the dependencies.
 
 ```bash
+# unzip is required for one of the setup scripts
+# Replace apt with your distributions package manager if needed
+apt install unzip
+
+
 git clone https://github.com/CatalysmsServerManager/7-days-to-die-server-manager
 cd 7-days-to-die-server-manager
 npm install --only=prod
