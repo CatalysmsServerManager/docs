@@ -1,5 +1,16 @@
 # Version History
 
+**Version 19.7 A19.6 b8 Stable (15-09-2021)**
+
+* Added Vanilla Bloodmoon spawner override: many players on a server? Lots of bloodmoon parties going on? Suffering from "boring" bloodmoons? This is the solution for you. CPM can now override the vanilla bloodmoon spawner. That spawner is not built to handle bloodmoons on servers with many players on (the so called high pop servers). Take full control and give back alive and kicking bloodmoons!
+
+New settings (CpmSettings.xml):
+
+* BloodmoonSpawner_OverrideVanillaSpawner: set true to override vanilla bloodmoon spawner and let CPM handle bloodmoon.
+* BloodmoonSpawner_Overridden_AdjustBMEnemyCountPerPlayerToNrOnlinePlayers: set true (default) to let CPM handle the bloodmoonspawning based on number of online players. This is the full auto mode and is recommended. Max alive zombies per player will be calculated and when players are in a bloodmoon party, CPM will bring the joy to all members of that party.
+* BloodmoonSpawner_Overridden_BMEnemyCountPerPlayer: only used if the previous setting is false. This will set the maximum number of zombies alive per player during bloodmoon regardless of number of players online.
+* BloodmoonSpawner_Overridden_AddMaxAliveServerDuringBloodmoon: this value will be added to the maximum allowed zombies alive that is configured in serverconfig.xml. Use this to spice up the bloodmoon spawning even more by allowing more zombies alive during bloodmoons.
+
 **Version 19.6.4 A19.6 b8 Stable (05-09-2021)**
 
 * Added bloodmoon despawner: Allows to despawn all zombies alive on map right before bloodmoon starts. Disabled by default. Enable in CpmSettings.xml (BloodmoonSpawner_DespawnAllOnStart).
