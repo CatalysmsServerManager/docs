@@ -1,5 +1,9 @@
 # Version History
 
+**Version 19.7.1 A19.6 b8 Stable (17-09-2021)**
+
+* "Performance enhancements and bugfixes": strongly advise to update to this version (seriously, do it)
+
 **Version 19.7 A19.6 b8 Stable (15-09-2021)**
 
 * Added Vanilla Bloodmoon spawner override: many players on a server? Lots of bloodmoon parties going on? Suffering from "boring" bloodmoons? This is the solution for you. CPM can now override the vanilla bloodmoon spawner. That spawner is not built to handle bloodmoons on servers with many players on (the so called high pop servers). Take full control and give back alive and kicking bloodmoons!
