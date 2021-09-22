@@ -1,5 +1,9 @@
 # Version History
 
+**Version 19.7.2 A19.6 b8 Stable (22-09-2021)**
+
+* Improved all get vehicle commands: improved owner detection on getbicycle, getbike, getmotorcycle, getjeep, getgyrocopter, getblimp and gethelicopter commands when player plays with a steam family share account.
+
 **Version 19.7.1 A19.6 b8 Stable (17-09-2021)**
 
 * "Performance enhancements and bugfixes": strongly advise to update to this version (seriously, do it)
