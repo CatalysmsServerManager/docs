@@ -17,9 +17,10 @@ You are free to choose any name for any type of claim. However, there are some s
 
 "bmonly(fromHour-toHour)_" : when a claimname contains this "tag" it will become a claim that is only active during bloodmoons between the specified hours "fromHour-toHour". Example: bmonly(20-7)_NoEnemies: this will activate this claim every bloodday from 20:00 until after bloodmoon 07:00.
 
-PVP punishment activates when there is a notify claim with "pve" in the name AND a 3rd notify parameter is issued. The 3rd parameter can be used to fire (multiple) console command(s) at an offending player (spawn zeds, kick, ban, jail, kill, tp etc etc) for punishment. Check Advanced Claims (type Command) for syntax on commands. The mod will know a player killed a player even before the game itself does ^^. Enter,- and exitmessages are required within a PVE notify claim that has punishment. A logmessage will be written on punishment including victim and offender and their positions. This could be used to create a CSMM discord notification on PVP punishment.
-Example: ccc add PVEzone -10000 10000 10000 0 0 "notify:You are entering a PVE zone!:You are leaving a PVE zone!:kick ${entityId} 'You have been violating PVE rules.'"
-When adding NPF (Not Punish Friends) to the PVE zone claimname, any violation in that zone will not trigger punishment if killing an in-game friend.
+PVP/PVE claims are created by making a notify claim with "pve" or "pvp" in the name. No player damage can be done while in a PVE claim and playerdamage can be done while in a PVP claim.
+Usually you will create PVE claims on a server that has global setting KillingMode for PVP and PVP claims on a server that has global setting KillingMode for PVE.
+Example: ccc add PVEzone -10000 10000 10000 0 0 "notify:You are entering a PVE zone!:You are leaving a PVE zone!"
+When creating a PVP claim the KillingMode can be configured in CpmSettings.xml (AdvClaims_PVP_KillingMode). Default KillingMode = 3 (kill everybody).
 
 ## Understanding Claim Parameters
 

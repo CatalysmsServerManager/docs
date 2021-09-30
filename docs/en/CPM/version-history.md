@@ -1,5 +1,10 @@
 # Version History
 
+**Version 19.8 A19.6 b8 Stable (30-09-2021)**
+
+* added new consolecommand timerba: a generic bloodmoon aware timer. Can be used for anything as long as there are commands for it. Configurable delay on bloodday after time and delay until after bloodmoon time in CpmSettings.xml (TimerBA_DelayBloodDayAfter and TimerBA_DelayAfterBloodmoonUntil). Example: timerba 10 "[00FF00]Prefabs will reset in [FF0000]{Minutes} minutes" "rrp kicklockreboot". You can use multiple commands. Seperate them with ; and use single quotes around command parameters that contain spaces.
+* Revised Adv. Claim PVE and added Adv. Claim PVP: compatible with existing PVE claims. Will prevent doing playerdamage when on PVE claim or allow doing player damage when on PVP claim. For PVP claims the KillingMode can be configured in CpmSettings.xml (AdvClaims_PVP_KillingMode). Default = 3. Create the same way as the previous PVE claims (except no punishment command needed with the new ones): make a notifyclaim with PVE (or PVP) in its name and you are done. The claims do use tooltip communication. Adjust to your liking in CPM's buffs.xml in the mod config folder. If your server global setting is PVE, use PVP claims. If your server global setting is PVP, use PVE claims. This functionality was already possible by using Adv. command claims but it needed multiple claims to cover the map. These new ones make it easier to implement PVE/PVP.
+
 **Version 19.7.2 A19.6 b8 Stable (22-09-2021)**
 
 * Improved all get vehicle commands: improved owner detection on getbicycle, getbike, getmotorcycle, getjeep, getgyrocopter, getblimp and gethelicopter commands when player plays with a steam family share account.
