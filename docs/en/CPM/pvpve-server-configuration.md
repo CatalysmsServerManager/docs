@@ -2,7 +2,7 @@
 
 Traditionally, 7 Days To Die servers are configured as PVP servers, or PVE servers, but using a combination of CSMM and CPM, you can create a special kind of hybrid server with areas where players can kill each other freely, and areas where killing of other players comes with a configurable punishment. There are several important criteria that admins must be aware of when configuring a server in the PvPvE style of gameplay:
 
-- The CPM Mod is required, and at least version 8.3 is recommended in order to prevent several bugs.
+- The CPM Mod is required, and at least version 19.8 is required for PVPVE configuration.
 - The server is not both a PVP and PVE server. It is solely a PVP server that has a special area where kills are prevented. Or its a PVE servers where kills are possible in certain areas.
 - The PVE protection zone helps limit PVE player kills, but it does not do anything against base raiding or griefing. The only way to do prevent this is to configure Land Claims blocks to provide 100% protection, or allow the use of Advanced Claims to prevent access to player bases.
 - The PVE/PVP border is a solid line on the map, but the ability to kill people across this line depends entirely on the player's visibility of eachother across this line. It is possible for players with better computers to see other players across the line and still be able to kill them from a distance.
