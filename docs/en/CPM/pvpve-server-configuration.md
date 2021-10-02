@@ -1,10 +1,10 @@
 # PvPvE Server Configuration
 
-Traditionally, 7 Days To Die servers are configured as PVP servers, or PVE servers, but using a combination of CSMM and CPM, you can create a special kind of hybrid server with areas where players can kill each other freely, and areas where killing of other players comes with a configurable punishment. There are several important criteria that admins must be aware of when configuring a server in the PvPvE style of gameplay:
+Traditionally, 7 Days To Die servers are configured as PVP servers, or PVE servers, but using a combination of CSMM and CPM, you can create a special kind of hybrid server with areas where players can kill each other freely, and areas where killing of other players is not possible. There are several important criteria that admins must be aware of when configuring a server in the PvPvE style of gameplay:
 
 - The CPM Mod is required, and at least version 19.8 is required for PVPVE configuration.
 - The server is not both a PVP and PVE server. It is solely a PVP server that has a special area where kills are prevented. Or its a PVE servers where kills are possible in certain areas.
-- The PVE protection zone helps limit PVE player kills, but it does not do anything against base raiding or griefing. The only way to do prevent this is to configure Land Claims blocks to provide 100% protection, or allow the use of Advanced Claims to prevent access to player bases.
+- The PVE protection zone helps prevent PVE player kills, but it does not do anything against base raiding or griefing. The only way to do prevent this is to configure Land Claims blocks to provide 100% protection, or allow the use of Advanced Claims to prevent access to player bases.
 - The PVE/PVP border is a solid line on the map, but the ability to kill people across this line depends entirely on the player's visibility of eachother across this line. It is possible for players with better computers to see other players across the line and still be able to kill them from a distance.
 
 With these restrictions understood, you can begin to configure your server.
@@ -54,7 +54,7 @@ You can use ANY coordinates for your PVE region, you aren't restricted to East-W
 - 1 - The claim access level: required but has no function in a notify claim.
 - "notify:You..." - The notify claim code. This one has several parts, so let's break it down even more. The structure of a PVE claim looks like this: "notify:EnterMsg:ExitMsg".
   - Notify - Mark this claim as a Notify claim, which sends messages to players when they enter or exit the region. Normal notify claims have Enter and Exit messages, and PVE claims have an extra section called Punishment.
-  - Enter Message - The message players get when they enter the PVE region. _You are inside the PVE Zone. Killing of other players in this zone is possible._ This message can be anything you wish, but should notify players they are in a killing zone.
+  - Enter Message - The message players get when they enter the PVE region. _You are inside the PVE Zone. Killing of other players in this zone is not possible._ This message can be anything you wish, but should notify players they are in a non-killing zone.
   - Exit Message - The message given to players when they exit the PVE zone and re-enter the PVP zone. \_You are in the PVP Zone. Killing of other players is possible.\_As before, it should clearly indicate that killing is now possible.
   
 **Note:** Each segment (enter/exit) is separated by a colon ( : )
