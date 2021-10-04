@@ -1,5 +1,13 @@
 # Version History
 
+**Version 19.8.1 A19.6 b8 Stable (04-10-2021)**
+
+* changed PVP kill logline: made logline more consistent with other CPM loglines, added more information and made format easier for regex info extraction. Ex. INF [CSMM_Patrons]playerKilledByPlayer: The killer (offenderSteamId=76561198123089815) killed Prisma501 (victimSteamId=76561198123095123) @ -350 58 -817 with AK-47 Machine Gun
+* Added logline for player getting killed by any other entity than another player. For creating CSMM hooks on player killed by animal, zombie, animalzombie, modded npc's, bandits etc. Ex. INF [CSMM_Patrons]playerKilledByEntity: animalBossGrace (-346,58,-820) killed Prisma501 (76561198123083837) @ -348 58 -818
+* Fixed wrong description in bmsOverrideVanillaSpawner console command
+* Lowered heartbeat interval to 3 seconds
+* Implemented auto debuff when a player logs off while on notify claim (buff visible), logs back in and moves/tp's out of the claim before it can detect the player on it again. The bufficon would stay on screen. Now there is an auto debuff when that happens.
+
 **Version 19.8 A19.6 b8 Stable (30-09-2021)**
 
 * added new consolecommand timerba: a generic bloodmoon aware timer. Can be used for anything as long as there are commands for it. Configurable delay on bloodday after time and delay until after bloodmoon time in CpmSettings.xml (TimerBA_DelayBloodDayAfter and TimerBA_DelayAfterBloodmoonUntil). Example: timerba 10 "[00FF00]Prefabs will reset in [FF0000]{Minutes} minutes" "rrp kicklockreboot". You can use multiple commands. Seperate them with ; and use single quotes around command parameters that contain spaces.
