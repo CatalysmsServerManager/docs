@@ -10,9 +10,9 @@ The first step is to confirm whether Alloc's Fixes is installed and running prop
 
 ```
     Game version: Alpha 19 (b178) Compatibility Version: Alpha 19
-    Mod Allocs command extensions: 20
+    Mod Allocs command extensions: 23
     Mod Allocs server fixes: 23
-    Mod Allocs MapRendering and Webinterface: 35
+    Mod Allocs MapRendering and Webinterface: 38
 ```
 
 Once you've confirmed that the mods are installed, the next step is to try and access the Alloc's web server. To do this, you'll need to know what ports your server has been configured for, and you can determine this by looking at your serverconfig.xml file on your server. You should see a section similar to this in the config file:
