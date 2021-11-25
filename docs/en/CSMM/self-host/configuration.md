@@ -31,7 +31,11 @@ Make sure you use your CSMM domain here. If your domain were example.com, the Oa
 Copy the example file to a new file
 
 ```bash
-cp .env.example .env
+# Hosted setups:
+cp .env.example.host .env
+
+# Docker setups:
+cp .env.example.docker .env
 ```
 
 DBSTRING, a [special syntax](https://sailsjs.com/documentation/reference/configuration/sails-config-datastores#?the-connection-url) is used. protocol://user:password@host:port/database

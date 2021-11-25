@@ -18,7 +18,7 @@ At this point, you should set up your env file! [Follow the instructions](/en/CS
 
 
 ::: tip
-The example env file on the configuration page is made for non-containerized setups. You should use docker networking to route CSMM to other services
+Make sure to use the .env.example.docker as base for your config. You should use docker networking to route CSMM to other services as well.
 
 ```
 DBSTRING=mysql2://csmm:your-db-password@db:3306/csmm
