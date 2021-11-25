@@ -88,3 +88,49 @@ Order deny,allow
 Allow from all
 </Proxy>
 ```
+
+## Traefik
+
+To use CSMM with [traefik](https://doc.traefik.io/traefik/), you need to add labels to your csmm-web instance. Also make sure to add it to the same network as your traefik proxy. The other services need to share one network with csmm-web.
+
+### Example `docker-compose.yml`:
+
+```
+services:
+  csmm-web:
+    ...
+    networks:
+      - proxy
+      - default
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.csmm.rule=Host(`your-domain.com`)"
+      - "traefik.http.routers.csmm.entrypoints=web-secure"
+      - "traefik.http.routers.csmm.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.csmm.middlewares=secHeaders@file"
+
+  csmm-worker:
+    ...
+    networks:
+      - default
+
+  csmm-migrations:
+    ...
+    networks:
+      - default
+
+  cache:
+    ...
+    networks:
+      - default
+
+  db:
+    ...
+    networks:
+      - default
+
+networks:
+  proxy:
+    external: true
+```
