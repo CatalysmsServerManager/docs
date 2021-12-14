@@ -1,5 +1,42 @@
 # Version History
 
+**Version 20.2 A20 b218 Experimental Compatible (14-12-2021)**
+
+* Added consolecommand getdrone: drones seem to get stuck in walls a lot. Let players get it by command (use for custom CSMM command).
+* Added drone dupe prevention: got multiple reports of the existence of this (very easy) dupe exploit by using a drone. Implemented prevention of this exploit by not allowing to teleport if a player has a drone deployed. Enable in CpmSettings.xml (DroneDupePrevention_Enabled). Configurable response string in CpmStrings.xml (DroneDupePrevention).
+Protected CPM chat,- and consolecommands: /bag, /bed, /ft, /ftw, /mv, /mvw, /rt, /tb, teleportplayerhome, mv, mvw, tp2bag
+Protected Vanilla consolecommand: teleportplayer (this is used by CSMM's teleport system. So if you enable dupe prevention, CSMM will also be protected).
+
+**Version 20.1 A20 b218 Experimental Compatible (12-12-2021)**
+
+* Added: setting in CpmSettings.xml for removing drones that are not packed away from the world on restart(Drones_RemoveOnRestart)
+* Changed consolecmd shutdownba: added parameter "resetdrones" for on demand drone removal
+* Changed all ttp edit commands to take steamId (hail to the old ways!) when running against offline players. For online players steamId, entityId and playerName can be used.
+Affects: rvr(removevendingrental), sdc(setdeathcount), wi(wipeinventory), rl(resetlevel), rpd(resetplayerdata), rs(resetskillpoints)
+* Changed consolecmd lfp(listplayerfriends): show friends names instead of EOSid.
+* Changed webapi getlandclaims: added EOSid to json response for owner info in claimcreator webUI.
+* Changed webapi getplayerhomes: added EOSid to json response for owner info in claimcreator webUI.
+* Fixed: chatcommands aaf and raf (add or remove all ingame friends to your adv. claim(s) whitelist)
+* Fixed: consolecmd af(addfriend)
+* Fixed: consolecmd grablcb
+* Fixed: consolecmd rlp2(removelandprotection2)
+* Fixed: consolecmd mv with fo(friendsonly) parameter
+* Fixed: consolecmd wlf(whitelistfriends)
+
+**Version 20.0 A20 b218 Experimental Compatible (06-12-2021)**
+
+* A20 Experimental Compatibility
+* steamId format changed. Use new format in commands/configs. Steam_76561928123009260
+* Make sure you use the steam platform format in serveradmin.xml for assigning permissions. If you use the new EOS identifier, CPM (and Allocs fixes) dont pick it up. Example:
+`<user platform="Steam" userid="76561928123009260" name="Prisma501" permission_level="0" />`
+* rrp and rac are breaking region files in A20 so they are disabled while being worked on
+* CPM now uses harmonyX that is shipped with the vanilla game. Make sure 0harmony.dll is not present in CPM modfolder. This is to ensure compatibility with mods that use the new built-in patch system that came with A20
+* All major features have been tested and are functional
+* Let me know if you find any quirks.
+* Latest allocs version is required. Make sure you have installed 22_24_39
+
+YOU CAN NOT USE OLD CPM DATABASES WITH A20. THE DB SCHEMAS HAVE CHANGED!
+
 **Version 19.8.1 A19.6 b8 Stable (04-10-2021)**
 
 * changed PVP kill logline: made logline more consistent with other CPM loglines, added more information and made format easier for regex info extraction. Ex. INF [CSMM_Patrons]playerKilledByPlayer: The killer (offenderSteamId=76561198123089815) killed Prisma501 (victimSteamId=76561198123095123) @ -350 58 -817 with AK-47 Machine Gun
