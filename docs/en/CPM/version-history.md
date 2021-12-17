@@ -1,6 +1,10 @@
 # Version History
 
-**Version 20.2 A20 b231 Experimental Compatible (14-12-2021)**
+**Version 20.2.1 A20 b231 Experimental Compatible (17-12-2021)**
+
+* Fixed consolecommand brender: it broke with A20 b231
+
+**Version 20.2 A20 b218 Experimental Compatible (14-12-2021)**
 
 * Added consolecommand getdrone: drones seem to get stuck in walls a lot. Let players get it by command (use for custom CSMM command).
 * Added drone dupe prevention: got multiple reports of the existence of this (very easy) dupe exploit by using a drone. Implemented prevention of this exploit by not allowing to teleport if a player has a drone deployed. Enable in CpmSettings.xml (DroneDupePrevention_Enabled). Configurable response string in CpmStrings.xml (DroneDupePrevention).
