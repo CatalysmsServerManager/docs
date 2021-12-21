@@ -1,8 +1,8 @@
 # Version History
 
-**Version 20.3 A20 b237 Experimental Compatible (21-12-2021)**
+**Version 20.3 A20 b238 Experimental Compatible (21-12-2021)**
 
-* A20 b237 compatibility
+* A20 b238 compatibility
 * Added killer position to playerKilledPlayer logline
 * Changed consolecommand bexport: help text now points to the correct new export location (/UserData/LocalPrefabs)
 Best practice (to prevent /Saves and /UserData wandering off to userprofile or .local and keep all data in the main server folder) is to set the locations in serverconfig.xml:
