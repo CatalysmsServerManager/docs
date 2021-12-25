@@ -1,5 +1,10 @@
 # Version History
 
+**Version 20.6 A20 b238 Stable (26-12-2021)**
+
+* Fixed a booboo i made in CPM's webapi handler with the 20.5 release
+* Spent a good amount of time optimizing CPM's code overall. Found some sweet spots that are handled a lot better now. This will make 20.6 the final version for a long time. As, for a guy who quit and only promised compatibility, i spent a lot more hours than i liked on A20 version. Taking a break from this all, so enjoy this version. Its going to serve you for A20 for a long time.
+
 **Version 20.5 A20 b238 Stable (25-12-2021)**
 
 * Added EOS id serveradmin support to CPM WebUI and WebApi's.  No need to have Steam platform format in serveradmin.xml anymore for CPM. You can have eosId, steamId or both. CPM doesnt care anymore. For Allocs map it is still a requirement to use Steam platform format as he hasnt updated yet. So be aware of that if you use CPM's webapi through my patched allocs webmap (map.js).
