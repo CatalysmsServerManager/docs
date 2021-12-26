@@ -22,7 +22,6 @@ Your Mods/ folder structure should look similar to this:
 ├── 1CSMM_Patrons
 │   ├── Config
 │   ├── cpmcc
-│   ├── 0Harmony.dll
 │   ├── CSMM_Patrons.dll
 │   ├── LiteDB.dll
 │   ├── ModInfo.xml
