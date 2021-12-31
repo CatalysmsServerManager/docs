@@ -3,7 +3,7 @@
 **Version 20.7 A20 b238 Stable (31-12-2021)**
 
 * Fixed whitelisting in blockplacement Adv. Claims: lcbfree, landclaim, problock and antiblock
-* Changed consolecommand brender: Added option to make the rendered prebab part of the randomgen world permanently. Use parameter "addtorwg" and the prefab you just rendered in will be saved in the RWG world. You can now add more skyscrapers, cities, lobby, hordebase etc to your generated RWG world. All you added with "addtorwg" will still be in the world after a chunkreset, regionfile delete or full map wipe. When you use this, the RWG world will be altered and that will trigger (re)downloading the map for all clients. So advise to make your custom RWG world on a non-player server and when done, deploy it to a production server.
+* Changed consolecommand brender: Added option to make the rendered prebab part of the randomgen world permanently. Use parameter "addtorwg" and the prefab you just rendered in will be saved in the RWG world. You can now add more skyscrapers, cities, lobby, hordebase etc to your generated RWG world. All you added with "addtorwg" will still be in the world after a chunkreset, regionfile delete or full map wipe. When you use this, the RWG world will be altered and that will trigger (re)downloading the world for all clients. So advise to make your custom RWG world on a non-player server and when done, deploy it to a production server.
 * Changed consolecommand bundo: added "brender addtorwg" detection. When the undo is handling an addtorwg done with brender it will remove the prefab from the RWG world it was added to.
 * Yes i know, ill be returning to my break.
 
