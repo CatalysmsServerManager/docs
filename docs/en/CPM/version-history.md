@@ -1,5 +1,13 @@
 # Version History
 
+**Version 20.8 A20 b238 Stable (08-01-2022)**
+
+* Added consolecommand lcp (listcpmplayers): list all players that ever visited your server. Filter by online only. Search players by (partial)playername, steamId or EOS_Id. Info per player: playerName, entityId, steamId, EOS_Id, Online status, IP Address, TotalPlayTime, Overridden chatname, ColorGroup membership, Individual chatcolor and mutedChat status.
+* Fixed consolecommand mcp (mutechatplayer): fixed always returning unmuted when checking mute status
+* Changed consolecommands pcc (playerchatcolor) and mpc (muteplayerchat): added support for coloring and muting offline players
+* Changed consolecommand shutdownba: added multiple reset support for all reset functionality. Use all or any combination of parameters reset, resetunclaimed, resetvehicles and resetdrones in one command.
+* Removed casesensitivity on all commands that use parameter steamId for usage on ofline players. Steam_xxxx and steam_xxxx will both be accepted for all commands.
+
 **Version 20.7 A20 b238 Stable (31-12-2021)**
 
 * Fixed whitelisting in blockplacement Adv. Claims: lcbfree, landclaim, problock and antiblock
