@@ -6,9 +6,37 @@ CPM has a lot of flexibility when it comes to how it behaves and what features a
 
 ## The various settings explained
 
+`<AdvClaims_Reversed_TpHeight>-1</AdvClaims_Reversed_TpHeight>`
+
+By default the revesed claim teleport sends the player to ground level (y=-1). Set this to a height if you want the player to tp to a specific height.
+
+`<AdvClaims_PVP_KillingMode>3</AdvClaims_PVP_KillingMode>`
+
+Define the PVP killing mode in an Adv. Claim PVP
+
 `<BlockUTF8Names_Enabled>true</BlockUTF8Names_Enabled>`
 
 Prevent or allow players to connect that have UTF-8 charset characters in their name.
+
+`<BloodmoonSpawner_DespawnAllOnStart>false</BloodmoonSpawner_DespawnAllOnStart>`
+
+Despawn all zombies alive on map right before bloodmoon starts. This will make sure you get as much bloodmoonspawns as possible.
+
+`<BloodmoonSpawner_OverrideVanillaSpawner>false</BloodmoonSpawner_OverrideVanillaSpawner>`
+
+Set true to override vanilla bloodmoon spawner and let CPM handle bloodmoon.
+
+`<BloodmoonSpawner_Overridden_AdjustBMEnemyCountPerPlayerToNrOnlinePlayers>true</BloodmoonSpawner_Overridden_AdjustBMEnemyCountPerPlayerToNrOnlinePlayers>`
+
+Set true to let CPM handle the bloodmoonspawning based on number of online players. This is the full auto mode and is recommended. Max alive zombies per player will be calculated and when players are in a bloodmoon party, CPM will bring the joy to all members of that party.
+
+`<BloodmoonSpawner_Overridden_BMEnemyCountPerPlayer>2</BloodmoonSpawner_Overridden_BMEnemyCountPerPlayer>`
+
+Only used if the previous setting is false. This will set the maximum number of zombies alive per player during bloodmoon regardless of number of players online.
+
+`<BloodmoonSpawner_Overridden_AddMaxAliveServerDuringBloodmoon>0</BloodmoonSpawner_Overridden_AddMaxAliveServerDuringBloodmoon>`
+
+This value will be added to the maximum allowed zombies alive that is configured in serverconfig.xml. Use this to spice up the bloodmoon spawning even more by allowing more zombies alive during bloodmoons.
 
 `<SpecialCharacters>!@#$%^&amp;*(),.?":;|&lt;&gt;'</SpecialCharacters>`
 
@@ -91,6 +119,10 @@ When enabled there will be no sleeperspawns in the world. Not permanent. When di
 `<DisableSleepers_BloodmoonOnly_Enabled>false</DisableSleepers_BloodmoonOnly_Enabled>`
 
 Same as disablesleepers above but ONLY prevents sleeperspawns during bloodmoon. Not permanent.
+
+`<DroneDupePrevention_Enabled>true</DroneDupePrevention_Enabled>`
+
+Enable to prevent players from teleporting if they have a drone deployed. A drone and teleporting can be used to easily dupe items ingame.
 
 `<GMSG_PlayerJoined_Enabled>true</GMSG_PlayerJoined_Enabled>`
 
@@ -229,3 +261,11 @@ The minimum amount of minutes the server has to be up before shutdownba will reb
 `<Vehicles_RemoveOnRestart>false</Vehicles_RemoveOnRestart>`
 
 If true, all vehicles that are NOT stored (backpack, container etc) will be removed at every server restart.
+
+`<Drones_RemoveOnRestart>false</Drones_RemoveOnRestart>`
+
+If true, all drones that are NOT stored (backpack, container etc) will be removed at every server restart.
+
+`<CreateTimeStampedCopyLogFile>true</CreateTimeStampedCopyLogFile>`
+
+ For serverowners that have a server start mechanism in place that will overwrite the logfile over and over again. If true this will create a timestamped copy of the logfile with every server restart.
