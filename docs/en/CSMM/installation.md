@@ -28,7 +28,7 @@ The easiest way to do this is with commands through the console. You can connect
 
 `webtokens add <name> <token> 0`
 
-Don’t forget the 0 at the end! It’s important CSMM has privilege 0 to ensure all functions can properly work.
+Please note that the token needs to be at least 10 characters long. Don’t forget the 0 at the end! It’s important CSMM has privilege 0 to ensure all functions can properly work.
 
 ::: warning These credentials are sensitive! You should treat these as a password. (Keep it secret, no obvious names/tokens). It's advised to use a combination of numbers, letters, lowercase and uppercase aswell as symbols
 :::
