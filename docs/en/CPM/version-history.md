@@ -1,5 +1,9 @@
 # Version History
 
+**Version 20.8.1 A20 b238 Stable (15-01-2022)**
+
+* Fixed consolecommands cvc (checkvehiclecontents) and ov (ownvehicle): fixed returning vehicle owner and then vehicle not found by default.
+
 **Version 20.8 A20 b238 Stable (08-01-2022)**
 
 * Added consolecommand lcp (listcpmplayers): list all players that ever visited your server. Filter by online only. Search players by (partial)playername, steamId or EOS_Id. Info per player: playerName, entityId, steamId, EOS_Id, Online status, IP Address, TotalPlayTime, Overridden chatname, ColorGroup membership, Individual chatcolor and mutedChat status.
