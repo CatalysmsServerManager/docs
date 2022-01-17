@@ -1,5 +1,11 @@
 # Version History
 
+**Version 20.9 A20 b238 Stable (17-01-2022)**
+
+* improved webapi's getplayerhomes and getlandclaims: the menu icon on CPM Webui gets visible after loading all data. Vastly improved performance on large datasets on (very) high populated servers. Menu icon will be visible much faster.
+* Added JunkDrone entityId to logline when a teleport gets blocked because of a deployed drone for dupe prevention: Playname and drone position were already logged. EntityId will make it easier to identify and work with the drone (teleport, remove etc).
+* Added consolecommand resetdronedata (rdd): when a drone entity gets removed (manually or by game), the playerdata will still contain the drone as ownedEntity. This will prevent players from placing new drones (Max deployed drones reached). This ttp edit will remove stuck drone(s) (and drones only, no turrets) from the playerdata to fix that. Note: this command will not remove any drones from the world.
+
 **Version 20.8.1 A20 b238 Stable (15-01-2022)**
 
 * Fixed consolecommands cvc (checkvehiclecontents) and ov (ownvehicle): fixed returning vehicle owner and then vehicle not found by default.
