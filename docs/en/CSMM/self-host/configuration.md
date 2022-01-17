@@ -36,6 +36,9 @@ cp .env.example.host .env
 
 # Docker setups:
 cp .env.example.docker .env
+
+# One-Click setups:
+File is created for you in /etc/csmm_version
 ```
 
 DBSTRING, a [special syntax](https://sailsjs.com/documentation/reference/configuration/sails-config-datastores#?the-connection-url) is used. protocol://user:password@host:port/database
