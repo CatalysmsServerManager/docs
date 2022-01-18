@@ -1,5 +1,9 @@
 # Version History
 
+**Version 20.9.1 A20 b238 Stable (18-01-2022)**
+
+* Fixed consolecommand resetregionsnow: moved from filesystem markers to in memory markers for simultaneous reset support in shutdownba few versions ago. Forgot to update resetregionsnow to set the in memory marker instead of filesystem marker. Now it does.
+
 **Version 20.9 A20 b238 Stable (17-01-2022)**
 
 * improved webapi's getplayerhomes and getlandclaims: the menu icon on CPM Webui gets visible after loading all data. Vastly improved performance on large datasets on (very) high populated servers. Menu icon will be visible much faster.
