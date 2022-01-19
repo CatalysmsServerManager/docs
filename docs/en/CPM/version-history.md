@@ -1,5 +1,11 @@
 # Version History
 
+**Version 21.0 A20.1 b5 Experimental (A20.0 b238 Stable compatible) (19-01-2022)**
+
+* A20.1 b5 Experimental compatibility
+* Moved reset operations (regions, vehicles, drones) to new patch location: Make sure the chunk handling thread, dronemanager and vehiclemanager dont save after the reset operation (effectively undoing the reset).
+* Moved creation of timestamped copy of logfile to new patch location: get some more last loglines before sever goes down.
+
 **Version 20.9.1 A20 b238 Stable (18-01-2022)**
 
 * Fixed consolecommand resetregionsnow: moved from filesystem markers to in memory markers for simultaneous reset support in shutdownba few versions ago. Forgot to update resetregionsnow to set the in memory marker instead of filesystem marker. Now it does.
