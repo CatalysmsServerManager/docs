@@ -4,7 +4,7 @@
 
 * A20.1 b5 Experimental compatibility
 * Moved reset operations (regions, vehicles, drones) to new patch location: Make sure the chunk handling thread, dronemanager and vehiclemanager dont save after the reset operation (effectively undoing the reset).
-* Moved creation of timestamped copy of logfile to new patch location: get some more last loglines before sever goes down.
+* Moved creation of timestamped copy of logfile to new patch location: get some more last loglines before server goes down.
 
 **Version 20.9.1 A20 b238 Stable (18-01-2022)**
 
