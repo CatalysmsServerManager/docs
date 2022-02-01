@@ -269,3 +269,7 @@ If true, all drones that are NOT stored (backpack, container etc) will be remove
 `<CreateTimeStampedCopyLogFile>true</CreateTimeStampedCopyLogFile>`
 
  For serverowners that have a server start mechanism in place that will overwrite the logfile over and over again. If true this will create a timestamped copy of the logfile with every server restart.
+
+`<WebUI_Port>28006</WebUI_Port>`
+
+TCP Port of CPM WebUI. Will initially be controlpanel port + 3. Use this only if you have a retarded gamehoster like Nitrado who doesnt want to open up a simple tcp port. Allocs patched map will break if you change port. You are on your own for making that work again.
