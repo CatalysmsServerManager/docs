@@ -6,6 +6,7 @@ Traditionally, 7 Days To Die servers are configured as PVP servers, or PVE serve
 - The server is not both a PVP and PVE server. It is solely a PVP server that has a special area where kills are prevented. Or its a PVE servers where kills are possible in certain areas.
 - The PVE protection zone helps prevent PVE player kills, but it does not do anything against base raiding or griefing. The only way to do prevent this is to configure Land Claims blocks to provide 100% protection, or allow the use of Advanced Claims to prevent access to player bases.
 - The PVE/PVP border is a solid line on the map, but the ability to kill people across this line depends entirely on the player's visibility of eachother across this line. It is possible for players with better computers to see other players across the line and still be able to kill them from a distance.
+- Lastly, the PVE zone created by CPM is only as good as TFP (the developers of the game) have made it possible for it to be. As a result, while direct player-to-player damage is able to be prevented in the PVE zone, other types of damage, like rocket-frag splash damage, robotic turret damage, etc. is not. If you desire to implement a "true" PVE zone, know that this type of damage will still be possible and that you'll need to address it via other methods - for example, rules barring the use of those items in the area, etc. 
 
 With these restrictions understood, you can begin to configure your server.
 
