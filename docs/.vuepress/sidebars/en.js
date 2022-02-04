@@ -63,6 +63,7 @@ module.exports = {
     "/en/CPM/claimcreator",
     "/en/CPM/pvpve-server-configuration",
     "/en/CPM/cpmsettings",
+    "/en/CPM/locationbasedbuffs",
     "/en/CPM/version-history",
     "/en/contributing"
   ],
