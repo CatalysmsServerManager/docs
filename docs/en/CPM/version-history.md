@@ -1,5 +1,9 @@
 # Version History
 
+**Version 21.2 A20.2 b2 Stable (05-02-2022)**
+
+* A20.2 b2 Stable compatibility release
+
 **Version 21.1 A20.1 b6 Stable (01-02-2022)**
 
 * Changed consolecommand wipeinventory: wipe any combination of bag, belt and equipment or all
