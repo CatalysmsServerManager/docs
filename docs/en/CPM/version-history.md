@@ -1,5 +1,9 @@
 # Version History
 
+**Version 21.2.1 A20.2 b2 Stable (08-02-2022)**
+
+* fixed consolecommand remitem: logging removed items broke with A20.2 b2
+
 **Version 21.2 A20.2 b2 Stable (05-02-2022)**
 
 * A20.2 b2 Stable compatibility release
