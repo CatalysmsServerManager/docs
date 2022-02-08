@@ -33,17 +33,14 @@ Okay, good! So it does exactly what we need it to do, how convenient! So by read
 
 `remitem <STEAMID>`
 
-Now, this will remove the items from a chest the player is standing on. That's good! However, if we want to _react_ to something happening, we must find a way to output something into the log. This is where the command `w2l` will come in handy. `w2l` allows you to **w**rite to **l**og, it even lets you log the output of a command.
+Now, this will log the removed items from the chest the player is standing on.
 
-`w2l command "remitem <STEAMID>"`
-
-If you execute this command (substituting \<STEAMID\> with a valid Steam ID of course), you will now see that the output is actually written to your logs. This might seem insignificant now, but will be very useful later when designing the hook.
 
 ## The command to execute
 
 To allow the player to trigger this feature, we will let them execute a chat command. To configure this, we'll make use of [custom commands](/en/CSMM/custom-commands.html). We are providing the command a variable `${player.steamId}`, this of course translates into the steam ID of the player who executed the command. CSMM supports lots of special variables you can use in your commands.
 
-`w2l command "remitem ${player.steamId}"`
+`remitem ${player.steamId}`
 
 So far so good, but seasoned 7D2D admins may notice something important. This command is currently exploitable! However, not to worry, let's think this through.
 
@@ -66,7 +63,7 @@ use single quotes for parameters that contain spaces in remote command.
 
 Okay, so this command lets you force the player to execute a command on their client. This opens up a lot of new possibilities! The `xui` command will work for our purposes. I'll leave the details of this command out of this guide. What we want to execute on the client is `xui close looting`. Now let's put all of this together
 
-`eoc ${player.steamId} "xui close looting";w2l command "remitem ${player.steamId}"`
+`eoc ${player.steamId} "xui close looting";remitem ${player.steamId}`
 
 So what does this do? If a player executes our custom command and then keeps the chest open, it will be automatically closed. This means the `remitem` command will work even when the player tries to abuse the system.
 
