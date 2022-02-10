@@ -119,7 +119,7 @@ Note that addCurrency does not use the `steam_` prefix.
            
 ![The final hook configuration](/assets/images/CSMM/advanced-feature-guide/bank-hook-1.png)
 
-Keep in mind that `Economy give multiplier` setting in roles will affect the ammount added to the csmm balance. If you need to compensate that, you'll need to do some math with the ${customqnt} to fix it up, and if you have multiple roles with different multipliers, the math will have to be inside a {{#if}} statement act accordingly, based on the role and the multipler, in order to get it right.
+Keep in mind that `Economy give multiplier` setting in roles will affect the ammount added to the csmm balance. If you need to compensate that, you'll need to do some math with the ${customqnt} to fix it up, and if you have multiple roles with different multipliers, the math will have to be inside a `{{#if}}` statement act accordingly, based on the role and the multipler, in order to get it right.
 
 Here is an example for a level 1 role with a 5 times multipler: `{{#if (eq player.role.level 1)}}addCurrency(${player.steamId}, {{round (divide custom.qnt 5) 0}}){{/if}}`
            
