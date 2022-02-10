@@ -38,9 +38,9 @@ Now, this will log the removed items from the chest the player is standing on.
 
 ## The command to execute
 
-To allow the player to trigger this feature, we will let them execute a chat command. To configure this, we'll make use of [custom commands](/en/CSMM/custom-commands.html). We are providing the command a variable `${player.steamId}`, this of course translates into the steam ID of the player who executed the command. CSMM supports lots of special variables you can use in your commands.
+To allow the player to trigger this feature, we will let them execute a chat command. To configure this, we'll make use of [custom commands](/en/CSMM/custom-commands.html). We are providing the command a prefix `Steam_` and a variable `${player.steamId}`, this of course translates into the steam ID of the player who executed the command, in the format the game currently uses. CSMM supports lots of special variables you can use in your commands.
 
-`remitem ${player.steamId}`
+`remitem steam_${player.steamId}`
 
 So far so good, but seasoned 7D2D admins may notice something important. This command is currently exploitable! However, not to worry, let's think this through.
 
@@ -63,7 +63,7 @@ use single quotes for parameters that contain spaces in remote command.
 
 Okay, so this command lets you force the player to execute a command on their client. This opens up a lot of new possibilities! The `xui` command will work for our purposes. I'll leave the details of this command out of this guide. What we want to execute on the client is `xui close looting`. Now let's put all of this together
 
-`eoc ${player.steamId} "xui close looting";remitem ${player.steamId}`
+`eoc steam_${player.steamId} "xui close looting";remitem steam_${player.steamId}`
 
 So what does this do? If a player executes our custom command and then keeps the chest open, it will be automatically closed. This means the `remitem` command will work even when the player tries to abuse the system.
 
@@ -88,26 +88,22 @@ The easiest way to have a hook pick up on a log line is with string filtering. F
 You can also use a regex for matching a log message. This can be used if you want to selectively match messages.
 :::
 
+Since the log line has only one steamId, CSMM automatically populates the {{player}} object with it, and by doing so, we already know which player executed the command. 
+  
 ![Search string hook config](/assets/images/CSMM/advanced-feature-guide/bank-hook-2.png)
 
 ### Creating variables
 
-Now we want to extract some info from the log line. Namely, we want to know which player executed the command and how much they deposited exactly. We will create custom variables inside the hook for this. Custom variables take a regex and will contain whatever your regex matches in the message.
-
-- Steam ID
-
-  We need to know who executed the command. There is a Steam ID in the log line which we can extract as a variable. The regex for this simply looks for a string of 17 digits.
-
-  `\d{17}`
+Now we want to extract some info from the log line. Namely, we want to know how much they deposited exactly. We will create a custom variable inside the hook for this. Custom variables take a regex and will contain whatever your regex matches in the message.
 
 - Quantity
 
-  Now this one is a little trickier. the quantity in our example is "1000". How can we match that and extract only the value? We will use some advanced Regex syntax for this one.
+  Now this part is a little trickier. the quantity in our example is "1000". How can we match that and extract only the value? We will use some advanced Regex syntax for this one.
 
   `(?<=item=casinoCoin, qnty=)(\d+)`
 
   This regular expression uses positive lookahead to make sure only what we need is matched. For more info on how this works, see this example on [regexr.com](https://regexr.com/51kil).
-
+           
 ![Custom hook variable config](/assets/images/CSMM/advanced-feature-guide/bank-hook-3.png)
 
 ### The final hook
@@ -115,13 +111,18 @@ Now we want to extract some info from the log line. Namely, we want to know whic
 What should the hook actually do? Well it should give the player some amount of CSMM currency and then respond to the player, letting them know it worked.
 
 To give the player currency, we can use the CSMM built-in function [addCurrency()](/en/CSMM/custom-commands.html) and to respond to the player, we can add a customized message with CPMs `pm2` command.
-
+eoc steam_${player.steamId} "xui close looting";w2l command "remitem steam_${player.steamId}" splitlog
 ```
-addCurrency(${custom.receiver}, ${custom.qnt}; pm2 [Exchange] ${custom.receiver} "You have deposited ${custom.qnt} casino coins."
+addCurrency(${player.steamId}, ${custom.qnt}; pm2 [Exchange] steam_${player.steamId} "You have deposited ${custom.qnt} casino coins."
 ```
-
+Note that addCurrency does not use the `steam_` prefix.
+           
 ![The final hook configuration](/assets/images/CSMM/advanced-feature-guide/bank-hook-1.png)
 
+Keep in mind that `Economy give multiplier` setting in roles will affect the ammount added to the csmm balance. If you need to compensate that, you'll need to do some math with the ${customqnt} to fix it up, and if you have multiple roles with different multipliers, the math will have to be inside a {{#if}} statement act accordingly, based on the role and the multipler, in order to get it right.
+
+Here is an example for a level 1 role with a 5 times multipler: `{{#if (eq player.role.level 1)}}addCurrency(${player.steamId}, {{round (divide custom.qnt 5) 0}}){{/if}}`
+           
 ## Finishing up
 
 CSMM and CPM each have very customizable features. If you combine the two, you can make really powerful and unique things. We hope that this guide can help you understand how to make different modules work together. If you want some more inspiration, be sure to check out the [configuration examples](/en/CSMM/configuration-examples.html).
