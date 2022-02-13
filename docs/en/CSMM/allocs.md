@@ -122,11 +122,11 @@ CSMM will specifically use a web token during the installation process, so if yo
 
 ## Permission parameters
 
-Each of the features of the Alloc Map have an associated permission module to define what access level a user must have in-game (not in CSMM) in order to access that particular feature of the live map. The permission level parameter refers to the in-game admin permission level set for a given player. Admins are permission level 0, and all other levels are configurable by the server owner, using the adminpermission.xml file. In the file, you will see entries such as:
+Each of the features of the Alloc Map have an associated permission module to define what access level a user must have in-game (not in CSMM) in order to access that particular feature of the live map. The permission level parameter refers to the in-game admin permission level set for a given player. Admins are permission level 0, and all other levels are configurable by the server owner, using the serveradmin.xml file. In the file, you will see entries such as:
 
 ```
 <admins>
- <user steamID="76561198021925107" name="Hint on who this user is" permission_level="0" />
+ <user platform="Steam" userid="76561198028175940" name="Hint on who this user is" permission_level="0" />
  <group steamID="103582791434672565" name="Steam Universe" permission_level_default="1000" permission_level_mod="0" />
 </admins>
 ```
