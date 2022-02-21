@@ -1,5 +1,9 @@
 # Version History
 
+**Version 21.3.1 A20.2 b2 Stable (21-02-2022)**
+
+* fixed consolecommand brender: forgot to add the PathAbstractions default prefab searchpaths to the implemented no reboot solution in v21.3. Now all prefab searchpaths are used again, so you can import any prefab that is in a designated prefab location again.
+
 **Version 21.3 A20.2 b2 Stable (21-02-2022)**
 
 * fixed consolecommand resetunclaimedregionsnow: was still using filesystem trigger instead of in memory trigger.
