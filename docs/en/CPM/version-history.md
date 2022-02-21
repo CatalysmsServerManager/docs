@@ -1,5 +1,10 @@
 # Version History
 
+**Version 21.3 A20.2 b2 Stable (21-02-2022)**
+
+* fixed consolecommand resetregionsnow: was still using filesystem trigger instead of in memory trigger.
+* changed consolecommand brender: no more reboot needed to render a prebab that has just been exported with bexport. When uploading an external prefab, a reboot is also not needed if you put the prebab in /LocalPrefabs (same location as bexport exports to).
+
 **Version 21.2.1 A20.2 b2 Stable (08-02-2022)**
 
 * fixed consolecommand remitem: logging removed items broke with A20.2 b2
