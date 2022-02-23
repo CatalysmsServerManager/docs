@@ -113,7 +113,7 @@ What should the hook actually do? Well it should give the player some amount of 
 To give the player currency, we can use the CSMM built-in function [addCurrency()](/en/CSMM/custom-commands.html) and to respond to the player, we can add a customized message with CPMs `pm2` command.
 eoc steam_${player.steamId} "xui close looting";w2l command "remitem steam_${player.steamId}" splitlog
 ```
-addCurrency(${player.steamId}, ${custom.qnt}; pm2 [Exchange] steam_${player.steamId} "You have deposited ${custom.qnt} casino coins."
+addCurrency(${player.steamId}, ${custom.qnt}); pm2 [Exchange] steam_${player.steamId} "You have deposited ${custom.qnt} casino coins."
 ```
 Note that addCurrency does not use the `steam_` prefix.
            
