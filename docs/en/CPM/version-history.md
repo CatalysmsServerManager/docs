@@ -1,5 +1,10 @@
 # Version History
 
+**Version 21.4 A20.3 b3 Stable (26-02-2022)**
+
+* fixed webapi gettraders: dont return trader tile filler parts as traders anymore
+* changed consolecommand bexport: added optional parameter "overwrite" to be able to overwrite existing prefabs on export
+
 **Version 21.3.1 A20.2 b2 Stable (21-02-2022)**
 
 * fixed consolecommand brender: forgot to add the PathAbstractions default prefab searchpaths to the implemented no reboot solution in v21.3. Now all prefab searchpaths are used again, so you can import any prefab that is in a designated prefab location again.
