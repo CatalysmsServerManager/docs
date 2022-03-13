@@ -31,7 +31,8 @@ If you want to change the default permissions for CPMcc create claims, view onli
 		<permission module="cpmcc.getplayersonline" permission_level="0" />
 		<permission module="cpmcc.getquestpois" permission_level="0" />
 		<permission module="cpmcc.getallpois" permission_level="0" />
-		<permission module="cpmcc.gettraders" permission_level="0" />	
+		<permission module="cpmcc.gettraders" permission_level="0" />
+		<permission module="cpmcc.getvehicles" permission_level="0" />
 	</permissions>
 </cpmcc_permissions>
 ````
