@@ -1,5 +1,10 @@
 # Version History
 
+**Version 21.5 A20.4 b38 Experimental (NOT A20.3 b3 stable compatible) (15-04-2022)**
+
+* A20.4 b38 Experimental compatibility
+* Removed all dependencies on allocs mod. CPM is now completely standalone. I considder allocs mod abandonware, since updates are not coming (in time) anymore. CPM does its own maprendering now.
+
 **Version 21.4 A20.3 b3 Stable (26-02-2022)**
 
 * fixed webapi gettraders: dont return trader tile filler parts as traders anymore

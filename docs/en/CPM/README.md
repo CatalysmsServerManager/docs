@@ -27,22 +27,7 @@ Your Mods/ folder structure should look similar to this:
 │   ├── ModInfo.xml
 │   ├── steam-intermediate.cer
 │   └── steam-rootca.cer
-├── Allocs_CommandExtensions
-│   ├── AllocsCommands.dll
-│   └── ModInfo.xml
-├── Allocs_CommonFunc
-│   ├── 7dtd-server-fixes.dll
-│   ├── 7dtd-server-fixes_version.txt
-│   └── ModInfo.xml
-├── Allocs_WebAndMapRendering
-│   ├── webserver
-│   ├── MapRendering.dll
-│   ├── ModInfo.xml
-│   ├── steam-intermediate.cer
-│   └── steam-rootca.cer
 ```
-([Allocs server fixes](https://7dtd.illy.bz/wiki/Server%20fixes#Download) need to be installed as it is required for CPM)
-
 ::: warning
 Make sure the CSMM\_Patrons folder has the ModInfo.xml and CSMM\_Patrons.dll file!  
 :::
