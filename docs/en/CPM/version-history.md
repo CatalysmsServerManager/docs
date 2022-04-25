@@ -1,5 +1,10 @@
 # Version History
 
+**Version 21.6 A20.4 b42 Stable (25-04-2022)**
+
+* A20.4 b42 Stable compatibility
+* Reintroducing consolecommand rrp (resetrwgprefabs): Dusted off my 3 year old implementation of resetting prefabs. This one does not use chunkresets which still causes region corruption. When running it will reset a prefab when all its chunks are loaded (by player(s)), so players actually do the work. You can leave it running until the next time you want to do a reset run as prefabs that are not loaded will just stay in the same state (they all become Schrödinger's prefabs). Its suboptimal compared to chunkresets, but at the moment this is the best you re going to get.
+
 **Version 21.5 A20.4 b38 Experimental (NOT A20.3 b3 stable compatible) (15-04-2022)**
 
 * A20.4 b38 Experimental compatibility
