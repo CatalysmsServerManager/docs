@@ -1,5 +1,9 @@
 # Version History
 
+**Version 21.8 A20.4 b42 Stable (02-05-2022)**
+
+* Added gamepass player support for offline players: added gamepass offline players support for ReservedSlots (ds), ResetPlayerData (rpd), ResetLevel (rl), ResetDroneData (rdd), SetDeathCount (sdc), WipeInventory (wi), ResetSkillPoints (rs), AddFriend (af).
+
 **Version 21.7 A20.4 b42 Stable (26-04-2022)**
 
 * Updated CPM WebUI to 1.8.0: show EOS Id on landclaimblocks and beds. Landclaim color green for active lcb's and red for inactive lcb's
