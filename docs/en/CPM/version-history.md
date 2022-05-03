@@ -1,5 +1,9 @@
 # Version History
 
+**Version 21.8.1 A20.4 b42 Stable (03-05-2022)**
+
+* Fixed consolecommand ds (donorslots): donorslots broke with previous release. This minor update fixes it.
+
 **Version 21.8 A20.4 b42 Stable (02-05-2022)**
 
 * Added gamepass player support for offline players: added gamepass offline players support for ReservedSlots (ds), ResetPlayerData (rpd), ResetLevel (rl), ResetDroneData (rdd), SetDeathCount (sdc), WipeInventory (wi), ResetSkillPoints (rs), AddFriend (af).
