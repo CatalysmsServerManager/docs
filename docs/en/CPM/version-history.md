@@ -1,5 +1,9 @@
 # Version History
 
+**Version 21.9 A20.5 b2 Experimental (10-05-2022)**
+
+* A20.5 b2 Experimental Compatibility
+
 **Version 21.8.1 A20.4 b42 Stable (03-05-2022)**
 
 * Fixed consolecommand ds (donorslots): donorslots broke with previous release. This minor update fixes it.
