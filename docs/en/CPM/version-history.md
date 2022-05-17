@@ -1,5 +1,11 @@
 # Version History
 
+**Version 22.0 A20.5 b2 Stable (17-05-2022)**
+
+* Changed consolecommand lcp (listcpmplayers): added ability to search players by XBL id. Renamed steamId to PlatformId in playerlisting.
+* Fixed WebUI not using custom settings: settings were loaded after the WebUI initialization, causing WebUI to always use default settings.
+* Fixed consolecommand rrp (resetrwgprefabs): stopped using TFP code to check if a prefab has a landclaim in it. That is bugged. It will only "see" the first landclaim placed by a player, causing prefabs that contain players 2nd, 3rd, 4th etc landclaim to be reset even with setting on to not reset claimed prefabs. Wrote my own implementation to fix it.
+
 **Version 21.9 A20.5 b2 Experimental (10-05-2022)**
 
 * A20.5 b2 Experimental Compatibility
