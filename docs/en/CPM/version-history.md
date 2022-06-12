@@ -1,5 +1,9 @@
 # Version History
 
+**Version 22.1 A20.5 b2 Stable (12-06-2022)**
+
+* Fixed tradingsystem: releasetradingitems (/rti) and canceltradingitems (/cti) were broken due to EOS implementation.
+
 **Version 22.0 A20.5 b2 Stable (17-05-2022)**
 
 * Changed consolecommand lcp (listcpmplayers): added ability to search players by XBL id. Renamed steamId to PlatformId in playerlisting.
