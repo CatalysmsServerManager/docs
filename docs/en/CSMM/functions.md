@@ -13,7 +13,7 @@ Will wait x seconds before continuing with command execution. Warning: you shoul
 Example:
 
 ```
-pm ${player.steamId} "You will be teleported in one minute."; wait(60); cpm-mvw ${player.steamId} home
+pm ${player.entityId} "You will be teleported in one minute."; wait(60); cpm-mvw ${player.entityId} home
 ```
 
 ### addCurrency(playerId, amount)
@@ -23,7 +23,7 @@ With this function, you can add or subtract currency from a players balance.
 Examples:
 
 ```
-pm ${player.steamId} "Thanks for your vote!"; addCurrency(${player.id}, 50)
+pm ${player.entityId} "Thanks for your vote!"; addCurrency(${player.id}, 50)
 
 addCurrency(${player.id}, -500); teleh ${player.entityId}
 ```
@@ -35,7 +35,7 @@ Sets a players role. The role parameter is the name of the role, this has to be 
 Example:
 
 ```
-setRole(${player.steamId}, Donator)
+setRole(${player.entityId}, Donator)
 ```
 
 ### sendDiscord(channel, message)
