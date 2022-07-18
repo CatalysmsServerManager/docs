@@ -30,9 +30,9 @@ Note: If a custom command has same name as an existing CSMM command, the existin
 
 ## Built-in variables
 
-You can add dynamic values to your commands. This is useful if you need to do something specific to the executing player like PMing the reply instead of a global message. Let's extend our hello world command. Every variable looks like this: "${variableName}". This might look familiar to people who know about [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). When a command is executed, CSMM will look for exact matches to the built-in variables (capitalization matters!). If found, it will replace the variable with the value relating to the executing player. So if you use ${player.steamId}, it will be replaced by the Steam ID of the player who triggered the command.
+You can add dynamic values to your commands. This is useful if you need to do something specific to the executing player like PMing the reply instead of a global message. Let's extend our hello world command. Every variable looks like this: "${variableName}". This might look familiar to people who know about [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). When a command is executed, CSMM will look for exact matches to the built-in variables (capitalization matters!). If found, it will replace the variable with the value relating to the executing player. So if you use ${player.entityId}, it will be replaced by the Steam ID of the player who triggered the command.
 
-`pm ${player.steamId} "Hello world"`
+`pm ${player.entityId} "Hello world"`
 
 Great! The server sent us a PM instead of displaying the message to everyone on the server.
 
@@ -103,7 +103,7 @@ See the list below for a list of all available variables with examples of their 
 
 To execute several commands inside one custom command, you have to separate them with ";".
 
-`pm ${player.steamId} "Hello world"; pm ${player.steamId} "Here's a second command!"`
+`pm ${player.entityId} "Hello world"; pm ${player.entityId} "Here's a second command!"`
 
 That's it! You're done! You now have a grasp on the basics. Check out some configuration examples if you need some inspiration.
 
@@ -119,7 +119,7 @@ Argument name is what you will use to substitute the value in your command. In t
 Argument type is used for validation
 An argument can be required or optional. If you deselect required, you must provide a default value.
 
-`pm ${player.steamId} "Hello ${name}"`
+`pm ${player.entityId} "Hello ${name}"`
 
 As you can see, when we pass a parameter "dave" to the command, it will say hello to Dave! When we do not add a parameter, it will use the default value.
 
@@ -143,7 +143,7 @@ For example, "\${randList:apple,orange,grape} \${randList:apple,orange,grape}" c
 ## Legacy variables
 
 ::: warning
-These were the first variables added to CSMM. They are still in the application for backwards compatibility, but it is recommended to use the new syntax (eg `${player.steamId}`)
+These were the first variables added to CSMM. They are still in the application for backwards compatibility, but it is recommended to use the new syntax (eg `${player.entityId}`)
 :::
 
 - \${steamId}
@@ -194,7 +194,7 @@ If the user were to type '/gv smith', the server would attempt to execute 'cpm-g
 An example command for players to retreive their own vehicle would look like this
 
 ```
-  getjeep ${player.steamId}
+  getjeep ${player.entityId}
 
 ```
 
@@ -239,7 +239,7 @@ You will also need 2 arguments
 Additionally you can send yourself a pm saying who you paid to and how much by adding this line to the end
 
 ```
-pm ${player.steamId} "You have just sent ${amount} to ${steam}"
+pm ${player.entityId} "You have just sent ${amount} to ${steam}"
 ```
 
 The final command is
@@ -255,7 +255,7 @@ A custom command to teleport the player back to where they last died (works even
 Command:
 
 ```
-teleportplayer ${player.steamId} ${player.lastDeathLocationX} ${player.lastDeathLocationY} ${player.lastDeathLocationZ}
+teleportplayer ${player.entityId} ${player.lastDeathLocationX} ${player.lastDeathLocationY} ${player.lastDeathLocationZ}
 ```
 
 You may want to give this command a cost, or allow it only for players with a specific role.
