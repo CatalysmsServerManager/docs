@@ -245,7 +245,7 @@ pm ${player.entityId} "You have just sent ${amount} to ${steam}"
 The final command is
 
 ```
-addCurrency(${steam},${amount});pm ${player.entityId} "You have just sent ${amount} to ${steam}"
+addCurrency(${steam},${amount});pm ${player.steamId} "You have just sent ${amount} to ${steam}"
 ```
 
 ### Teleport to last death
