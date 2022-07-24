@@ -134,7 +134,7 @@ pm {{player.steamId}} "The following high-level players are online:";
 
 ```
 {{#if (gt player.level 100)}}
-    cpm-targetedhorde {{player.entityId}} 25
+    cpm-targetedhorde {{player.entityId}} 25;
     pm {{player.steamId}} "Here they come!"
 {{else}}
     pm {{player.steamId}} "Sorry, you must be at least level 100 for this command"
@@ -150,7 +150,7 @@ Using a hook based on the "player death" event, check their zombie and player ki
 ```
 {{#if (and (eq player.zombieKills 0) (eq player.playerKills 0))}}
     wait 60;
-    pm {{player.steamId}} "Died before you did any damage? That's no good. Here's a pity prize."
+    pm {{player.steamId}} "Died before you did any damage? That's no good. Here's a pity prize.";
     giveplus {{player.entityId}} gunHandgunT1Pistol 1 1 0;
     giveplus {{player.entityId}} ammo9mmBulletBall 24;
 {{/if}}
