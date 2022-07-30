@@ -1,5 +1,12 @@
 # Version History
 
+**Version 22.2 A20.6 b8 Experimental (NOT 20.5 and lower compatible) (30-07-2022)**
+
+* A20.6 b8 compatability
+* Fixed consolecommands bexport and brender: prefab im,- and exporting broke with A20.6 b8
+* Changed consolecommand deactivatebedroll: added Xbox Live support
+* Removed consolecommand givexp: TFP added that command to vanilla
+
 **Version 22.1 A20.5 b2 Stable (12-06-2022)**
 
 * Fixed tradingsystem: releasetradingitems (/rti) and canceltradingitems (/cti) were broken due to EOS implementation.
