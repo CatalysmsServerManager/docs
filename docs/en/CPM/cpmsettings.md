@@ -142,6 +142,18 @@ Define the prefixes for chatcommands that are not to be shown in public chat. Se
 
 Enable or disable prefix hiding in chat. Prefixes in HideChatCommandPrefixes_Prefixes will be used when enabled.
 
+`<LevelJumpDetection_MinimumLevelJumpTrigger>2</LevelJumpDetection_MinimumLevelJumpTrigger>`
+
+The amount of jumping levels on which the leveljumping detection will trigger. For vanilla a jump of 2 is impossible, but if you have mods/events that grant a LOT of XP a jump of 3 or 4 for might be possible. You can configure a higher level jump trigger with this setting then.
+
+`<LevelJumpDetection_DetectedCommand>arrest ${platformId}</LevelJumpDetection_DetectedCommand>`
+
+The (optional) command to execute when leveljump detection gets triggered.
+
+`<LevelJumpDetection_ExcludeAdminLvl>0</LevelJumpDetection_ExcludeAdminLvl>`
+
+The player/admin level which will be excluded from leveljumping check.
+
 `<LocationTracker_Enabled>true</LocationTracker_Enabled>`
 
 Enable or disable local location tracking.
