@@ -100,7 +100,7 @@ Logline example for using for custom CSMM discord notification:
 
 [CSMM_Patrons]damageDetection(Entity): Player Prisma501 (7656114567822412) triggered damage detection! Damage done: 5000
 
-`<DamageDetection_DetectedCommand>ban add ${steamId} 10 years "Nice hack mate"</DamageDetection_DetectedCommand>`
+`<DamageDetection_DetectedCommand>ban add ${platformId} 10 years "Nice hack mate"</DamageDetection_DetectedCommand>`
 
 The (optional) command(s) to execute when damagedetections gets triggered. Use semicolon ( ; ) to seperate commands. Placeholders for use in commands: (casesensitive): ${playerName}, ${entityId} and ${platformId}
 
@@ -192,7 +192,7 @@ Logline example for using for custom CSMM discord notification:
 
 [CSMM_Patrons]Permissionlevel: 1000 MaxAdminLevelGodMode: 0
 
-`<GodModeDetectedCommand>ban add ${steamId} 10 years "Nice hack mate"</GodModeDetectedCommand>`
+`<GodModeDetectedCommand>ban add ${platformId} 10 years "Nice hack mate"</GodModeDetectedCommand>`
 
 The (optional) command(s) to execute when Godmode Anticheat gets triggered. Use semicolon ( ; ) to seperate commands. Placeholders for use in commands: (casesensitive): ${playerName}, ${entityId} and ${platformId}
 
@@ -206,9 +206,9 @@ Logline example for using for custom CSMM discord notification:
 
 [CSMM_Patrons]Permissionlevel: 1000 MaxAdminLevelSpectatorMode: 0
 
-`<SpectatorModeDetectedCommand>ban add ${steamId} 10 years "Nice hack mate"</SpectatorModeDetectedCommand>`
+`<SpectatorModeDetectedCommand>ban add ${platformId} 10 years "Nice hack mate"</SpectatorModeDetectedCommand>`
 
-Command (optional) that will be executed when Spectatormode anticheat gets triggered.
+The (optional) command(s) to execute when SpectatorMode Anticheat gets triggered. Use semicolon ( ; ) to seperate commands. Placeholders for use in commands: (casesensitive): ${playerName}, ${entityId} and ${platformId}
 
 `<MaxChatLength>0</MaxChatLength>`
 
