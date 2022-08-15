@@ -198,9 +198,9 @@ whitelist: has no function in this claim
 
 ### Command
 
-Trigger one or multiple console commands when a player enter this claim area. The claim type must be enclosed in double quotes and parameters with spaces within each command must be enclosed in single quotes. Use semicolon ( ; ) to seperate commands. Below is an example shows all 3 supported placeholders (casesensitive): ${playerName}, ${entityId} and ${steamId}:
+Trigger one or multiple console commands when a player enter this claim area. The claim type must be enclosed in double quotes and parameters with spaces within each command must be enclosed in single quotes. Use semicolon ( ; ) to seperate commands. Below is an example shows all 3 supported placeholders (casesensitive): ${playerName}, ${entityId} and ${platformId}:
 
-`ccc add deathzone -10 10 10 -10 0 "command:say '${playerName} has entered the DeathZone!!! mwuhahahaha!';pm ${entityId} 'I wish you luck my friend. Lots of it...';th ${steamId} 30"`
+`ccc add deathzone -10 10 10 -10 0 "command:say '${playerName} has entered the DeathZone!!! mwuhahahaha!';pm ${entityId} 'I wish you luck my friend. Lots of it...';th ${platformId} 30"`
 
 accessLevel: permissionlevel for which the commands will NOT fire when inside claim.
 

@@ -102,7 +102,7 @@ Logline example for using for custom CSMM discord notification:
 
 `<DamageDetection_DetectedCommand>ban add ${steamId} 10 years "Nice hack mate"</DamageDetection_DetectedCommand>`
 
-The (optional) command to execute when damagedetections gets triggered.
+The (optional) command(s) to execute when damagedetections gets triggered. Use semicolon ( ; ) to seperate commands. Placeholders for use in commands: (casesensitive): ${playerName}, ${entityId} and ${platformId}
 
 `<DamageDetection_ExcludeAdminLvl>0</DamageDetection_ExcludeAdminLvl>`
 
@@ -148,7 +148,7 @@ The amount of jumping levels on which the leveljumping detection will trigger. F
 
 `<LevelJumpDetection_DetectedCommand>arrest ${platformId}</LevelJumpDetection_DetectedCommand>`
 
-The (optional) command to execute when leveljump detection gets triggered.
+The (optional) command(s) to execute when leveljumping detection gets triggered. Use semicolon ( ; ) to seperate commands. Placeholders for use in commands: (casesensitive): ${playerName}, ${entityId} and ${platformId}
 
 `<LevelJumpDetection_ExcludeAdminLvl>0</LevelJumpDetection_ExcludeAdminLvl>`
 
@@ -194,7 +194,7 @@ Logline example for using for custom CSMM discord notification:
 
 `<GodModeDetectedCommand>ban add ${steamId} 10 years "Nice hack mate"</GodModeDetectedCommand>`
 
-Command (optional) that will be executed when Godmode anticheat gets triggered.
+The (optional) command(s) to execute when Godmode Anticheat gets triggered. Use semicolon ( ; ) to seperate commands. Placeholders for use in commands: (casesensitive): ${playerName}, ${entityId} and ${platformId}
 
 `<MaxAdminLevelSpectatorMode>0</MaxAdminLevelSpectatorMode>`
 
