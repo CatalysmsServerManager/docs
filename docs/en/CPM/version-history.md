@@ -1,6 +1,6 @@
 # Version History
 
-**Version 22.3 A20.6 b9 Experimental (NOT A20.5 and lower compatible) (13-08-2022)**
+**Version 22.3 A20.6 b9 Stable (NOT A20.5 and lower compatible) (13-08-2022)**
 
 * Added settings for Level Jump detection: configure MinJumpLevel, ExcludeAdminLevel and command(s) to execute on detection in CpmSettings.xml
 * Added placeholder ```${platformId}``` for use in commands in Adv. Commandclaim, SpectatorDetection, GodmodeDetection, DamageDetection and LevelJumpDetection. ${steamId} is still in for backwards compatability in existing commands.
