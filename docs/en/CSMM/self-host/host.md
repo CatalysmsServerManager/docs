@@ -14,12 +14,12 @@ Installing CSMM straight on the host is possible but can cause all sorts of weir
 
 ## Installing Node.js
 
-For official install instructions, you should consult [the Node.js website](https://nodejs.org/en/), the following commands will install v14.
+For official install instructions, you should consult [the Node.js website](https://nodejs.org/en/), the following commands will install v16.
 
 ```bash
 sudo apt-get update
 sudo apt-get install curl python3-software-properties
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install nodejs
 ```
 
