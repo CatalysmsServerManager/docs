@@ -241,7 +241,7 @@ accessLevel: permission level that is allowed to place anti blocks inside claim
 
 whitelist: players that are allowed to place anti blocks inside claim
 
-### Reset
+### Reset (DO NOT USE, chunkresets can corrupt region files. Command RAC is disabled until TFP fix that)
 Reset areas on the map on chunk(!) level. Use this claim to very precisely mark areas you want to reset on demand. Use consolecommand rac(resetadvclaim) to actually reset the chunks that are marked with this claim. When creating this claim with ccc consolecommand or CPM Web UI the claim borders will automatically snap to the nearest chunk border. That way the claim always shows exactly what is going to be reset. Advise: resetting chunks is very memory consuming. Better to have multiple smaller claims (city/town level) than few big claims as they will consume more memory when processed. Be aware that the world will be in a time vacuum during any reset. Online players will experience it like X-men member Quicksilver. Use parameter kicklockreboot on consolecommand rac to kick all online players, lock the server during reset and reboot when done.
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> reset
