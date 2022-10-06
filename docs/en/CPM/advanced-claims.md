@@ -15,7 +15,7 @@ All advanced claims are created using the same three methods: either by specifyi
 
 You are free to choose any name for any type of claim. However, there are some special "tags" you can add to a claimname that will change its behaviour in special ways.
 
-"bmonly(fromHour-toHour)_" : when a claimname contains this "tag" it will become a claim that is only active during bloodmoons between the specified hours "fromHour-toHour". Example: bmonly(20-7)_NoEnemies: this will activate this claim every bloodday from 20:00 until after bloodmoon 07:00.
+"bmonly(fromHour-toHour)_" : when a claimname is prefixed by this "tag" it will become a claim that is only active during bloodmoons between the specified hours "fromHour-toHour". Example: bmonly(20-7)_NoEnemies: this will activate this claim every bloodday from 20:00 until after bloodmoon 07:00.
 
 PVP/PVE claims are created by making a notify claim with "pve" or "pvp" in the name. No player damage can be done while in a PVE claim and playerdamage can be done while in a PVP claim.
 Usually you will create PVE claims on a server that has global setting KillingMode for PVP and PVP claims on a server that has global setting KillingMode for PVE.
