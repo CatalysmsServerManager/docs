@@ -38,6 +38,20 @@ Example:
 setRole(${player.entityId}, Donator)
 ```
 
+### removeTele(teleName, playerId)
+
+Removes a CSMM teleport set by a player. `playerId` can be either: 
+
+  - The internal CSMM ID <code v-pre>{{ player.id }}</code>
+  - The steam ID <code v-pre>{{ player.steamId }}</code>
+  - The cross ID <code v-pre>{{ player.crossId }}</code>
+  - Or the name <code v-pre>{{ player.name }}</code> Names can be unreliable. This should be a last resort, using IDs is much more stable.
+
+
+```
+removeTele(coolTeleportName, {{ player.steamId }})
+```
+
 ### sendDiscord(channel, message)
 
 Sends a discord message via the CSMM bot. Note that you must have already authorized the bot in your Discord server.
