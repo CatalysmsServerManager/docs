@@ -42,10 +42,10 @@ setRole(${player.entityId}, Donator)
 
 Removes a CSMM teleport set by a player. `playerId` can be either: 
 
-  - The internal CSMM ID `{{ player.id }}`
-  - The steam ID `{{ player.steamId }}`
-  - The cross ID `{{ player.crossId }}`
-  - Or the name `{{ player.name }}` Names can be unreliable. This should be a last resort, using IDs is much more stable.
+  - The internal CSMM ID <code v-pre>{{ player.id }}</code>
+  - The steam ID <code v-pre>{{ player.steamId }}</code>
+  - The cross ID <code v-pre>{{ player.crossId }}</code>
+  - Or the name <code v-pre>{{ player.name }}</code> Names can be unreliable. This should be a last resort, using IDs is much more stable.
 
 
 ```
