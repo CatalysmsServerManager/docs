@@ -180,6 +180,21 @@ You can also reward players for reaching milestone levels (25,50,100,...). For t
 To detect special levels, you must have CPM installed as this creates the log lines.
 :::
 
+### Announcement when a player is about to join
+
+Event - logLine
+
+Commands to execute - `say "[FC8403]${custom.playername}[-] is about to join the server";`
+Search String - `RequestToEnterGame`
+
+Add a new variable, dont forget to klick the **ADD** button
+
+Name - `playername`
+
+Regex - `(?<=EOS_.*\/)(.*)`
+
+:warning:Just a small sidenote: Lookbehind and PCRE together are not friends of `*` but in that case its working:warning:
+
 ## Cron jobs / server automation
 
 Scheduled commands include things like automated world saving, scheduled reboots, server announcements, etc. Most of the time, these will be administrative or behind-the-scenes functionality things that the users won't interact with. You will want to think about how often you execute these. It's fine to save the world every 30 minutes but you do not want the server to restart every 30 minutes!
