@@ -187,7 +187,7 @@ Event - logLine
 Commands to execute - `say "[FC8403]${custom.playername}[-] is about to join the server";`
 Search String - `RequestToEnterGame`
 
-Add a new variable, dont forget to klick the **ADD** button
+Add a new variable, don't forget to click the **ADD** button
 
 Name - `playername`
 
