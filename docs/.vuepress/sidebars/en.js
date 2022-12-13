@@ -10,7 +10,7 @@ module.exports = {
       children: [
         "/en/CSMM/self-host/installation",
         "/en/CSMM/self-host/one-click",
-        {title: "Self hosting",
+        {title: "Docker installation",
         children: ["/en/CSMM/self-host/docker-linux", "/en/CSMM/self-host/docker-windows"]},
         "/en/CSMM/self-host/host",
         "/en/CSMM/self-host/configuration",
