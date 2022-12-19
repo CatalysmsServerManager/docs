@@ -55,6 +55,36 @@ server: You have executed this command 2 times
 player2: $test
 server: You have executed this command 1 times
 ```
+## List var Handlebars helper
 
+This helper gives allows you to search, filter and sort lists of persistent variables.
 
+### Simple search with limit
 
+`listVar <search query> <limit>`
+
+```
+{{#each (listVar "test" 4)}}
+  {{{this.createdAt}}} - {{{this.updatedAt}}} - {{{this.name}}} - {{{this.value}}} - {{{this.server}}} - {{{this.preventDeletion}}}
+{{/each}}
+```
+
+### Search and sort
+
+`listVar <search query> <column to sort by> <sort direction>`
+
+```
+{{#each (listVar "test" "name" "asc")}}
+  {{{this.createdAt}}} - {{{this.updatedAt}}} - {{{this.name}}} - {{{this.value}}} - {{{this.server}}} - {{{this.preventDeletion}}}
+{{/each}}
+```
+
+### Search, sort and limit
+
+`listVar <search query> <column to sort by> <sort direction> <limit>`
+
+```
+{{#each (listVar "test" "name" "desc" 4)}}
+  {{{this.createdAt}}} - {{{this.updatedAt}}} - {{{this.name}}} - {{{this.value}}} - {{{this.server}}} - {{{this.preventDeletion}}}
+{{/each}}
+```
