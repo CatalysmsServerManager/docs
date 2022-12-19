@@ -1,5 +1,9 @@
 # Version History
 
+**Version 22.4.1 A20.6 b9 Stable (NOT A20.5 and lower compatible) (19-12-2022)**
+
+* Note to self to NOT empty worldgeneration caches on chunkresets on a server that still needs to run after the reset. Please update 22.4 if you have already downloaded it.
+
 **Version 22.4 A20.6 b9 Stable (NOT A20.5 and lower compatible) (19-12-2022)**
 
 BIG Shoutout to O C, the author of ServerTools. He found out, that deleting a chunk before regenerating it, will cause region corruption. That makes this release possible in the first place.
