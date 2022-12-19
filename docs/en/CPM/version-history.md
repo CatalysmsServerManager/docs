@@ -1,5 +1,15 @@
 # Version History
 
+**Version 22.4 A20.6 b9 Stable (NOT A20.5 and lower compatible) (19-12-2022)**
+
+BIG Shoutout to O C, the author of ServerTools. He found out, that deleting a chunk before regenerating it, will cause region corruption. That makes this release possible in the first place.
+
+
+* changed consolecommand ResetChunks: fixed region corruption on using chunkresets
+* enabled consolecommand rac (resetadvclaims): enabled command for resetting adv. claim reset areas, without the region corruption. You can use adv. claim reset again!
+* changed command rrp (resetrwgprefabs): now using chunkresets for resetting prefabs again, without the region corruption.
+* vanilla consolecommand cr (chunkreset) will still cause region corruption if used, except if you use the fix (mod) that O C has created for patching this command.
+
 **Version 22.3 A20.6 b9 Stable (NOT A20.5 and lower compatible) (13-08-2022)**
 
 * Added settings for Level Jump detection: configure MinJumpLevel, ExcludeAdminLevel and command(s) to execute on detection in CpmSettings.xml
