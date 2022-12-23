@@ -35,8 +35,9 @@ Generally, claims look something like this:
 The parts of this claim command are as follows:
 
 - Claimid/SteamID - The name of the claim. Inserting a SteamID in this portion of the command will assign the claim to that player, allowing them to use the whitelist commands to manage access. You can also use simple, descriptive names that don't have a SteamID when you want to create admin-managed areas, such as PVE zones or server lobbies.
-    - Example: 76561197961408188_myBase
-    - Example: 76561197961408188_hostileFree
+    - Example: Steam_76561197961408188_myBase
+    - Example: Steam_76561197961408188_portal1
+    - Example: XBL_D563EF7D9A9D47C94082DA1E013BB678EEDB7961_base2
     - Example: serverlobby
 - Claim Boundaries - To specify a claim via a shaped rectangle, you need to specify the 4 corners of the rectangle in a specific order. This process is described below. 
 - Access Level - This parameter defines the admin permission level before the claim applies to the player. For example, if you have an in-game permission level of 50 for your donors, and want to create a donor-only area, you would specify 51 for this command, and anyone who was an access level of 51-1000 would not be able to enter this area. This can be useful for creating advanced claims that nobody can enter without permission, except Admins.
@@ -88,7 +89,7 @@ P1/P2 is a quick and simple way of specifying a rectangle by specifying the oppo
 
 This version of the syntax is used to to create a square-shaped claim directly around the player who runs it. By doing this, you don't need to know where the boundary coordinates are, but you are also restricted to working only with square-shaped claims. In the screenshot below, the red dot is our target player, Corran, and a radius of 25 is specified.
 
-`ccc radius 25 Corran 76561197961408188_myBase 1`
+`ccc radius 25 Corran Steam_76561197961408188_myBase 1`
 
 - The length of a claim side is specified by the radius number '25'. Note that the word 'radius' is still present just before the number; this tells the CCC command to build the claim using a radius.
 - The player name to center the claim on is Corran.
