@@ -27,13 +27,15 @@ If you don't want to make a scoreboard for all animals but just one, let's say r
 
 Now you have the kill counts, but how do you retrieve that information in a way you can use it? With listVar.
 
-listVar can list, sort, and limit how many variables are returned. For a top 5, we want to list all animal kill variables, but also sort them by value in a descendent order, and limited to 5 results. We need a #each loop for that, and here is how that looks:
+listVar can list, sort, and limit how many variables are returned. For a top 5, we want to list all animal kill variables, but also sort them by value in a descendent order, and limited to 5 results. We need a `#each` loop for that, and here is how that looks:
 
 ```
 {{#each (listVar "Animals-killed-by-" "value" "desc" 5)}} 
 {{/each}} 
 ```
-The {{#each}} {{/each}} if for the loop part, listVar is the "action" that will look for any variable that has "Animals-killed-by-" in the name, sort by "value" in "desc" order and return 5 results, ignoring all others.
+
+
+The <code v-pre>{{#each}} {{/each}}</code> if for the loop part, listVar is the "action" that will look for any variable that has "Animals-killed-by-" in the name, sort by "value" in "desc" order and return 5 results, ignoring all others.
 
 Each loop iteration returns a variable that has a name and a value for us to use. Even though "Animals-killed-by-Edward122" does the trick, we can do better than that, by displaying only the player name. So let's remove the first part of the variable name and use a "say" command to announce the scoreboard. Looks like this:
 
