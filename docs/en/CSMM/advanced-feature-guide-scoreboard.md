@@ -17,6 +17,9 @@ The command looks like this:
 {{setVar (append "Animals-killed-by-" player.name) (add (getVar (append "Animals-killed-by-" player.name)) 1)}}
 ```
 
+That goes in the `Commands` section of the hook we just made.
+
+
 Say a player called Edward122 kills a boar and it is his very first animal. In the playground's variables section (under experiments) you will see a variable named "Animals-killed-by-Edward122" with a value of 1.
 
 As the killing goes, the number will increase. Remember that zombie animals count as zombies only, so they don't add up to this.
@@ -45,6 +48,11 @@ say "This are the current top 5 animals slayers from the server:";
 say "{{remove this.name 'Animals-killed-by-'}} - {{{this.value}}} animals killed"; 
 {{/each}} 
 ```
+
+This whole block could be added as a new custom command such as `/top5animals`, for example. Remember, you add custom commands in the `Ingame commands` section of CSMM. It could also be something sent automatically from time to time using the `Server automation` part of CSMM.
+
+As a custom command, if you want to prevent players from spamming the scoreboard in the chat, you can change the `say` part for `pm {{player.entityId}}`, so it gets sent only to the player using the command, as a private message. 
+
 When you wipe, make sure you delete the variables if you wish to restart the scoreboard, using the playground interface. 
 
 And that is it. A one line hook and a 4 lines command and you can have an animal killing competition. Happy hunting!
