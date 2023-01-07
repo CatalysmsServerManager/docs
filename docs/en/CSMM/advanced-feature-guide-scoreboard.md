@@ -51,7 +51,7 @@ say "{{remove this.name 'Animals-killed-by-'}} - {{{this.value}}} animals killed
 
 This whole block could be added as a new custom command such as `/top5animals`, for example. Remember, you add custom commands in the `Ingame commands` section of CSMM. It could also be something sent automatically from time to time using the `Server automation` part of CSMM.
 
-As a custom command, if you want to prevent players from spamming the scoreboard in the chat, you can change the `say` part for `pm {{player.entityId}}`, so it gets sent only to the player using the command, as a private message. 
+As a custom command, if you want to prevent players from spamming the scoreboard in the chat, you can change the `say` part for <code v-pre>pm {{player.entityId}}</code>, so it gets sent only to the player using the command, as a private message. 
 
 When you wipe, make sure you delete the variables if you wish to restart the scoreboard, using the playground interface. 
 
