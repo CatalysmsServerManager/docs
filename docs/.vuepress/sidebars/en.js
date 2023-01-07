@@ -43,8 +43,8 @@ module.exports = {
         "/en/CSMM/advanced-feature-guide",
         "/en/CSMM/advanced-feature-guide-chathook",
         "/en/CSMM/advanced-feature-guide-fallingblocks",
-        "/en/CSMM/advanced-feature-guide-deadlydrops"
-      ]
+        "/en/CSMM/advanced-feature-guide-deadlydrops",
+        "/en/CSMM/advanced-feature-guide-scoreboard"      ]
     },
     "/en/CSMM/catching-dupers",
     "/en/CSMM/configuration-examples",
