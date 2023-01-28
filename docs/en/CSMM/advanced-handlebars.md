@@ -96,6 +96,36 @@ To call helpers within other helpers, use `( )` instead of `{{}}`.
 {{round (divide player.zombieKills (divide player.playtime 60)) 2}}
 ```
 
+### datePassed
+
+The datePassed function is a Handlebars helper that takes in a date as a string in ISO format (e.g. "2022-01-01T00:00:00.000Z") and returns a boolean indicating whether or not the date has passed. If the date has passed, the function will return true, and if the date has not passed, the function will return false. This function can be useful for determining if a certain event or deadline has passed in your application.
+
+```
+{{#if (datePassed "2022-01-01T00:00:00.000Z")}}
+    pm {{player.steamId}} "The date has passed"
+{{else}}
+    pm {{player.steamId}} "The date has not passed"
+{{/if}}
+```
+
+### timeDiff / timeDiffPretty
+
+The timeDiff helper function calculates the time difference between the current time and the provided date in seconds, by subtracting the current time from the provided date.
+
+The timeDiffPretty helper does the same as the timeDiff helper but it uses the ms library to format the time difference in a human-readable format. It also checks if the time difference is in the past and if it is, it will append the string " ago" to the end of the pretty-printed time difference.
+
+```
+Time until event: {{timeDiff "2022-12-31T23:59:59.000Z"}} seconds
+```
+
+```
+Time until event: {{timeDiffPretty "2022-12-31T23:59:59.000Z"}}
+```
+
+### External
+
+CSMM includes a lot of helpers from [an external package](https://github.com/Budibase/handlebars-helpers). There's lots of possibilities here, check out their documentation for more information.
+
 ## Basic examples
 
 ### Give all players an item
