@@ -122,6 +122,22 @@ Time until event: {{timeDiff "2022-12-31T23:59:59.000Z"}} seconds
 Time until event: {{timeDiffPretty "2022-12-31T23:59:59.000Z"}}
 ```
 
+### lookupPlayer
+
+Sometimes you need to fetch some data about a specific player. They might not be online (so they are not included in the `server.onlinePlayers` object). With the `lookupPlayer` helper, you can fetch this info from the database.
+
+You can find players by searching for a Steam ID, a name, an EOS ID or the internal CSMM id.
+
+```
+{{ lookupPlayer "76561198028175941" }}
+```
+
+In a lot of cases, you're actually just interesting in a specific property of this player, you can use the `get` helper to fetch this property. In the following example, we get the player level.
+
+```
+{{ get "level" (lookupPlayer "76561198028175941") }}
+```
+
 ### External
 
 CSMM includes a lot of helpers from [an external package](https://github.com/Budibase/handlebars-helpers). There's lots of possibilities here, check out their documentation for more information.
