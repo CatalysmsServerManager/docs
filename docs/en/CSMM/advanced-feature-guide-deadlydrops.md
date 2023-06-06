@@ -12,7 +12,7 @@ First we need to create a hook that will pull the coordinates of the drop, and u
 AIAirDrop: Spawned supply crate at (-125.2, 199.1, -20.1), plane is at (-127.4, 209.1, -19.7)
 ```
 
-So we will create a logLine hook with the search string "Spawned supply crate at" and then use the following two custom variables:
+So we will create a logLine hook with the search string "Spawned supply crate at" and then use the following two custom variables (note: xcoord and zcoord are the names of the variables and must not be included in the Regex field):
 
 ```
 xcoord :    (?<=Spawned supply crate at \()(-?\d{1,4})
@@ -28,7 +28,7 @@ We will use these coordinates to create the claim, but we also need to make sure
 Now we have the coordinates and a unique name, we need to put these together to create the command claim. This will trigger our second hook when someone enters the area. We'll use the coordinates of the crate plus and minus 20 to create a square 40 blocks by 40 blocks around it. The command the claim will execute is simply to log a keyword along with the victim's steamID for our next hook, and then delete itself. The command for this is as follows:
 
 ```
-ccc add DeadlyDrop{{time}} {{subtract custom.xcoord 20}} {{add custom.xcoord 20}} {{add custom.zcoord 20}} {{subtract custom.zcoord 20}} -1 "command: w2l 'DADambush ${steamId}'; ccc remove DeadlyDrop{{time}}"
+ccc add DeadlyDrop{{time}} {{subtract custom.xcoord 20}} {{add custom.xcoord 20}} {{add custom.zcoord 20}} {{subtract custom.zcoord 20}} -1 "command: w2l 'DADambush Steam_${steamId}'; ccc remove DeadlyDrop{{time}}"
 ```
 
 ## The ambush hook - levelled to provide an appropriate challenge
@@ -39,23 +39,23 @@ This command tests the player's level with a long logic list and sends a horde w
 
 ```
 {{#if (lt player.level 10)}}
-th {{player.entityId}} 4
+th Steam_${steamId} 4
 {{else if (lt player.level 20)}}
-th {{player.entityId}} 8
+th Steam_${steamId} 8
 {{else if (lt player.level 40)}}
-th {{player.entityId}} 12
+th Steam_${steamId} 12
 {{else if (lt player.level 70)}}
-th {{player.entityId}} 16
+th Steam_${steamId} 16
 {{else if (lt player.level 100)}}
-th {{player.entityId}} 20
+th Steam_${steamId} 20
 {{else if (lt player.level 140)}}
-th {{player.entityId}} 24
+th Steam_${steamId} 24
 {{else if (lt player.level 200)}}
-th {{player.entityId}} 28
+th Steam_${steamId} 28
 {{else if (lt player.level 250)}}
-th {{player.entityId}} 32
+th Steam_${steamId} 32
 {{else}}
-th {{player.entityId}} 36
+th Steam_${steamId} 36
 {{/if}}
 ```
 
