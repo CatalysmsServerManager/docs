@@ -40,7 +40,7 @@ Now, this will log the removed items from the chest the player is standing on.
 
 To allow the player to trigger this feature, we will let them execute a chat command. To configure this, we'll make use of [custom commands](/en/CSMM/custom-commands.html). We are providing the command a prefix `Steam_` and a variable `${player.steamId}`, this of course translates into the steam ID of the player who executed the command, in the format the game currently uses. CSMM supports lots of special variables you can use in your commands.
 
-`remitem steam_${player.steamId}`
+`remitem Steam_${player.steamId}`
 
 So far so good, but seasoned 7D2D admins may notice something important. This command is currently exploitable! However, not to worry, let's think this through.
 
@@ -63,7 +63,7 @@ use single quotes for parameters that contain spaces in remote command.
 
 Okay, so this command lets you force the player to execute a command on their client. This opens up a lot of new possibilities! The `xui` command will work for our purposes. I'll leave the details of this command out of this guide. What we want to execute on the client is `xui close looting`. Now let's put all of this together
 
-`eoc steam_${player.steamId} "xui close looting";remitem steam_${player.steamId}`
+`eoc Steam_${player.steamId} "xui close looting";remitem Steam_${player.steamId}`
 
 So what does this do? If a player executes our custom command and then keeps the chest open, it will be automatically closed. This means the `remitem` command will work even when the player tries to abuse the system.
 
@@ -111,11 +111,11 @@ Now we want to extract some info from the log line. Namely, we want to know how 
 What should the hook actually do? Well it should give the player some amount of CSMM currency and then respond to the player, letting them know it worked.
 
 To give the player currency, we can use the CSMM built-in function [addCurrency()](/en/CSMM/custom-commands.html) and to respond to the player, we can add a customized message with CPMs `pm2` command.
-eoc steam_${player.steamId} "xui close looting";w2l command "remitem steam_${player.steamId}" splitlog
+eoc Steam_${player.steamId} "xui close looting";w2l command "remitem Steam_${player.steamId}" splitlog
 ```
-addCurrency(${player.steamId}, ${custom.qnt}); pm2 [Exchange] steam_${player.steamId} "You have deposited ${custom.qnt} casino coins."
+addCurrency(${player.steamId}, ${custom.qnt}); pm2 [Exchange] Steam_${player.steamId} "You have deposited ${custom.qnt} casino coins."
 ```
-Note that addCurrency does not use the `steam_` prefix.
+Note that addCurrency does not use the `Steam_` prefix.
            
 ![The final hook configuration](/assets/images/CSMM/advanced-feature-guide/bank-hook-1.png)
 
