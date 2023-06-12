@@ -1,5 +1,11 @@
 # Version History
 
+**Version 23.0 A21 b313 Experimental (NOT A20 and lower compatible) (12-06-2023)**
+
+* A21 Compatibility.
+*  Changed CPM Web UI: Added owner name to bed(roll) info. Added owner name and vehicle id (both loaded and unloaded vehicles) to vehicle info.
+* Changed consolecommands resetlevel, resetskillpoints and removeexpdeficit: no more playerkicking for offline ttp editing. Level, skillpoints and expdeficit can be set live with player online.
+
 **Version 22.4.1 A20.6 b9 Stable (NOT A20.5 and lower compatible) (19-12-2022)**
 
 * Note to self to NOT empty worldgeneration caches on chunkresets on a server that still needs to run after the reset. Please update 22.4 if you have already downloaded it.
