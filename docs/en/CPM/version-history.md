@@ -1,5 +1,32 @@
 # Version History
 
+**Version 23.1 A21 b313 Experimental (NOT A20 and lower compatible) (15-06-2023)**
+
+* CPM Web UI 1.8.2: switched coordinates for Mouse position and Last click from N/S - E/W to E/W - N/S
+* Changed flydetection: fixed false positive on flying when player is in water/swimming in A21.
+* Changed webapi access: added possibility to add apiusers in cpmcc_permissions.xml. Now you can use apiuser(s) to gain access to the cpm webapis based on their permissionlevel. Add "?apiuser=username&password=password" after your apicall from any script/software to use cpm apis. Delete cpmcc_permissions.xml and it will autogenerate with apiusers tree on server start. Or add the tree manually like below.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<cpmcc_permissions>
+	<apiusers>
+		 <!-- <apiuser username="apiuser1" password="password1" permission_level="0" /> -->
+	</apiusers>
+	<permissions>
+		<permission module="cpmcc.map" permission_level="0" />
+		<permission module="cpmcc.createadvclaims" permission_level="0" />
+		<permission module="cpmcc.getlandclaims" permission_level="0" />
+		<permission module="cpmcc.getadvclaims" permission_level="0" />
+		<permission module="cpmcc.getresetregions" permission_level="0" />
+		<permission module="cpmcc.getplayerhomes" permission_level="0" />
+		<permission module="cpmcc.getplayersonline" permission_level="0" />
+		<permission module="cpmcc.getquestpois" permission_level="0" />
+		<permission module="cpmcc.getallpois" permission_level="0" />
+		<permission module="cpmcc.gettraders" permission_level="0" />
+		<permission module="cpmcc.getvehicles" permission_level="0" />
+	</permissions>
+</cpmcc_permissions>
+```
+
 **Version 23.0 A21 b313 Experimental (NOT A20 and lower compatible) (12-06-2023)**
 
 * A21 Compatibility.
