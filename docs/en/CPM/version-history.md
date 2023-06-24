@@ -1,5 +1,10 @@
 # Version History
 
+**Version 23.2 A21 b317 Experimental (NOT A20 and lower compatible) (24-06-2023)**
+
+* Changed RegionsReset, Vehicle/Drone Removal, ResetPlayerData and Permadeath: implemented thread/latesaving safety. In edge cases (high pop servers) there was a chance of failing, because of busy gamethreads/latesaving operations.
+* CPM Web UI 1.8.3: added location to landclaim info on map.
+
 **Version 23.1 A21 b313 Experimental (NOT A20 and lower compatible) (15-06-2023)**
 
 * CPM Web UI 1.8.2: switched coordinates for Mouse position and Last click from N/S - E/W to E/W - N/S
