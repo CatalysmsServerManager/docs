@@ -1,5 +1,9 @@
 # Version History
 
+**Version 23.3 A21 b324 Stable (NOT A20 and lower compatible) (29-06-2023)**
+
+* A21 b324 Stable compatibility
+
 **Version 23.2 A21 b317 Experimental (NOT A20 and lower compatible) (24-06-2023)**
 
 * Changed RegionsReset, Vehicle/Drone Removal, ResetPlayerData and Permadeath: implemented thread/latesaving safety. In edge cases (high pop servers) there was a chance of failing, because of busy gamethreads/latesaving operations.
