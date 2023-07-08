@@ -284,4 +284,4 @@ If true, all drones that are NOT stored (backpack, container etc) will be remove
 
 `<WebUI_Port>28006</WebUI_Port>`
 
-TCP Port of CPM WebUI. Will initially be controlpanel port + 3. Use this only if you have a retarded gamehoster like Nitrado who doesnt want to open up a simple tcp port. Allocs patched map will break if you change port. You are on your own for making that work again.
+TCP Port of CPM WebUI. Will initially be controlpanel port + 3. Use this only if you have a gamehoster who doesnt want to open up a simple tcp port. Allocs patched map will break if you change port. You are on your own for making that work again.

@@ -135,7 +135,7 @@ BIG Shoutout to O C, the author of ServerTools. He found out, that deleting a ch
 **Version 21.1 A20.1 b6 Stable (01-02-2022)**
 
 * Changed consolecommand wipeinventory: wipe any combination of bag, belt and equipment or all
-* Made CPM WebUI port configurable: will initially be controlpanel port + 3. Can be changed in CpmSettings.xml (WebUI_Port). Use this only if you have a retarded gamehoster like Nitrado who doesnt want to open up a simple tcp port. Allocs patched map will break if you change port. You are on your own for making that work again.
+* Made CPM WebUI port configurable: will initially be controlpanel port + 3. Can be changed in CpmSettings.xml (WebUI_Port). Use this only if you have a gamehoster who doesnt want to open up a simple tcp port. Allocs patched map will break if you change port. You are on your own for making that work again.
 * Added some better logging to database cleanup of tracking data. Make it easier to identify corrupt db for deletion.
 
 **Version 21.0 A20.1 b5 Experimental (A20.0 b238 Stable compatible) (19-01-2022)**
