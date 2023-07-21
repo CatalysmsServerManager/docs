@@ -1,5 +1,12 @@
 # Version History
 
+**Version 23.4 A21.1 b6 Experimental (21-07-2023)**
+
+* A21.1 b6 Experimental compatibility
+* Fixed /day7 zombie count
+* Changed consolecommand mv: added parameter os (offline support) for parameter fo (friends only). If os parameter is added to mv fo, the tp will support offline target player. If omitted, offline tp is not supported.
+* Removed command tprotect: TFP moved traderprotection to RWG prefab level instead of chunk/block level. Renders trprotect completely useless. Back to the drawing board for this functionality.
+
 **Version 23.3 A21 b324 Stable (NOT A20 and lower compatible) (29-06-2023)**
 
 * A21 b324 Stable compatibility
