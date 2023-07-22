@@ -4,6 +4,10 @@
 
 This video tutorial will show you the basics of adding a server.
 
+::: tip
+The URL in the video is outdated. You can find the cloud-hosted CSMM instances at [https://eu.csmm.app](https://eu.csmm.app) [https://us.csmm.app](https://us.csmm.app) and [https://au.csmm.app](https://au.csmm.app)
+:::
+
 <div align=center>
     <iframe width="800" height="500" src="https://www.youtube.com/embed/vOXqe7PYti4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
