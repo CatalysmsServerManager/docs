@@ -20,10 +20,6 @@ Install [Alloc's Server Fixes](https://7dtd.illy.bz/wiki/Server%20fixes) if you 
 
 The easiest way to do this is with commands through the console. You can connect to your server console via telnet, webpanel or ingame.
 
-::: warning
-If your server is on A21 or higher, you need to use the `webtokens_legacy` command instead
-:::
-
 1. Check if you have any set up already:
 
 `webtokens list`
