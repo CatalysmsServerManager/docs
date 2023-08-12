@@ -4,6 +4,19 @@
 
 CPM uses buffs for communicating through tooltips (buffs) in the advanced claim system. Its very easy to make use of that system to create areas in which buffs of your liking will be applied (and auto debuffed when leaving the area). Aka location based buffs. For more info on that system and how to use your own, read in CPM mod folder /Config/buffs.xml. For location based buffs you will be using adv. claim notify.
 
+## Example: Simulate tprotect in a specific area
+
+These buffs are used for a adv. claim notify called "ProtectedLobby". Make sure to edit the buff when your adv. claim notify has a different name.
+
+```<!--Cant do damage to blocks-->
+        <buff name="cpm_tooltip_ProtectedLobby_enter" name_key="cpm_tooltip_ProtectedLobby_enter" icon="ui_game_symbol_destruction2" icon_color="46,244,41" tooltip_key="[00FF00]Welcome to the lobby[-]">
+            <display_value_key value="Lobby"/> <display_value value="xxx"/> <stack_type value="ignore"/>
+            <effect_group>
+                <passive_effect name="BlockDamage" operation="perc_add" value="-1"/>
+            </effect_group>
+        </buff>
+```
+
 ## Example: Make a player invulnerable against any harm
 
 These buffs are used for a adv. claim notify called "SafeZone". Make sure to edit the buff when your adv. claim notify has a different name.
