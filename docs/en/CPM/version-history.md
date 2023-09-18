@@ -1,8 +1,8 @@
 # Version History
 
-**Version 23.5 A21.1 b16 Stable (10-08-2023)**
+**Version 23.5 A21.1 b16 Stable - A21.2 b14 Experimental (10-08-2023)**
 
-* A21.1 b16 Stable compatibility
+* A21.1 b16 Stable - A21.2 b14 Experimental compatibility
 
 **Version 23.4 A21.1 b6 Experimental (21-07-2023)**
 
