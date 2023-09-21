@@ -24,7 +24,11 @@ Once you've confirmed that the mods are installed, the next step is to try and a
     <property name="EnableMapRendering"	value="true"/>
 ```
 
+<<<<<<< HEAD
 Note the Web Dashboard Port. This is the port for the build-in webserver, and is now integrated with Alloc's Mod server. In the example above, the Alloc's port number would be 8084.
+=======
+Note the Web Dashboard Port. This is the port for the build-in webserver, and is not integrated with Alloc's Mod server. In the example above, the Alloc's port number would be 8084.
+>>>>>>> 35b39dab53a857fdb4e4d75866148bc265025fc0
 
 Next, you'll need your server's IP Address. Once you have it, in your browser, browse to the following address in your preferred browser:
 
