@@ -6,28 +6,29 @@ If you are hosting your game with a professional hosting company, your game serv
 
 ## Determine whether Alloc's server fixes is already installed
 
-The first step is to confirm whether Alloc's Fixes is installed and running properly. To do that, you can simply type 'version' into your console or RCON window. The output should look something like below. There are three separate Alloc's Fixes mods that need to be installed, and depending on the version you install, the numbers (20, 23, 35) can be different.
+The first step is to confirm whether Alloc's Fixes is installed and running properly. To do that, you can simply type 'version' into your console or RCON window. The output should look something like below. There are three separate Alloc's Fixes mods that need to be installed, and depending on the version you install, the numbers (26, 31, 47) can be different.
 
 ```
-    Game version: Alpha 19 (b178) Compatibility Version: Alpha 19
-    Mod Allocs command extensions: 23
-    Mod Allocs server fixes: 23
-    Mod Allocs MapRendering and Webinterface: 38
+    Game version: Alpha 21.1 (b16) Compatibility Version: Alpha 21.1
+    Mod Allocs_Commands: 26
+    Mod Allocs_Core: 31
+    Mod Allocs_Webinterface: 47
+
 ```
 
 Once you've confirmed that the mods are installed, the next step is to try and access the Alloc's web server. To do this, you'll need to know what ports your server has been configured for, and you can determine this by looking at your serverconfig.xml file on your server. You should see a section similar to this in the config file:
 
 ```
-    <property name="ControlPanelEnabled" value="false"/>
-    <property name="ControlPanelPort" value="8084"/>
-    <property name="ControlPanelPassword" value="CHANGEME"/>
+    <property name="WebDashboardEnabled" value="true"/>
+    <property name="WebDashboardPort" value="8084"/>
+    <property name="EnableMapRendering"	value="true"/>
 ```
 
-Note the Control Panel Port. This is the port for the build-in webserver, not the Alloc's Mod server, so take that number, and add 2 to it. In the example above, the Alloc's port number would be 8086.
+Note the Web Dashboard Port. This is the port for the build-in webserver, and is not integrated with Alloc's Mod server. In the example above, the Alloc's port number would be 8084.
 
 Next, you'll need your server's IP Address. Once you have it, in your browser, browse to the following address in your preferred browser:
 
-http://serverip:allocport
+http://serverip:allocport/legacymap
 
 If you don't have a map login page, continue to the next section, which will help you install the mod properly. If you see a page like the above, it means that you have the port and have access to the interactive map, and Alloc's is successfully installed and working. You can skip the Installation section, and move on to the Configuration section if you wish.
 
@@ -41,17 +42,19 @@ Clicking one of the Alloc's folders should given you a structure like this:
 Mods/
 ├── Allocs_CommandExtensions
 │   ├── AllocsCommands.dll
+│   ├── AllocsCommands.pdb
 │   └── ModInfo.xml
 ├── Allocs_CommonFunc
 │   ├── 7dtd-server-fixes.dll
+│   ├── 7dtd-server-fixes.pdb
 │   ├── 7dtd-server-fixes_version.txt
 │   └── ModInfo.xml
 └── Allocs_WebAndMapRendering
-    ├── MapRendering.dll
-    ├── ModInfo.xml
-    ├── steam-intermediate.cer
-    ├── steam-rootca.cer
-    └── webserver
+    ├── AllocsWeb.dll
+    ├── AllocsWeb.pdb
+    ├── WebMod
+    ├── webserver_legacy
+    └── ModInfo.xml
 ```
 
 Note that each Mod folder has a ModInfo.xml file and a DLL file for the mod. If you have any other structure than this, the mod is most likely installed incorrectly. The most common mistake is a structure such as:
