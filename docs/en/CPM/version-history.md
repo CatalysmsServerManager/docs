@@ -1,8 +1,8 @@
 # Version History
 
-**Version 23.6 A21.2 b30 Experimental (NOT A21.2 b14 Experimental and lower compatible) (02-11-2023)**
+**Version 23.6 A21.2 b30 Stable (NOT A21.1 b16 Stable and lower compatible) (20-11-2023)**
 
-* A21.2 b30 Experimental compatibility
+* A21.2 b30 Stable compatibility
 * Improved hostilefree advanced claim: better handling of enemies, that in edge case have already been despawned.
 * Changed consolecommand addfriend: fixed A21.2 b30 incompatability
 
