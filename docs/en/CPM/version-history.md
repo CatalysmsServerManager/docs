@@ -1,5 +1,11 @@
 # Version History
 
+**Version 23.7 1.0 b306 Experimental (NOT A21.2 b37 Stable and lower compatible) (22-06-2024)**
+
+* LOTS of compatibility fixes
+* Brought reset region system up to speed with todays standards. No more server restart needed. Removed parameters from shutdownba. Consolecommands resetregions and resetunclaimedregions can be used at will, ultra fast and on a running server. Marking regions (by console or webui has not changed)
+* Due to big changes in storage, tradingsystem and consolecommands checkloot, remitem, unlockall and own have been removed
+
 **Version 23.6 A21.2 b37 Stable (NOT A21.1 b16 Stable and lower compatible) (20-11-2023)**
 
 * A21.2 b37 Stable compatibility
