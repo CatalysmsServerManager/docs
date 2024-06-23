@@ -158,45 +158,6 @@ Gives you a report on how many hostile creatures there are within a small radius
 
 Last Seen shows the time since the specified player was last online, in days hours and minutes.
 
-### Global Trading System
-
-Starting with CPM 8.9, a trading system was implemented that allows players to exchange items with other players. Players put items in a secure storage chest that they control, run a few chat commands to mark items for trade and review the proposed trade, and then the items switch places.
-
-::: tip
-By default, this trading system is disabled, and requires an admin to enable it. To do this, an Admin will have to run the console command **ccp rtc 1000**, which will enable the creating of trading chests.
-:::
-
-The process is as follows:
-
-1.  Stand atop a secure storage chest for use as your trading chest and type **/rtc**
-2.  Place the items you want to trade into your chest and type **/rti \<playername\>** (note: you can use partial names, like 'Corr' instead of 'Corran'; see the Player Names section below for more info)
-3.  If you need to cancel the trade at any time from here until the end, you can type **/cti** to cancel the trade.
-4.  Once both sides have performed the /rti process, the mod will show both parties a list of what is being traded. At any time from here until the end, you can type /lti to repeat the list of items marked for trade.
-5.  If both parties agree to the trade, they then type **/ati \<playername\>** to complete the trade.
-6.  Once completed, the items will swap places and the trade is complete.
-
-/rtc (register trading chest)
-
-Marks a secure storage chest for use as a trading chest. You must stand atop it at the moment of creation for this to take effect.
-
-You can only have one active chest at a time; running the command again will revert the previous trading chest back into a storage box only.
-
-/rti \<playername\> (release trading items)
-
-Releases any and all items in a trading chest for trade to another player that you specify. Both sides must run this command. The other player will be informed of this with quality colorcoded items in chat. Eventual mods on items will get listed also.
-
-/ati \<playername\> (accept trading items)
-
-Accept the trade from the other player. Both sides must run this command.
-
-/cti (cancel trading items)
-
-Cancels the trade process, returning the items to their original owners.
-
-/lti (list trading items)
-
-Lists all items currently marked for trade.
-
 ### Advanced Claim Commands
 
 While Players can't place Advanced Claims, they _can_ interact with Advanced Claims that were created and assigned to them in order to manage the whitelist for the claim. With most advanced claim types, any player not on the whitelist is typically not able to enter, unless they are added to the whitelist. Similarly, anyone inside a Reversed claim region can't leave unless they are whitelisted, and players on the whitelist for an OpenHours claim can enter the region off-hours.
