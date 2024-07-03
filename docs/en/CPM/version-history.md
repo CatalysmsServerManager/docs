@@ -1,6 +1,6 @@
 # Version History
 
-**Version 23.9 1.0 b309 Experimental (NOT A21.2 b37 Stable and lower compatible) (30-06-2024)**
+**Version 23.9 1.0 b312 Experimental (NOT A21.2 b37 Stable and lower compatible) (30-06-2024)**
 
 * fixed owner name not showing properly in CPM WebUi on landclaim details.
 * Changed custom bloodmoonspawner to do an extra check that was added in vanilla method.
