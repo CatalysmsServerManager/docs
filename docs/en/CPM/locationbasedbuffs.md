@@ -25,12 +25,11 @@ These buffs are used for a adv. claim notify called "SafeZone". Make sure to edi
         <buff name="cpm_tooltip_SafeZone_enter" name_key="cpm_tooltip_SafeZone_enter" icon="ui_game_symbol_add" icon_color="46,244,41" tooltip_key="[00FF00]Take a deep breath, you are safe from harm now.[-]">
             <display_value_key value="SafeZone"/> <display_value value="xxx"/> <stack_type value="ignore"/>
             <effect_group>
-                <passive_effect name="HealthLoss" operation="base_set" value="0"/>
-                <passive_effect name="HealthLoss" operation="perc_set" value="0"/>
-                <passive_effect name="HealthLoss" operation="perc_add" value="-1.2"/>
-                <passive_effect name="BuffResistance" operation="base_add" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
-                <passive_effect name="PhysicalDamageResist" operation="base_add" value="500"/>
-                <passive_effect name="PhysicalDamageResist" operation="base_add" value="500" tags="coredamageresist"/>
+                <passive_effect name="GeneralDamageResist" operation="base_add" value="1"/>
+                <passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="cold,heat,electrical"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="200"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="200" tags="coredamageresist"/>
+                <passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="heat,electrical"/>
             </effect_group>
         </buff>
         
