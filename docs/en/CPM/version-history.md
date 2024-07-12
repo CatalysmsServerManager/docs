@@ -1,5 +1,10 @@
 # Version History
 
+**Version 24.2 1.0 b316 Experimental (NOT 1.0 b313 Experimental and lower compatible) (12-07-2024)**
+
+* Removed chatcoloring and playerrenaming from friends and party channels. Because broken (publicly visible, so if on 24.1 please update)
+* Added colorsetting in CpmSettings.xml for "command received" reply on chatcommands (`<CommandReceivedColor>D00000</CommandReceivedColor>`)
+
 **Version 24.1 1.0 b316 Experimental (NOT 1.0 b313 Experimental and lower compatible) (12-07-2024)**
 
 * Fixed chatcoloring, groupcoloring, chatnameoverriding, servernameoverriding and all chatrelated FUBARs that came with b316 (including say2 and pm2)
