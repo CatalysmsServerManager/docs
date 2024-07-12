@@ -1,5 +1,14 @@
 # Version History
 
+**Version 24.1 1.0 b316 Experimental (NOT 1.0 b313 Experimental and lower compatible) (12-07-2024)**
+
+* Fixed chatcoloring, groupcoloring, chatnameoverriding, servernameoverriding and all chatrelated FUBARs that came with b316 (including say2 and pm2)
+
+**Version 24.0 1.0 b316 Experimental (NOT 1.0 b313 Experimental and lower compatible) (12-07-2024)**
+
+* Emergency release
+* FUBAR: chatname coloring, chatname renaming, custom servername, custom playername. These are all off for now until i find time and a method to fix. Server will at least be running.
+
 **Version 23.9 1.0 b313 Experimental (NOT A21.2 b37 Stable and lower compatible) (30-06-2024)**
 
 * fixed owner name not showing properly in CPM WebUi on landclaim details.
