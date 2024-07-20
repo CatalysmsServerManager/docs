@@ -1,6 +1,6 @@
 # Version History
 
-**Version 24.3 1.0 b326 Experimental (NOT 1.0 b313 Experimental and lower compatible) (15-07-2024)**
+**Version 24.3 1.0 b327 Experimental (NOT 1.0 b313 Experimental and lower compatible) (15-07-2024)**
 
 * Improved bloodmoonstart despawner: better handling of enemies, that in edge case have already been despawned.
 * Changed WebUI port to default to WebdashBoardPort + 1. Allocs own mod does not claim a port anymore and is part of vanilla. No reason to make the port difference so big (+3). This will ONLY  be applied if you generate a NEW CpmSettings.xml or have removed the WebUI_Port setting from an existing CpmSettings.xml. Existing values will NOT be overwritten and keep being used.
