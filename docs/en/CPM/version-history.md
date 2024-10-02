@@ -1,8 +1,8 @@
 # Version History
 
-**Version 25.0 1.0 b333 Stable (NOT A21.2 b37 Stable and lower compatible) (25-07-2024)**
+**Version 25.0 1.1 b14 Stable (NOT A21.2 b37 Stable and lower compatible) (25-07-2024)**
 
-* Official 1.0 Release
+* Official 1.1 Release
 * Added CPM WebUI 1.9.0: start map in zoomed out state
 
 **Version 24.3 1.0 b330 Experimental (NOT 1.0 b313 Experimental and lower compatible) (15-07-2024)**
