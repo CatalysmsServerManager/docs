@@ -1,5 +1,10 @@
 # Version History
 
+**Version 25.1 1.1 b14 Stable (NOT A21.2 b37 Stable and lower compatible) (16-11-2024)**
+
+* Fixed consolecommand sayadmin: did nothing at all
+* Fixed consolecommand lfp (listfriendsplayer): friends names were not displayed (only EOS ID)
+
 **Version 25.0 1.1 b14 Stable (NOT A21.2 b37 Stable and lower compatible) (25-07-2024)**
 
 * Official 1.1 Release
