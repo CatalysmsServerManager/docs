@@ -1,5 +1,29 @@
 # Version History
 
+**Version 25.2 1.2 b22 Experimental (NOT 1.1 b14 Stable and lower compatible) (06-12-2024)**
+
+1.2 b22 Compatability:
+
+* Fixed consolecommands:
+    ownvehicle
+    getbicycle
+    getbike
+    getmotorcycle
+    getjeep
+    getgyrocopter
+    gethelicopter
+    getdrone
+    getblimp
+    addfriends
+    grablcb
+    removelandprotection2
+
+* Fixed webapi's:
+    getlandclaims
+    getplayerhomes
+
+* Fixed Permadeath
+
 **Version 25.1 1.1 b14 Stable (NOT A21.2 b37 Stable and lower compatible) (16-11-2024)**
 
 * Fixed consolecommand sayadmin: did nothing at all
