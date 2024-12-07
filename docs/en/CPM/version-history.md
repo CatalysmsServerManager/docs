@@ -1,8 +1,8 @@
 # Version History
 
-**Version 25.2 1.2 b24 Experimental (NOT 1.1 b14 Stable and lower compatible) (06-12-2024)**
+**Version 25.2 1.2 b25 Experimental (NOT 1.1 b14 Stable and lower compatible) (06-12-2024)**
 
-1.2 b24 Compatability:
+1.2 b25 Compatability:
 
 * Fixed consolecommands:
     ownvehicle
