@@ -29,6 +29,6 @@
     "vuepress-theme-yuu": "^3.1.1"
   },
   "dependencies": {
-    "vuepress-plugin-plausible": "^0.0.2"
+    "vuepress-plugin-plausible": "^0.0.4"
   }
 }
