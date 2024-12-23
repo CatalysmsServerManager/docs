@@ -83,39 +83,23 @@ The live map has several specific features you can grant granular access to, suc
 
 This map updates in a near-live fashion, and is a simple and easy way to track all of the above items. However, for servers with a PVP element, this information can often be super impactful to gameplay, so controlling who can see what is very important.
 
-You set these permissions by modifying the webpermissions.xml file, which is stored in the base 'savegames' folder where all of your world data is kept. This folder can be configured to any value, but is commonly kept in the 'saves' or 'World' folder within the 7 Days installation folder. If you know where your serveradmin.xml file is, this will be in the same place. When editing the XML file, you will see something like the below:
+You set these permissions by modifying the serveradmin.xml file, which is stored in the base 'savegames' folder where all of your world data is kept. This folder can be configured to any value, but is commonly kept in the 'saves' or 'World' folder within the 7 Days installation folder. The following needs to be added to the xml file:
 
 ```
-<?xml version="1.0" encoding="UTF-8"?>
-<webpermissions>
-
-    <admintokens>
-        <!-- <token name="adminuser1" token="supersecrettoken" permission_level="0" /> -->
-    </admintokens>
-
-    <permissions>
-        <permission module="web.map" permission_level="2000" />
-        <!-- <permission module="web.map" permission_level="1000" /> -->
-
-        <!-- <permission module="webapi.getlog" permission_level="0" /> -->
-        <!-- <permission module="webapi.executeconsolecommand" permission_level="0" /> -->
-
-        <!-- <permission module="webapi.getstats" permission_level="1000" /> -->
-        <!-- <permission module="webapi.getplayersonline" permission_level="1000" /> -->
-
-        <!-- <permission module="webapi.getplayerslocation" permission_level="1000" /> -->
-        <!-- <permission module="webapi.viewallplayers" permission_level="1" /> -->
-
-        <!-- <permission module="webapi.getlandclaims" permission_level="1000" /> -->
-        <!-- <permission module="webapi.viewallclaims" permission_level="1" /> -->
-
-        <!-- <permission module="webapi.getplayerinventory" permission_level="1" /> -->
-
-        <!-- <permission module="webapi.gethostilelocation" permission_level="1" /> -->
-        <!-- <permission module="webapi.getanimalslocation" permission_level="1" /> -->
-    </permissions>
-
-</webpermissions>
+  <webmodules>
+    <module name="web.map" permission_level="2000" />
+    <module name="webapi.GetLog" permission_level="1" />
+    <module name="webapi.executeconsolecommand" permission_level="0" />
+    <module name="webapi.getstats" permission_level="2000" />
+    <module name="webapi.getplayersonline" permission_level="2000" />
+    <module name="webapi.getplayerslocation" permission_level="2000" />
+    <module name="webapi.viewallplayers" permission_level="2000" />
+    <module name="webapi.getlandclaims" permission_level="1000" />
+    <module name="webapi.viewallclaims" permission_level="1" />
+    <module name="webapi.getplayerinventory" permission_level="1" />
+    <module name="webapi.gethostilelocation" permission_level="1" />
+    <module name="webapi.getanimalslocation" permission_level="1" />
+  </webmodules>
 ```
 
 ## Web tokens
