@@ -8,12 +8,26 @@ CPM uses buffs for communicating through tooltips (buffs) in the advanced claim 
 
 These buffs are used for a adv. claim notify called "ProtectedLobby". Make sure to edit the buff when your adv. claim notify has a different name.
 
-```<!--Cant do damage to blocks-->
+```
+<!--Cant do damage to blocks-->
         <buff name="cpm_tooltip_ProtectedLobby_enter" name_key="cpm_tooltip_ProtectedLobby_enter" icon="ui_game_symbol_destruction2" icon_color="46,244,41" tooltip_key="[00FF00]Welcome to the lobby[-]">
             <display_value_key value="Lobby"/> <display_value value="xxx"/> <stack_type value="ignore"/>
             <effect_group>
+                <passive_effect name="BlockDamage" operation="perc_set" value="0"/>
                 <passive_effect name="BlockDamage" operation="perc_add" value="-1"/>
+                <passive_effect name="DisableItem" operation="base_set" value="1" tags="melee" />
+                <passive_effect name="DisableItem" operation="base_set" value="1" tags="ranged" />
+                <passive_effect name="DisableItem" operation="base_set" value="1" tags="perkDemolitionsExpert" />
+                <passive_effect name="DisableItem" operation="base_set" value="1" tags="perkTurrets" />
             </effect_group>
+        </buff>
+<!--Remove buff for exiting the ProtectedLobby notify claim-->
+        <buff name="cpm_tooltip_ProtectedLobby_exit" name_key="cpm_tooltip_ProtectedLobby_exit" icon="ui_game_symbol_add" tooltip_key="">
+                <display_value_key value="Lobby"/> <display_value value="xxx"/> <stack_type value="ignore"/><duration value="1"/>
+          <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="cpm_tooltip_ProtectedLobby_enter"/>
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="cpm_tooltip_ProtectedLobby_exit"/>
+          </effect_group>
         </buff>
 ```
 
