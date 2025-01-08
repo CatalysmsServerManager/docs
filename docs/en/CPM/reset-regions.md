@@ -111,13 +111,11 @@ The normal 'shutdownba' is a more feature-filled way of shutting down/rebooting 
 1.  The region contains one or more Land Claim Blocks, or the LCB radius of a block extends into the region. This is represented on the screenshot as a solid yellow square (the LCB) surrounded by another yellow square (the LCB protection radius). In this example, both region 4.-4.2 and region r.-5.2 are considered claimed by that single LCB and its radius.
 2.  The region contains one or more Normal [Advanced Claims](/en/CPM/advanced-claims.html), or at least part of an advanced claim extends into the region. This is represented in the screenshot by the green rectangle. Because this claim overlaps two regions, both r.-4.0 and r.-5.0 are protected.
 
-resetunclaimedregionsnow
+resetunclaimedregions
+or
+resetregions
 
-Immediately triggers a save and server shutdown that erases any region that doesn't meet at least one of the two criteria above. There are no warnings given, no countdowns, and it does not look for in-progress events like a blood moon.
-
-shutdownba \<minutes\> resetunclaimed
-
-The normal 'shutdownba' is a more feature-filled way of shutting down/rebooting the server, including a countdown timer, and the ability to avoid accidentally rebooting during a bloodmoon. Adding the 'resetunclaimed' parameter at the end also triggers the erasure of any region that doesn't meet one of the two the criteria above.
+Marked regions or unclaimed regions can be reset with those commands immediately. No reboot is needed for the operation.
 
 ## Using Reset Regions Effectively
 
