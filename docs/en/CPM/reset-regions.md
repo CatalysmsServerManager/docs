@@ -94,15 +94,7 @@ Region resets don't occur automatically, but must instead be triggered by a spec
 
 ### Wipe Marked Reset Regions
 
-This is the most commonly used version, and there are several ways to accomplish this one, mostly depending on how you want to reset the server.
-
-resetregionsnow
-
-Immediately triggers a save and server shutdown that includes marked reset regions. There are no warnings given, no countdowns, and it does not look for in-progress events like a blood moon.
-
-shutdownba \<minutes\> reset
-
-The normal 'shutdownba' is a more feature-filled way of shutting down/rebooting the server, including a countdown timer, and the ability to avoid accidentally rebooting during a bloodmoon. Adding the 'reset' parameter at the end also triggers the erasure of marked reset regions.
+resetregions
 
 ### Wipe every region on that map that is not marked as 'claimed'
 
@@ -112,10 +104,8 @@ The normal 'shutdownba' is a more feature-filled way of shutting down/rebooting 
 2.  The region contains one or more Normal [Advanced Claims](/en/CPM/advanced-claims.html), or at least part of an advanced claim extends into the region. This is represented in the screenshot by the green rectangle. Because this claim overlaps two regions, both r.-4.0 and r.-5.0 are protected.
 
 resetunclaimedregions
-or
-resetregions
 
-Marked regions or unclaimed regions can be reset with those commands immediately. No reboot is needed for the operation.
+Unclaimed regions are reset immediately. No reboot is needed for the operation.
 
 ## Using Reset Regions Effectively
 
