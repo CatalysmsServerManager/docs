@@ -1,5 +1,10 @@
 # Version History
 
+**Version 25.3 1.3 b6 Experimental (1.2 b27 Stable compatible) (01-02-2025)**
+
+* Moved ResetRegions data to specific map Save location. New location is in your maps Save location /ResetRegions. Old data will not automatically be migrated. Just copy files from /Saves/ResetRegions/ to /ResetRegions/ in your maps Saves folder.
+* Updated block placement detection to newest gamecode. Affects ResetRegions, ProBlock, Antiblock, LcbFree and Landclaim adv. Claims
+
 **Version 25.2 1.2 b27 Stable (NOT 1.1 b14 Stable and lower compatible) (06-12-2024)**
 
 1.2 b27 Compatability:
