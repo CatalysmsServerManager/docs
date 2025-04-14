@@ -16,6 +16,15 @@ The first step is to confirm whether Alloc's Fixes is installed and running prop
 
 ```
 
+For Allocs mods to work you need to have the TFP mods, these come with the server installation. Below you can find the mod names;
+
+```
+TFP_CommandExtensions
+TFP_MapRendering
+TFP_WebServer
+
+```
+
 Once you've confirmed that the mods are installed, the next step is to try and access the Alloc's web server. To do this, you'll need to know what ports your server has been configured for, and you can determine this by looking at your serverconfig.xml file on your server. You should see a section similar to this in the config file:
 
 ```
