@@ -1,6 +1,6 @@
 # Version History
 
-**Version 25.4 2.0 b285 Experimental (NOT 1.4 b8 Stable compatible) (16-06-2025)**
+**Version 25.4 2.0 b289 Experimental (NOT 1.4 b8 Stable compatible) (16-06-2025)**
 
 * 2.0 Experimental compatibility
 
