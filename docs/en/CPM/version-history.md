@@ -1,8 +1,8 @@
 # Version History
 
-**Version 25.4 2.0 b294 Experimental (NOT 1.4 b8 Stable compatible) (16-06-2025)**
+**Version 25.4 2.0 b295 Stable (NOT 1.4 b8 Stable compatible) (16-06-2025)**
 
-* 2.0 Experimental compatibility
+* 2.0 Stable compatibility
 
 **Version 25.3 1.3 b9 Stable (1.2 b27 Stable compatible) (01-02-2025)**
 
