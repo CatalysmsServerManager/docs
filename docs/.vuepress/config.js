@@ -20,7 +20,7 @@ module.exports = {
                   <strong>🚀 Upgrade to Takaro!</strong> CSMM will be replaced by Takaro - a powerful, modern game server manager with enhanced features and better performance.
                 </div>
                 <div style="display: flex; align-items: center; gap: 1rem;">
-                  <a href="https://takaro.io" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; padding: 0.5rem 1rem; background: rgba(255, 255, 255, 0.2); color: #fff; text-decoration: none; border-radius: 4px; font-weight: 500; transition: all 0.2s ease;">
+                  <a href="https://takaro.io?utm_source=csmm-docs&utm_medium=banner&utm_campaign=sunset-notice&ref=csmm-docs" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; padding: 0.5rem 1rem; background: rgba(255, 255, 255, 0.2); color: #fff; text-decoration: none; border-radius: 4px; font-weight: 500; transition: all 0.2s ease;">
                     Learn More →
                   </a>
                   <button onclick="document.getElementById('takaro-banner').style.display='none'; localStorage.setItem('takaro-banner-dismissed', 'true'); document.body.style.paddingTop = '';" style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; padding: 0; background: transparent; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; border-radius: 4px;">
