@@ -12,7 +12,7 @@ module.exports = {
           if (!localStorage.getItem('takaro-banner-dismissed')) {
             const banner = document.createElement('div');
             banner.id = 'takaro-banner';
-            banner.style.cssText = 'position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.15); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;';
+            banner.style.cssText = 'position: fixed; top: 3.6rem; left: 0; right: 0; z-index: 50; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.15); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;';
             
             banner.innerHTML = \`
               <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.5rem; max-width: 1200px; margin: 0 auto;">
@@ -23,7 +23,7 @@ module.exports = {
                   <a href="https://takaro.io" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; padding: 0.5rem 1rem; background: rgba(255, 255, 255, 0.2); color: #fff; text-decoration: none; border-radius: 4px; font-weight: 500; transition: all 0.2s ease;">
                     Learn More →
                   </a>
-                  <button onclick="document.getElementById('takaro-banner').style.display='none'; localStorage.setItem('takaro-banner-dismissed', 'true');" style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; padding: 0; background: transparent; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; border-radius: 4px;">
+                  <button onclick="document.getElementById('takaro-banner').style.display='none'; localStorage.setItem('takaro-banner-dismissed', 'true'); document.body.style.paddingTop = '';" style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; padding: 0; background: transparent; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; border-radius: 4px;">
                     ✕
                   </button>
                 </div>
@@ -31,7 +31,15 @@ module.exports = {
             \`;
             
             document.body.insertBefore(banner, document.body.firstChild);
-            document.body.style.paddingTop = '60px';
+            // Add padding to push content below both navbar (3.6rem) and banner (~3.6rem)
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+              const navbarHeight = navbar.offsetHeight;
+              const bannerHeight = 60; // approximate banner height
+              document.body.style.paddingTop = (navbarHeight + bannerHeight) + 'px';
+            } else {
+              document.body.style.paddingTop = '110px'; // fallback: ~3.6rem + ~3.6rem
+            }
           }
         });
       }
