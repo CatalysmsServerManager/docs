@@ -5,6 +5,38 @@ module.exports = {
   title: "CSMM",
   description: "Documentation for the web based 7 days to die server manager",
   theme: 'yuu',
+  head: [
+    ['script', {}, `
+      if (typeof window !== 'undefined') {
+        window.addEventListener('DOMContentLoaded', function() {
+          if (!localStorage.getItem('takaro-banner-dismissed')) {
+            const banner = document.createElement('div');
+            banner.id = 'takaro-banner';
+            banner.style.cssText = 'position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.15); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;';
+            
+            banner.innerHTML = \`
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.5rem; max-width: 1200px; margin: 0 auto;">
+                <div style="flex: 1; font-size: 0.95rem; line-height: 1.5;">
+                  <strong>🚀 Upgrade to Takaro!</strong> CSMM will be replaced by Takaro - a powerful, modern game server manager with enhanced features and better performance.
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <a href="https://takaro.io" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; padding: 0.5rem 1rem; background: rgba(255, 255, 255, 0.2); color: #fff; text-decoration: none; border-radius: 4px; font-weight: 500; transition: all 0.2s ease;">
+                    Learn More →
+                  </a>
+                  <button onclick="document.getElementById('takaro-banner').style.display='none'; localStorage.setItem('takaro-banner-dismissed', 'true');" style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; padding: 0; background: transparent; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; border-radius: 4px;">
+                    ✕
+                  </button>
+                </div>
+              </div>
+            \`;
+            
+            document.body.insertBefore(banner, document.body.firstChild);
+            document.body.style.paddingTop = '60px';
+          }
+        });
+      }
+    `]
+  ],
   locales: {
     "/": {
       lang: "en-US"
