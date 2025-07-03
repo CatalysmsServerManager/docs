@@ -1,7 +1,11 @@
 <template>
   <div id="global-layout">
     <TakaroBanner />
-    <ParentLayout />
+    <component :is="ParentLayout">
+      <template v-for="(_, name) in $slots" v-slot:[name]="slotData">
+        <slot :name="name" v-bind="slotData || {}" />
+      </template>
+    </component>
   </div>
 </template>
 
