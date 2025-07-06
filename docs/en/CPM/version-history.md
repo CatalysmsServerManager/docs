@@ -1,5 +1,9 @@
 # Version History
 
+**Version 25.5 2.1 b5 Experimental (NOT 2.0 b29S Stable compatible) (06-07-2025)**
+
+* 2.1 Experimental compatibility: fixed harmony patching for locking the server by moving patch to subclass LiteNetLibAuthWrapperServer when using kicklockreboot parameter on reset commands 
+
 **Version 25.4 2.0 b295 Stable (NOT 1.4 b8 Stable compatible) (16-06-2025)**
 
 * 2.0 Stable compatibility
