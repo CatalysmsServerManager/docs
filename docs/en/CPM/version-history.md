@@ -1,5 +1,9 @@
 # Version History
 
+**Version 25.7 2.1 b7 Stable (NOT 2.0 b295 Stable compatible) (14-07-2025)**
+
+* 2.1 Stable compatibility: fixed hostilefree claim despawning traders because of the change to localized names
+
 **Version 25.6 2.1 b7 Experimental (NOT 2.0 b295 Stable compatible) (12-07-2025)**
 
 * 2.1 Experimental compatibility: fixed usage of localized EntityName 
