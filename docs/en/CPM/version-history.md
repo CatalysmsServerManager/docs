@@ -1,5 +1,10 @@
 # Version History
 
+**Version 25.9 2.2 b1 Experimental (NOT 2.0 b295 Stable compatible) (26-07-2025)**
+
+* Fixed traders despawning in hostilefree advanced claims on non-English localized servers
+* 2.1 b10 Stable compatible
+
 **Version 25.8 2.1 b7 Stable (NOT 2.0 b295 Stable compatible) (20-07-2025)**
 
 * 2.1 Stable compatibility: fixed playerKilledByPlayer and playerKilledByEntity loglines reporting wrong names
