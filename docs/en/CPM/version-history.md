@@ -1,6 +1,6 @@
 # Version History
 
-**Version 25.9 2.2 b1 Experimental (NOT 2.0 b295 Stable compatible) (26-07-2025)**
+**Version 25.9 2.2 b3 Stable (NOT 2.0 b295 Stable compatible) (26-07-2025)**
 
 * Fixed traders despawning in hostilefree advanced claims on non-English localized servers
 * 2.1 b10 Stable compatible
