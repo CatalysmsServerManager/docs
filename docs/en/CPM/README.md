@@ -31,7 +31,7 @@ Your Mods/ folder structure should look similar to this:
 ::: warning
 Make sure the CSMM\_Patrons folder has the ModInfo.xml and CSMM\_Patrons.dll file!
 
-For Crossplay servers remove the Config folder. Console clients cannot connect if an xml mod is present!
+For Crossplay servers remove the Config folder. Console clients cannot connect if a xml mod is present!
 :::
 
 4\. Restart your server.
