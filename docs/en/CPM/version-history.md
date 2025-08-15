@@ -1,5 +1,9 @@
 # Version History
 
+**Version 26.0 2.3 b6 Experimental (NOT 2.2 b3 Stable compatible) (15-08-2025)**
+
+* Fixed getbicycle, getbike, getmotorcycle, getjeep, getgyrocopter, getjetpack and gethelicopter commands
+
 **Version 25.9 2.2 b3 Stable (NOT 2.0 b295 Stable compatible) (26-07-2025)**
 
 * Fixed traders despawning in hostilefree advanced claims on non-English localized servers
