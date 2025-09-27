@@ -1,6 +1,6 @@
 # Version History
 
-**Version 26.0 2.3 b9 Stable (NOT 2.2 b3 Stable compatible) (15-08-2025)**
+**Version 26.0 2.3 b9 Stable / 2.4 b5 Experimental (NOT 2.2 b3 Stable compatible) (15-08-2025)**
 
 * Fixed getbicycle, getbike, getmotorcycle, getjeep, getgyrocopter, getjetpack and gethelicopter commands
 
