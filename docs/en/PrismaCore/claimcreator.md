@@ -16,7 +16,7 @@ For using the webui you must login via Steam so PrismaCore can determine what pe
 
 ![Missing image](/assets/images/CPM/claimCreator/login1.png)
 
-If you want to change the default permissions for ClaimCreator create claims, view online players, view landclaims, view advClaims and (quest) POI's, you can do so in PrismaCore_permissions.xml. That file is in your Saves folder.
+If you want to change the default permissions for ClaimCreator create claims, view online players, view landclaims, view advClaims and (quest) POI's, you can do so in ClaimCreator_permissions.xml. That file is in your Saves folder.
 
 ````
 <?xml version="1.0" encoding="UTF-8"?>
