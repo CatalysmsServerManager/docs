@@ -1,6 +1,6 @@
 # Chat Commands
 
-_Starting with CPM 5.28, the CPM chat command prefix is configurable by using the [console command](/en/CPM/console-commands.html)_ cpmprefix. The default prefix is / for all versions.
+_Starting with PrismaCore 5.28, the PrismaCore chat command prefix is configurable by using the [console command](/en/PrismaCore/console-commands.html)_ prismacoreprefix. The default prefix is / for all versions.
 
 The chat commands are available in two varieties: Admin commands, and Player commands. By default, all Admin commands require Level 0 access in order to execute them. You can use the 'changechatpermissions' (ccp) command to adjust the access level required for each command. This allows you to grant Players access to an Admin command, and allows you to prevent Players from using a command they normally have access to. You can completely disable a chatcommand by assigning permission -1.
 
@@ -86,11 +86,11 @@ Sends the specified player back to the position they were in before they were te
 
 Teleports yourself back to your previous location after using a teleport command.
 
-As of CPM Version 5.26, the Move and FlyTo commands can be used on Offline players. If you teleport to an Offline player, it will place you at their last known location. If you Move an offline player, the moment they log on, it will teleport them to the Move destination automatically.
+As of PrismaCore Version 5.26, the Move and FlyTo commands can be used on Offline players. If you teleport to an Offline player, it will place you at their last known location. If you Move an offline player, the moment they log on, it will teleport them to the Move destination automatically.
 
 ### Player Protection
 
-Admins have the ability to place a protective bubble around a player. This bubble will automatically kill all hostile creatures (but not players!) that enter the 25 meter radius of the bubble. This command can be used to protect yourself from zombies while you are out-of-window doing Admin things, or even used to place a shield around a new player who is being overwhelmed by zombies during a horde night. This chat command triggers the [console command](/en/CPM/console-commands.html) _protectplayer_.
+Admins have the ability to place a protective bubble around a player. This bubble will automatically kill all hostile creatures (but not players!) that enter the 25 meter radius of the bubble. This command can be used to protect yourself from zombies while you are out-of-window doing Admin things, or even used to place a shield around a new player who is being overwhelmed by zombies during a horde night. This chat command triggers the [console command](/en/PrismaCore/console-commands.html) _protectplayer_.
 
 /bubble
 
@@ -106,7 +106,7 @@ These commands are available to both Players and Admins, unless the Admin has al
 
 ### Location Tracking
 
-Admins can use the _loctrack \_command to determine which players have been in a specific area within a certain time frame. This is intended to be a short-term solution to help determine who was in a specific area; if you need to perform a detailed track of a player, you should use CSMM's Player Tracking feature. Using \_loctrack_ can help determine which players need to be followed in Player Tracking.
+Admins can use the _loctrack \_command to determine which players have been in a specific area within a certain time frame. This is intended to be a short-term solution to help determine who was in a specific area; if you need to perform a detailed track of a player, you should use Takaro/CSMM's Player Tracking feature. Using \_loctrack_ can help determine which players need to be followed in Player Tracking.
 
 Depending on your server configuration, the command may not be _loctrack_. The chat command can be changed or even disabled using the following console commands:
 
@@ -134,7 +134,7 @@ Reports all living players within the radius defined by the _loctrack_ _neardist
 
 Reports the next bloodmoon, number of players, number of zombies and server fps in chat.
 
-You can disable the number of zombies and fps stats reporting by setting them to "off" in CpmStrings.xml:
+You can disable the number of zombies and fps stats reporting by setting them to "off" in PrismaCoreStrings.xml:
 
 Zombiecount: <Day7_Stats>off</Day7_Stats>
 
