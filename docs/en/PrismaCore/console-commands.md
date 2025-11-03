@@ -1,17 +1,17 @@
 # Console Commands
 
-[CPM](/en/CPM/index.html) has a _lot_ of functionality, more so than most people realize, and it's very easy to miss some very helpful configuration settings that allow you to use the more useful features.
+[PrismaCore](/en/PrismaCore/index.html) has a _lot_ of functionality, more so than most people realize, and it's very easy to miss some very helpful configuration settings that allow you to use the more useful features.
 
 ::: tip
 New command prefix
 
-Starting with CPM 5.35, all CPM-specific commands have been given the prefix 'cpm-' to identify which mod they are part of. As a result, commands like 'brender' are now named 'cpm-brender'; however, an alias has been added to the older name, so that Admins with experience in the older names can still use them. As an example, all three of the following commands would be valid and produce the same result:
+Starting with PrismaCore 5.35, all PrismaCore-specific commands have been given the prefix 'pc-' to identify which mod they are part of. As a result, commands like 'brender' are now named 'pc-brender'; however, an alias has been added to the older name, so that Admins with experience in the older names can still use them. As an example, all three of the following commands would be valid and produce the same result:
 
-- cpm-chatgroupcolor
+- pc-chatgroupcolor
 - chatgroupcolor
 - cgc
 
-You can type 'help' to see all possible commands, and any command provided by CPM will have the prefix listed. Alternately, to only see CPM-related commands, you can type 'cpm-help' instead.
+You can type 'help' to see all possible commands, and any command provided by PrismaCore will have the prefix listed. Alternately, to only see PrismaCore-related commands, you can type 'pc-help' instead.
 :::
 
 ## High-level
@@ -30,11 +30,11 @@ The above settings will enable the announcer, provide a 3-hour warning before in
 
 ### hccp
 
-The hide chat command prefix feature allows you to hide player chat that is related to CSMM/CPM commands. For example, if a player types /claim in order to obtain their shop purchases, hccp would prevent that chat from appearing in the game.
+The hide chat command prefix feature allows you to hide player chat that is related to PrismaCore commands. For example, if a player types /claim in order to obtain their shop purchases, hccp would prevent that chat from appearing in the game.
 
 hccp /,\$
 
-The above command will hide all chat lines that begin with the / or $ characters. CSMM uses $ by default for commands, and CPM uses / by default for commands. The comma that separates the two symbols is required.
+The above command will hide all chat lines that begin with the / or $ characters. CSMM uses $ by default for commands, and PrismaCore uses / by default for commands. The comma that separates the two symbols is required.
 
 ### pfb
 
@@ -46,19 +46,19 @@ If PFB is set to any value above zero, it will vanish falling blocks; the numeri
 
 ### scn
 
-The Server Chat Name feature allows you to customize the 'Name' of the server when it sends chat messages via CPM. Typically, this would be the same value as the 'an announcer' command above.
+The Server Chat Name feature allows you to customize the 'Name' of the server when it sends chat messages via PrismaCore. Typically, this would be the same value as the 'an announcer' command above.
 
 scn Botname
 
 ## Reference
 
-CPM has a built in function to list all avalaible console commands (cpm-help), which give you a global description of the available commands. For detailed info on a command do:
+PrismaCore has a built in function to list all avalaible console commands (pc-help), which give you a global description of the available commands. For detailed info on a command do:
 
 ```
 help <command>
 ```
 
-Following here is a reference list of **all commands** included with CPM, Allocs fixes and the base game. 
+Following here is a reference list of **all commands** included with PrismaCore, Allocs fixes and the base game. 
 
 Also available [as JSON](/assets/commands/cpmCommands.json)
 

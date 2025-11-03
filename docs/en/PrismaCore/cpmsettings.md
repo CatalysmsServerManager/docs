@@ -1,8 +1,8 @@
-# CPM Settings
+# PrismaCore Settings
 
 ## Intro
 
-CPM has a lot of flexibility when it comes to how it behaves and what features are active. Settings can be done by consolecommands and are set in /Saves/CpmSettings.xml eventually. CpmSettings.xml can be editted manually too and saving it will make the changed settings effective immediately even on a running server.
+PrismaCore has a lot of flexibility when it comes to how it behaves and what features are active. Settings can be done by consolecommands and are set in /Saves/PrismaCoreSettings.xml eventually. PrismaCoreSettings.xml can be editted manually too and saving it will make the changed settings effective immediately even on a running server.
 
 ## The various settings explained
 
@@ -24,11 +24,11 @@ Despawn all zombies alive on map right before bloodmoon starts. This will make s
 
 `<BloodmoonSpawner_OverrideVanillaSpawner>false</BloodmoonSpawner_OverrideVanillaSpawner>`
 
-Set true to override vanilla bloodmoon spawner and let CPM handle bloodmoon.
+Set true to override vanilla bloodmoon spawner and let PrismaCore handle bloodmoon.
 
 `<BloodmoonSpawner_Overridden_AdjustBMEnemyCountPerPlayerToNrOnlinePlayers>true</BloodmoonSpawner_Overridden_AdjustBMEnemyCountPerPlayerToNrOnlinePlayers>`
 
-Set true to let CPM handle the bloodmoonspawning based on number of online players. This is the full auto mode and is recommended. Max alive zombies per player will be calculated and when players are in a bloodmoon party, CPM will bring the joy to all members of that party.
+Set true to let PrismaCore handle the bloodmoonspawning based on number of online players. This is the full auto mode and is recommended. Max alive zombies per player will be calculated and when players are in a bloodmoon party, PrismaCore will bring the joy to all members of that party.
 
 `<BloodmoonSpawner_Overridden_BMEnemyCountPerPlayer>2</BloodmoonSpawner_Overridden_BMEnemyCountPerPlayer>`
 
@@ -86,11 +86,11 @@ The number of bundo's that are stored and you can do after prefab commands like 
 
 `<ChatCommandPermissions_loctrack>0</ChatCommandPermissions_loctrack>`
 
-Set permissionlevel for all available CPM chatcommands. For free for all use permission level 1000. To completely disable a chatcommand use permission level -1.
+Set permissionlevel for all available PrismaCore chatcommands. For free for all use permission level 1000. To completely disable a chatcommand use permission level -1.
 
-`<CPMPrefix>/</CPMPrefix>`
+`<PrismaCorePrefix>/</PrismaCorePrefix>`
 
-The prefix for CPM chatcommands
+The prefix for PrismaCore chatcommands
 
 `<DamageDetection_MinAmountDamage>5000</DamageDetection_MinAmountDamage>`
 
@@ -284,4 +284,4 @@ If true, all drones that are NOT stored (backpack, container etc) will be remove
 
 `<WebUI_Port>28006</WebUI_Port>`
 
-TCP Port of CPM WebUI. Will initially be controlpanel port + 3. Use this only if you have a gamehoster who doesnt want to open up a simple tcp port. Allocs patched map will break if you change port. You are on your own for making that work again.
+TCP Port of PrismaCore ClaimCreator. Will initially be controlpanel port + 3. Use this only if you have a gamehoster who doesnt want to open up a simple tcp port. Allocs patched map will break if you change port. You are on your own for making that work again.

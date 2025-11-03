@@ -5,7 +5,7 @@ title: Advanced Claims
 
 ## Intro
 
-Advanced Claims are a CPM-specific feature intended to allow Admins a more granular control over creating areas for specific purposes. Similar to land claim blocks, Advanced Claims create a zone on the map in which certain rules apply. Unlike a LCB, however, Advanced Claims are specific to a set of coordinates, not based on placing a block in the game. Additionally, Advanced Claims can be set to nearly any size on the map, so long as the shape is rectangular.
+Advanced Claims are a PrismaCore-specific feature intended to allow Admins a more granular control over creating areas for specific purposes. Similar to land claim blocks, Advanced Claims create a zone on the map in which certain rules apply. Unlike a LCB, however, Advanced Claims are specific to a set of coordinates, not based on placing a block in the game. Additionally, Advanced Claims can be set to nearly any size on the map, so long as the shape is rectangular.
 
 ## Creating A Claim
 
@@ -20,7 +20,7 @@ You are free to choose any name for any type of claim. However, there are some s
 PVP/PVE claims are created by making a notify claim with "pve" or "pvp" in the name. No player damage can be done while in a PVE claim and playerdamage can be done while in a PVP claim.
 Usually you will create PVE claims on a server that has global setting KillingMode for PVP and PVP claims on a server that has global setting KillingMode for PVE.
 Example: ccc add PVEzone -10000 10000 10000 0 0 "notify:You are entering a PVE zone!:You are leaving a PVE zone!"
-When creating a PVP claim the KillingMode can be configured in CpmSettings.xml (AdvClaims_PVP_KillingMode). Default KillingMode = 3 (kill everybody).
+When creating a PVP claim the KillingMode can be configured in PrismaCoreSettings.xml (AdvClaims_PVP_KillingMode). Default KillingMode = 3 (kill everybody).
 
 ## Understanding Claim Parameters
 
@@ -219,7 +219,7 @@ accessLevel: permission level that is allowed to always enter the claim
 whitelist: has no function in this claim
 
 ### LcbFree
-Control abillity to place LCB's within the boundaries of the lcbfree adv. claim. Allow to place LCB's by accesslevel and/or whitelist. If not allowed to place LCB, it will be removed and put back in player inventory. Use lcbfree as type when creating this advanced claim. Violation message is configurable in CpmStrings.xml (AdvClaims_LcbFree).
+Control abillity to place LCB's within the boundaries of the lcbfree adv. claim. Allow to place LCB's by accesslevel and/or whitelist. If not allowed to place LCB, it will be removed and put back in player inventory. Use lcbfree as type when creating this advanced claim. Violation message is configurable in PrismaCoreStrings.xml (AdvClaims_LcbFree).
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> lcbfree
 ```
@@ -229,7 +229,7 @@ accessLevel: permission level that is allowed to place landclaim blocks inside c
 whitelist: players that are allowed to place landclaim blocks inside claim
 
 ### AntiBlock
-Prevent configurable blocks being placed within the boundaries of the AntiBlock adv. claim. Allow certain blocks to be placed by accesslevel and/or whitelist. If not allowed to place a configured block, it will be removed instantly and the player get a message about it in chat. Use antiblock as type when creating this advanced claim. Violation message is configurable in CpmStrings.xml (AdvClaims_AntiBlock). When disallowing more than 1 block separate the blocknames with ; . Blocknames are casesensitive. You can use fblock to search and find exact blocknames.
+Prevent configurable blocks being placed within the boundaries of the AntiBlock adv. claim. Allow certain blocks to be placed by accesslevel and/or whitelist. If not allowed to place a configured block, it will be removed instantly and the player get a message about it in chat. Use antiblock as type when creating this advanced claim. Violation message is configurable in PrismaCoreStrings.xml (AdvClaims_AntiBlock). When disallowing more than 1 block separate the blocknames with ; . Blocknames are casesensitive. You can use fblock to search and find exact blocknames.
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> antiblock:block1;block2
 ```
@@ -243,7 +243,7 @@ accessLevel: permission level that is allowed to place anti blocks inside claim
 whitelist: players that are allowed to place anti blocks inside claim
 
 ### Reset
-Reset areas on the map on chunk(!) level. Use this claim to very precisely mark areas you want to reset on demand. Use consolecommand rac(resetadvclaim) to actually reset the chunks that are marked with this claim. When creating this claim with ccc consolecommand or CPM Web UI the claim borders will automatically snap to the nearest chunk border. That way the claim always shows exactly what is going to be reset. Advise: resetting chunks is very memory consuming. Better to have multiple smaller claims (city/town level) than few big claims as they will consume more memory when processed. Be aware that the world will be in a time vacuum during any reset. Online players will experience it like X-men member Quicksilver. Use parameter kicklockreboot on consolecommand rac to kick all online players, lock the server during reset and reboot when done.
+Reset areas on the map on chunk(!) level. Use this claim to very precisely mark areas you want to reset on demand. Use consolecommand rac(resetadvclaim) to actually reset the chunks that are marked with this claim. When creating this claim with ccc consolecommand or PrismaCore ClaimCreator the claim borders will automatically snap to the nearest chunk border. That way the claim always shows exactly what is going to be reset. Advise: resetting chunks is very memory consuming. Better to have multiple smaller claims (city/town level) than few big claims as they will consume more memory when processed. Be aware that the world will be in a time vacuum during any reset. Online players will experience it like X-men member Quicksilver. Use parameter kicklockreboot on consolecommand rac to kick all online players, lock the server during reset and reboot when done.
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> reset
 ```
@@ -253,7 +253,7 @@ accessLevel: required but has no function in this claim
 whitelist: has no function in this claim
 
 ### ProBlock
-Prevent placements of blocks other than configurable problocks within the boundaries of the ProBlock adv. claim. Allow non-problocks to be placed by accesslevel, claimownership and/or whitelist. If not allowed to place a configured block, it will be removed instantly and the player get a message about it in chat. Use problock as type when creating this advanced claim. Violation message is configurable in CpmStrings.xml (AdvClaims_ProBlock). When disallowing more than 1 block separate the blocknames with ; . Blocknames are casesensitive. You can use fblock to search and find exact blocknames.
+Prevent placements of blocks other than configurable problocks within the boundaries of the ProBlock adv. claim. Allow non-problocks to be placed by accesslevel, claimownership and/or whitelist. If not allowed to place a configured block, it will be removed instantly and the player get a message about it in chat. Use problock as type when creating this advanced claim. Violation message is configurable in PrismaCoreStrings.xml (AdvClaims_ProBlock). When disallowing more than 1 block separate the blocknames with ; . Blocknames are casesensitive. You can use fblock to search and find exact blocknames.
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> problock:block1;block2
 ```
@@ -267,7 +267,7 @@ accessLevel: permission level that is allowed to place blocks that are not probl
 whitelist: players that are allowed to place blocks that are not problocks inside claim
 
 ### Landclaim
-Only claimowners, whitelisted players and accesslevel allowed players can place any block within this adv. claim. Type= "landclaim". Violation string configurable in CpmStrings.xml (AdvClaims_Landclaim). Auto giveback to placing player.
+Only claimowners, whitelisted players and accesslevel allowed players can place any block within this adv. claim. Type= "landclaim". Violation string configurable in PrismaCoreStrings.xml (AdvClaims_Landclaim). Auto giveback to placing player.
 ```
 ccc add <claimid/steamid> <w_boundary> <e_boundary> <n_boundary> <s_boundary> <accessLevel> landclaim
 ```

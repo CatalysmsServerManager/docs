@@ -1,12 +1,12 @@
 # PvPvE Server Configuration
 
-Traditionally, 7 Days To Die servers are configured as PVP servers, or PVE servers, but using a combination of CSMM and CPM, you can create a special kind of hybrid server with areas where players can kill each other freely, and areas where killing of other players is not possible. There are several important criteria that admins must be aware of when configuring a server in the PvPvE style of gameplay:
+Traditionally, 7 Days To Die servers are configured as PVP servers, or PVE servers, but using a combination of CSMM and PrismaCore, you can create a special kind of hybrid server with areas where players can kill each other freely, and areas where killing of other players is not possible. There are several important criteria that admins must be aware of when configuring a server in the PvPvE style of gameplay:
 
-- The CPM Mod is required, and at least version 19.8 is required for PVPVE configuration.
+- The PrismaCore Mod is required, and at least version 19.8 is required for PVPVE configuration.
 - The server is not both a PVP and PVE server. It is solely a PVP server that has a special area where kills are prevented. Or its a PVE servers where kills are possible in certain areas.
 - The PVE protection zone helps prevent PVE player kills, but it does not do anything against base raiding or griefing. The only way to do prevent this is to configure Land Claims blocks to provide 100% protection, or allow the use of Advanced Claims to prevent access to player bases.
 - The PVE/PVP border is a solid line on the map, but the ability to kill people across this line depends entirely on the player's visibility of eachother across this line. It is possible for players with better computers to see other players across the line and still be able to kill them from a distance.
-- Lastly, the PVE zone created by CPM is only as good as TFP (the developers of the game) have made it possible for it to be. As a result, while direct player-to-player damage is able to be prevented in the PVE zone, other types of damage, like rocket-frag splash damage, robotic turret damage, etc. is not. If you desire to implement a "true" PVE zone, know that this type of damage will still be possible and that you'll need to address it via other methods - for example, rules barring the use of those items in the area, etc. 
+- Lastly, the PVE zone created by PrismaCore is only as good as TFP (the developers of the game) have made it possible for it to be. As a result, while direct player-to-player damage is able to be prevented in the PVE zone, other types of damage, like rocket-frag splash damage, robotic turret damage, etc. is not. If you desire to implement a "true" PVE zone, know that this type of damage will still be possible and that you'll need to address it via other methods - for example, rules barring the use of those items in the area, etc. 
 
 With these restrictions understood, you can begin to configure your server.
 
@@ -39,7 +39,7 @@ If you wish to _completely_ prevent griefing behavior in your PVE zones, you sho
 
 ## PVE Claim Regions
 
-The PVE region claim is the most complicated part of the server setup. A PVE claim is simply a Notify claim with "pve" or "pvp" in its name [Advanced Claims](/en/CPM/advanced-claims.html). A PVE claim looks something like this:
+The PVE region claim is the most complicated part of the server setup. A PVE claim is simply a Notify claim with "pve" or "pvp" in its name [Advanced Claims](/en/PrismaCore/advanced-claims.html). A PVE claim looks something like this:
 
 ccc add pveZone \-4096 2500 4096 -4096 1 "notify:You are inside the PVE Zone. Killing of other players in this zone is not possible.:You are in the PVP Zone. Killing of other players is possible."
 
@@ -48,7 +48,7 @@ There's a lot going on in this claim command, so we'll take it section by sectio
 - pveZone - This is the name of the PVE area. It can be anything you want it to be, but must be unique, and should be fairly easy to understand just by the name.
 - \-4096 2500 4096 -4096 - The coordinates of the PVE claim. On a 8K map, the coordinates to the left mark everything from 4096W to 2500E as the PVE region. Everywhere else on the map is still PVP.
 
-![Missing image](/assets/images/CPM/pvpveConfiguration/9797735.png)
+![Missing image](/assets/images/PrismaCore/pvpveConfiguration/9797735.png)
 
 You can use ANY coordinates for your PVE region, you aren't restricted to East-West or North-South. See the Examples section below for some more coordinate combinations.
 
@@ -62,7 +62,7 @@ You can use ANY coordinates for your PVE region, you aren't restricted to East-W
 
 ## The PVP / PVE Kill Rules
 
-![Missing image](/assets/images/CPM/pvpveConfiguration/9797739.png)
+![Missing image](/assets/images/PrismaCore/pvpveConfiguration/9797739.png)
 
 Once you've established your PVE zone, it's important to understand how punishment works for kills. The logic is very simple: if both players are in the PVE zone they can't kill eachother. Using the above map example, we have the following slice of the map shown in the screenshot. The left side (green) is PVE, and the right side (red) is PVP.
 
@@ -70,7 +70,7 @@ It makes sense that PVP to PVP kills are always permitted, but you should notice
 
 ## The DMZ Warning Zone \[optional\]
 
-![Missing image](/assets/images/CPM/pvpveConfiguration/9797738.png)
+![Missing image](/assets/images/PrismaCore/pvpveConfiguration/9797738.png)
 
 This section is optional, but is intended to help your players understand where they are in the world. In the previous section, it explains that simply being within _visible range_ of the PVE/PVP line can be deadly. However, players themselves can't actually _see_ the border, so unless they're constantly watching their map, they have no real way to know how close they are. The DMZ Warning Zone solves that problem.
 
@@ -92,7 +92,7 @@ See above documentation. Simply change the second number of the first set of coo
 
 Similar to the East-West setup. Change both of the numbers in the second set of coordinates to match where you want your line to be. This screenshot has the line at 1100S.
 
-![Missing image](/assets/images/CPM/pvpveConfiguration/9797741.png)
+![Missing image](/assets/images/PrismaCore/pvpveConfiguration/9797741.png)
 
 Commands:
 
@@ -105,7 +105,7 @@ ccc add DMZ -4096 4096 -900 -1300 -1 "notify:You are inside the DMZ right now. C
 
 In the screnshot below, the inner 2K diameter square is PVE, the next 200 units in all directions are the DMZ zones, and the remainder of the map is PVP. Note the black lines on the DMZ zones; there are 4 separate zones that make up the area around the inner square. Players who move around the 4 corners of the DMZ area will receive a message each time they move from one zone to the next, and there's no way to prevent this.
 
-![Missing image](/assets/images/CPM/pvpveConfiguration/9797740.png)
+![Missing image](/assets/images/PrismaCore/pvpveConfiguration/9797740.png)
 
 Commands:
 
