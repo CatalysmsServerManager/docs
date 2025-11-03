@@ -48,7 +48,7 @@ There's a lot going on in this claim command, so we'll take it section by sectio
 - pveZone - This is the name of the PVE area. It can be anything you want it to be, but must be unique, and should be fairly easy to understand just by the name.
 - \-4096 2500 4096 -4096 - The coordinates of the PVE claim. On a 8K map, the coordinates to the left mark everything from 4096W to 2500E as the PVE region. Everywhere else on the map is still PVP.
 
-![Missing image](/assets/images/PrismaCore/pvpveConfiguration/9797735.png)
+![Missing image](/assets/images/CPM/pvpveConfiguration/9797735.png)
 
 You can use ANY coordinates for your PVE region, you aren't restricted to East-West or North-South. See the Examples section below for some more coordinate combinations.
 
@@ -62,7 +62,7 @@ You can use ANY coordinates for your PVE region, you aren't restricted to East-W
 
 ## The PVP / PVE Kill Rules
 
-![Missing image](/assets/images/PrismaCore/pvpveConfiguration/9797739.png)
+![Missing image](/assets/images/CPM/pvpveConfiguration/9797739.png)
 
 Once you've established your PVE zone, it's important to understand how punishment works for kills. The logic is very simple: if both players are in the PVE zone they can't kill eachother. Using the above map example, we have the following slice of the map shown in the screenshot. The left side (green) is PVE, and the right side (red) is PVP.
 
@@ -70,7 +70,7 @@ It makes sense that PVP to PVP kills are always permitted, but you should notice
 
 ## The DMZ Warning Zone \[optional\]
 
-![Missing image](/assets/images/PrismaCore/pvpveConfiguration/9797738.png)
+![Missing image](/assets/images/CPM/pvpveConfiguration/9797738.png)
 
 This section is optional, but is intended to help your players understand where they are in the world. In the previous section, it explains that simply being within _visible range_ of the PVE/PVP line can be deadly. However, players themselves can't actually _see_ the border, so unless they're constantly watching their map, they have no real way to know how close they are. The DMZ Warning Zone solves that problem.
 
@@ -92,7 +92,7 @@ See above documentation. Simply change the second number of the first set of coo
 
 Similar to the East-West setup. Change both of the numbers in the second set of coordinates to match where you want your line to be. This screenshot has the line at 1100S.
 
-![Missing image](/assets/images/PrismaCore/pvpveConfiguration/9797741.png)
+![Missing image](/assets/images/CPM/pvpveConfiguration/9797741.png)
 
 Commands:
 
@@ -105,7 +105,7 @@ ccc add DMZ -4096 4096 -900 -1300 -1 "notify:You are inside the DMZ right now. C
 
 In the screnshot below, the inner 2K diameter square is PVE, the next 200 units in all directions are the DMZ zones, and the remainder of the map is PVP. Note the black lines on the DMZ zones; there are 4 separate zones that make up the area around the inner square. Players who move around the 4 corners of the DMZ area will receive a message each time they move from one zone to the next, and there's no way to prevent this.
 
-![Missing image](/assets/images/PrismaCore/pvpveConfiguration/9797740.png)
+![Missing image](/assets/images/CPM/pvpveConfiguration/9797740.png)
 
 Commands:
 
