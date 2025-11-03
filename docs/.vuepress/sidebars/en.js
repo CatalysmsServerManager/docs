@@ -50,21 +50,21 @@ module.exports = {
     "/en/CSMM/support",
     "/en/contributing"
   ],
-  "/en/CPM/": [
-    "/en/CPM/",
+  "/en/PrismaCore/": [
+    "/en/PrismaCore/",
     {
       title: "Functional overview",
-      children: ["/en/CPM/advanced-claims", "/en/CPM/reset-regions"]
+      children: ["/en/PrismaCore/advanced-claims", "/en/PrismaCore/reset-regions"]
     },
     {
       title: "Commands",
-      children: ["/en/CPM/chat-commands", "/en/CPM/console-commands"]
+      children: ["/en/PrismaCore/chat-commands", "/en/PrismaCore/console-commands"]
     },
-    "/en/CPM/claimcreator",
-    "/en/CPM/pvpve-server-configuration",
-    "/en/CPM/cpmsettings",
-    "/en/CPM/locationbasedbuffs",
-    "/en/CPM/version-history",
+    "/en/PrismaCore/claimcreator",
+    "/en/PrismaCore/pvpve-server-configuration",
+    "/en/PrismaCore/cpmsettings",
+    "/en/PrismaCore/locationbasedbuffs",
+    "/en/PrismaCore/version-history",
     "/en/contributing"
   ],
   "/en/3SM/": [

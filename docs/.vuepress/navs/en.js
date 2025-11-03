@@ -3,8 +3,8 @@ module.exports = [{
     link: '/'
   },
   {
-    text: 'CPM',
-    link: '/en/CPM/'
+    text: 'PrismaCore',
+    link: '/en/PrismaCore/'
   },
   {
     text: '3SM',
