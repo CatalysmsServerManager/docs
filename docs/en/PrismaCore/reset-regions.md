@@ -4,7 +4,7 @@
 
 ## Intro
 
-![Missing image](/assets/images/PrismaCore/resetRegions/8028300.gif)
+![Missing image](/assets/images/CPM/resetRegions/8028300.gif)
 
 In 7 Days To Die, the world is broken up into 'regions', which are 500x500 square areas of the map. 7 Days stores all the changes that happen to that part of the world in a single file, called a region file. Reset Regions are a feature of PrismaCore that allows administrators to mark one or more of these region files to be erased (reset) during a special kind of reboot, deleting everything within the specified region(s) and restoring the area back to the way it was at the start of the seed. This process restores buildings and resources back to their original state and removes all modifications, structures, and bases built by players.
 
@@ -12,7 +12,7 @@ After the reboot, a region that has been reset will look exactly like it did on 
 
 Additionally, land claim blocks can't be placed in a reset region, and any that exist when a reset region is marked will immediately be deleted. If a player attempts to place a land claim block in an established reset region, it will return the claim block to them and inform them that they can't build in the area.
 
-![Missing image](/assets/images/PrismaCore/resetRegions/9797644.png)
+![Missing image](/assets/images/CPM/resetRegions/9797644.png)
 
 To see what the regions look like on your map, use the [Alloc's Live Map](/en/CSMM/allocs.html) utility, and enable the Region File checkbox in the upper right corner. It should resemble the grid shown in the screenshot above.
 
@@ -32,7 +32,7 @@ The first command will show the player's current region based on his/her positio
 
 ### Toggling Your Current Region For Reset
 
-![Missing image](/assets/images/PrismaCore/resetRegions/9797645.gif)
+![Missing image](/assets/images/CPM/resetRegions/9797645.gif)
 
 The simplest way to toggle a region for reset is to simply run the _mrr_ command in your console while you are online and in-game. When you run _mrr add_, PrismaCore will immediately mark the region the player is standing on for reset, If you run _mrr remove_, it will remove the mark on the region the player is standing on. Click the screenshot to see an animated version.
 
@@ -40,7 +40,7 @@ This command only works while you are in-game (and as a Level 0 Admin), as it re
 
 ### Adding/Removing A Single Region By Name
 
-![Missing image](/assets/images/PrismaCore/resetRegions/9797643.png)
+![Missing image](/assets/images/CPM/resetRegions/9797643.png)
 
 Using the Alloc's Live map linked above, you can see the region grid. Within each region square is a name, shown in the screenshot to the right. To add or remove this region file from the list, you would run one of the two following command:
 
@@ -54,7 +54,7 @@ This is a simple and easy way to add one or two regions to the list without extr
 
 ### Adding/Removing Multiple Regions Via Coordinates
 
-![Missing image](/assets/images/PrismaCore/resetRegions/8028246.png)
+![Missing image](/assets/images/CPM/resetRegions/8028246.png)
 
 The mrr command accepts two-coordinate X/Z notation as an input as well. To use this command, you specify the west-most, east-most, north-most, and south-most coordinate that make up the rectangle you want to mark for reset. In the screenshot to the right, the W/E/N/S coordinates have been marked. The syntax for this version of the command is as follows:
 
@@ -68,7 +68,7 @@ mrr add 482 580 3084 3000
 It's important to remember that you aren't just entering a coordinate that has a W or E in it, you're entering the coordinate from the rectangle that is the furthest in that direction. For example, even though the coordinate is 482 East, 482E is more West than 580E, so 482E is the 'west' boundary, and this is why you use it as the West coordinate. Similarly, 3084N is more North than 3000N, even though both coordinates are North.
 :::
 
-![Missing image](/assets/images/PrismaCore/resetRegions/9797651.png)
+![Missing image](/assets/images/CPM/resetRegions/9797651.png)
 
 **Note:** Also remember that West and South coordinates are negative values. If your left coordinate was 100W, you would enter it as -100. See the example below.
 
@@ -76,7 +76,7 @@ In this next picture, you have coordinates that are across both the North/South 
 
 mrr add -150 225 50 -300
 
-![Missing image](/assets/images/PrismaCore/resetRegions/9797652.gif)
+![Missing image](/assets/images/CPM/resetRegions/9797652.gif)
 
 When marking regions for reset, it's important to understand that no matter how much of a region you cover with the reset command, it will wipe _the entire region file_. In the screenshot to the right (click to preview the animated version), all three different red rectangles are represented by the three commands below:
 
@@ -98,7 +98,7 @@ resetregions
 
 ### Wipe every region on that map that is not marked as 'claimed'
 
-![Missing image](/assets/images/PrismaCore/resetRegions/9797657.png)The commands for this option are very similar to the regular reset region commands, but understanding what they apply to is much more complicated. In short, these commands will wipe every region on the map that is not 'claimed' in some way. There are two criteria that are checked to determine if a region is claimed or not. If any of them are true, the region will not be reset:
+![Missing image](/assets/images/CPM/resetRegions/9797657.png)The commands for this option are very similar to the regular reset region commands, but understanding what they apply to is much more complicated. In short, these commands will wipe every region on the map that is not 'claimed' in some way. There are two criteria that are checked to determine if a region is claimed or not. If any of them are true, the region will not be reset:
 
 1.  The region contains one or more Land Claim Blocks, or the LCB radius of a block extends into the region. This is represented on the screenshot as a solid yellow square (the LCB) surrounded by another yellow square (the LCB protection radius). In this example, both region 4.-4.2 and region r.-5.2 are considered claimed by that single LCB and its radius.
 2.  The region contains one or more Normal [Advanced Claims](/en/PrismaCore/advanced-claims.html), or at least part of an advanced claim extends into the region. This is represented in the screenshot by the green rectangle. Because this claim overlaps two regions, both r.-4.0 and r.-5.0 are protected.
@@ -109,7 +109,7 @@ Unclaimed regions are reset immediately. No reboot is needed for the operation.
 
 ## Using Reset Regions Effectively
 
-![Missing image](/assets/images/PrismaCore/resetRegions/reset-regions-overview.png)
+![Missing image](/assets/images/CPM/resetRegions/reset-regions-overview.png)
 
 The most common use of reset regions is to either wipe a specific area back to day 1 to remove large, impactful changes that can't be repaired otherwise, or to refresh the area in order to allow it to be looted again. A common example of this is where Admins mark some or all of the cities on a map as a reset region; not only does this prevent players from claiming large loot-friendly PoIs, but it also gives the server a way to refresh destroyed loot containers and other limited resources, like cars. In the screenshot to the right, all of the region tiles that contain major city zones have been marked for reset.
 
