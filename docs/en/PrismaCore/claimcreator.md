@@ -8,7 +8,7 @@ With this Web UI its very easy to create advanced claims or mark regions for res
 To access the Claim Creator Web UI just add one to the port you are using to access allocs webmap.
 So if you are using http://serverip:8082 to access allocs webmap, you add 1 to that port and thus access ClaimCreator with http://serverip:8083
 
-![Missing image](/assets/images/PrismaCore/claimCreator/complete1.png)
+![Missing image](/assets/images/CPM/claimCreator/complete1.png)
 
 ## Using ClaimCreator
 
