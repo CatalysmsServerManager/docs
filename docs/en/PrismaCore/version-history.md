@@ -1,5 +1,11 @@
 # Version History
 
+**Version 2.0 2.5 b18 Experimental (NOT 2.4 b7 Stable compatible) (12-12-2025)**
+
+* 2.5 b18 Compatability
+* Changed consolecommands resetregions and resetunclaimedregions: added optional kicklockreboot parameter. If used, players will be kicked, server will be locked while reset active and then reboot.
+* Fixed typo in shutdownba configured settings response
+
 **Version 1.0 2.4 b7 Stable (NOT 2.2 b3 Stable compatible) (03-11-2025)**
 
 * CSMM is being phased out and more and more serverowners are switching to [Takaro](https://takaro.io/). THE next gen ServerManager, which is an absolute bomb! It was time to choose a more generic name for CPM and with help from my friends in CSMM staff the choice has been made. CPM will continue as PrismaCore. CPM has been completely refactored to PrismaCore. This has consequences in terms of migrations and ServerManager hooks(regex logline hooks in particular). This release is meant to give you some time to come up with some migration strategies. 7dtd 2.5 is weeks away. Use this time wisely to adapt to PrismaCore!
