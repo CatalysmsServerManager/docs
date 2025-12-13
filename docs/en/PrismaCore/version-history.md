@@ -1,5 +1,9 @@
 # Version History
 
+**Version 2.1 2.5 b18 Experimental (NOT 2.4 b7 Stable compatible) (13-12-2025)**
+
+* Fixed ClaimCreator WebUI not starting on Windows servers. Windows server owners MUST update. Linux server owners CAN update, but don't need to.
+
 **Version 2.0 2.5 b18 Experimental (NOT 2.4 b7 Stable compatible) (12-12-2025)**
 
 * 2.5 b18 Compatability
