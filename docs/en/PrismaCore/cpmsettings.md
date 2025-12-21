@@ -98,7 +98,7 @@ The amount of damage done on entities which will trigger the damagedetection ant
 
 Logline example for using for custom CSMM discord notification:
 
-[CSMM_Patrons]damageDetection(Entity): Player Prisma501 (7656114567822412) triggered damage detection! Damage done: 5000
+[PrismaCore]damageDetection(Entity): Player Prisma501 (7656114567822412) triggered damage detection! Damage done: 5000
 
 `<DamageDetection_DetectedCommand>ban add ${platformId} 10 years "Nice hack mate"</DamageDetection_DetectedCommand>`
 
@@ -188,9 +188,9 @@ Define the player/admin level which is allowed to use Godmode whithout triggerin
 
 Logline example for using for custom CSMM discord notification:
 
-[CSMM_Patrons]Unauthorized GodMode detected on Prisma501 (23654789532547) !!!!!
+[PrismaCore]Unauthorized GodMode detected on Prisma501 (23654789532547) !!!!!
 
-[CSMM_Patrons]Permissionlevel: 1000 MaxAdminLevelGodMode: 0
+[PrismaCore]Permissionlevel: 1000 MaxAdminLevelGodMode: 0
 
 `<GodModeDetectedCommand>ban add ${platformId} 10 years "Nice hack mate"</GodModeDetectedCommand>`
 
@@ -202,9 +202,9 @@ Define the player/admin level which is allowed to use Spectatormode whithout tri
 
 Logline example for using for custom CSMM discord notification:
 
-[CSMM_Patrons]Unauthorized SpectatorMode detected on Prisma501 (23654789532547) !!!!!
+[PrismaCore]Unauthorized SpectatorMode detected on Prisma501 (23654789532547) !!!!!
 
-[CSMM_Patrons]Permissionlevel: 1000 MaxAdminLevelSpectatorMode: 0
+[PrismaCore]Permissionlevel: 1000 MaxAdminLevelSpectatorMode: 0
 
 `<SpectatorModeDetectedCommand>ban add ${platformId} 10 years "Nice hack mate"</SpectatorModeDetectedCommand>`
 
@@ -232,7 +232,7 @@ The height (in blocks) that will trigger flying detection anticheat. 0 is disabl
 
 Logline example for using for custom CSMM discord notification:
 
-[CSMM_Patrons]Player Prisma501 (23654789532547) seems to be flying !!!!!
+[PrismaCore]Player Prisma501 (23654789532547) seems to be flying !!!!!
 
 `<PlayerFlying_MaxAdminLevelFlying>0</PlayerFlying_MaxAdminLevelFlying>`
 
@@ -244,7 +244,7 @@ If set to 0, falling blocks prevention is disabled. Setting to any number higher
 
 Logline example for using for custom CSMM discord notification:
 
-[CSMM_Patrons] 658 falling blocks prevented! @ 2130 7 161
+[PrismaCore] 658 falling blocks prevented! @ 2130 7 161
 
 `<QuestPoiProtection_Enabled>true</QuestPoiProtection_Enabled>`
 
