@@ -1,5 +1,11 @@
 # Version History
 
+**Version 2.2 2.5 b23 Stable (NOT 2.4 b7 Stable compatible) (26-12-2025)**
+
+* Fixed consolecommand GetParty: threw null ref when querying a player with no party membership
+* Fixed chathandler not to block chat for other apimods that use chatapi when PrismaCore is the first mod that loads.
+I can't stress enough that if you use multiple apimods that handle chat and you use command hiding in chat, the mod you use to hide commands from chat MUST be loaded last or it will block chatflow for apimods that want to handle chat too.
+
 **Version 2.1 2.5 b23 Stable (NOT 2.4 b7 Stable compatible) (13-12-2025)**
 
 * Fixed ClaimCreator WebUI not starting on Windows servers. Windows server owners MUST update. Linux server owners CAN update, but don't need to.
