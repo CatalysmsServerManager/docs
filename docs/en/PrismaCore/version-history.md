@@ -4,7 +4,7 @@
 
 * Fixed consolecommand GetParty: threw null ref when querying a player with no party membership
 * Fixed chathandler not to block chat for other apimods that use chatapi when PrismaCore is the first mod that loads.
-I can't stress enough that if you use multiple apimods that handle chat and you use command hiding in chat, the mod you use to hide commands from chat MUST be loaded last or it will block chatflow for apimods that want to handle chat too.
+I can't stress enough that if you use multiple apimods that handle chat and you use command hiding in chat, the mod you use to hide commands from chat MUST be loaded last or it will block chatflow for apimods that want to handle chat too. Same goes for chatcoloring and chatname overriding. Choose one mod that handles them all and load it LAST.
 
 **Version 2.1 2.5 b23 Stable (NOT 2.4 b7 Stable compatible) (13-12-2025)**
 
