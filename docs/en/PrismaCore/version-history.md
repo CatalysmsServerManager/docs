@@ -1,6 +1,6 @@
 # Version History
 
-**Version 2.2 2.5 b23 Stable (NOT 2.4 b7 Stable compatible) (26-12-2025)**
+**Version 2.2 2.5 b27 Stable (NOT 2.4 b7 Stable compatible) (26-12-2025)**
 
 * Fixed consolecommand GetParty: threw null ref when querying a player with no party membership
 * Fixed chathandler not to block chat for other apimods that use chatapi when PrismaCore is the first mod that loads.
