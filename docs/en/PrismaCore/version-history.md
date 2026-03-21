@@ -1,5 +1,49 @@
 # Version History
 
+**Version 2.3 2.6 b14 Experimental/2.5 b32 Stable (NOT 2.4 b7 Stable compatible) (21-03-2026)**
+
+* added banned items system: simple but effective system to catch hackers that have items, that they should not be able to have.
+  Config in file /Saves/PrismaCoreBannedItems.txt with banned item and allowed permissionlevel per line in form bannedItem:permissionLevel  
+  Eg:  
+  gunHandgunPistolAdmin:0  
+  gunToolDiggerAdmin:0  
+   
+  Disabled by default and no detected command configured in PrismaCoreSettings.xml:
+  <BannedItems_Enabled>false</BannedItems_Enabled>  
+  <BannedItems_DetectedCommand />
+  
+  The usual variables for use in commands are available: ${platformId}, ${entityId} and ${playerName}
+  
+  Items can be manually added/removed to/from PrismaCoreBannedItems.txt or by bi command (banneditems):  
+  *** Command(s): pc-bi, bi, banneditems ***  
+  Usage:  
+   bi add <itemName> <permissionLevel>  
+   bi remove <itemName>  
+   bi list  
+
+  This will always have faster detection than cloud server managers.
+
+* added consolecommand rii (removeinvitem): very nice contribution from CSMM/Takaro staffmember Tree. Full credits to him and big thanks!
+  The command enables removing specific items from bag, belt and equipment.
+  Can filter on specific quality or all qualities, number of items or all items and 1 or all players:
+  
+  *** Command(s): pc-removeinvitem, rii, removeinvitem ***  
+  Usage:  
+    rii <PlayerName|SteamID|EntityId> <Item> [Count|all] [Quality]  
+    rii all <Item> [Count|all] [Quality]  
+  Examples:  
+    rii Bob pistol                                 -> removes 1 pistol (any quality)  
+    rii Bob pistol 2                               -> removes 2 pistols (any quality)  
+    rii Bob pistol 2 2                             -> removes 2 pistols of quality 2  
+    rii Bob pistol all                             -> removes ALL pistols (any quality)  
+    rii Bob pistol all 5                           -> removes ALL pistols of quality 5  
+    rii all pistol all                             -> removes ALL pistols from ALL players  
+    rii Steam_76561198016034203 gunMGT0PipeMachineGun 2 -> removes 2 Pipe Machine Guns from that SteamID  
+  Notes:
+    - If Quality is provided, only that quality is removed.
+    - If Quality is omitted, all qualities match.
+    - 'all' can be used instead of Count to remove every matching item.
+
 **Version 2.2 2.6 b10 Experimental (NOT 2.4 b7 Stable compatible) (26-12-2025)**
 
 * Fixed consolecommand GetParty: threw null ref when querying a player with no party membership
