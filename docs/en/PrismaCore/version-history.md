@@ -1,6 +1,6 @@
 # Version History
 
-**Version 2.3 2.6 b14 Experimental/2.5 b32 Stable (NOT 2.4 b7 Stable compatible) (21-03-2026)**
+**Version 2.3 2.6 Stable (21-03-2026)**
 
 * added banned items system: simple but effective system to catch hackers that have items, that they should not be able to have.
   Config in file /Saves/PrismaCoreBannedItems.txt with banned item and allowed permissionlevel per line in form bannedItem:permissionLevel  
