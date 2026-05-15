@@ -248,11 +248,11 @@ Logline example for using for custom CSMM discord notification:
 
 `<QuestPoiProtection_Enabled>true</QuestPoiProtection_Enabled>`
 
-Quests wont activate if there is a bedroll/lcb in the quest poi. Enable protection and players cannot place bedrolls/lcb's in poi's that can be selected as questpoi by the game. Exceptions per POI or POI type can be added in /Saves/ResetRegions/QuestPoi_Exceptions.txt
+Quests wont activate if there is a bedroll/lcb in the quest poi. Enable protection and players cannot place bedrolls/lcb's in poi's that can be selected as questpoi by the game. Exceptions per POI or POI type can be added in /Saves/WorldName/SeedName/ResetRegions/QuestPoi_Exceptions.txt
 
 `<AllPoiProtection_Enabled>false</AllPoiProtection_Enabled>`
 
-Enable protection and players cannot place bedrolls/lcb's in ALL poi's on map. Exceptions per POI or POI type can be added in /Saves/ResetRegions/AllPoi_Exceptions.txt
+Enable protection and players cannot place bedrolls/lcb's in ALL poi's on map. Exceptions per POI or POI type can be added in /Saves/WorldName/SeedName/ResetRegions/AllPoi_Exceptions.txt
 
 `<ResetPrefabs_ExcludeClaimedPrefabs>true</ResetPrefabs_ExcludeClaimedPrefabs>`
 
