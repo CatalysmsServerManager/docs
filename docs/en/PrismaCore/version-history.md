@@ -1,5 +1,14 @@
 # Version History
 
+**Version 2.4 3.0.0 b252 Experimental (NOT 2.6 b14 Stable compatible) (15-06-2026)**
+
+* compatability fixes for 3.0.0
+* added webapi GetDrones for fetching loaded and unloaded drones on server
+* ClaimCreator 2.2: added displaying loaded and unloaded drones by using the new webapi
+  New entry for ClaimCreator_permissions.xml. Existing xml needs manual adding. Newly generated xml will contain permission automatically:
+  
+  `<permission module="ClaimCreator.getdrones" permission_level="0" />`
+
 **Version 2.3 2.6 b14 Stable (21-03-2026)**
 
 * added banned items system: simple but effective system to catch hackers that have items, that they should not be able to have.
