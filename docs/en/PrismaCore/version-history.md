@@ -1,5 +1,9 @@
 # Version History
 
+**Version 2.4.1 3.0.0 b252 Experimental (NOT 2.6 b14 Stable compatible) (16-06-2026)**
+
+* fixed landclaims deactivating after owner logging off
+
 **Version 2.4 3.0.0 b252 Experimental (NOT 2.6 b14 Stable compatible) (15-06-2026)**
 
 * compatability fixes for 3.0.0
