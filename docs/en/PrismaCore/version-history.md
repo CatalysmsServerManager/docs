@@ -1,6 +1,6 @@
 # Version History
 
-**Version 2.4.2 3.0.0 b252 Experimental (NOT 2.6 b14 Stable compatible) (17-06-2026)**
+**Version 2.4.2 3.0.0 b257 Experimental (NOT 2.6 b14 Stable compatible) (17-06-2026)**
 
 * added consolecommand decodesandboxoptions (dsbo): list all sandbox options, that are active on server in human readable format without needing to paste the sandbox code into the client for reviewing options. Lists options both as human readable as technical representation (incl. default values)
 Ex: `RangedDamage: 150% (1.5 | default:1)
