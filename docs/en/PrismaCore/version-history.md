@@ -1,5 +1,10 @@
 # Version History
 
+**Version 2.5 3.0.0 b259 Stable (NOT 2.6 b14 Stable compatible) (05-07-2026)**
+
+* removed consolecommand resetdronedata (rdd). TFP have implemented serverside drone management via command jds so rdd is obsolete. Use "jds clear playerName" to clear drone data from a player.
+* fixed using brender with parameter nosleepers. Sleeper volumes would still be present after brendering a prefab in. Not anymore.
+
 **Version 2.4.2 3.0.0 b259 Stable (NOT 2.6 b14 Stable compatible) (17-06-2026)**
 
 * added consolecommand decodesandboxoptions (dsbo): list all sandbox options, that are active on server in human readable format without needing to paste the sandbox code into the client for reviewing options. Lists options both as human readable as technical representation (incl. default values)
