@@ -1,6 +1,6 @@
 # Version History
 
-**Version 2.5 3.1.0 b14 Stable / 3.2.0 b6 Experimental (NOT 2.6 b14 Stable compatible) (05-07-2026)**
+**Version 2.5 3.1.0 b14 Stable / 3.2.0 b9 Experimental (NOT 2.6 b14 Stable compatible) (05-07-2026)**
 
 * removed consolecommand resetdronedata (rdd). TFP have implemented serverside drone management via command jds so rdd is obsolete. Use "jds clear playerName" to clear drone data from a player.
 * fixed using brender with parameter nosleepers. Sleeper volumes would still be present after brendering a prefab in. Not anymore.
